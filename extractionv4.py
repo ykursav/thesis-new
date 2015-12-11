@@ -23,8 +23,10 @@ class SignatureExtraction:
         self.height = 0
         self.resized_image = np.array([])
         self.cropped_image = np.array([])
+        self.cropped_blur = np.array([])
         #unrelevant but used in experimentally it will remove
         self.img_name = ""
+        self.hist_eq = np.array([])
 
     def get_width_height(self, image):
         self.height = len(image)
@@ -68,8 +70,6 @@ class SignatureExtraction:
         self.get_width_height(self.image)
         new_width = 0
         new_height = 0
-        print self.height
-        print self.width
         if self.height > self.width:
             new_height = int(np.floor(float(self.height) * (self.L / float(self.width))))
             new_width = self.L
@@ -79,8 +79,6 @@ class SignatureExtraction:
         elif self.height == self.width:
             new_width = self.L
             new_height = self.L
-        print new_width
-        print new_height
         self.resized_image = cv2.resize(self.image, (new_width, new_height), \
         interpolation = cv2.INTER_LINEAR)
         return self.resized_image
@@ -104,15 +102,27 @@ class SignatureExtraction:
                    crop_height = self.height / 2 - 1
                    self.cropped_image = self.resized_image[crop_height - (self.L/ 2 - 1):crop_height + (self.L/ 2 + 1), :]
 
-
        return self.cropped_image
+
+    def get_blurred(self):
+    	self.cropped_blur = cv2.blur(self.cropped_image,(3,3))
+    	return self.cropped_blur
+
+    def get_hist_eq(self):
+    	self.hist_eq = cv2.equalizeHist(self.cropped_image)
+        return self.hist_eq
+
 
 
 yunus = SignatureExtraction(128, False, False, 3, 5)
 image = yunus.get_image()
 image2 = yunus.get_scaled()
 image3 = yunus.get_cropped()
+image4 = yunus.get_blurred()
+image5= yunus.get_hist_eq()
 img_name = yunus.get_image_name()
 cv2.imwrite("output/" + img_name[0:-4] + '_captured.jpg', image)
 cv2.imwrite("output/" + img_name[0:-4] + '_scaled.jpg', image2)
 cv2.imwrite("output/" + img_name[0:-4] + '_cropped.jpg', image3)
+cv2.imwrite("output/" + img_name[0:-4] + '_blurred.jpg', image4)
+cv2.imwrite("output/" + img_name[0:-4] + '_histogram.jpg', image5)
