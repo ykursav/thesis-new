@@ -24,9 +24,13 @@ class SignatureExtraction:
         self.resized_image = np.array([])
         self.cropped_image = np.array([])
         self.cropped_blur = np.array([])
-        #unrelevant but used in experimentally it will remove
+        self.image_blocks = np.array([])
+        self.number_of_blocks = ((self.L - self.N) / self.M ) + 1
+        self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N))
+        self.average_luminance = np.zeros((self.number_of_blocks, self.number_of_blocks, 1))
+        #irrelevant but used in experimentally or optional it will remove or toggle comment in future
         self.img_name = ""
-        self.hist_eq = np.array([])
+        #self.hist_eq = np.array([])
 
     def get_width_height(self, image):
         self.height = len(image)
@@ -66,7 +70,7 @@ class SignatureExtraction:
         pass
 
     def get_scaled(self):
-        #Returns scaled image
+        '''Scales image short edge to L value '''
         self.get_width_height(self.image)
         new_width = 0
         new_height = 0
@@ -84,7 +88,7 @@ class SignatureExtraction:
         return self.resized_image
 
     def get_cropped(self):
-       '''Resized image middle cropping 128 x 128'''
+       '''Cropping image middle part L x L'''
        self.get_width_height(self.resized_image)
        if self.width != self.height:
            if self.width > self.height:
@@ -105,24 +109,78 @@ class SignatureExtraction:
        return self.cropped_image
 
     def get_blurred(self):
+        '''Blurring cropped image'''
     	self.cropped_blur = cv2.blur(self.cropped_image,(3,3))
     	return self.cropped_blur
+    
+    #(optional area)
+    # def get_hist_eq(self):
+    #     '''Histogram equalization for cropped image'''
+    # 	self.hist_eq = cv2.equalizeHist(self.cropped_image)
+    #     return self.hist_eq
 
-    def get_hist_eq(self):
-    	self.hist_eq = cv2.equalizeHist(self.cropped_image)
-        return self.hist_eq
+    #check again it is correct or not
+    def __get_average_luminance_of_block(self, block):
+        '''luminance calculation block'''
+        lum = np.sum(block) / self.N ** 2
+        return lum  
+
+    #check again it is correct or not
+    # def var_luminance(I_hist): 
+    # '''Variance of luminance calculation'''
+    # variance = np.sum((I_hist-avg_luminance(I_hist))**2)/N**2
+    # return variance 
+
+    def __get_total_energy_block(self, block):
+        block = block.flatten()
+        total_energy = 0
+        for element in block:
+            total_energy += element ** 2
+
+        return total_energy
+
+    
+
+    def get_blocks(self):
+        '''Dividing cropped image N x N blocks by M overlapping'''
+        I_vis_blur_y = np.zeros((self.number_of_blocks * self.N, self.number_of_blocks * self.N))
+        I_vis_blur_x = np.zeros((self.L, self.number_of_blocks * self.N))
+        for x in range(0, self.L - self.M, self.M):
+            I_vis_blur_x[:, x * 2:x * 2 + self.N] = self.cropped_blur[:, x:x + self.N]
+
+        for y in range(0, self.L - self.M, self.M):
+            I_vis_blur_y[y * 2:y * 2 + self.N, :] = I_vis_blur_x[y:y + self.N, :]
+
+        #block numbering
+        for x in range(0, self.number_of_blocks):
+            for y in range(0, self.number_of_blocks):
+                self.block_all[x, y, :] = I_vis_blur_y[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+                self.average_luminance[x, y, :] =  self.get_average_luminance_of_block(I_vis_blur_y[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+
+
+        return self.I_vis_blur_y
 
 
 
-yunus = SignatureExtraction(128, False, False, 3, 5)
+
+
+
+
+
+        
+
+
+yunus = SignatureExtraction(128, False, False, 8, 4)
 image = yunus.get_image()
 image2 = yunus.get_scaled()
 image3 = yunus.get_cropped()
 image4 = yunus.get_blurred()
-image5= yunus.get_hist_eq()
+#image5= yunus.get_hist_eq()
+image6 = yunus.get_blocks()
 img_name = yunus.get_image_name()
 cv2.imwrite("output/" + img_name[0:-4] + '_captured.jpg', image)
 cv2.imwrite("output/" + img_name[0:-4] + '_scaled.jpg', image2)
 cv2.imwrite("output/" + img_name[0:-4] + '_cropped.jpg', image3)
 cv2.imwrite("output/" + img_name[0:-4] + '_blurred.jpg', image4)
-cv2.imwrite("output/" + img_name[0:-4] + '_histogram.jpg', image5)
+#cv2.imwrite("output/" + img_name[0:-4] + '_histogram.jpg', image5)
+cv2.imwrite("output/" + img_name[0:-4] + '_xblocks.jpg', image6)
