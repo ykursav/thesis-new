@@ -36,8 +36,7 @@ class SignatureExtraction:
         image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         blur = self.get_blurred(gray, G)
-        th, ret = cv2.threshold(blur, 0, 255, cv2.THRESH_OTSU)
-        edge =  cv2.Canny(blur, 100, 100, 3)
+        
         __, cnts, hierarchy = cv2.findContours(edge.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         cv2.namedWindow('image')
         def nothing(x):
@@ -158,7 +157,7 @@ class SignatureExtraction:
     #(optional area)
     # def get_hist_eq(self):
     #     '''Histogram equalization for cropped image'''
-    # 	self.hist_eq = cv2.equalizeHist(self.cropped_image)
+    #   self.hist_eq = cv2.equalizeHist(self.cropped_image)
     #     return self.hist_eq
 
     #check again it is correct or not
