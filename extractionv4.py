@@ -81,35 +81,7 @@ class SignatureExtraction:
         self.height = len(image)
         self.width = len(image[0,:])
 
-    # def get_image(self):
-    #     '''This function is collecting image from picamera and
-    #     keep this image as a opencv image'''
-    #     #http://picamera.readthedocs.org/en/latest/recipes1.html#capturing-to-a-file
-    #     #Section 4.4 is used to get image from camera to keep in stream and set to image
-    #     #Unfinished function it will improve in future
-    #     #There is a problem with camera warmup time because it will directly
-    #     #connected with sync of the sound
-    #     #in future version no need to return something it can be used as a internal method
-    #     '''
-    #     These lines for rpi
-    #     '''
-    #     # stream = io.bytesio()
-    #     # with picamera.picamera() as camera:
-    #     #     camera.resolution = (640, 480)
-    #     #     camera.capture(stream, format = 'jpeg')
-    #     #
-    #     # data = np.fromstring(stream.getvalue(), dtype = np.uint8)
-    #     # self.image = cv2.imdecode(data, 0)
-    #     self.img_name = raw_input("Please enter image name which will process for feature extraction: ")
-    #     self.img_name += ".jpg"
-    #     try:
-    #         self.image = cv2.imread(self.img_name,0)
-    #         return self.image
-    #     except:
-    #         print "ERROR: This image is not exist or unknown format."
 
-    # def get_image_name(self):
-    #     return self.img_name
 
 
 
