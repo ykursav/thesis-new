@@ -61,40 +61,97 @@ class PreProcessing:
         image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
         gray = self.gray_image(image)
         blur = self.get_blurred(gray, G)
-        th, im = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY)
-        edge =  cv2.Canny(th, 100, 255)
-        self.threshold = th
+        th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
+        ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+        edge =  cv2.Canny(th, ret * 0.5, ret)
+
         return edge
 
     def get_contour(self, image):
         height, width = image.shape[:2]
         image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
-        gray = self.gray_image(image)
-        blur = self.get_blurred(gray, 9)
-        th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
-        ret3,th3 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
-        print ret3
-        edged = cv2.Canny(th, ret3 * 0.5, ret3)
-        cv2.imshow("edged",edged)
+        edged = self.get_edged(image, 9)
+        cv2.imshow("edged", edged)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
         __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         
         first = False
         for cnt in contours:
-            epsilon = 0.1 * cv2.arcLength(cnt, True)
+            epsilon = 0.02 * cv2.arcLength(cnt, True)
             new_approx = cv2.approxPolyDP(cnt, epsilon, True)
             if first == False:
                 approx = cv2.approxPolyDP(cnt, epsilon, True)
                 first = True
             elif cv2.contourArea(approx) < cv2.contourArea(new_approx):
                 approx = new_approx
-
-
         cv2.drawContours(image, [approx], -1, (0, 255, 0), 2)
-        cv2.imshow("Contours",image)
+        cv2.imshow("edged", image)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
+        return approx, image
+        
+    def order_contour(self, points):
+        ordered_points = np.zeros((4, 2), dtype = "float32")
+        #sum of point to detect max and minimum sums
+        #maximum sum is the right bottom corner and minimum left top corner
+        #points are arranged starting from top left to clock wise indexing
+        sum_point = points.sum(axis = 2)
+        
+        ordered_points[0] = points[np.argmin(sum_point)].flatten()
+        ordered_points[2] = points[np.argmax(sum_point)].flatten()
+        
+        points = np.delete(points, np.argmin(sum_point), 0)
+        points = np.delete(points, np.argmax(sum_point) - 1, 0)
+        if points[0][0][0] > points[1][0][0]:
+            ordered_points[1] = points[0][0].copy()
+            ordered_points[3] = points[1][0].copy()
+        else:
+            ordered_points[1] = points[1][0].copy()
+            ordered_points[3] = points[0][0].copy()
+
+        return ordered_points
+
+    def check_points(self, points):
+        if len(points) == 4:
+            return True 
+        else:
+            return False
+
+    def distance_calculator(self, p1, p2):
+        '''Calculates distance between 2 points'''
+        return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
+
+    def get_perspective(self, image, points):
+        if self.check_points(points):
+            height, width = image.shape[:2]
+            image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
+            ordered_points = self.order_contour(points)
+            width_top = self.distance_calculator(ordered_points[0], ordered_points[1])
+            width_bottom = self.distance_calculator(ordered_points[2], ordered_points[3])
+            
+            width_perspective = int(max(width_top, width_bottom))
+            
+            height_left = self.distance_calculator(ordered_points[0], ordered_points[3])
+            height_right = self.distance_calculator(ordered_points[1], ordered_points[2])
+
+            height_perspective = int(max(height_left, height_right))
+
+            img_size = np.array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
+                [0, height_perspective - 1]], dtype = "float32")
+            print points
+            print ordered_points
+            M = cv2.getPerspectiveTransform(ordered_points, img_size)
+
+            warped_image = cv2.warpPerspective(image, M, (width_perspective, height_perspective))
+            cv2.imshow("warped", warped_image)
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()
+            return warped_image
+        else:
+            #for now pass in future turn back to starting point of process.
+            pass
+
 
     def get_scaled(self):
         '''Scales image short edge to L value '''
@@ -138,7 +195,7 @@ class PreProcessing:
 
     def get_blurred(self, image, G):
         '''Blurring cropped image'''
-        image = cv2.GaussianBlur(image, (G, G), 0)
+        image = cv2.GaussianBlur(image, (G, G), 0, 0)
         return image
 
     # #(optional area)
@@ -362,7 +419,8 @@ yunus = PreProcessing(image, 128, False)
 # points_new = np.asarray(points_new, dtype = "float32")
 
 # warped = yunus.get_perspective(image, points_new)
-yunus.get_contour(image)
+points, image1 = yunus.get_contour(image)
+warped = yunus.get_perspective(image, points)
 image2 = yunus.get_scaled()
 image3 = yunus.get_cropped()
 image4 = yunus.get_blurred(image, 5)
@@ -375,6 +433,7 @@ cv2.imwrite("output/" + img_name[0:-4] + '_scaled.jpg', image2)
 cv2.imwrite("output/" + img_name[0:-4] + '_cropped.jpg', image3)
 cv2.imwrite("output/" + img_name[0:-4] + '_blurred.jpg', image4)
 cv2.imwrite("output/" + img_name[0:-4] + '_edged.jpg', image5)
+cv2.imwrite("output/" + img_name[0:-4] + '_warped.jpg', warped)
 
 # cv2.imwrite("output/" + img_name[0:-4] + '_lines.jpg', image6)
 # cv2.imwrite("output/" + img_name[0:-4] + '_intersection_normal.jpg', intersection_normal)
