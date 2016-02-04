@@ -61,150 +61,40 @@ class PreProcessing:
         image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
         gray = self.gray_image(image)
         blur = self.get_blurred(gray, G)
-        th, ret = cv2.threshold(blur, 0, 255, cv2.THRESH_OTSU)
-        edge =  cv2.Canny(blur, th * 0.5, th)
+        th, im = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY)
+        edge =  cv2.Canny(th, 100, 255)
         self.threshold = th
         return edge
 
-    def get_distance(self, pt1, pt2):
-        return math.sqrt((pt2[0] - pt1[0]) ** 2 + (pt2[1] - pt1[1]) ** 2)
-
-    def get_hough_lines(self, image):
-        '''This function is for finding hough lines properly and extending them for visualization purposes'''
+    def get_contour(self, image):
         height, width = image.shape[:2]
         image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
-        edged = self.get_edged(image, 5)
-        lines = cv2.HoughLinesP(edged, 1, np.pi/180, int(self.threshold * 0.5) , 1000, self.threshold * 0.5)
-        width_resized = int(width * (500.0 / height))
-        height_resized = 500
-        extended_lines = []
-        counter = 0
-        for line in lines:
-            #v is a vector storing one line information
-            # v = line[0] 
-            # m = 0
-            # if (v[0] - v[2]) != 0:
-            #     m = (float(v[1]) - float(v[3])) / (float(v[0]) - float(v[2]))
-            #     b = v[1] - v[0] * m
-            #     v[0] = 0
-            #     v[1] = b
-            #     v[2] = width_resized
-            #     v[3] = width_resized * m + b
-            #     if v[3] > height_resized or v[3] < 0:
-            #         v[2] = height_resized * m + b
-            #         v[3] = height_resized
-            #     cv2.line(image,(v[0], v[1]), (v[2], v[3]),(0,0,255),2)
-
-            # else:
-            #     v[1] = 0
-            #     v[3] = height_resized
-            #     cv2.line(image,(v[0], v[1]), (v[2], v[3]),(0,255,0),2)
-            # extended_lines.append([])
-
-            # for element in v:
-            #     extended_lines[counter].append(element)
-
-            # counter += 1
-            
-            #print m, b
-            # line_draw = []
-            # line[0][0] = 0
-            # line[0][1] = float(((v[1] - v[3]) / (v[0] - v[2])) * -v[0] + v[1])
-            # line[0][2] = width_resized
-            # line[0][3] = float(((v[1] - v[3]) / (v[0] - v[2])) * (width_resized - v[2]) + v[3])
-            cv2.line(image,(line[0][0], line[0][1]), (line[0][2], line[0][3]),(0,255,0),2)
-            
-        return image, lines
-
-    def intersection_vis(self, image, intersection_points):
-        height, width = image.shape[:2]
-        image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
-        for point in intersection_points:
-            cv2.circle(image, (point[0], point[1]), 5, (255, 0, 0), -1)
-
-        return image
-
-    def get_intersection(self, image, line1, line2):
-
-        x1 = line1[0][0]; y1 = line1[0][1]; x2 = line1[0][2]; y2 = line1[0][3]
-        x3 = line2[0][0]; y3 = line2[0][1]; x4 = line2[0][2]; y4 = line2[0][3]
-        intersection_point = []
-
-        d = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
-        if d != 0:
-            px = ((x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4)) / d
-            py = ((x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4)) / d
-            intersection_point.append(px)
-            intersection_point.append(py)
-            
-        else:
-            intersection_point = [0, 0]
-
-        return intersection_point
-
-    def same_intersections(self, intersection_points):
-
-        for i in range(0, len(intersection_points)):
-            for j in range(i + 1, len(intersection_points)):
-                if intersection_points[i] == intersection_points[j]:
-                    intersection_points.pop(j)
-                    return self.same_intersections(intersection_points)
-
-        return intersection_points
-
-    def smooth_intersections(self, intersection_points):
-        '''This function makes closer intersection values approximation, it
-        is preprocessing for eliminating multiple intersection points for better results'''
-        checker = 0
-        remove = []
-        for i in range(0, len(intersection_points)):
-            counter = 1
-            for j in range(i + 1, len(intersection_points)):
-                if (intersection_points[i][0] + 15) > intersection_points[j][0] and (intersection_points[i][0] - 15) < intersection_points[j][0] \
-                    and (intersection_points[i][1] + 15) > intersection_points[j][1] and (intersection_points[i][1] - 15) < intersection_points[j][1]:
-                    intersection_points[i][0] += intersection_points[j][0]
-                    intersection_points[i][1] += intersection_points[j][1]
-                    remove.append(intersection_points[j])
-                    counter += 1
-                    checker += 1
-
-            if counter != 1:
-                intersection_points[i][0] = intersection_points[i][0] / counter
-                intersection_points[i][1] = intersection_points[i][1] / counter
-                for rm in remove:
-                    intersection_points.remove(rm)
-
-                return self.smooth_intersections(intersection_points)
-
-        if checker == 0:
-            return intersection_points
-
+        gray = self.gray_image(image)
+        blur = self.get_blurred(gray, 9)
+        th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
+        ret3,th3 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+        print ret3
+        edged = cv2.Canny(th, ret3 * 0.5, ret3)
+        cv2.imshow("edged",edged)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+        __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         
+        first = False
+        for cnt in contours:
+            epsilon = 0.1 * cv2.arcLength(cnt, True)
+            new_approx = cv2.approxPolyDP(cnt, epsilon, True)
+            if first == False:
+                approx = cv2.approxPolyDP(cnt, epsilon, True)
+                first = True
+            elif cv2.contourArea(approx) < cv2.contourArea(new_approx):
+                approx = new_approx
 
 
-    def calculate_distances(self, intersection_points):
-        line_distances = []
-        for counter in range(0, len(intersection_points)):
-            for counter2 in range(counter + 1, len(intersection_points)):
-                line_distances.append([math.floor(self.get_distance(intersection_points[counter], intersection_points[counter2])), \
-                intersection_points[counter], intersection_points[counter2]])
-
-        return line_distances
-
-    def distance_ratio_detect(self, distances):
-        correct_lines = []
-        for counter in range(0, len(distances)):
-            for counter2 in range(counter + 1, len(distances)):
-                if int(distances[counter][0]) != 0 and int(distances[counter2][0]) != 0:
-                    if (distances[counter][0] / distances[counter2][0]) < 1.78 and (distances[counter][0] / distances[counter2][0]) > 1.76:
-                        correct_lines.append([distances[counter][0], distances[counter2][0], distances[counter][1], distances[counter][2], \
-                            distances[counter2][1], distances[counter2][2]])
-                    elif (distances[counter][0] / distances[counter2][0]) < 0.57 and (distances[counter][0] / distances[counter2][0]) > 0.55:
-                        correct_lines.append([distances[counter][0], distances[counter2][0], distances[counter][1], distances[counter][2], \
-                            distances[counter2][1], distances[counter2][2]])
-
-    def get_perspective(self, image):
-        pass
+        cv2.drawContours(image, [approx], -1, (0, 255, 0), 2)
+        cv2.imshow("Contours",image)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
     def get_scaled(self):
         '''Scales image short edge to L value '''
@@ -257,6 +147,179 @@ class PreProcessing:
     #   self.hist_eq = cv2.equalizeHist(self.cropped_image)
     #   return self.hist_eq
 
+        # def get_distance(self, pt1, pt2):
+    #     return math.sqrt((pt2[0] - pt1[0]) ** 2 + (pt2[1] - pt1[1]) ** 2)
+
+    # def get_hough_lines(self, image):
+    #     '''This function is for finding hough lines properly and extending them for visualization purposes'''
+    #     height, width = image.shape[:2]
+    #     image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
+    #     edged = self.get_edged(image, 5)
+    #     lines = cv2.HoughLinesP(edged, 1, np.pi/180, int(self.threshold * 0.5) , 50, 20)
+    #     width_resized = int(width * (500.0 / height))
+    #     height_resized = 500
+    #     extended_lines = []
+    #     counter = 0
+    #     for line in lines:
+    #         #v is a vector storing one line information
+    #         # v = line[0] 
+    #         # m = 0
+    #         # if (v[0] - v[2]) != 0:
+    #         #     m = (float(v[1]) - float(v[3])) / (float(v[0]) - float(v[2]))
+    #         #     b = v[1] - v[0] * m
+    #         #     v[0] = 0
+    #         #     v[1] = b
+    #         #     v[2] = width_resized
+    #         #     v[3] = width_resized * m + b
+    #         #     if v[3] > height_resized or v[3] < 0:
+    #         #         v[2] = height_resized * m + b
+    #         #         v[3] = height_resized
+    #         #     cv2.line(image,(v[0], v[1]), (v[2], v[3]),(0,0,255),2)
+
+    #         # else:
+    #         #     v[1] = 0
+    #         #     v[3] = height_resized
+    #         #     cv2.line(image,(v[0], v[1]), (v[2], v[3]),(0,255,0),2)
+    #         # extended_lines.append([])
+
+    #         # for element in v:
+    #         #     extended_lines[counter].append(element)
+
+    #         # counter += 1
+            
+    #         #print m, b
+    #         # line_draw = []
+    #         # line[0][0] = 0
+    #         # line[0][1] = float(((v[1] - v[3]) / (v[0] - v[2])) * -v[0] + v[1])
+    #         # line[0][2] = width_resized
+    #         # line[0][3] = float(((v[1] - v[3]) / (v[0] - v[2])) * (width_resized - v[2]) + v[3])
+    #         cv2.line(image,(line[0][0], line[0][1]), (line[0][2], line[0][3]),(0,255,0),2)
+            
+    #     return image, lines
+
+    # def intersection_vis(self, image, intersection_points):
+    #     height, width = image.shape[:2]
+    #     image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
+    #     for point in intersection_points:
+    #         cv2.circle(image, (point[0], point[1]), 5, (255, 0, 0), -1)
+
+    #     return image
+
+    # def get_intersection(self, image, line1, line2):
+    #     height, width = image.shape[:2]
+    #     x1 = line1[0][0]; y1 = line1[0][1]; x2 = line1[0][2]; y2 = line1[0][3]
+    #     x3 = line2[0][0]; y3 = line2[0][1]; x4 = line2[0][2]; y4 = line2[0][3]
+    #     intersection_point = []
+
+    #     d = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
+    #     if d != 0:
+    #         px = ((x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4)) / d
+    #         py = ((x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4)) / d
+    #         if (px < 500 or px < width * (500.0 / height)) and (py < 500 or py < width * (500.0 / height)):
+    #             intersection_point.append(px)
+    #             intersection_point.append(py)
+    #         else:
+    #             intersection_point = -1
+    #             return intersection_point
+    #     else:
+    #         intersection_point = -1
+
+    #     return intersection_point
+
+    # def same_intersections(self, intersection_points):
+
+    #     for i in range(0, len(intersection_points)):
+    #         for j in range(i + 1, len(intersection_points)):
+    #             if intersection_points[i] == intersection_points[j]:
+    #                 intersection_points.pop(j)
+    #                 return self.same_intersections(intersection_points)
+
+    #     return intersection_points
+
+    # def smooth_intersections(self, intersection_points):
+    #     '''This function makes closer intersection values approximation, it
+    #     is preprocessing for eliminating multiple intersection points for better results'''
+    #     checker = 0
+    #     remove = []
+    #     for i in range(0, len(intersection_points)):
+    #         counter = 1
+    #         for j in range(i + 1, len(intersection_points)):
+    #             if (intersection_points[i][0] + 15) > intersection_points[j][0] and (intersection_points[i][0] - 15) < intersection_points[j][0] \
+    #                 and (intersection_points[i][1] + 15) > intersection_points[j][1] and (intersection_points[i][1] - 15) < intersection_points[j][1]:
+    #                 intersection_points[i][0] += intersection_points[j][0]
+    #                 intersection_points[i][1] += intersection_points[j][1]
+    #                 remove.append(intersection_points[j])
+    #                 counter += 1
+    #                 checker += 1
+
+    #         if counter != 1:
+    #             intersection_points[i][0] = intersection_points[i][0] / counter
+    #             intersection_points[i][1] = intersection_points[i][1] / counter
+    #             for rm in remove:
+    #                 intersection_points.remove(rm)
+
+    #             return self.smooth_intersections(intersection_points)
+
+    #     if checker == 0:
+    #         return intersection_points
+
+        
+
+
+    # def calculate_distances(self, intersection_points):
+    #     line_distances = []
+    #     for counter in range(0, len(intersection_points)):
+    #         for counter2 in range(counter + 1, len(intersection_points)):
+    #             line_distances.append([math.floor(self.get_distance(intersection_points[counter], intersection_points[counter2])), \
+    #             intersection_points[counter], intersection_points[counter2]])
+
+    #     return line_distances
+
+    # def distance_ratio_detect(self, distances):
+    #     correct_lines = []
+    #     for counter in range(0, len(distances)):
+    #         for counter2 in range(counter + 1, len(distances)):
+    #             if int(distances[counter][0]) != 0 and int(distances[counter2][0]) != 0:
+    #                 if (distances[counter][0] / distances[counter2][0]) < 1.78 and (distances[counter][0] / distances[counter2][0]) > 1.76:
+    #                     correct_lines.append([distances[counter][1], distances[counter][2], \
+    #                         distances[counter2][1], distances[counter2][2]])
+    #                 elif (distances[counter][0] / distances[counter2][0]) < 0.57 and (distances[counter][0] / distances[counter2][0]) > 0.55:
+    #                     correct_lines.append([distances[counter][1], distances[counter][2], \
+    #                         distances[counter2][1], distances[counter2][2]])
+
+    #     return correct_lines
+
+
+    # def order_points(self, points):
+    #     rect = np.zeros((4, 2), dtype = "float32")
+     
+    #     s = points.sum(axis = 1)
+    #     rect[0] = points[np.argmin(s)]
+    #     rect[2] = points[np.argmax(s)]
+     
+    #     diff = np.diff(points, axis = 1)
+    #     rect[1] = points[np.argmin(diff)]
+    #     rect[3] = points[np.argmax(diff)]
+     
+    #     return rect
+
+    # def get_perspective(self, image, points):
+        # height, width = image.shape[:2]
+        # image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
+        # epsilon = 0.1*cv2.arcLength(points, True)
+        # approx = cv2.approxPolyDP(points, epsilon, True)
+        # awidth = points[0][0]
+        # aheight = points[0][1]
+        # dst = np.array([
+        # [0, 0],
+        # [awidth - 1, 0],
+        # [awidth - 1, aheight - 1],
+        # [0, aheight - 1]], dtype = "float32")
+        # rect = self.order_points(points)
+        # M = cv2.getPerspectiveTransform(rect, dst)
+        # warped = cv2.warpPerspective(image, M, (awidth, aheight))
+        # return warped
+
 img_name = raw_input("Please enter image name which will process for feature extraction: ")
 img_name += ".jpg"
 image = 0
@@ -264,30 +327,45 @@ try:
     image = cv2.imread(img_name, 1)
 except:
     print "ERROR: This image is not exist or unknown format."
-intersection_points = []
+# intersection_points = []
 yunus = PreProcessing(image, 128, False)
-image6, lines = yunus.get_hough_lines(image)
+# image6, lines = yunus.get_hough_lines(image)
 
-for i in range(0, len(lines)):
-    for j in range(i + 1, len(lines)):
-            intersection_point = yunus.get_intersection(image, lines[i], lines[j])
-            intersection_points.append(intersection_point)
+# for i in range(0, len(lines)):
+#     for j in range(i + 1, len(lines)):
+#             intersection_point = yunus.get_intersection(image, lines[i], lines[j])
+#             if intersection_point != -1:
+#                 intersection_points.append(intersection_point)
 
-intersection_points = yunus.same_intersections(intersection_points)
 
-intersection_normal = yunus.intersection_vis(image, intersection_points)
+# intersection_points = yunus.same_intersections(intersection_points)
 
-smooth_points = yunus.smooth_intersections(intersection_points)
 
-intersection_smooth = yunus.intersection_vis(image, smooth_points)
+# intersection_normal = yunus.intersection_vis(image, intersection_points)
 
-distances = yunus.calculate_distances(intersection_points)
+# smooth_points = yunus.smooth_intersections(intersection_points)
 
-yunus.distance_ratio_detect(distances)
+# intersection_smooth = yunus.intersection_vis(image, smooth_points)
 
+# distances = yunus.calculate_distances(smooth_points)
+
+# points = yunus.distance_ratio_detect(distances)
+
+
+# points_new = []
+
+
+# for point in points:
+#     for p in point:
+#         points_new.append(p)
+# points_new = yunus.same_intersections(points_new)
+# points_new = np.asarray(points_new, dtype = "float32")
+
+# warped = yunus.get_perspective(image, points_new)
+yunus.get_contour(image)
 image2 = yunus.get_scaled()
 image3 = yunus.get_cropped()
-image4 = yunus.get_blurred(image, 3)
+image4 = yunus.get_blurred(image, 5)
 image5 = yunus.get_edged(image, 5)
 
 #image5= yunus.get_hist_eq()
@@ -298,6 +376,7 @@ cv2.imwrite("output/" + img_name[0:-4] + '_cropped.jpg', image3)
 cv2.imwrite("output/" + img_name[0:-4] + '_blurred.jpg', image4)
 cv2.imwrite("output/" + img_name[0:-4] + '_edged.jpg', image5)
 
-cv2.imwrite("output/" + img_name[0:-4] + '_lines.jpg', image6)
-cv2.imwrite("output/" + img_name[0:-4] + '_intersection_normal.jpg', intersection_normal)
-cv2.imwrite("output/" + img_name[0:-4] + '_intersection_smooth.jpg', intersection_smooth)
+# cv2.imwrite("output/" + img_name[0:-4] + '_lines.jpg', image6)
+# cv2.imwrite("output/" + img_name[0:-4] + '_intersection_normal.jpg', intersection_normal)
+# cv2.imwrite("output/" + img_name[0:-4] + '_intersection_smooth.jpg', intersection_smooth)
+# cv2.imwrite("output/" + img_name[0:-4] + '_warped.jpg', warped)
