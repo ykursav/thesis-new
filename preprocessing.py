@@ -7,6 +7,8 @@ SCALED_IMAGE = [128, 128]
 
 class PreProcessing:
     def __init__(self, image, L, hist_eq):
+        height, width = image.shape[:2]
+        image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
         self.image = image
         self.L = L
         self.hist_eq = hist_eq
@@ -14,8 +16,9 @@ class PreProcessing:
         self.height = 0
         self.cropped_image = np.array([])
         self.resized_image = np.array([])
+        self.warped = np.array([])
+        self.contours = self.image.copy()
         self.threshold = 0
-        self.smooth = 5
 
     # def get_image(self):
     #     '''This function is collecting image from picamera and
@@ -47,8 +50,8 @@ class PreProcessing:
     # def get_image_name(self):
     #     return self.img_name 
 
-    def gray_image(self, image):
-        image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    def gray_image(self):
+        image_gray = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         return image_gray
 
     def get_width_height(self, image):
@@ -56,10 +59,8 @@ class PreProcessing:
         width = len(image[0,:])
         return [width, height]
 
-    def get_edged(self, image, G):
-        height, width = image.shape[:2]
-        image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
-        gray = self.gray_image(image)
+    def get_edged(self, G):
+        gray = self.gray_image()
         blur = self.get_blurred(gray, G)
         th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
         ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
@@ -67,13 +68,8 @@ class PreProcessing:
 
         return edge
 
-    def get_contour(self, image):
-        height, width = image.shape[:2]
-        image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
-        edged = self.get_edged(image, 9)
-        cv2.imshow("edged", edged)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+    def get_contour(self, G):
+        edged = self.get_edged(G)
         __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         
         first = False
@@ -85,11 +81,8 @@ class PreProcessing:
                 first = True
             elif cv2.contourArea(approx) < cv2.contourArea(new_approx):
                 approx = new_approx
-        cv2.drawContours(image, [approx], -1, (0, 255, 0), 2)
-        cv2.imshow("edged", image)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
-        return approx, image
+        cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), 2)
+        return approx, self.contours
         
     def order_contour(self, points):
         ordered_points = np.zeros((4, 2), dtype = "float32")
@@ -113,6 +106,7 @@ class PreProcessing:
         return ordered_points
 
     def check_points(self, points):
+        '''Checking there is four points to make a rectangle shape or not'''
         if len(points) == 4:
             return True 
         else:
@@ -122,10 +116,8 @@ class PreProcessing:
         '''Calculates distance between 2 points'''
         return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
 
-    def get_perspective(self, image, points):
+    def get_perspective(self, points):
         if self.check_points(points):
-            height, width = image.shape[:2]
-            image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
             ordered_points = self.order_contour(points)
             width_top = self.distance_calculator(ordered_points[0], ordered_points[1])
             width_bottom = self.distance_calculator(ordered_points[2], ordered_points[3])
@@ -139,15 +131,16 @@ class PreProcessing:
 
             img_size = np.array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
                 [0, height_perspective - 1]], dtype = "float32")
-            print points
-            print ordered_points
-            M = cv2.getPerspectiveTransform(ordered_points, img_size)
 
-            warped_image = cv2.warpPerspective(image, M, (width_perspective, height_perspective))
-            cv2.imshow("warped", warped_image)
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
+
+            M = cv2.getPerspectiveTransform(ordered_points, img_size)
+            warped_image = cv2.warpPerspective(self.image, M, (width_perspective, height_perspective))
+            
+            self.warped = warped_image
+
             return warped_image
+
+        
         else:
             #for now pass in future turn back to starting point of process.
             pass
@@ -155,7 +148,7 @@ class PreProcessing:
 
     def get_scaled(self):
         '''Scales image short edge to L value '''
-        [self.width, self.height] = self.get_width_height(self.image)
+        [self.width, self.height] = self.get_width_height(self.warped)
         new_width = 0
         new_height = 0
         if self.height > self.width:
@@ -167,7 +160,7 @@ class PreProcessing:
         elif self.height == self.width:
             new_width = self.L
             new_height = self.L
-        self.resized_image = cv2.resize(self.image, (new_width, new_height), \
+        self.resized_image = cv2.resize(self.warped, (new_width, new_height), \
         interpolation = cv2.INTER_LINEAR)
         return self.resized_image
 
@@ -377,15 +370,57 @@ class PreProcessing:
         # warped = cv2.warpPerspective(image, M, (awidth, aheight))
         # return warped
 
-img_name = raw_input("Please enter image name which will process for feature extraction: ")
-img_name += ".jpg"
-image = 0
-try:
-    image = cv2.imread(img_name, 1)
-except:
-    print "ERROR: This image is not exist or unknown format."
+
+            # def get_blurred(self, image, G):
+    #     '''Blurring cropped image'''
+    #     image = cv2.GaussianBlur(image, (G, G), 0)
+    #     return image
+
+    # def get_edges(self, image, G):
+    #     screenCnt = 0
+    #     height, width = image.shape[:2]
+    #     image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
+    #     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    #     blur = self.get_blurred(gray, G)
+        
+    #     __, cnts, hierarchy = cv2.findContours(edge.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    #     cv2.namedWindow('image')
+    #     def nothing(x):
+    #         pass
+    #     cnts = sorted(cnts, key = cv2.contourArea, reverse = True)
+    #     cv2.createTrackbar('cnts','image',0, len(cnts) - 1,nothing)
+    #     # lines = cv2.HoughLines(edge,1,np.pi/180,int(th))
+    #     # print lines
+    #     # for line in lines:
+    #     #     for rho, theta in line:
+    #     #         a = np.cos(theta)
+    #     #         b = np.sin(theta)
+    #     #         x0 = a*rho
+    #     #         y0 = b*rho
+    #     #         x1 = int(x0 + 1000*(-b))
+    #     #         y1 = int(y0 + 1000*(a))
+    #     #         x2 = int(x0 - 1000*(-b))
+    #     #         y2 = int(y0 - 1000*(a))
+
+    #     #         cv2.line(image,(x1,y1),(x2,y2),(0,0,255),2)
+    #     while(1):
+    #         cv2.imshow('image', image)
+    #         epsilon = 0.05 * cv2.arcLength(cnts[cv2.getTrackbarPos('cnts','image')],True)
+    #         approx = cv2.approxPolyDP(cnts[cv2.getTrackbarPos('cnts','image')], epsilon, True)
+    #         #x,y,w,h = cv2.boundingRect(cnts[cv2.getTrackbarPos('cnts','image')])
+    #         #cv2.rectangle(image,(x,y),(x+w,y+h),(0,255,0),2)
+    #         k = cv2.waitKey(1) & 0xFF
+    #         if k == 27:
+    #             break
+    #         cv2.drawContours(image, cnts[cv2.getTrackbarPos('cnts','image')], -1, (0, 255, 0), 2)
+
+    #     cv2.destroyAllWindows()
+
+    #     return edge
+
+
 # intersection_points = []
-yunus = PreProcessing(image, 128, False)
+
 # image6, lines = yunus.get_hough_lines(image)
 
 # for i in range(0, len(lines)):
@@ -419,21 +454,17 @@ yunus = PreProcessing(image, 128, False)
 # points_new = np.asarray(points_new, dtype = "float32")
 
 # warped = yunus.get_perspective(image, points_new)
-points, image1 = yunus.get_contour(image)
-warped = yunus.get_perspective(image, points)
-image2 = yunus.get_scaled()
-image3 = yunus.get_cropped()
-image4 = yunus.get_blurred(image, 5)
-image5 = yunus.get_edged(image, 5)
+
+
 
 #image5= yunus.get_hist_eq()
 
 #image6 = yunus.get_blocks()
-cv2.imwrite("output/" + img_name[0:-4] + '_scaled.jpg', image2)
-cv2.imwrite("output/" + img_name[0:-4] + '_cropped.jpg', image3)
-cv2.imwrite("output/" + img_name[0:-4] + '_blurred.jpg', image4)
-cv2.imwrite("output/" + img_name[0:-4] + '_edged.jpg', image5)
-cv2.imwrite("output/" + img_name[0:-4] + '_warped.jpg', warped)
+# cv2.imwrite("output/" + img_name[0:-4] + '_scaled.jpg', image2)
+# cv2.imwrite("output/" + img_name[0:-4] + '_cropped.jpg', image3)
+# cv2.imwrite("output/" + img_name[0:-4] + '_blurred.jpg', image4)
+# cv2.imwrite("output/" + img_name[0:-4] + '_edged.jpg', image5)
+# cv2.imwrite("output/" + img_name[0:-4] + '_warped.jpg', warped)
 
 # cv2.imwrite("output/" + img_name[0:-4] + '_lines.jpg', image6)
 # cv2.imwrite("output/" + img_name[0:-4] + '_intersection_normal.jpg', intersection_normal)
