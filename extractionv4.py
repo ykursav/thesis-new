@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+from bitarray import bitarray
 
 
 
@@ -7,16 +8,15 @@ import cv2
 
 
 class SignatureExtraction:
-    def __init__(self, image, N, M):
+    '''N block size, M overlapping pixels, L image size'''
+    def __init__(self, image, N, M, L):
+        self.L = L
         self.N = N
         self.M = M
         # self.image = np.array([])
         self.image = image
         self.width = 0
         self.height = 0
-        self.resized_image = np.array([])
-        self.cropped_image = np.array([])
-        self.cropped_blur = np.array([])
         self.image_blocks = np.array([])
         self.number_of_blocks = ((self.L - self.N) / self.M ) + 1
         self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N))
@@ -25,104 +25,13 @@ class SignatureExtraction:
         self.img_name = ""
         #self.hist_eq = np.array([])
 
-    def get_blurred(self, image, G):
-        '''Blurring cropped image'''
-        image = cv2.GaussianBlur(image, (G, G), 0)
-        return image
 
-    def get_edges(self, image, G):
-        screenCnt = 0
-        height, width = image.shape[:2]
-        image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        blur = self.get_blurred(gray, G)
-        
-        __, cnts, hierarchy = cv2.findContours(edge.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-        cv2.namedWindow('image')
-        def nothing(x):
-            pass
-        cnts = sorted(cnts, key = cv2.contourArea, reverse = True)
-        cv2.createTrackbar('cnts','image',0, len(cnts) - 1,nothing)
-        # lines = cv2.HoughLines(edge,1,np.pi/180,int(th))
-        # print lines
-        # for line in lines:
-        #     for rho, theta in line:
-        #         a = np.cos(theta)
-        #         b = np.sin(theta)
-        #         x0 = a*rho
-        #         y0 = b*rho
-        #         x1 = int(x0 + 1000*(-b))
-        #         y1 = int(y0 + 1000*(a))
-        #         x2 = int(x0 - 1000*(-b))
-        #         y2 = int(y0 - 1000*(a))
-
-        #         cv2.line(image,(x1,y1),(x2,y2),(0,0,255),2)
-        while(1):
-            cv2.imshow('image', image)
-            epsilon = 0.05 * cv2.arcLength(cnts[cv2.getTrackbarPos('cnts','image')],True)
-            approx = cv2.approxPolyDP(cnts[cv2.getTrackbarPos('cnts','image')], epsilon, True)
-            #x,y,w,h = cv2.boundingRect(cnts[cv2.getTrackbarPos('cnts','image')])
-            #cv2.rectangle(image,(x,y),(x+w,y+h),(0,255,0),2)
-            k = cv2.waitKey(1) & 0xFF
-            if k == 27:
-                break
-            cv2.drawContours(image, cnts[cv2.getTrackbarPos('cnts','image')], -1, (0, 255, 0), 2)
-
-        cv2.destroyAllWindows()
-
-        return edge
-
-
-
-    def get_perspective(self):
-        pass
     
     def get_width_height(self, image):
         self.height = len(image)
         self.width = len(image[0,:])
 
 
-
-
-
-    def get_scaled(self):
-        '''Scales image short edge to L value '''
-        self.get_width_height(self.image)
-        new_width = 0
-        new_height = 0
-        if self.height > self.width:
-            new_height = int(np.floor(float(self.height) * (self.L / float(self.width))))
-            new_width = self.L
-        elif self.height < self.width:
-            new_width = int(np.floor(float(self.width) * (self.L / float(self.height))))
-            new_height = self.L
-        elif self.height == self.width:
-            new_width = self.L
-            new_height = self.L
-        self.resized_image = cv2.resize(self.image, (new_width, new_height), \
-        interpolation = cv2.INTER_LINEAR)
-        return self.resized_image
-
-    def get_cropped(self):
-       '''Cropping image middle part L x L'''
-       self.get_width_height(self.resized_image)
-       if self.width != self.height:
-           if self.width > self.height:
-               if self.width % 2 == 0:
-                   crop_width = self.width / 2 - 1
-                   self.cropped_image = self.resized_image[:, crop_width - self.L / 2:crop_width + self.L / 2]
-               else:
-                   crop_width = self.width / 2 - 1
-                   self.cropped_image = self.resized_image[:, crop_width - (self.L/ 2 - 1):crop_width + (self.L/ 2 + 1)]
-           else:
-               if self.height % 2 == 0:
-                   crop_height = self.height / 2 - 1
-                   self.cropped_image = self.resized_image[crop_height - self.L / 2:crop_height + self.L / 2, :]
-               else:
-                   crop_height = self.height / 2 - 1
-                   self.cropped_image = self.resized_image[crop_height - (self.L/ 2 - 1):crop_height + (self.L/ 2 + 1), :]
-
-       return self.cropped_image
 
 
     
@@ -133,18 +42,22 @@ class SignatureExtraction:
     #     return self.hist_eq
 
     #check again it is correct or not
-    def __get_average_luminance_of_block(self, block):
+
+    def get_average_luminance_of_block(self, block):
         '''luminance calculation block'''
         lum = np.sum(block) / self.N ** 2
         return lum  
 
-    #check again it is correct or not
-    # def var_luminance(I_hist): 
+    # check again it is correct or not
+    # def var_luminance(self, block): 
     # '''Variance of luminance calculation'''
-    # variance = np.sum((I_hist-avg_luminance(I_hist))**2)/N**2
-    # return variance 
+    #     for line in block:
+    #         for y in line:
 
-    def __get_total_energy_of_block(self, block):
+    #     variance = np.sum((block - self.get_average_luminance_of_block(block))**2) / self.N ** 2
+    #     return variance 
+
+    def get_total_energy_of_block(self, block):
         block = block.flatten()
         total_energy = 0
         for element in block:
@@ -152,54 +65,133 @@ class SignatureExtraction:
 
         return total_energy
 
+    def get_second_singular(self, block):
+        U, s, V = np.linalg.svd(block)
+        return s[1] ** 2
 
 
     def get_blocks(self):
         '''Dividing cropped image N x N blocks by M overlapping'''
-        self.cropped_blur =  self.get_blurred(self.cropped_image, 3)
         I_vis_blur_y = np.zeros((self.number_of_blocks * self.N, self.number_of_blocks * self.N))
         I_vis_blur_x = np.zeros((self.L, self.number_of_blocks * self.N))
         for x in range(0, self.L - self.M, self.M):
-            I_vis_blur_x[:, x * 2:x * 2 + self.N] = self.cropped_blur[:, x:x + self.N]
+            I_vis_blur_x[:, x * 2:x * 2 + self.N] = self.image[:, x:x + self.N]
 
         for y in range(0, self.L - self.M, self.M):
             I_vis_blur_y[y * 2:y * 2 + self.N, :] = I_vis_blur_x[y:y + self.N, :]
 
         #block numbering
-        for x in range(0, self.number_of_blocks):
-            for y in range(0, self.number_of_blocks):
-                self.block_all[x, y, :] = I_vis_blur_y[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-                self.average_luminance[x, y, :] =  self.__get_average_luminance_of_block(I_vis_blur_y[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+        # for x in range(0, self.number_of_blocks):
+        #     for y in range(0, self.number_of_blocks):
+        #         self.block_all[x, y, :] = I_vis_blur_y[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        #         #self.average_luminance[x, y, :] =  self.__get_average_luminance_of_block(I_vis_blur_y[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
 
 
         return I_vis_blur_y
 
+    def basic_rotations(self, image):
+        center = (self.N * self.number_of_blocks) / 2
+        M1 = cv2.getRotationMatrix2D((center, center), 90, 1)
+        M2 = cv2.getRotationMatrix2D((center, center), 180, 1)
+        M3 = cv2.getRotationMatrix2D((center, center), 270, 1)
+        rot90 = cv2.warpAffine(image, M1, (center * 2, center * 2))
+        rot180 = cv2.warpAffine(image, M2, (center * 2, center * 2))
+        rot270 = cv2.warpAffine(image, M3, (center * 2, center * 2))
+
+        return rot90, rot180, rot270
+
+    def get_fragment(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
+        group = np.zeros((8, 64))
+        group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 8:16] = rot90[(30 - x) * 8:(30 - x) * 8 + self.N, y * 8:y * 8 + self.N]
+        group[:, 16:24] = rot180[(30 - y) * 8:(30 - y) * 8 + self.N, (30 - x) * 8:(30 - x) * 8 + self.N]
+        group[:, 24:32] = rot270[x * 8:x * 8 + self.N, (30 - y) * 8:(30 - y) * 8 + self.N]
+        lum1 = self.get_average_luminance_of_block(group[:, 0:8])
+        lum2 = self.get_average_luminance_of_block(group[:, 8:16])
+        lum3 = self.get_average_luminance_of_block(group[:, 16:24])
+        lum4 = self.get_average_luminance_of_block(group[:, 24:32])
+
+        sing1 = self.get_singular_energy(group[:, 0:8])
+        sing2 = self.get_singular_energy(group[:, 8:16])
+        sing3 = self.get_singular_energy(group[:, 16:24])
+        sing4 = self.get_singular_energy(group[:, 24:32])
+
+        if only_rotate == 1:
+            avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
+            std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
+
+            avg_sing = (sing1 + sing2 + sing3 + sing4) / 4
+            std_sing = np.std(np.array([sing1, sing2, sing3, sing4]))
+
+            return avg_lum, std_lum, avg_sing, std_sing
+        elif only_rotate == -1:
+            avg_lum = lum1
+            std_lum = 0
+
+            avg_sing = sing1
+            std_sing = 0
+
+            return avg_lum, std_lum, avg_sing, std_sing
+        else:
+            group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
+            group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
+            group[:, 48:56] = cv2.flip(group[:, 16:24], 0)
+            group[:, 56:64] = cv2.flip(group[:, 0:8], 0)
+
+            lum5 = self.get_average_luminance_of_block(group[:, 32:40])
+            lum6 = self.get_average_luminance_of_block(group[:, 40:48])
+            lum7 = self.get_average_luminance_of_block(group[:, 48:56])
+            lum8 = self.get_average_luminance_of_block(group[:, 56:64])
+
+            sing5 = self.get_singular_energy(group[:, 32:40])
+            sing6 = self.get_singular_energy(group[:, 40:48])
+            sing7 = self.get_singular_energy(group[:, 48:56])
+            sing8 = self.get_singular_energy(group[:, 56:64])
+
+            avg_lum = (lum1 + lum2 + lum3 + lum4 + lum5 + lum6 + lum7+ lum8) / 8
+            std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8]))
+
+            avg_sing = (sing1 + sing2 + sing3 + sing4 + sing5 + sing6 + sing7 + sing8) / 8
+            std_sing = np.std(np.array([sing1, sing2, sing3, sing4, sing5, sing6, sing7, sing8]))
+
+            return avg_lum, std_lum, avg_sing, std_sing
 
 
+    def get_singular_energy(self, block):
+        return self.get_second_singular(block) / self.get_total_energy_of_block(block)
 
 
+    def get_signature(self, list):
+        signature = bitarray()
+        for x in range(0, len(list) -1):
+            if list[x] < list[x + 1]:
+                signature.append(True)
+            else:
+                signature.append(False)
+
+        return signature
 
 
-img_name = raw_input("Please enter image name which will process for feature extraction: ")
-img_name += ".jpg"
-image = 0
-try:
-    image = cv2.imread(img_name, 1)
-except:
-    print "ERROR: This image is not exist or unknown format."
+# img_name = raw_input("Please enter image name which will process for feature extraction: ")
+# img_name += ".jpg"
+# image = 0
+# try:
+#     image = cv2.imread(img_name, 1)
+# except:
+#     print "ERROR: This image is not exist or unknown format."
     
 
-yunus = SignatureExtraction(image, 128, False, 8, 4)
+# yunus = SignatureExtraction(image, 128, False, 8, 4)
 
-image1 = yunus.get_edges(image, 5)
-image2 = yunus.get_scaled()
-image3 = yunus.get_cropped()
+# image1 = yunus.get_edges(image, 5)
+# image2 = yunus.get_scaled()
+# image3 = yunus.get_cropped()
 # image4 = yunus.get_blurred()
 #image5= yunus.get_hist_eq()
 #image6 = yunus.get_blocks()
-cv2.imwrite("output/" + img_name[0:-4] + '_edge.jpg', image1)
-cv2.imwrite("output/" + img_name[0:-4] + '_scaled.jpg', image2)
-cv2.imwrite("output/" + img_name[0:-4] + '_cropped.jpg', image3)
+# cv2.imwrite("output/" + img_name[0:-4] + '_edge.jpg', image1)
+# cv2.imwrite("output/" + img_name[0:-4] + '_scaled.jpg', image2)
+# cv2.imwrite("output/" + img_name[0:-4] + '_cropped.jpg', image3)
 # cv2.imwrite("output/" + img_name[0:-4] + '_blurred.jpg', image4)
 #cv2.imwrite("output/" + img_name[0:-4] + '_histogram.jpg', image5)
 #cv2.imwrite("output/" + img_name[0:-4] + '_xblocks.jpg', image6)

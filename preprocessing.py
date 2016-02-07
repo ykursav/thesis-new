@@ -50,8 +50,8 @@ class PreProcessing:
     # def get_image_name(self):
     #     return self.img_name 
 
-    def gray_image(self):
-        image_gray = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
+    def gray_image(self, image):
+        image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         return image_gray
 
     def get_width_height(self, image):
@@ -60,7 +60,7 @@ class PreProcessing:
         return [width, height]
 
     def get_edged(self, G):
-        gray = self.gray_image()
+        gray = self.gray_image(self.image)
         blur = self.get_blurred(gray, G)
         th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
         ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
@@ -132,9 +132,11 @@ class PreProcessing:
             img_size = np.array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
                 [0, height_perspective - 1]], dtype = "float32")
 
-
+            #3x3 blur mask
+            blurred = self.get_blurred(self.image, 3)
+            gray = self.gray_image(blurred)
             M = cv2.getPerspectiveTransform(ordered_points, img_size)
-            warped_image = cv2.warpPerspective(self.image, M, (width_perspective, height_perspective))
+            warped_image = cv2.warpPerspective(gray, M, (width_perspective, height_perspective))
             
             self.warped = warped_image
 
