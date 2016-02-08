@@ -11,14 +11,16 @@ class PreProcessing:
         image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
         self.image = image
         self.L = L
-        self.hist_eq = hist_eq
+        # self.hist_eq = hist_eq
         self.width = 0
         self.height = 0
         self.cropped_image = np.array([])
         self.resized_image = np.array([])
-        self.warped = np.array([])
-        self.contours = self.image.copy()
-        self.threshold = 0
+        self.image = self.gray_image(self.image)
+        self.image = self.get_blurred(self.image, 3)
+        # self.warped = np.array([])
+        # self.contours = self.image.copy()
+        # self.threshold = 0
 
     # def get_image(self):
     #     '''This function is collecting image from picamera and
@@ -58,98 +60,98 @@ class PreProcessing:
         height, width = image.shape[:2]
         return [width, height]
 
-    def get_edged(self, G):
-        gray = self.gray_image(self.image)
-        blur = self.get_blurred(gray, G)
-        th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
-        ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
-        edge =  cv2.Canny(th, ret * 0.5, ret)
+    # def get_edged(self, G):
+    #     gray = self.gray_image(self.image)
+    #     blur = self.get_blurred(gray, G)
+    #     th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
+    #     ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    #     edge =  cv2.Canny(th, ret * 0.5, ret)
 
-        return edge
+    #     return edge
 
-    def get_contour(self, G):
-        edged = self.get_edged(G)
-        __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    # def get_contour(self, G):
+    #     edged = self.get_edged(G)
+    #     __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         
-        first = False
-        for cnt in contours:
-            epsilon = 0.02 * cv2.arcLength(cnt, True)
-            new_approx = cv2.approxPolyDP(cnt, epsilon, True)
-            if first == False:
-                approx = cv2.approxPolyDP(cnt, epsilon, True)
-                first = True
-            elif cv2.contourArea(approx) < cv2.contourArea(new_approx):
-                approx = new_approx
-        cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), 2)
-        return approx, self.contours
+    #     first = False
+    #     for cnt in contours:
+    #         epsilon = 0.02 * cv2.arcLength(cnt, True)
+    #         new_approx = cv2.approxPolyDP(cnt, epsilon, True)
+    #         if first == False:
+    #             approx = cv2.approxPolyDP(cnt, epsilon, True)
+    #             first = True
+    #         elif cv2.contourArea(approx) < cv2.contourArea(new_approx):
+    #             approx = new_approx
+    #     cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), 2)
+    #     return approx, self.contours
         
-    def order_contour(self, points):
-        ordered_points = np.zeros((4, 2), dtype = "float32")
-        #sum of point to detect max and minimum sums
-        #maximum sum is the right bottom corner and minimum left top corner
-        #points are arranged starting from top left to clock wise indexing
-        sum_point = points.sum(axis = 2)
+    # def order_contour(self, points):
+    #     ordered_points = np.zeros((4, 2), dtype = "float32")
+    #     #sum of point to detect max and minimum sums
+    #     #maximum sum is the right bottom corner and minimum left top corner
+    #     #points are arranged starting from top left to clock wise indexing
+    #     sum_point = points.sum(axis = 2)
         
-        ordered_points[0] = points[np.argmin(sum_point)].flatten()
-        ordered_points[2] = points[np.argmax(sum_point)].flatten()
+    #     ordered_points[0] = points[np.argmin(sum_point)].flatten()
+    #     ordered_points[2] = points[np.argmax(sum_point)].flatten()
         
-        points = np.delete(points, np.argmin(sum_point), 0)
-        points = np.delete(points, np.argmax(sum_point) - 1, 0)
-        if points[0][0][0] > points[1][0][0]:
-            ordered_points[1] = points[0][0].copy()
-            ordered_points[3] = points[1][0].copy()
-        else:
-            ordered_points[1] = points[1][0].copy()
-            ordered_points[3] = points[0][0].copy()
+    #     points = np.delete(points, np.argmin(sum_point), 0)
+    #     points = np.delete(points, np.argmax(sum_point) - 1, 0)
+    #     if points[0][0][0] > points[1][0][0]:
+    #         ordered_points[1] = points[0][0].copy()
+    #         ordered_points[3] = points[1][0].copy()
+    #     else:
+    #         ordered_points[1] = points[1][0].copy()
+    #         ordered_points[3] = points[0][0].copy()
 
-        return ordered_points
+    #     return ordered_points
 
-    def check_points(self, points):
-        '''Checking there is four points to make a rectangle shape or not'''
-        if len(points) == 4:
-            return True 
-        else:
-            return False
+    # def check_points(self, points):
+    #     '''Checking there is four points to make a rectangle shape or not'''
+    #     if len(points) == 4:
+    #         return True 
+    #     else:
+    #         return False
 
-    def distance_calculator(self, p1, p2):
-        '''Calculates distance between 2 points'''
-        return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
+    # def distance_calculator(self, p1, p2):
+    #     '''Calculates distance between 2 points'''
+    #     return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
 
-    def get_perspective(self, points):
-        if self.check_points(points):
-            ordered_points = self.order_contour(points)
-            width_top = self.distance_calculator(ordered_points[0], ordered_points[1])
-            width_bottom = self.distance_calculator(ordered_points[2], ordered_points[3])
+    # def get_perspective(self, points):
+    #     if self.check_points(points):
+    #         ordered_points = self.order_contour(points)
+    #         width_top = self.distance_calculator(ordered_points[0], ordered_points[1])
+    #         width_bottom = self.distance_calculator(ordered_points[2], ordered_points[3])
             
-            width_perspective = int(max(width_top, width_bottom))
+    #         width_perspective = int(max(width_top, width_bottom))
             
-            height_left = self.distance_calculator(ordered_points[0], ordered_points[3])
-            height_right = self.distance_calculator(ordered_points[1], ordered_points[2])
+    #         height_left = self.distance_calculator(ordered_points[0], ordered_points[3])
+    #         height_right = self.distance_calculator(ordered_points[1], ordered_points[2])
 
-            height_perspective = int(max(height_left, height_right))
+    #         height_perspective = int(max(height_left, height_right))
 
-            img_size = np.array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
-                [0, height_perspective - 1]], dtype = "float32")
+    #         img_size = np.array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
+    #             [0, height_perspective - 1]], dtype = "float32")
 
-            #3x3 blur mask
-            blurred = self.get_blurred(self.image, 3)
-            gray = self.gray_image(blurred)
-            M = cv2.getPerspectiveTransform(ordered_points, img_size)
-            warped_image = cv2.warpPerspective(gray, M, (width_perspective, height_perspective))
+    #         #3x3 blur mask
+    #         blurred = self.get_blurred(self.image, 3)
+    #         gray = self.gray_image(blurred)
+    #         M = cv2.getPerspectiveTransform(ordered_points, img_size)
+    #         warped_image = cv2.warpPerspective(gray, M, (width_perspective, height_perspective))
             
-            self.warped = warped_image
+    #         self.warped = warped_image
 
-            return warped_image
+    #         return warped_image
 
 
-        else:
-            #for now pass in future turn back to starting point of process.
-            pass
+    #     else:
+    #         #for now pass in future turn back to starting point of process.
+    #         pass
 
 
     def get_scaled(self):
         '''Scales image short edge to L value '''
-        self.width, self.height = self.get_width_height(self.warped)
+        [self.width, self.height] = self.get_width_height(self.image)
         new_width = 0
         new_height = 0
         if self.height > self.width:
@@ -161,7 +163,7 @@ class PreProcessing:
         elif self.height == self.width:
             new_width = self.L
             new_height = self.L
-        self.resized_image = cv2.resize(self.warped, (new_width, new_height), \
+        self.resized_image = cv2.resize(self.image, (new_width, new_height), \
         interpolation = cv2.INTER_LINEAR)
         return self.resized_image
 

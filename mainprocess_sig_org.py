@@ -1,9 +1,8 @@
-import preprocessing as pre
+import preprocessing_orig_sig as pre
 import extractionv4 as extract
 import matching as match
 import cv2
 import numpy as np
-from bitarray import bitarray
 
 img_name = raw_input("Please enter image name which will process for feature extraction: ")
 img_name += ".jpg"
@@ -16,19 +15,11 @@ except:
 
 pre_process = pre.PreProcessing(image, 128, False)
 
-points, image1 = pre_process.get_contour(9)
-warped = pre_process.get_perspective(points)
-
-image2 = pre_process.get_scaled()
+pre_process.get_scaled()
 image3 = pre_process.get_cropped()
 
 extract_process = extract.SignatureExtraction(image3, 8, 4, 128)
 rot0 = extract_process.get_blocks()
-
-
-# flipped1 = cv2.flip(rot0, 1)
-
-# vis = np.zeros((248,248))
 
 avg_lum_list = []
 avg_sing_list = []
@@ -66,24 +57,7 @@ sig1.extend(sig2)
 sig1.extend(sig3)
 sig1.extend(sig4)
 
-sigGen = sig1
-sigOrig = bitarray()
-f = open("signature.bin", "rb")
-#signatures must import from a binary file
-sigOrig.fromfile(f)
-print sigOrig, len(sigOrig)
-print sigGen, len(sigGen)
-
-matching_process = match.SignatureMatching(sigOrig[0:476], sigGen, 48, 77, 8, 56, 44)
-
-print matching_process.signature_rejection()
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_scaled.jpg', image2)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_cropped.jpg', image3)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_warped.jpg', warped)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot0.jpg', rot0)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot90.jpg', rot90)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot180.jpg', rot180)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot270.jpg', rot270)
-# cv2.imwrite("outputv2/" + img_name[0:-4] + '_fragment.jpg', fragment)
-# cv2.imwrite("outputv2/" + img_name[0:-4] + '_flipped.jpg', flipped1)
-
+sigOrig = sig1
+f = open("signature.bin", "wb")
+f.write(sigOrig.tobytes())
+f.close()
