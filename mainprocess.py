@@ -34,14 +34,7 @@ extract_install = time.time()
 rot0 = extract_process.get_blocks()
 rotations_time = time.time()
 
-print "Preinstall time:" + str(pre_install_time - start_time)
-print "Points time:" + str(pre_point_time - pre_install_time)
-print "warped_time" + str(warped_time - pre_point_time)
-print "Scaling time: " + str(scaled_time - warped_time)
-print "Cropping time: " + str(cropped_time - scaled_time)
-print "Cropping time: " + str(edge_time - cropped_time)
-print "Extract time:" + str(extract_install - edge_time)
-print "Rotation time:" + str(rotations_time - extract_install)
+
 # flipped1 = cv2.flip(rot0, 1)
 
 # vis = np.zeros((248,248))
@@ -51,6 +44,9 @@ avg_sing_list = []
 std_lum_list = []
 std_sing_list = []
 rot90, rot180, rot270 = extract_process.basic_rotations(rot0)
+basic_rotations_time = time.time()
+
+
 
 for y in range(0, 15):
     for x in range(y, 15):
@@ -76,10 +72,29 @@ for y in range(0, 15):
             std_sing_list.append(std_sing)
 
 
+extraction_time = time.time()
+
+
+
 sig1 = extract_process.get_signature(std_lum_list)
 sig2 = extract_process.get_signature(avg_lum_list)
 sig3 = extract_process.get_signature(std_sing_list)
 sig4 = extract_process.get_signature(avg_sing_list)
+
+signature_time = time.time()
+
+print "Preinstall time:" + str(pre_install_time - start_time)
+print "Points time:" + str(pre_point_time - pre_install_time)
+print "warped_time" + str(warped_time - pre_point_time)
+print "Scaling time: " + str(scaled_time - warped_time)
+print "Cropping time: " + str(cropped_time - scaled_time)
+print "Cropping time: " + str(edge_time - cropped_time)
+print "Extract time:" + str(extract_install - edge_time)
+print "Rotation time:" + str(rotations_time - extract_install)
+print "Basic Rotation time:" + str(basic_rotations_time - rotations_time)
+print "Extraction time:" + str(extraction_time - basic_rotations_time)
+print "Signature time:" + str(signature_time - extraction_time)
+
 
 sig1.extend(sig2)
 sig1.extend(sig3)
