@@ -1,6 +1,7 @@
 import numpy as np
 import math
 import cv2
+import time
 
 
 SCALED_IMAGE = [128, 128]
@@ -8,7 +9,13 @@ SCALED_IMAGE = [128, 128]
 class PreProcessing:
     def __init__(self, image, L, hist_eq):
         height, width = image.shape[:2]
+
         image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
+
+        # cv2.imshow("res",image)
+        # cv2.waitKey(0)
+        # cv2.destroyAllWindows()
+        start_time = time.time()
         self.image = image
         self.L = L
         self.hist_eq = hist_eq
@@ -19,6 +26,9 @@ class PreProcessing:
         self.warped = np.array([])
         self.contours = self.image.copy()
         self.threshold = 0
+        end_time = time.time()
+
+        print end_time - start_time
 
     # def get_image(self):
     #     '''This function is collecting image from picamera and
@@ -70,7 +80,7 @@ class PreProcessing:
     def get_contour(self, G):
         edged = self.get_edged(G)
         __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-        
+
         first = False
         for cnt in contours:
             epsilon = 0.02 * cv2.arcLength(cnt, True)
@@ -80,8 +90,10 @@ class PreProcessing:
                 first = True
             elif cv2.contourArea(approx) < cv2.contourArea(new_approx):
                 approx = new_approx
+        
+        
         cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), 2)
-        return approx, self.contours
+        return approx
         
     def order_contour(self, points):
         ordered_points = np.zeros((4, 2), dtype = "float32")
@@ -116,7 +128,9 @@ class PreProcessing:
         return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
 
     def get_perspective(self, points):
+        print points
         if self.check_points(points):
+
             ordered_points = self.order_contour(points)
             width_top = self.distance_calculator(ordered_points[0], ordered_points[1])
             width_bottom = self.distance_calculator(ordered_points[2], ordered_points[3])
@@ -132,13 +146,13 @@ class PreProcessing:
                 [0, height_perspective - 1]], dtype = "float32")
 
             #3x3 blur mask
-            blurred = self.get_blurred(self.image, 3)
-            gray = self.gray_image(blurred)
+            
+            gray = self.gray_image(self.image)
             M = cv2.getPerspectiveTransform(ordered_points, img_size)
             warped_image = cv2.warpPerspective(gray, M, (width_perspective, height_perspective))
+            blurred = self.get_blurred(warped_image, 3)
+            self.warped = blurred
             
-            self.warped = warped_image
-
             return warped_image
 
 
@@ -162,6 +176,24 @@ class PreProcessing:
             new_width = self.L
             new_height = self.L
         self.resized_image = cv2.resize(self.warped, (new_width, new_height), \
+        interpolation = cv2.INTER_LINEAR)
+        return self.resized_image
+
+    def get_scaled_main(self, image, L):
+        '''Scales image short edge to L value '''
+        self.width, self.height = self.get_width_height(image)
+        new_width = 0
+        new_height = 0
+        if self.height > self.width:
+            new_height = int(np.floor(float(self.height) * (L / float(self.width))))
+            new_width = L
+        elif self.height < self.width:
+            new_width = int(np.floor(float(self.width) * (L / float(self.height))))
+            new_height = L
+        elif self.height == self.width:
+            new_width = L
+            new_height = L
+        self.resized_image = cv2.resize(image, (new_width, new_height), \
         interpolation = cv2.INTER_LINEAR)
         return self.resized_image
 

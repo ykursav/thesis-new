@@ -19,12 +19,12 @@ class SignatureMatching:
     def signature_rejection(self):
         hamming_sig = self.signature_hamming()
         if sum(hamming_sig[0:120]) > self.tau1:
-            return False
+            return False, sum(hamming_sig) / 476 
         else:
             if sum(hamming_sig[0:240]) > self.tau2:
-                return False
+                return False, sum(hamming_sig) / 476 
             else:
                 if (sum(hamming_sig[0:240])) < self.tau3 or (sum(hamming_sig[240:476]) < self.tau4):
-                    return True
+                    return True, sum(hamming_sig) / 476
                 else:
-                    return False
+                    return False, sum(hamming_sig) / 476

@@ -103,9 +103,13 @@ class SignatureExtraction:
     def get_fragment(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
         group = np.zeros((8, 64))
         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-        group[:, 8:16] = rot90[(30 - x) * 8:(30 - x) * 8 + self.N, y * 8:y * 8 + self.N]
-        group[:, 16:24] = rot180[(30 - y) * 8:(30 - y) * 8 + self.N, (30 - x) * 8:(30 - x) * 8 + self.N]
-        group[:, 24:32] = rot270[x * 8:x * 8 + self.N, (30 - y) * 8:(30 - y) * 8 + self.N]
+        # group[:, 8:16] = rot90[(30 - x) * 8:(30 - x) * 8 + self.N, y * 8:y * 8 + self.N]
+        # group[:, 16:24] = rot180[(30 - y) * 8:(30 - y) * 8 + self.N, (30 - x) * 8:(30 - x) * 8 + self.N]
+        # group[:, 24:32] = rot270[x * 8:x * 8 + self.N, (30 - y) * 8:(30 - y) * 8 + self.N]
+        group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+
         lum1 = self.get_average_luminance_of_block(group[:, 0:8])
         lum2 = self.get_average_luminance_of_block(group[:, 8:16])
         lum3 = self.get_average_luminance_of_block(group[:, 16:24])
