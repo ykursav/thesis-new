@@ -5,6 +5,7 @@ import cv2
 import numpy as np
 from bitarray import bitarray
 import time
+import multiprocessing
 img_name = raw_input("Please enter image name which will process for feature extraction: ")
 img_name += ".jpg"
 
@@ -31,46 +32,52 @@ edge_time = time.time()
 extract_process = extract.SignatureExtraction(image3, 8, 4, 128)
 extract_install = time.time()
 
-rot0 = extract_process.get_blocks()
-rotations_time = time.time()
-
 
 # flipped1 = cv2.flip(rot0, 1)
 
 # vis = np.zeros((248,248))
 
-avg_lum_list = []
-avg_sing_list = []
-std_lum_list = []
-std_sing_list = []
-rot90, rot180, rot270 = extract_process.basic_rotations(rot0)
-basic_rotations_time = time.time()
 
 
+# for y in range(0, 15):
+#     for x in range(y, 15):
+#         if x == y or x == 14:
+#             if x == 14 and y == 14:
+#                 # avg_lum = multiprocessing.Process(target=extract_process.get_luminance(rot0, rot90, rot180, rot270, x, y, -1))
+#                 # std_lum = multiprocessing.Process(target=extract_process.get_std_lum(rot0, rot90, rot180, rot270, x, y, -1))
+#                 # avg_sing = multiprocessing.Process(target=extract_process.get_avg_sing(rot0, rot90, rot180, rot270, x, y, -1))
+#                 # std_sing = multiprocessing.Process(target=extract_process.get_std_sing(rot0, rot90, rot180, rot270, x, y, -1))
+#                 avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, x, y, -1)
+#                 avg_lum_list.append(avg_lum)
+#                 avg_sing_list.append(avg_sing)
+#                 std_lum_list.append(std_lum)
+#                 std_sing_list.append(std_sing)
+#                 # avg_lum_list.append(avg_lum)
+#                 # avg_sing_list.append(avg_sing)
+#                 # std_lum_list.append(std_lum)
+#                 # std_sing_list.append(std_sing)
+#             else:
+#                 # avg_lum = multiprocessing.Process(target=extract_process.get_luminance(rot0, rot90, rot180, rot270, x, y, 1))
+#                 # std_lum = multiprocessing.Process(target=extract_process.get_std_lum(rot0, rot90, rot180, rot270, x, y, 1))
+#                 # avg_sing = multiprocessing.Process(target=extract_process.get_avg_sing(rot0, rot90, rot180, rot270, x, y, 1))
+#                 # std_sing = multiprocessing.Process(target=extract_process.get_std_sing(rot0, rot90, rot180, rot270, x, y, 1))
+#                 avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, x, y, 1)
+#                 avg_lum_list.append(avg_lum)
+#                 avg_sing_list.append(avg_sing)
+#                 std_lum_list.append(std_lum)
+#                 std_sing_list.append(std_sing)
+#         else:
+#             # avg_lum = multiprocessing.Process(target=extract_process.get_luminance(rot0, rot90, rot180, rot270, x, y, 0))
+#             # std_lum = multiprocessing.Process(target=extract_process.get_std_lum(rot0, rot90, rot180, rot270, x, y, 0))
+#             # avg_sing = multiprocessing.Process(target=extract_process.get_avg_sing(rot0, rot90, rot180, rot270, x, y, 0))
+#             # std_sing = multiprocessing.Process(target=extract_process.get_std_sing(rot0, rot90, rot180, rot270, x, y, 0))
+#             avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, x, y, 0)
+#             avg_lum_list.append(avg_lum)
+#             avg_sing_list.append(avg_sing)
+#             std_lum_list.append(std_lum)
+#             std_sing_list.append(std_sing)
 
-for y in range(0, 15):
-    for x in range(y, 15):
-        if x == y or x == 14:
-            if x == 14 and y == 14:
-                avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, x, y, -1)
-                avg_lum_list.append(avg_lum)
-                avg_sing_list.append(avg_sing)
-                std_lum_list.append(std_lum)
-                std_sing_list.append(std_sing)
-            else:
-                avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, x, y, 1)
-                avg_lum_list.append(avg_lum)
-                avg_sing_list.append(avg_sing)
-                std_lum_list.append(std_lum)
-                std_sing_list.append(std_sing)
-        else:
-            
-            avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, x, y, 0)
-            avg_lum_list.append(avg_lum)
-            avg_sing_list.append(avg_sing)
-            std_lum_list.append(std_lum)
-            std_sing_list.append(std_sing)
-
+avg_lum_list, std_lum_list, avg_sing_list, std_sing_list = extract_process.get_all_fragments()
 
 extraction_time = time.time()
 
@@ -83,17 +90,7 @@ sig4 = extract_process.get_signature(avg_sing_list)
 
 signature_time = time.time()
 
-print "Preinstall time:" + str(pre_install_time - start_time)
-print "Points time:" + str(pre_point_time - pre_install_time)
-print "warped_time" + str(warped_time - pre_point_time)
-print "Scaling time: " + str(scaled_time - warped_time)
-print "Cropping time: " + str(cropped_time - scaled_time)
-print "Cropping time: " + str(edge_time - cropped_time)
-print "Extract time:" + str(extract_install - edge_time)
-print "Rotation time:" + str(rotations_time - extract_install)
-print "Basic Rotation time:" + str(basic_rotations_time - rotations_time)
-print "Extraction time:" + str(extraction_time - basic_rotations_time)
-print "Signature time:" + str(signature_time - extraction_time)
+
 
 
 sig1.extend(sig2)
@@ -112,16 +109,26 @@ print sigGen, len(sigGen)
 matching_process = match.SignatureMatching(sigOrig[0:476], sigGen, 48, 77, 8, 56, 44)
 
 end_time = time.time()
+print "Preinstall time:" + str(pre_install_time - start_time)
+print "Points time:" + str(pre_point_time - pre_install_time)
+print "warped_time" + str(warped_time - pre_point_time)
+print "Scaling time: " + str(scaled_time - warped_time)
+print "Cropping time: " + str(cropped_time - scaled_time)
+print "Cropping time: " + str(edge_time - cropped_time)
+print "Extract time:" + str(extract_install - edge_time)
+print "Extraction time:" + str(extraction_time - extract_install)
+print "Signature time:" + str(signature_time - extraction_time)
+print "Matching time:" + str(end_time - signature_time)
 print "Total time:" + str(end_time - start_time)
 print matching_process.signature_rejection()
 # cv2.imwrite("outputv2/" + img_name[0:-4] + '_contour.jpg', image1)
 cv2.imwrite("outputv2/" + img_name[0:-4] + '_scaled.jpg', image2)
 cv2.imwrite("outputv2/" + img_name[0:-4] + '_cropped.jpg', image3)
 cv2.imwrite("outputv2/" + img_name[0:-4] + '_warped.jpg', warped)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot0.jpg', rot0)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot90.jpg', rot90)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot180.jpg', rot180)
-cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot270.jpg', rot270)
+# cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot0.jpg', rot0)
+# cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot90.jpg', rot90)
+# cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot180.jpg', rot180)
+# cv2.imwrite("outputv2/" + img_name[0:-4] + '_rot270.jpg', rot270)
 cv2.imwrite("outputv2/" + img_name[0:-4] + '_edged.jpg', vis1)
 # cv2.imwrite("outputv2/" + img_name[0:-4] + '_fragment.jpg', fragment)
 # cv2.imwrite("outputv2/" + img_name[0:-4] + '_flipped.jpg', flipped1)

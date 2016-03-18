@@ -10,7 +10,7 @@ class PreProcessing:
     def __init__(self, image, L, hist_eq):
         height, width = image.shape[:2]
 
-        image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
+        # image = cv2.resize(image, (int(width * (400.0 / height)), 500), cv2.INTER_LINEAR)
 
         # cv2.imshow("res",image)
         # cv2.waitKey(0)

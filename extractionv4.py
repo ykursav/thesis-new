@@ -100,6 +100,160 @@ class SignatureExtraction:
 
         return rot90, rot180, rot270
 
+    def get_luminance(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
+        group = np.zeros((8, 64))
+        group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+
+        group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+
+        lum1 = self.get_average_luminance_of_block(group[:, 0:8])
+        lum2 = self.get_average_luminance_of_block(group[:, 8:16])
+        lum3 = self.get_average_luminance_of_block(group[:, 16:24])
+        lum4 = self.get_average_luminance_of_block(group[:, 24:32])
+
+
+        if only_rotate == 1:
+            avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
+
+            return avg_lum
+        elif only_rotate == -1:
+            avg_lum = lum1
+
+            return avg_lum
+        else:
+            group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
+            group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
+            group[:, 48:56] = cv2.flip(group[:, 16:24], 0)
+            group[:, 56:64] = cv2.flip(group[:, 0:8], 0)
+
+            lum5 = self.get_average_luminance_of_block(group[:, 32:40])
+            lum6 = self.get_average_luminance_of_block(group[:, 40:48])
+            lum7 = self.get_average_luminance_of_block(group[:, 48:56])
+            lum8 = self.get_average_luminance_of_block(group[:, 56:64])
+
+            avg_lum = (lum1 + lum2 + lum3 + lum4 + lum5 + lum6 + lum7+ lum8) / 8
+
+
+            return avg_lum
+
+
+    def get_std_lum(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
+        group = np.zeros((8, 64))
+        group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        # group[:, 8:16] = rot90[(30 - x) * 8:(30 - x) * 8 + self.N, y * 8:y * 8 + self.N]
+        # group[:, 16:24] = rot180[(30 - y) * 8:(30 - y) * 8 + self.N, (30 - x) * 8:(30 - x) * 8 + self.N]
+        # group[:, 24:32] = rot270[x * 8:x * 8 + self.N, (30 - y) * 8:(30 - y) * 8 + self.N]
+        group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+
+        lum1 = self.get_average_luminance_of_block(group[:, 0:8])
+        lum2 = self.get_average_luminance_of_block(group[:, 8:16])
+        lum3 = self.get_average_luminance_of_block(group[:, 16:24])
+        lum4 = self.get_average_luminance_of_block(group[:, 24:32])
+
+        if only_rotate == 1:
+            std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
+
+            return std_lum
+        elif only_rotate == -1:
+            std_lum = 0
+
+            return std_lum
+        else:
+            group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
+            group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
+            group[:, 48:56] = cv2.flip(group[:, 16:24], 0)
+            group[:, 56:64] = cv2.flip(group[:, 0:8], 0)
+
+            lum5 = self.get_average_luminance_of_block(group[:, 32:40])
+            lum6 = self.get_average_luminance_of_block(group[:, 40:48])
+            lum7 = self.get_average_luminance_of_block(group[:, 48:56])
+            lum8 = self.get_average_luminance_of_block(group[:, 56:64])
+
+            std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8]))
+
+
+            return std_lum
+
+    def get_avg_sing(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
+        group = np.zeros((8, 64))
+        group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        # group[:, 8:16] = rot90[(30 - x) * 8:(30 - x) * 8 + self.N, y * 8:y * 8 + self.N]
+        # group[:, 16:24] = rot180[(30 - y) * 8:(30 - y) * 8 + self.N, (30 - x) * 8:(30 - x) * 8 + self.N]
+        # group[:, 24:32] = rot270[x * 8:x * 8 + self.N, (30 - y) * 8:(30 - y) * 8 + self.N]
+        group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+
+        sing1 = self.get_singular_energy(group[:, 0:8])
+        sing2 = self.get_singular_energy(group[:, 8:16])
+        sing3 = self.get_singular_energy(group[:, 16:24])
+        sing4 = self.get_singular_energy(group[:, 24:32])
+
+        if only_rotate == 1:
+            avg_sing = (sing1 + sing2 + sing3 + sing4) / 4
+
+            return avg_sing
+        elif only_rotate == -1:
+            avg_sing = sing1
+
+            return avg_sing
+        else:
+            group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
+            group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
+            group[:, 48:56] = cv2.flip(group[:, 16:24], 0)
+            group[:, 56:64] = cv2.flip(group[:, 0:8], 0)
+
+            sing5 = self.get_singular_energy(group[:, 32:40])
+            sing6 = self.get_singular_energy(group[:, 40:48])
+            sing7 = self.get_singular_energy(group[:, 48:56])
+            sing8 = self.get_singular_energy(group[:, 56:64])
+
+            avg_sing = (sing1 + sing2 + sing3 + sing4 + sing5 + sing6 + sing7 + sing8) / 8
+
+            return avg_sing
+
+    def get_std_sing(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
+        group = np.zeros((8, 64))
+        group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        # group[:, 8:16] = rot90[(30 - x) * 8:(30 - x) * 8 + self.N, y * 8:y * 8 + self.N]
+        # group[:, 16:24] = rot180[(30 - y) * 8:(30 - y) * 8 + self.N, (30 - x) * 8:(30 - x) * 8 + self.N]
+        # group[:, 24:32] = rot270[x * 8:x * 8 + self.N, (30 - y) * 8:(30 - y) * 8 + self.N]
+        group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+        group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+
+        sing1 = self.get_singular_energy(group[:, 0:8])
+        sing2 = self.get_singular_energy(group[:, 8:16])
+        sing3 = self.get_singular_energy(group[:, 16:24])
+        sing4 = self.get_singular_energy(group[:, 24:32])
+
+        if only_rotate == 1:
+            std_sing = np.std(np.array([sing1, sing2, sing3, sing4]))
+
+            return std_sing
+        elif only_rotate == -1:
+            std_sing = 0
+
+            return std_sing
+        else:
+            group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
+            group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
+            group[:, 48:56] = cv2.flip(group[:, 16:24], 0)
+            group[:, 56:64] = cv2.flip(group[:, 0:8], 0)
+
+            sing5 = self.get_singular_energy(group[:, 32:40])
+            sing6 = self.get_singular_energy(group[:, 40:48])
+            sing7 = self.get_singular_energy(group[:, 48:56])
+            sing8 = self.get_singular_energy(group[:, 56:64])
+
+            std_sing = np.std(np.array([sing1, sing2, sing3, sing4, sing5, sing6, sing7, sing8]))
+
+            return std_sing
+
     def get_fragment(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
         group = np.zeros((8, 64))
         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
@@ -159,6 +313,53 @@ class SignatureExtraction:
             std_sing = np.std(np.array([sing1, sing2, sing3, sing4, sing5, sing6, sing7, sing8]))
 
             return avg_lum, std_lum, avg_sing, std_sing
+
+    def get_all_fragments(self):
+        avg_lum_list = []
+        avg_sing_list = []
+        std_lum_list = []
+        std_sing_list = []
+        rot0 = self.get_blocks()
+        rot90, rot180, rot270 = self.basic_rotations(rot0)
+        for y in range(0, 15):
+            for x in range(y, 15):
+                if x == y or x == 14:
+                    if x == 14 and y == 14:
+                        # avg_lum = multiprocessing.Process(target=extract_process.get_luminance(rot0, rot90, rot180, rot270, x, y, -1))
+                        # std_lum = multiprocessing.Process(target=extract_process.get_std_lum(rot0, rot90, rot180, rot270, x, y, -1))
+                        # avg_sing = multiprocessing.Process(target=extract_process.get_avg_sing(rot0, rot90, rot180, rot270, x, y, -1))
+                        # std_sing = multiprocessing.Process(target=extract_process.get_std_sing(rot0, rot90, rot180, rot270, x, y, -1))
+                        avg_lum, std_lum, avg_sing, std_sing = self.get_fragment(rot0, rot90, rot180, rot270, x, y, -1)
+                        avg_lum_list.append(avg_lum)
+                        avg_sing_list.append(avg_sing)
+                        std_lum_list.append(std_lum)
+                        std_sing_list.append(std_sing)
+                        # avg_lum_list.append(avg_lum)
+                        # avg_sing_list.append(avg_sing)
+                        # std_lum_list.append(std_lum)
+                        # std_sing_list.append(std_sing)
+                    else:
+                        # avg_lum = multiprocessing.Process(target=extract_process.get_luminance(rot0, rot90, rot180, rot270, x, y, 1))
+                        # std_lum = multiprocessing.Process(target=extract_process.get_std_lum(rot0, rot90, rot180, rot270, x, y, 1))
+                        # avg_sing = multiprocessing.Process(target=extract_process.get_avg_sing(rot0, rot90, rot180, rot270, x, y, 1))
+                        # std_sing = multiprocessing.Process(target=extract_process.get_std_sing(rot0, rot90, rot180, rot270, x, y, 1))
+                        avg_lum, std_lum, avg_sing, std_sing = self.get_fragment(rot0, rot90, rot180, rot270, x, y, 1)
+                        avg_lum_list.append(avg_lum)
+                        avg_sing_list.append(avg_sing)
+                        std_lum_list.append(std_lum)
+                        std_sing_list.append(std_sing)
+                else:
+                    # avg_lum = multiprocessing.Process(target=extract_process.get_luminance(rot0, rot90, rot180, rot270, x, y, 0))
+                    # std_lum = multiprocessing.Process(target=extract_process.get_std_lum(rot0, rot90, rot180, rot270, x, y, 0))
+                    # avg_sing = multiprocessing.Process(target=extract_process.get_avg_sing(rot0, rot90, rot180, rot270, x, y, 0))
+                    # std_sing = multiprocessing.Process(target=extract_process.get_std_sing(rot0, rot90, rot180, rot270, x, y, 0))
+                    avg_lum, std_lum, avg_sing, std_sing = self.get_fragment(rot0, rot90, rot180, rot270, x, y, 0)
+                    avg_lum_list.append(avg_lum)
+                    avg_sing_list.append(avg_sing)
+                    std_lum_list.append(std_lum)
+                    std_sing_list.append(std_sing)
+
+        return avg_lum_list, std_lum_list, avg_sing_list, std_sing_list
 
 
     def get_singular_energy(self, block):
