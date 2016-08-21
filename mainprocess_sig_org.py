@@ -1,5 +1,5 @@
 import preprocessing_orig_sig as pre
-import extractionv4 as extract
+import extraction as extract
 import matching as match
 import cv2
 import numpy as np
@@ -25,24 +25,24 @@ avg_lum_list = []
 avg_sing_list = []
 std_lum_list = []
 std_sing_list = []
-rot90, rot180, rot270 = extract_process.basic_rotations(rot0)
+rot90, rot180, rot270, fVertical, fHorizontal = extract_process.basic_rotations(rot0)
 for y in range(0, 15):
     for x in range(y, 15):
         if x == y or x == 14:
             if x == 14 and y == 14:
-                avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, x, y, -1)
+                avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, fVertical, fHorizontal, x, y, -1)
                 avg_lum_list.append(avg_lum)
                 avg_sing_list.append(avg_sing)
                 std_lum_list.append(std_lum)
                 std_sing_list.append(std_sing)
             else:
-                avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, x, y, 1)
+                avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, fVertical, fHorizontal, x, y, 1)
                 avg_lum_list.append(avg_lum)
                 avg_sing_list.append(avg_sing)
                 std_lum_list.append(std_lum)
                 std_sing_list.append(std_sing)
         else:
-            avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, x, y, 0)
+            avg_lum, std_lum, avg_sing, std_sing = extract_process.get_fragment(rot0, rot90, rot180, rot270, fVertical, fHorizontal, x, y, 0)
             avg_lum_list.append(avg_lum)
             avg_sing_list.append(avg_sing)
             std_lum_list.append(std_lum)

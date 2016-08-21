@@ -1,8 +1,9 @@
-import numpy as np
 import math
 import cv2
-import time
+import numpy as np
 
+# import time
+cv2.setUseOptimized(True)
 
 SCALED_IMAGE = [128, 128]
 
@@ -10,12 +11,12 @@ class PreProcessing:
     def __init__(self, image, L, hist_eq):
         height, width = image.shape[:2]
 
-        # image = cv2.resize(image, (int(width * (400.0 / height)), 500), cv2.INTER_LINEAR)
+        image = cv2.resize(image, (int(width * (400.0 / height)), 400), cv2.INTER_LINEAR)
 
         # cv2.imshow("res",image)
         # cv2.waitKey(0)
         # cv2.destroyAllWindows()
-        start_time = time.time()
+        # start_time = time.time()
         self.image = image
         self.L = L
         self.hist_eq = hist_eq
@@ -26,9 +27,9 @@ class PreProcessing:
         self.warped = np.array([])
         self.contours = self.image.copy()
         self.threshold = 0
-        end_time = time.time()
+        # end_time = time.time()
 
-        print end_time - start_time
+        # print end_time - start_time
 
     # def get_image(self):
     #     '''This function is collecting image from picamera and
@@ -72,27 +73,38 @@ class PreProcessing:
         gray = self.gray_image(self.image)
         blur = self.get_blurred(gray, G)
         th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
-        ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
-        edge =  cv2.Canny(th, ret * 0.5, ret)
-
-        return edge
+        # ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+        # edge =  cv2.Canny(th, ret * 0.5, ret)
+        # cv2.imwrite("Adaptive.jpg", th)
+        return th
 
     def get_contour(self, G):
         edged = self.get_edged(G)
         __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-
+        approx = 0
         first = False
+        approx_cnt = cv2.drawContours(self.contours, contours, -1, (0, 255, 0), -1)
         for cnt in contours:
-            epsilon = 0.02 * cv2.arcLength(cnt, True)
+            epsilon = 0.01 * cv2.arcLength(cnt, True)
             new_approx = cv2.approxPolyDP(cnt, epsilon, True)
             if first == False:
                 approx = cv2.approxPolyDP(cnt, epsilon, True)
                 first = True
             elif cv2.contourArea(approx) < cv2.contourArea(new_approx):
                 approx = new_approx
+        new_image = self.image
         
-        
-        cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), 2)
+        # approx_cnt = cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), -1)
+   
+        # x1 = tuple(approx[0][0])
+        # x2 = tuple(approx[1][0])
+        # x3 = tuple(approx[2][0])
+        # x4 = tuple(approx[3][0])
+        # cv2.circle(new_image,x1,5,[0,255,0],-1)
+        # cv2.circle(new_image,x2,5,[0,255,0],-1)
+        # cv2.circle(new_image,x3,5,[0,255,0],-1)
+        # cv2.circle(new_image,x4,5,[0,255,0],-1)
+        # cv2.imwrite("output_image.jpg", approx_cnt)
         return approx
         
     def order_contour(self, points):
@@ -114,6 +126,12 @@ class PreProcessing:
             ordered_points[1] = points[1][0].copy()
             ordered_points[3] = points[0][0].copy()
 
+        # new_image = self.image.copy()
+        # cv2.circle(new_image,tuple(ordered_points[0]),5,[0,255,0],-1)
+        # cv2.circle(new_image,tuple(ordered_points[1]),5,[0,255,0],-1)
+        # cv2.circle(new_image,tuple(ordered_points[2]),5,[0,255,0],-1)
+        # cv2.circle(new_image,tuple(ordered_points[3]),5,[0,255,0],-1)
+        # cv2.imwrite("ordere_points.jpg", new_image)
         return ordered_points
 
     def check_points(self, points):
@@ -128,7 +146,6 @@ class PreProcessing:
         return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
 
     def get_perspective(self, points):
-        print points
         if self.check_points(points):
 
             ordered_points = self.order_contour(points)
@@ -152,13 +169,12 @@ class PreProcessing:
             warped_image = cv2.warpPerspective(gray, M, (width_perspective, height_perspective))
             blurred = self.get_blurred(warped_image, 3)
             self.warped = blurred
-            
-            return warped_image
+            cv2.imwrite("warped.jpg",warped_image)
+            return True
 
 
         else:
-            #for now pass in future turn back to starting point of process.
-            pass
+            return False
 
 
     def get_scaled(self):

@@ -185,8 +185,11 @@ class PreProcessing:
                 else:
                     crop_height = self.height / 2 - 1
                     self.cropped_image = self.resized_image[crop_height - (self.L/ 2 - 1):crop_height + (self.L/ 2 + 1), :]
-
-        return self.cropped_image
+        blurred = self.get_blurred(self.cropped_image, 3)
+        cv2.imshow('cropped', blurred)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+        return blurred
 
 
     def get_blurred(self, image, G):
