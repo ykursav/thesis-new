@@ -1,6 +1,6 @@
-import ../preprocessing as pre
-import ../extraction as extract
-import ../matching as match
+import preprocessing as pre
+import extraction as extract
+import matching as match
 import cv2
 import numpy as np
 from bitarray import bitarray
