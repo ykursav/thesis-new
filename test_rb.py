@@ -7,20 +7,26 @@ from bitarray import bitarray
 import time
 import multiprocessing
 import sys
+from picamera import PiCamera
+from picamera.array import PiRGBArray
+from time import sleep
+
+
 
 pre.cv2.setUseOptimized(True)
 
-cap = cv2.VideoCapture(0)
-cap.set(3, 1024)
-cap.set(4, 768)
-counter = 0
-while(counter < 60):
-    ret, image = cap.read()
+camera = PiCamera()
+camera.resolution = (1024, 768)
+camera.framerate = 10
+rawCapture = PiRGBArray(camera, size = (1024, 768))
 
-    cv2.imshow("deneme", image)
+time.sleep(1)
+
+for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
+    image = frame.array
+    cv2.imshow("frame",image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
     pre_process = pre.PreProcessing(image, 128, False)
 
     points  = pre_process.get_contour(3)
@@ -55,8 +61,12 @@ while(counter < 60):
 
         print sigGen
         print sigOrig
+    
+    rawCapture.truncate(0)
 
-        time.sleep(0.5)
 
-    counter += 1
+   
+
+
+
 

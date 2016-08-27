@@ -1,6 +1,6 @@
 import preprocessing_orig_sig as pre
-import ../extraction as extract
-import ../matching as match
+import extraction as extract
+import matching as match
 import cv2
 import numpy as np
 from bitarray import bitarray
