@@ -73,10 +73,15 @@ class PreProcessing:
         gray = self.gray_image(self.image)
         blur = self.get_blurred(gray, G)
         th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
-        # ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
-        # edge =  cv2.Canny(th, ret * 0.5, ret)
+        ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+        edge =  cv2.Canny(blur, ret * 0.5, ret)
+        kernel = np.ones((5,5),np.uint8)
+        dilation = cv2.dilate(th,kernel,iterations = 4)
         # cv2.imwrite("Adaptive.jpg", th)
-        return th
+        cv2.imshow("th", dilation)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+        return dilation
 
     def get_contour(self, G):
         edged = self.get_edged(G)
