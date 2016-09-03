@@ -29,7 +29,7 @@ pre_process = pre.PreProcessing(image, 128, False)
 #     print "ERROR:Contour not detected"
 #     sys.exit(0)
 # warped_time = time.time()
-image2 = pre_process.get_scaled()
+image2 = pre_process.get_scaled(3)
 # scaled_time = time.time()
 image3 = pre_process.get_cropped()
 # cropped_time = time.time()

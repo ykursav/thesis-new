@@ -21,17 +21,14 @@ class SignatureMatching:
     def signature_rejection(self):
         hamming_sig = self.signature_hamming()
         if sum(hamming_sig[0:120]) > self.tau1:
-            print "tau1 fail"
-            return False, sum(hamming_sig) 
+            return False, sum(hamming_sig), "tau1_fail"
         else:
             if sum(hamming_sig[0:240]) > self.tau2:
-                print "tau2 fail"
-                return False, sum(hamming_sig) 
+                return False, sum(hamming_sig), "tau2_fail" 
             else:
                 if (sum(hamming_sig[0:240])) < self.tau3 or (sum(hamming_sig[240:476]) < self.tau4):
                     print sum(hamming_sig[0:240]), sum(hamming_sig[240:476])
-                    return True, sum(hamming_sig)
+                    return True, sum(hamming_sig),  "replica detected"
                 else:
-                    print "tau3 fail"
-                    return False, sum(hamming_sig)
+                    return False, sum(hamming_sig), "tau3_fail"
 

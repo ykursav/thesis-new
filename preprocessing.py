@@ -74,13 +74,13 @@ class PreProcessing:
         blur = self.get_blurred(gray, G)
         th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
         ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
-        edge =  cv2.Canny(blur, ret * 0.5, ret)
-        kernel = np.ones((5,5),np.uint8)
-        dilation = cv2.dilate(th,kernel,iterations = 4)
+        ##edge =  cv2.Canny(blur, ret * 0.5, ret)
+        kernel = np.ones((3,3),np.uint8)
+        dilation = cv2.dilate(th,kernel,iterations = 1)
         # cv2.imwrite("Adaptive.jpg", th)
-        cv2.imshow("th", dilation)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+##        cv2.imshow("th", dilation)
+##        cv2.waitKey(0)
+##        cv2.destroyAllWindows()
         return dilation
 
     def get_contour(self, G):
@@ -88,19 +88,28 @@ class PreProcessing:
         __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         approx = 0
         first = False
-        approx_cnt = cv2.drawContours(self.contours, contours, -1, (0, 255, 0), -1)
+        last_cnt = 0
+        ##approx_cnt = cv2.drawContours(self.contours, contours, -1, (0, 255, 0), -1)
         for cnt in contours:
-            epsilon = 0.01 * cv2.arcLength(cnt, True)
+            epsilon = 0.05 * cv2.arcLength(cnt, True)
             new_approx = cv2.approxPolyDP(cnt, epsilon, True)
             if first == False:
-                approx = cv2.approxPolyDP(cnt, epsilon, True)
-                first = True
-            elif cv2.contourArea(approx) < cv2.contourArea(new_approx):
-                approx = new_approx
+                if self.check_points(new_approx):
+                    last_cnt = cnt
+                    approx = cv2.approxPolyDP(cnt, epsilon, True)
+                    first = True
+            elif cv2.contourArea(last_cnt) < cv2.contourArea(cnt):
+                if self.check_points(new_approx):
+                    last_cnt = cnt
+                    approx = new_approx
+            else:
+                pass
         new_image = self.image
         
-        # approx_cnt = cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), -1)
-   
+        ##approx_cnt = cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), -1)
+##        cv2.imshow("approx cnt", approx_cnt)
+##        cv2.waitKey(0)
+##        cv2.destroyAllWindows()
         # x1 = tuple(approx[0][0])
         # x2 = tuple(approx[1][0])
         # x3 = tuple(approx[2][0])
@@ -110,7 +119,10 @@ class PreProcessing:
         # cv2.circle(new_image,x3,5,[0,255,0],-1)
         # cv2.circle(new_image,x4,5,[0,255,0],-1)
         # cv2.imwrite("output_image.jpg", approx_cnt)
-        return approx
+        if first == False:
+            return -1
+        else:
+            return approx
         
     def order_contour(self, points):
         ordered_points = np.zeros((4, 2), dtype = "float32")
@@ -150,8 +162,8 @@ class PreProcessing:
         '''Calculates distance between 2 points'''
         return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
 
-    def get_perspective(self, points):
-        if self.check_points(points):
+    def get_perspective(self, points, counter):
+        if len(points) != 1:
 
             ordered_points = self.order_contour(points)
             width_top = self.distance_calculator(ordered_points[0], ordered_points[1])
@@ -168,13 +180,16 @@ class PreProcessing:
                 [0, height_perspective - 1]], dtype = "float32")
 
             #3x3 blur mask
-            
             gray = self.gray_image(self.image)
             M = cv2.getPerspectiveTransform(ordered_points, img_size)
             warped_image = cv2.warpPerspective(gray, M, (width_perspective, height_perspective))
+            if width_perspective > height_perspective:     
+                warped_image = cv2.resize(warped_image, (500, 300), cv2.INTER_LINEAR)
+            elif height_perspective > width_perspective:
+                warped_image = cv2.resize(warped_image, (300, 500), cv2.INTER_LINEAR)            
             blurred = self.get_blurred(warped_image, 3)
             self.warped = blurred
-            cv2.imwrite("warped.jpg",warped_image)
+            cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
             return True
 
 

@@ -8,7 +8,7 @@ SCALED_IMAGE = [128, 128]
 class PreProcessing:
     def __init__(self, image, L, hist_eq):
         height, width = image.shape[:2]
-        image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
+        image = cv2.resize(image, (int(width * (400.0 / height)), 400), cv2.INTER_LINEAR)
         self.image = image
         self.L = L
         # self.hist_eq = hist_eq
@@ -149,8 +149,9 @@ class PreProcessing:
     #         pass
 
 
-    def get_scaled(self):
+    def get_scaled(self, G):
         '''Scales image short edge to L value '''
+        self.image = self.get_blurred(self.image, G)
         [self.width, self.height] = self.get_width_height(self.image)
         new_width = 0
         new_height = 0
@@ -185,11 +186,8 @@ class PreProcessing:
                 else:
                     crop_height = self.height / 2 - 1
                     self.cropped_image = self.resized_image[crop_height - (self.L/ 2 - 1):crop_height + (self.L/ 2 + 1), :]
-        blurred = self.get_blurred(self.cropped_image, 3)
-        cv2.imshow('cropped', blurred)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
-        return blurred
+
+        return self.cropped_image
 
 
     def get_blurred(self, image, G):
