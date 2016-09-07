@@ -2,8 +2,22 @@ import numpy as np
 import cv2
 from bitarray import bitarray
 import time
+from multiprocessing import Process, Queue, Pool
+from subprocess import call
+from threading import Thread
+##import copy_reg
+##import types
 
 
+
+##def _pickle_method(m):
+##    if m.im_self is None:
+##        return getattr, (m.im_class, m.im_func.func_name)
+##    else:
+##        return getattr, (m.im_self, m.im_func.func_name)
+##
+##copy_reg.pickle(types.MethodType, _pickle_method)
+##
 # camera settings
 
 cv2.setUseOptimized(True)
@@ -46,7 +60,7 @@ class SignatureExtraction:
     def get_average_luminance_of_block(self, block):
         '''luminance calculation block'''
         lum = np.sum(block) / self.N ** 2
-        return lum  
+        return lum
 
     # check again it is correct or not
     # def var_luminance(self, block): 
@@ -283,21 +297,92 @@ class SignatureExtraction:
         sing3 = self.get_singular_energy(group[:, 16:24])
         sing4 = self.get_singular_energy(group[:, 24:32])
 
+##        pool = Pool(processes = 4)
+##        results_sing = pool.map(self.get_singular_energy, (group[:, 0:8], group[:, 8:16], group[:, 16:24], group[:, 24:32]))
+##        
+##        lum_queue = Queue()
+##        sin_queue = Queue()
+
+        
+        
+##        lum1_p = Process(target = self.get_average_luminance_of_block, args=(lum_queue, group[:, 0:8]))
+##        lum1_p.start()
+##        lum2_p = Process(target = self.get_average_luminance_of_block, args=(lum_queue, group[:, 8:16]))
+##        lum2_p.start()
+##        lum3_p = Process(target = self.get_average_luminance_of_block, args=(lum_queue, group[:, 16:24]))
+##        lum3_p.start()
+##        lum4_p = Process(target = self.get_average_luminance_of_block, args=(lum_queue, group[:, 24:32]))
+##        lum4_p.start()
+##
+##        lum1 = lum_queue.get()
+##        lum2 = lum_queue.get()
+##        lum3 = lum_queue.get()
+##        lum4 = lum_queue.get()
+##
+##        lum1_p.terminate()
+##        lum2_p.terminate()
+##        lum3_p.terminate()
+##        lum4_p.terminate()
+##
+##
+##        sing1_p = Process(target = self.get_singular_energy_q, args = (sin_queue, group[:, 0:8]))
+##        sing1_p.start()
+##        sing2_p = Process(target = self.get_singular_energy_q, args = (sin_queue, group[:, 8:16]))
+##        sing2_p.start()
+##        sing3_p = Process(target = self.get_singular_energy_q, args = (sin_queue, group[:, 16:24]))
+##        sing3_p.start()
+##        sing4_p = Process(target = self.get_singular_energy, args = (sin_queue, group[:, 24:32]))
+##        sing4_p.start()
+##       
+##        sing1 = sin_queue.get()
+##        sing2 = sin_queue.get()
+##        sing3 = sin_queue.get()
+##        sing4 = sin_queue.get()
+
+##        sing1_p.join()
+##        sing2_p.join()
+##        sing3_p.join()
+##        sing4_p.join()
+####
+##
+##        sing1_p.terminate()
+##        sing2_p.terminate()
+##        sing3_p.terminate()
+##        sing4_p.terminate()
+
+##        pool = Pool(processes = 4)
+##        
+##
+##        results_lum = pool.map(self.get_average_luminance_of_block, (group[:, 0:8], group[:, 8:16], group[:, 16:24], group[:, 24:32]))
+##        results_sing = pool.map(self.get_singular_energy, (group[:, 0:8], group[:, 8:16], group[:, 16:24], group[:, 24:32]))
+##    
+##        
+##        pool.close()
+##        pool.join()
+
+
         if only_rotate == 1:
             avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
             std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
 
             avg_sing = (sing1 + sing2 + sing3 + sing4) / 4
             std_sing = np.std(np.array([sing1, sing2, sing3, sing4]))
+##            avg_lum = (results_lum[0] + results_lum[1] + results_lum[2] + results_lum[3]) / 4
+##            std_lum = np.std(np.array([results_lum[0], results_lum[1], results_lum[2], results_lum[3]]))
+##
+##            avg_sing = (results_sing[0] + results_sing[1] + results_sing[2] + results_sing[3]) / 4
+##            std_sing = np.std(np.array([results_sing[0], results_sing[1], results_sing[2], results_sing[3]]))
 
             return avg_lum, std_lum, avg_sing, std_sing
         elif only_rotate == -1:
             avg_lum = lum1
+##            avg_lum = results_lum[0]
             std_lum = 0
 
             avg_sing = sing1
+##            avg_sing = results_sing[0]
             std_sing = 0
-
+            
             return avg_lum, std_lum, avg_sing, std_sing
         else:
             group[:, 32:40] = fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
@@ -308,6 +393,85 @@ class SignatureExtraction:
             group[:, 72:80] = fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
             group[:, 80:88] = fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
             group[:, 88:96] = fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+
+##            pool2 = Pool(processes = 8)
+##            results_lum_2 = pool2.map(self.get_average_luminance_of_block, (group[:, 32:40], group[:, 40:48], group[:, 48:56], group[:, 56:64], \
+##                                                                         group[:, 64:72], group[:, 72:80], group[:, 80:88], group[:, 88:96]))
+##            results_sing_2 = pool2.map(self.get_singular_energy, (group[:, 32:40], group[:, 40:48], group[:, 48:56], group[:, 56:64], \
+##                                                                         group[:, 64:72], group[:, 72:80], group[:, 80:88], group[:, 88:96]))
+##            pool2.close()
+##            pool2.join()
+
+##            lum5 = lum_queue.get()
+##            lum6 = lum_queue.get()
+##            lum7 = lum_queue.get()
+##            lum8 = lum_queue.get()
+##
+##            lum5_p.terminate()
+##            lum6_p.terminate()
+##            lum7_p.terminate()
+##            lum8_p.terminate()
+##            
+##            lum9_p = Process(target = self.get_average_luminance_of_block, args=(lum_queue, group[:, 64:72]))
+##            lum9_p.start()
+##            lum10_p = Process(target = self.get_average_luminance_of_block, args=(lum_queue, group[:, 72:80]))
+##            lum10_p.start()
+##            lum11_p = Process(target = self.get_average_luminance_of_block, args=(lum_queue, group[:, 80:88]))
+##            lum11_p.start()
+##            lum12_p = Process(target = self.get_average_luminance_of_block, args=(lum_queue, group[:, 88:96]))
+##            lum12_p.start()
+##
+##
+##            lum9 = lum_queue.get()
+##            lum10 = lum_queue.get()
+##            lum11 = lum_queue.get()
+##            lum12 = lum_queue.get()
+##
+##            lum9_p.terminate()
+##            lum10_p.terminate()
+##            lum11_p.terminate()
+##            lum12_p.terminate()
+##
+##
+##            sing5_p = Process(target = self.get_singular_energy, args = (sin_queue, group[:, 32:40]))
+##            sing5_p.start()
+##            sing6_p = Process(target = self.get_singular_energy, args = (sin_queue, group[:, 40:48]))
+##            sing6_p.start()
+##            sing7_p = Process(target = self.get_singular_energy, args = (sin_queue, group[:, 48:56]))
+##            sing7_p.start()
+##            sing8_p = Process(target = self.get_singular_energy, args = (sin_queue, group[:, 56:64]))
+##            sing8_p.start()
+##
+##            sing5 = sin_queue.get()
+##            sing6 = sin_queue.get()
+##            sing7 = sin_queue.get()
+##            sing8 = sin_queue.get()
+##
+##            sing5_p.terminate()
+##            sing6_p.terminate()
+##            sing7_p.terminate()
+##            sing8_p.terminate()
+##            
+##            sing9_p = Process(target = self.get_singular_energy, args = (sin_queue, group[:, 64:72]))
+##            sing9_p.start()
+##            sing10_p = Process(target = self.get_singular_energy, args = (sin_queue, group[:, 72:80]))
+##            sing10_p.start()
+##            sing11_p = Process(target = self.get_singular_energy, args = (sin_queue, group[:, 80:88]))
+##            sing11_p.start()
+##            sing12_p = Process(target = self.get_singular_energy, args = (sin_queue, group[:, 88:96]))
+##            sing12_p.start()
+##            
+##            sing9 = sin_queue.get()
+##            sing10 = sin_queue.get()
+##            sing11 = sin_queue.get()
+##            sing12 = sin_queue.get()
+##            
+##            sing9_p.terminate()
+##            sing10_p.terminate()
+##            sing11_p.terminate()
+##            sing12_p.terminate()
+            
+            
 
             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
@@ -332,6 +496,26 @@ class SignatureExtraction:
 
             avg_sing = (sing1 + sing2 + sing3 + sing4 + sing5 + sing6 + sing7 + sing8 + sing9 + sing10 + sing11 + sing12) / 12
             std_sing = np.std(np.array([sing1, sing2, sing3, sing4, sing5, sing6, sing7, sing8, sing9, sing10, sing11, sing12]))
+
+##            avg_lum = 0
+##            avg_sing = 0
+##            counter = 0
+##            results_lum.extend(results_lum_2)
+##            results_sing.extend(results_sing_2)
+##            while counter < 12:
+##                avg_lum = results_lum[counter] + avg_lum
+##                avg_sing = results_sing[counter] + avg_sing
+##                counter += 1
+##
+##            avg_lum = avg_lum / 12
+##            avg_sing = avg_sing /12
+            
+##            std_lum = np.std(np.array([results_lum[0], results_lum[1], results_lum[2], results_lum[3], results_lum[4], results_lum[5], \
+##                                       results_lum[6], results_lum[7], results_lum[8], results_lum[9], results_lum[10], results_lum[11]]))
+##            std_sing = np.std(np.array([results_sing[0], results_sing[1], results_sing[2], results_sing[3], results_sing[4], results_sing[5], \
+##                                       results_sing[6], results_sing[7], results_sing[8], results_sing[9], results_sing[10], results_sing[11]]))
+
+
 
             return avg_lum, std_lum, avg_sing, std_sing
 
@@ -439,9 +623,11 @@ class SignatureExtraction:
         return fragments_list
 
 
+    def get_singular_energy_q(self, q, block):
+        q.put(self.get_second_singular(block) / self.get_total_energy_of_block(block))
+
     def get_singular_energy(self, block):
         return self.get_second_singular(block) / self.get_total_energy_of_block(block)
-
 
     def get_signature(self, list):
         signature = bitarray()

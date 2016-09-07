@@ -29,7 +29,7 @@ counter = 0
 true_counter = 0
 camera.start_preview()
 time.sleep(5)
-f_report = open("Quality_Reports_Image/twohundredseventydegrees.txt","w")
+f_report = open("Quality_Reports_Image/extras.txt","w")
 for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
     start = time.time()
     image = frame.array
@@ -76,7 +76,7 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port 
     end = time.time()
     f_report.write("Time spend: " + str(end-start) + "\n")
     counter += 1
-    if counter == 10:
+    if counter == 1:
         ratio = true_counter / 10
         f_report.write("Success Ratio: " + str(ratio))
         break

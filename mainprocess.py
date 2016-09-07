@@ -10,13 +10,14 @@ import sys
 
 pre.cv2.setUseOptimized(True)
 
-img_name = raw_input("Please enter image name which will process for feature extraction: ")
-img_name += ".jpg"
+##img_name = raw_input("Please enter image name which will process for feature extraction: ")
+##img_name += ".jpg"
 
 
 image = 0
 try:
-    image = pre.cv2.imread(img_name, 1)
+    image = cv2.imread("flash1.jpg", 1)
+##    image = pre.cv2.imread(img_name, 1)
 except:
     print "ERROR: This image is not exist or unknown format."
 start_time = time.time()
@@ -24,7 +25,7 @@ pre_process = pre.PreProcessing(image, 128, False)
 # pre_install_time = time.time()
 points  = pre_process.get_contour(3)
 # pre_point_time = time.time()
-check = pre_process.get_perspective(points)
+check = pre_process.get_perspective(points, 0)
 if not check:
     print "ERROR:Contour not detected"
     sys.exit(0)

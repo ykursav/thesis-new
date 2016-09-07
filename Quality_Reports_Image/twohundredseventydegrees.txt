@@ -1,31 +1,31 @@
-Hamming distance = 55
+Hamming distance = 69
 Message: replica detected
-Time spend: 2.01234292984
-Hamming distance = 63
-Message: replica detected
-Time spend: 2.01778483391
-Hamming distance = 66
-Message: replica detected
-Time spend: 1.96262216568
-Hamming distance = 49
-Message: replica detected
-Time spend: 1.97236704826
-Hamming distance = 54
-Message: replica detected
-Time spend: 2.04437994957
-Hamming distance = 71
-Message: replica detected
-Time spend: 1.96657109261
-Hamming distance = 76
-Message: replica detected
-Time spend: 2.00151395798
-Hamming distance = 63
-Message: replica detected
-Time spend: 1.96333503723
+Time spend: 2.09979200363
 Hamming distance = 45
 Message: replica detected
-Time spend: 1.99215507507
-Hamming distance = 63
+Time spend: 1.99435400963
+Hamming distance = 36
 Message: replica detected
-Time spend: 1.982899189
-Success Ratio: 1.0
+Time spend: 2.01324105263
+Hamming distance = 65
+Message: replica detected
+Time spend: 2.06360697746
+Hamming distance = 52
+Message: replica detected
+Time spend: 1.95503997803
+Hamming distance = 61
+Message: replica detected
+Time spend: 1.94935107231
+Hamming distance = 58
+Message: replica detected
+Time spend: 1.95502686501
+Hamming distance = 90
+Message: tau3_fail
+Time spend: 1.98310899734
+Hamming distance = 64
+Message: replica detected
+Time spend: 2.09352183342
+Hamming distance = 62
+Message: replica detected
+Time spend: 1.93969678879
+Success Ratio: 0.9
