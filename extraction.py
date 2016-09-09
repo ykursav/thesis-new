@@ -289,47 +289,47 @@ class SignatureExtraction:
             
             return avg_lum, std_lum, avg_sing, std_sing
         else:
-            # group[:, 32:40] = fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            # group[:, 40:48] = fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            # group[:, 48:56] = fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            # group[:, 56:64] = fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            # group[:, 64:72] = fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            # group[:, 72:80] = fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            # group[:, 80:88] = fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            # group[:, 88:96] = fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+            group[:, 32:40] = fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+            group[:, 40:48] = fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+            group[:, 48:56] = fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+            group[:, 56:64] = fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+            group[:, 64:72] = fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+            group[:, 72:80] = fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+            group[:, 80:88] = fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+            group[:, 88:96] = fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
 
             
 
-            # lum5 = self.get_average_luminance_of_block(group[:, 32:40])
-            # lum6 = self.get_average_luminance_of_block(group[:, 40:48])
-            # lum7 = self.get_average_luminance_of_block(group[:, 48:56])
-            # lum8 = self.get_average_luminance_of_block(group[:, 56:64])
-            # lum9 = self.get_average_luminance_of_block(group[:, 64:72])
-            # lum10 = self.get_average_luminance_of_block(group[:, 72:80])
-            # lum11 = self.get_average_luminance_of_block(group[:, 80:88])
-            # lum12 = self.get_average_luminance_of_block(group[:, 88:96])
+            lum5 = self.get_average_luminance_of_block(group[:, 32:40])
+            lum6 = self.get_average_luminance_of_block(group[:, 40:48])
+            lum7 = self.get_average_luminance_of_block(group[:, 48:56])
+            lum8 = self.get_average_luminance_of_block(group[:, 56:64])
+            lum9 = self.get_average_luminance_of_block(group[:, 64:72])
+            lum10 = self.get_average_luminance_of_block(group[:, 72:80])
+            lum11 = self.get_average_luminance_of_block(group[:, 80:88])
+            lum12 = self.get_average_luminance_of_block(group[:, 88:96])
 
-            # sing5 = self.get_singular_energy(group[:, 32:40])
-            # sing6 = self.get_singular_energy(group[:, 40:48])
-            # sing7 = self.get_singular_energy(group[:, 48:56])
-            # sing8 = self.get_singular_energy(group[:, 56:64])
-            # sing9 = self.get_singular_energy(group[:, 64:72])
-            # sing10 = self.get_singular_energy(group[:, 72:80])
-            # sing11 = self.get_singular_energy(group[:, 80:88])
-            # sing12 = self.get_singular_energy(group[:, 88:96])
+            sing5 = self.get_singular_energy(group[:, 32:40])
+            sing6 = self.get_singular_energy(group[:, 40:48])
+            sing7 = self.get_singular_energy(group[:, 48:56])
+            sing8 = self.get_singular_energy(group[:, 56:64])
+            sing9 = self.get_singular_energy(group[:, 64:72])
+            sing10 = self.get_singular_energy(group[:, 72:80])
+            sing11 = self.get_singular_energy(group[:, 80:88])
+            sing12 = self.get_singular_energy(group[:, 88:96])
 
-            # avg_lum = (lum1 + lum2 + lum3 + lum4 + lum5 + lum6 + lum7 + lum8 + lum9 + lum10 + lum11 + lum12) / 12
-            avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
+            avg_lum = (lum1 + lum2 + lum3 + lum4 + lum5 + lum6 + lum7 + lum8 + lum9 + lum10 + lum11 + lum12) / 12
+            # avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
 
-            # std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8, lum9, lum10, lum11, lum12]))
-            std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
+            std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8, lum9, lum10, lum11, lum12]))
+            # std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
 
 
-            # avg_sing = (sing1 + sing2 + sing3 + sing4 + sing5 + sing6 + sing7 + sing8 + sing9 + sing10 + sing11 + sing12) / 12
-            avg_sing = (sing1 + sing2 + sing3 + sing4) / 4
+            avg_sing = (sing1 + sing2 + sing3 + sing4 + sing5 + sing6 + sing7 + sing8 + sing9 + sing10 + sing11 + sing12) / 12
+            # avg_sing = (sing1 + sing2 + sing3 + sing4) / 4
 
-            # std_sing = np.std(np.array([sing1, sing2, sing3, sing4, sing5, sing6, sing7, sing8, sing9, sing10, sing11, sing12]))
-            std_sing = np.std(np.array([sing1, sing2, sing3, sing4]))
+            std_sing = np.std(np.array([sing1, sing2, sing3, sing4, sing5, sing6, sing7, sing8, sing9, sing10, sing11, sing12]))
+            # std_sing = np.std(np.array([sing1, sing2, sing3, sing4]))
 
 
 
