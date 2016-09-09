@@ -20,7 +20,7 @@ try:
 except:
     print "ERROR: This image is not exist or unknown format."
 start_time = time.time()
-pre_process = pre.PreProcessing(image, 128, False)
+pre_process = pre.PreProcessing(image, 64, False)
 # pre_install_time = time.time()
 # points  = pre_process.get_contour(3)
 # # pre_point_time = time.time()
@@ -36,7 +36,7 @@ image3 = pre_process.get_cropped()
 # vis1 = pre_process.get_edged(9)
 # edge_time = time.time()
 
-extract_process = extract.SignatureExtraction(image3, 8, 4, 128)
+extract_process = extract.SignatureExtraction(image3, 8, 4, 64)
 extract_install = time.time()
 
 
