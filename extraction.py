@@ -2,23 +2,23 @@ import numpy as np
 import cv2
 from bitarray import bitarray
 import time
-from multiprocessing import Process, Queue, Pool
+from multiprocessing import Process, Queue, Pool, Manager
 from subprocess import call
 from threading import Thread
-##import copy_reg
-##import types
+# import copy_reg
+# import types
 
 
 
-##def _pickle_method(m):
-##    if m.im_self is None:
-##        return getattr, (m.im_class, m.im_func.func_name)
-##    else:
-##        return getattr, (m.im_self, m.im_func.func_name)
-##
-##copy_reg.pickle(types.MethodType, _pickle_method)
-##
-# camera settings
+# def _pickle_method(m):
+#     if m.im_self is None:
+#         return getattr, (m.im_class, m.im_func.func_name)
+#     else:
+#         return getattr, (m.im_self, m.im_func.func_name)
+
+# copy_reg.pickle(types.MethodType, _pickle_method)
+
+#camera settings
 
 cv2.setUseOptimized(True)
 class SignatureExtraction:
@@ -62,13 +62,15 @@ class SignatureExtraction:
         lum = np.sum(block) / self.N ** 2
         return lum
 
-    def get_total_energy_of_block(self, block):
+    def get_total_energy_of_block(self, block, q):
         block = block.flatten()
         total_energy = 0
         for element in block:
             total_energy += element ** 2
 
-        return total_energy
+        time.sleep(0.1)
+        q.put(total_energy)
+        # return total_energy
 
     def get_second_singular(self, block):
         U, s, V = np.linalg.svd(block)
@@ -380,6 +382,29 @@ class SignatureExtraction:
         q.put(self.get_second_singular(block) / self.get_total_energy_of_block(block))
 
     def get_singular_energy(self, block):
+        sum_energy = 0
+        q = Queue()
+        # p1 = Process(target = self.get_total_energy_of_block, args= (block[0:4, 0:4], q))
+        # # 
+        # time.sleep(0.1)
+        
+        p2 = Process(target=self.get_total_energy_of_block, args=(block[0:4, 4:8],q))
+        p2.start()
+        # p3 = Process(target=self.get_total_energy_of_block, args=(block[4:8, 0:4],q))
+        # p3.start()
+        # p4 = Process(target=self.get_total_energy_of_block, args=(block[4:8, 4:8],q))
+        # p4.start()
+        counter = 0
+        while counter < 4:
+            sum_energy += 3
+            counter += 1
+        # p1.start()
+        # p1.join()
+        # p2.join()
+        # p3.join()
+        # p4.join()
+        print sum_energy
+        print self.get_total_energy_of_block(block)
         return self.get_second_singular(block) / self.get_total_energy_of_block(block)
 
     def get_signature(self, list):
