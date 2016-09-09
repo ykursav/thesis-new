@@ -21,8 +21,7 @@ from threading import Thread
 # camera settings
 
 
-def get_energy(i):
-    return i ** 2
+
 cv2.setUseOptimized(True)
 class SignatureExtraction:
     '''N block size, M overlapping pixels, L image size'''
@@ -65,11 +64,13 @@ class SignatureExtraction:
         lum = np.sum(block) / self.N ** 2
         return lum
 
-    def get_total_energy_of_block(self, element):
+    def get_total_energy_of_block(self, block):
+        block = block.flatten()
         total_energy = 0
-        total_energy += element ** 2
+        for element in block:
+            total_energy += element ** 2
+
         return total_energy
-        # return total_energy
 
     def get_second_singular(self, block):
         U, s, V = np.linalg.svd(block)
@@ -381,17 +382,9 @@ class SignatureExtraction:
         q.put(self.get_second_singular(block) / self.get_total_energy_of_block(block))
 
     def get_singular_energy(self, block):
-        sum_energy = 0
-        p = mp.ProcessingPool(4)
-        result = p.map(self.get_total_energy_of_block, [3, 4, 5])
-        print result
-        # 
-        # for res in result:
-        #     sum_energy += res
-        # print sum_energy
-        # print self.get_total_energy_of_block(block)
-        # return self.get_second_singular(block) / self.get_total_energy_of_block(block)
+        return self.get_second_singular(block) / self.get_total_energy_of_block(block)
 
+ 
     def get_signature(self, list):
         signature = bitarray()
         counter_list = 0
