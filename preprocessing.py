@@ -5,7 +5,7 @@ import numpy as np
 # import time
 cv2.setUseOptimized(True)
 
-SCALED_IMAGE = [64, 64]
+SCALED_IMAGE = [128, 128]
 
 class PreProcessing:
     def __init__(self, image, L, hist_eq):
