@@ -299,7 +299,6 @@ class SignatureExtraction:
             group[:, 88:96] = fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
 
             
-
             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
             lum7 = self.get_average_luminance_of_block(group[:, 48:56])
