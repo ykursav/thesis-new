@@ -21,7 +21,8 @@ try:
 except:
     print "ERROR: This image is not exist or unknown format."
 start_time = time.time()
-pre_process = pre.PreProcessing(image, 128, False)
+pre_process = pre.PreProcessing(128, False)
+pre_process.set_image(image)
 # pre_install_time = time.time()
 points  = pre_process.get_contour(3)
 # pre_point_time = time.time()
@@ -37,7 +38,8 @@ image3 = pre_process.get_cropped()
 # vis1 = pre_process.get_edged(9)
 # edge_time = time.time()
 
-extract_process = extract.SignatureExtraction(image3, 8, 4, 128)
+extract_process = extract.SignatureExtraction(8, 4, 128)
+extract_process.set_image(image3)
 extract_install = time.time()
 
 
@@ -60,11 +62,10 @@ f = open("signature.bin", "rb")
 sigOrig.fromfile(f)
 # print sigOrig, len(sigOrig)
 # print sigGen, len(sigGen)
-
-matching_process = match.SignatureMatching(sigOrig[0:476], sigGen, 48, 77, 8, 56, 44)
-
-print sigGen
-print sigOrig
+matching_process = match.SignatureMatching(sigOrig[0:238], 24, 38, 4, 28, 22)
+matching_process.set_signature(sigGen)
+print len(sigGen)
+print len(sigOrig)
 print matching_process.signature_rejection()
 end_time = time.time()
 # print "Preinstall time:" + str(pre_install_time - start_time)

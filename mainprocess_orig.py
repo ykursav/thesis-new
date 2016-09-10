@@ -36,7 +36,8 @@ image3 = pre_process.get_cropped()
 # vis1 = pre_process.get_edged(9)
 # edge_time = time.time()
 
-extract_process = extract.SignatureExtraction(image3, 8, 4, 128)
+extract_process = extract.SignatureExtraction(8, 4, 128)
+extract_process.set_image(image3)
 extract_install = time.time()
 
 
@@ -50,7 +51,7 @@ extraction_time = time.time()
 
 sigOrig = extract_process.get_signature(fragments_list)
 
-
+print sigOrig
 f = open("signature.bin", "wb")
 f.write(sigOrig.tobytes())
 f.close()

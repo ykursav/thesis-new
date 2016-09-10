@@ -1,0 +1,31 @@
+Hamming distance = 13
+Message: replica detected
+Time spend: 0.368453979492
+Hamming distance = 19
+Message: replica detected
+Time spend: 0.370006084442
+Hamming distance = 17
+Message: replica detected
+Time spend: 0.355991125107
+Hamming distance = 14
+Message: replica detected
+Time spend: 0.388472080231
+Hamming distance = 14
+Message: replica detected
+Time spend: 0.363240003586
+Hamming distance = 17
+Message: replica detected
+Time spend: 0.358687877655
+Hamming distance = 17
+Message: replica detected
+Time spend: 0.371690988541
+Hamming distance = 15
+Message: replica detected
+Time spend: 0.376762866974
+Hamming distance = 15
+Message: replica detected
+Time spend: 0.376139879227
+Hamming distance = 18
+Message: replica detected
+Time spend: 0.383729934692
+Success Ratio: 1.0

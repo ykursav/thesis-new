@@ -1,4 +1,4 @@
-Hamming distance = 168
-Message: tau3_fail
-Time spend: 2.24559283257
-Success Ratio: 0
+Hamming distance = 19
+Message: replica detected
+Time spend: 0.443779945374
+Success Ratio: 0.1

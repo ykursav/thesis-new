@@ -8,16 +8,14 @@ cv2.setUseOptimized(True)
 SCALED_IMAGE = [128, 128]
 
 class PreProcessing:
-    def __init__(self, image, L, hist_eq):
-        height, width = image.shape[:2]
+    def __init__(self, L, hist_eq):
 
-        image = cv2.resize(image, (int(width * (400.0 / height)), 400), cv2.INTER_LINEAR)
 
         # cv2.imshow("res",image)
         # cv2.waitKey(0)
         # cv2.destroyAllWindows()
         # start_time = time.time()
-        self.image = image
+        self.image = np.array([])
         self.L = L
         self.hist_eq = hist_eq
         self.width = 0
@@ -64,6 +62,11 @@ class PreProcessing:
     def gray_image(self, image):
         image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         return image_gray
+
+    def set_image(self, image):
+##        height, width = image.shape[:2]
+##        image = cv2.resize(image, (int(width * (400.0 / height)), 400), cv2.INTER_LINEAR)
+        self.image = image
 
     def get_width_height(self, image):
         height, width = image.shape[:2]
