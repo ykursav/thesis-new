@@ -194,7 +194,7 @@ class PreProcessing:
                 warped_image = cv2.resize(warped_image, (300, 500), cv2.INTER_LINEAR)            
             blurred = self.get_blurred(warped_image, 3)
             self.warped = blurred
-            #cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
+            cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
             return True
 
 
