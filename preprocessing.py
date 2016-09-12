@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # import time
-cv2.setUseOptimized(True)
+##cv2.setUseOptimized(True)
 
 SCALED_IMAGE = [128, 128]
 
@@ -91,6 +91,7 @@ class PreProcessing:
         __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         approx = 0
         first = False
+        no_contour = True
         last_cnt = 0
         ##approx_cnt = cv2.drawContours(self.contours, contours, -1, (0, 255, 0), -1)
         for cnt in contours:
@@ -101,13 +102,14 @@ class PreProcessing:
                     last_cnt = cnt
                     approx = cv2.approxPolyDP(cnt, epsilon, True)
                     first = True
-            elif cv2.contourArea(last_cnt) < cv2.contourArea(cnt):
+                    no_contour = False
+            elif (cv2.contourArea(last_cnt) < cv2.contourArea(cnt)):
                 if self.check_points(new_approx):
                     last_cnt = cnt
                     approx = new_approx
-            else:
-                pass
-        new_image = self.image
+                    no_contour = False
+
+        
         
         ##approx_cnt = cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), -1)
 ##        cv2.imshow("approx cnt", approx_cnt)
@@ -192,7 +194,7 @@ class PreProcessing:
                 warped_image = cv2.resize(warped_image, (300, 500), cv2.INTER_LINEAR)            
             blurred = self.get_blurred(warped_image, 3)
             self.warped = blurred
-            cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
+            #cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
             return True
 
 

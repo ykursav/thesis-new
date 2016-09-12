@@ -1,0 +1,31 @@
+0Hamming distance = 60
+Message: replica detected
+Time spend: 0.431337833405
+1Hamming distance = 110
+Message: tau1_fail
+Time spend: 0.360582113266
+2Hamming distance = 112
+Message: tau1_fail
+Time spend: 0.381529092789
+3Hamming distance = 60
+Message: replica detected
+Time spend: 0.337368965149
+4Hamming distance = 104
+Message: tau1_fail
+Time spend: 0.348839998245
+5Hamming distance = 62
+Message: replica detected
+Time spend: 0.339218854904
+6Hamming distance = 78
+Message: tau3_fail
+Time spend: 0.338490009308
+7Hamming distance = 109
+Message: tau1_fail
+Time spend: 0.342742919922
+8Hamming distance = 67
+Message: tau3_fail
+Time spend: 0.338171005249
+9Hamming distance = 111
+Message: tau1_fail
+Time spend: 0.347268104553
+Success Ratio: 0.03

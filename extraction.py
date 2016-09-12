@@ -2,9 +2,10 @@ import numpy as np
 import cv2
 from bitarray import bitarray
 import time
+from multiprocessing import Pool
 import pathos.multiprocessing as mp
 from subprocess import call
-from threading import Thread
+##from threading import Thread
 # import copy_reg
 # import types
 
@@ -22,7 +23,7 @@ from threading import Thread
 
 
 
-cv2.setUseOptimized(True)
+##cv2.setUseOptimized(True)
 class SignatureExtraction:
     '''N block size, M overlapping pixels, L image size'''
     def __init__(self, N, M, L):
@@ -62,6 +63,8 @@ class SignatureExtraction:
 
     def get_average_luminance_of_block(self, block):
         '''luminance calculation block'''
+##        lum1 = [row for row in block]
+##        lum1 = sum(sum(lum1)) / (self.N ** 2)
         lum = np.sum(block) / (self.N ** 2)
         return lum
 
@@ -258,11 +261,11 @@ class SignatureExtraction:
 
     def get_fragment(self, rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
     fVertical180, fHorizontal180, fVertical270, fHorizontal270, x, y, only_rotate):
-        group = np.zeros((8, 96))
-        group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-        group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-        group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-        group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##        group = np.zeros((8, 96))
+##        group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##        group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##        group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##        group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
 
 
         
@@ -278,10 +281,14 @@ class SignatureExtraction:
 
 
         if only_rotate == 1:
-            lum1 = self.get_average_luminance_of_block(group[:, 0:8])
-            lum2 = self.get_average_luminance_of_block(group[:, 8:16])
-            lum3 = self.get_average_luminance_of_block(group[:, 16:24])
-            lum4 = self.get_average_luminance_of_block(group[:, 24:32])
+##            pool = mp.ProcessingPool(node = 4)
+##            results = pool.imap(self.get_average_luminance_of_block, group[:, 0:8],group[:, 8:16],group[:, 16:24],group[:, 24:32])
+##            results = results(list)
+
+            lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
             avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
             std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
 
@@ -292,42 +299,46 @@ class SignatureExtraction:
         
 ##            avg_sing = (sing1 + sing2 + sing3 + sing4) / 4
 ##            std_sing = np.std(np.array([sing1, sing2, sing3, sing4]))
-            avg_sing = 0
-            std_sing = 0
+##            avg_sing = 0
+##            std_sing = 0
 
-            return avg_lum, std_lum, avg_sing, std_sing
+##            return avg_lum, std_lum, avg_sing, std_sing
+            return avg_lum, std_lum
+
         elif only_rotate == -1:
-            lum1 = self.get_average_luminance_of_block(group[:, 0:8])
+            lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
             avg_lum = lum1
             std_lum = 0
 
-            sing1 = self.get_singular_energy(group[:, 0:8])
-            avg_sing = sing1
-            std_sing = 0
+##            sing1 = self.get_singular_energy(group[:, 0:8])
+##            avg_sing = sing1
+##            std_sing = 0
             
-            return avg_lum, std_lum, avg_sing, std_sing
-        else:
-            group[:, 32:40] = fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            group[:, 40:48] = fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            group[:, 48:56] = fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            group[:, 56:64] = fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            group[:, 64:72] = fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            group[:, 72:80] = fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            group[:, 80:88] = fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
-            group[:, 88:96] = fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##            return avg_lum, std_lum, avg_sing, std_sing
+            return avg_lum, std_lum
 
-            lum1 = self.get_average_luminance_of_block(group[:, 0:8])
-            lum2 = self.get_average_luminance_of_block(group[:, 8:16])
-            lum3 = self.get_average_luminance_of_block(group[:, 16:24])
-            lum4 = self.get_average_luminance_of_block(group[:, 24:32])
-            lum5 = self.get_average_luminance_of_block(group[:, 32:40])
-            lum6 = self.get_average_luminance_of_block(group[:, 40:48])
-            lum7 = self.get_average_luminance_of_block(group[:, 48:56])
-            lum8 = self.get_average_luminance_of_block(group[:, 56:64])
-            lum9 = self.get_average_luminance_of_block(group[:, 64:72])
-            lum10 = self.get_average_luminance_of_block(group[:, 72:80])
-            lum11 = self.get_average_luminance_of_block(group[:, 80:88])
-            lum12 = self.get_average_luminance_of_block(group[:, 88:96])
+        else:
+##            group[:, 32:40] = fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##            group[:, 40:48] = fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##            group[:, 48:56] = fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##            group[:, 56:64] = fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##            group[:, 64:72] = fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##            group[:, 72:80] = fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##            group[:, 80:88] = fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+##            group[:, 88:96] = fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
+
+            lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum5 = self.get_average_luminance_of_block(fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum6 = self.get_average_luminance_of_block(fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum7 = self.get_average_luminance_of_block(fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum8 = self.get_average_luminance_of_block(fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum9 = self.get_average_luminance_of_block(fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum10 = self.get_average_luminance_of_block(fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum11 = self.get_average_luminance_of_block(fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            lum12 = self.get_average_luminance_of_block(fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
 
 ##            sing1 = self.get_singular_energy(group[:, 0:8])
 ##            sing2 = self.get_singular_energy(group[:, 8:16])
@@ -348,17 +359,18 @@ class SignatureExtraction:
             std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8, lum9, lum10, lum11, lum12]))
             # std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
 
-            avg_sing = 0
+##            avg_sing = 0
 ##            avg_sing = (sing1 + sing2 + sing3 + sing4 + sing5 + sing6 + sing7 + sing8 + sing9 + sing10 + sing11 + sing12) / 12
             # avg_sing = (sing1 + sing2 + sing3 + sing4) / 4
             
-            std_sing = 0
+##            std_sing = 0
 ##            std_sing = np.std(np.array([sing1, sing2, sing3, sing4, sing5, sing6, sing7, sing8, sing9, sing10, sing11, sing12]))
             # std_sing = np.std(np.array([sing1, sing2, sing3, sing4]))
 
 
 
-            return avg_lum, std_lum, avg_sing, std_sing
+##            return avg_lum, std_lum, avg_sing, std_sing
+            return avg_lum, std_lum
 
     def get_all_fragments(self):
 ##        fragments_list = [[],[],[],[]]
@@ -373,24 +385,24 @@ class SignatureExtraction:
 ##        append_std_sing = fragments_list[2].append
 ##        append_avg_sing = fragments_list[3].append
 
-        while(True):
+        while(counter_x < 14 or counter_y < 14):
             if counter_x == 15:
                 counter_y += 1
                 counter_x = counter_y
             if counter_x == counter_y or counter_x == 14:
                 if counter_x == 14 and counter_y == 14:
                     fragment_time = time.time()
-                    avg_lum, std_lum, avg_sing, std_sing = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
+                    avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, -1)
                     fragment_end_time = time.time()
                     append_std_lum(std_lum)
                     append_avg_lum(avg_lum)
 ##                    append_std_sing(std_sing)
 ##                    append_avg_sing(avg_sing)
-                    break
+##                    break
                 else:
                     fragment_time = time.time()
-                    avg_lum, std_lum, avg_sing, std_sing = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
+                    avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 1)
                     fragment_end_time = time.time()
                     append_std_lum(std_lum)
@@ -398,7 +410,7 @@ class SignatureExtraction:
 ##                    append_std_sing(std_sing)
 ##                    append_avg_sing(avg_sing)
             else:
-                avg_lum, std_lum, avg_sing, std_sing = self.get_fragment(rot0, rot90, rot180, rot270,fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
+                avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270,fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 0)
                 append_std_lum(std_lum)
                 append_avg_lum(avg_lum)
@@ -408,11 +420,11 @@ class SignatureExtraction:
         return fragments_list
 
 
-    def get_singular_energy_q(self, q, block):
-        q.put(self.get_second_singular(block) / self.get_total_energy_of_block(block))
-
-    def get_singular_energy(self, block):
-##        return self.get_second_singular(block) / self.get_total_energy_of_block(block)
+##    def get_singular_energy_q(self, q, block):
+##        q.put(self.get_second_singular(block) / self.get_total_energy_of_block(block))
+##
+##    def get_singular_energy(self, block):
+####        return self.get_second_singular(block) / self.get_total_energy_of_block(block)
         return 0
 
  

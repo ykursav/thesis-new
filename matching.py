@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from bitarray import bitarray
 
-cv2.setUseOptimized(True)
+##cv2.setUseOptimized(True)
 
 class SignatureMatching:
     '''This class includes functions for signature matching'''

@@ -7,6 +7,7 @@ from bitarray import bitarray
 import time
 import multiprocessing
 import sys
+import datetime
 
 pre.cv2.setUseOptimized(True)
 
@@ -20,8 +21,16 @@ try:
 ##    image = pre.cv2.imread(img_name, 1)
 except:
     print "ERROR: This image is not exist or unknown format."
-start_time = time.time()
+
+extract_process = extract.SignatureExtraction(8, 4, 128)
 pre_process = pre.PreProcessing(128, False)
+sigOrig = bitarray()
+f = open("signature.bin", "rb")
+#signatures must import from a binary file
+sigOrig.fromfile(f)
+matching_process = match.SignatureMatching(sigOrig[0:238], 24, 38, 4, 28, 22)
+start_time = time.time()
+print "start" + str(datetime.datetime.now())
 pre_process.set_image(image)
 # pre_install_time = time.time()
 points  = pre_process.get_contour(3)
@@ -38,7 +47,8 @@ image3 = pre_process.get_cropped()
 # vis1 = pre_process.get_edged(9)
 # edge_time = time.time()
 
-extract_process = extract.SignatureExtraction(8, 4, 128)
+
+
 extract_process.set_image(image3)
 extract_install = time.time()
 
@@ -56,18 +66,16 @@ sigGen = extract_process.get_signature(fragments_list)
 
 signature_time = time.time()
 
-sigOrig = bitarray()
-f = open("signature.bin", "rb")
-#signatures must import from a binary file
-sigOrig.fromfile(f)
+
 # print sigOrig, len(sigOrig)
 # print sigGen, len(sigGen)
-matching_process = match.SignatureMatching(sigOrig[0:238], 24, 38, 4, 28, 22)
+
 matching_process.set_signature(sigGen)
 print len(sigGen)
 print len(sigOrig)
 print matching_process.signature_rejection()
 end_time = time.time()
+print datetime.datetime.now()
 # print "Preinstall time:" + str(pre_install_time - start_time)
 # print "Points time:" + str(pre_point_time - pre_install_time)
 # print "warped_time" + str(warped_time - pre_point_time)

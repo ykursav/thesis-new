@@ -1,0 +1,144 @@
+reached zero
+0.409312963486
+         1124 function calls (1121 primitive calls) in 0.439 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.008    0.008    0.439    0.439 thread.py:1(<module>)
+        4    0.401    0.100    0.401    0.100 {time.sleep}
+        1    0.003    0.003    0.012    0.012 subprocess.py:387(<module>)
+        1    0.004    0.004    0.010    0.010 threading.py:1(<module>)
+        1    0.004    0.004    0.009    0.009 pickle.py:25(<module>)
+      119    0.001    0.000    0.005    0.000 re.py:230(_compile)
+        4    0.000    0.000    0.005    0.001 threading.py:726(start)
+      117    0.001    0.000    0.004    0.000 re.py:138(match)
+        3    0.000    0.000    0.004    0.001 sre_compile.py:567(compile)
+        1    0.002    0.002    0.003    0.003 collections.py:1(<module>)
+        5    0.001    0.000    0.003    0.001 threading.py:656(__init__)
+        4    0.000    0.000    0.003    0.001 threading.py:603(wait)
+        4    0.000    0.000    0.002    0.001 threading.py:309(wait)
+        1    0.000    0.000    0.002    0.002 warnings.py:46(filterwarnings)
+        2    0.000    0.000    0.002    0.001 re.py:192(compile)
+        3    0.000    0.000    0.002    0.001 sre_parse.py:686(parse)
+        4    0.002    0.000    0.002    0.000 {thread.start_new_thread}
+       22    0.002    0.000    0.002    0.000 {method 'acquire' of 'thread.lock' objects}
+       10    0.000    0.000    0.002    0.000 threading.py:242(Condition)
+        3    0.000    0.000    0.002    0.001 sre_parse.py:310(_parse_sub)
+        5    0.000    0.000    0.002    0.000 threading.py:542(Event)
+        3    0.000    0.000    0.002    0.001 sre_compile.py:552(_code)
+        3    0.001    0.000    0.002    0.001 sre_parse.py:388(_parse)
+       10    0.002    0.000    0.002    0.000 threading.py:260(__init__)
+        5    0.000    0.000    0.002    0.000 threading.py:561(__init__)
+        1    0.001    0.001    0.001    0.001 heapq.py:31(<module>)
+      4/3    0.000    0.000    0.001    0.000 sre_compile.py:64(_compile)
+        3    0.000    0.000    0.001    0.000 sre_compile.py:433(_compile_info)
+       41    0.000    0.000    0.001    0.000 sre_parse.py:210(get)
+        1    0.000    0.000    0.001    0.001 threading.py:1090(__init__)
+      117    0.001    0.000    0.001    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+       47    0.000    0.000    0.001    0.000 sre_parse.py:191(__next)
+        3    0.000    0.000    0.000    0.000 sre_compile.py:228(_compile_charset)
+        3    0.000    0.000    0.000    0.000 sre_compile.py:256(_optimize_charset)
+        4    0.000    0.000    0.000    0.000 threading.py:709(_set_daemon)
+        4    0.000    0.000    0.000    0.000 threading.py:629(_newname)
+      5/4    0.000    0.000    0.000    0.000 sre_parse.py:149(getwidth)
+      136    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+       20    0.000    0.000    0.000    0.000 threading.py:59(__init__)
+  138/137    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {dir}
+       25    0.000    0.000    0.000    0.000 sre_parse.py:147(append)
+        4    0.000    0.000    0.000    0.000 threading.py:297(_acquire_restore)
+        1    0.000    0.000    0.000    0.000 pickle.py:827(Unpickler)
+        1    0.000    0.000    0.000    0.000 threading.py:576(set)
+        1    0.000    0.000    0.000    0.000 threading.py:640(Thread)
+        1    0.000    0.000    0.000    0.000 collections.py:26(OrderedDict)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:411(_mk_bitmap)
+        3    0.000    0.000    0.000    0.000 sre_parse.py:187(__init__)
+        1    0.000    0.000    0.000    0.000 pickle.py:171(Pickler)
+        5    0.000    0.000    0.000    0.000 threading.py:300(_is_owned)
+        4    0.000    0.000    0.000    0.000 threading.py:1152(currentThread)
+        1    0.000    0.000    0.000    0.000 threading.py:400(notifyAll)
+        6    0.000    0.000    0.000    0.000 sre_parsstart2016-09-11 11:14:22.870224
+238
+240
+0 1
+(True, 1, 'replica detected')
+2016-09-11 11:14:23.654165
+Total time:0.783942937851
+start2016-09-11 11:14:22.833404
+238
+240
+0 1
+(True, 1, 'replica detected')
+2016-09-11 11:14:23.741937
+Total time:0.908524990082
+start2016-09-11 11:14:22.964667
+238
+240
+0 1
+(True, 1, 'replica detected')
+2016-09-11 11:14:23.756387
+Total time:0.791718006134
+start2016-09-11 11:14:23.262084
+238
+240
+0 1
+(True, 1, 'replica detected')
+2016-09-11 11:14:23.982353
+Total time:0.72029209137
+e.py:139(__getitem__)
+       10    0.000    0.000    0.000    0.000 sre_parse.py:204(match)
+       15    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+       19    0.000    0.000    0.000    0.000 {isinstance}
+        6    0.000    0.000    0.000    0.000 sre_compile.py:546(isstring)
+        1    0.000    0.000    0.000    0.000 keyword.py:11(<module>)
+        1    0.000    0.000    0.000    0.000 subprocess.py:647(Popen)
+        4    0.000    0.000    0.000    0.000 threading.py:294(_release_save)
+       28    0.000    0.000    0.000    0.000 {ord}
+       11    0.000    0.000    0.000    0.000 {method 'find' of 'bytearray' objects}
+        8    0.000    0.000    0.000    0.000 {min}
+        1    0.000    0.000    0.000    0.000 threading.py:373(notify)
+        3    0.000    0.000    0.000    0.000 {_sre.compile}
+        6    0.000    0.000    0.000    0.000 {range}
+        9    0.000    0.000    0.000    0.000 threading.py:64(_note)
+        2    0.000    0.000    0.000    0.000 {time.time}
+       12    0.000    0.000    0.000    0.000 {_sre.getlower}
+        1    0.000    0.000    0.000    0.000 sre_compile.py:428(_simple)
+        4    0.000    0.000    0.000    0.000 threading.py:1008(daemon)
+        1    0.000    0.000    0.000    0.000 collections.py:390(Counter)
+        9    0.000    0.000    0.000    0.000 {method 'release' of 'thread.lock' objects}
+        4    0.000    0.000    0.000    0.000 sre_parse.py:135(__len__)
+        4    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 {method 'setter' of 'property' objects}
+        3    0.000    0.000    0.000    0.000 sre_parse.py:67(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:255(_Condition)
+        1    0.000    0.000    0.000    0.000 threading.py:125(_RLock)
+        1    0.000    0.000    0.000    0.000 threading.py:552(_Event)
+        4    0.000    0.000    0.000    0.000 sre_parse.py:90(__init__)
+        6    0.000    0.000    0.000    0.000 {thread.get_ident}
+        4    0.000    0.000    0.000    0.000 threading.py:570(isSet)
+        1    0.000    0.000    0.000    0.000 threading.py:789(_set_ident)
+        1    0.000    0.000    0.000    0.000 {posix.sysconf}
+        1    0.000    0.000    0.000    0.000 threading.py:423(_Semaphore)
+        1    0.000    0.000    0.000    0.000 subprocess.py:400(CalledProcessError)
+        1    0.000    0.000    0.000    0.000 threading.py:1058(_Timer)
+        1    0.000    0.000    0.000    0.000 threading.py:57(_Verbose)
+        3    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {getattr}
+        1    0.000    0.000    0.000    0.000 threading.py:1128(_DummyThread)
+        1    0.000    0.000    0.000    0.000 {method 'insert' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 pickle.py:82(_Stop)
+        1    0.000    0.000    0.000    0.000 threading.py:515(_BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 {issubclass}
+        1    0.000    0.000    0.000    0.000 pickle.py:58(PickleError)
+        1    0.000    0.000    0.000    0.000 threading.py:1088(_MainThread)
+        1    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 pickle.py:69(UnpicklingError)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:143(__setitem__)
+        1    0.000    0.000    0.000    0.000 pickle.py:62(PicklingError)
+        1    0.000    0.000    0.000    0.000 pickle.py:1261(_EmptyClass)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 threading.py:1097(_set_daemon)
+
+
