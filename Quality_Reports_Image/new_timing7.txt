@@ -1,31 +1,301 @@
-0Hamming distance = 153
-Message: tau1_fail
-Time spend: 0.384170055389
-1Hamming distance = 142
-Message: tau1_fail
-Time spend: 0.340752124786
-2Hamming distance = 140
-Message: tau1_fail
-Time spend: 0.337797880173
-3Hamming distance = 114
-Message: tau1_fail
-Time spend: 0.3329641819
-4Hamming distance = 151
-Message: tau1_fail
-Time spend: 0.332174062729
-5Hamming distance = 150
-Message: tau1_fail
-Time spend: 0.330017805099
-6Hamming distance = 105
-Message: tau1_fail
-Time spend: 0.339421033859
-7Hamming distance = 60
+0Hamming distance = 17
 Message: replica detected
-Time spend: 0.33275604248
-8Hamming distance = 109
-Message: tau1_fail
-Time spend: 0.336865901947
-9Hamming distance = 112
-Message: tau1_fail
-Time spend: 0.335426807404
-Success Ratio: 0.01
+Time spend: 0.364493846893
+1Hamming distance = 18
+Message: replica detected
+Time spend: 0.316745996475
+2Hamming distance = 19
+Message: replica detected
+Time spend: 0.332994937897
+3Hamming distance = 20
+Message: replica detected
+Time spend: 0.326897144318
+4Hamming distance = 19
+Message: replica detected
+Time spend: 0.328804016113
+5Hamming distance = 21
+Message: replica detected
+Time spend: 0.324904918671
+6Hamming distance = 22
+Message: replica detected
+Time spend: 0.324159860611
+7Hamming distance = 27
+Message: replica detected
+Time spend: 0.327739953995
+8Hamming distance = 14
+Message: replica detected
+Time spend: 0.330514907837
+9Hamming distance = 13
+Message: replica detected
+Time spend: 0.331237077713
+10Hamming distance = 14
+Message: replica detected
+Time spend: 0.327887058258
+11Hamming distance = 19
+Message: replica detected
+Time spend: 0.327921152115
+12Hamming distance = 12
+Message: replica detected
+Time spend: 0.337080001831
+13Hamming distance = 16
+Message: replica detected
+Time spend: 0.330929994583
+14Hamming distance = 34
+Message: replica detected
+Time spend: 0.331824064255
+15Hamming distance = 27
+Message: replica detected
+Time spend: 0.32851099968
+16Hamming distance = 21
+Message: replica detected
+Time spend: 0.330821990967
+17Hamming distance = 26
+Message: replica detected
+Time spend: 0.326886892319
+18Hamming distance = 19
+Message: replica detected
+Time spend: 0.333034992218
+19Hamming distance = 23
+Message: replica detected
+Time spend: 0.328856945038
+20Hamming distance = 35
+Message: replica detected
+Time spend: 0.33126616478
+21Hamming distance = 23
+Message: replica detected
+Time spend: 0.316068172455
+22Hamming distance = 26
+Message: replica detected
+Time spend: 0.331647872925
+23Hamming distance = 27
+Message: replica detected
+Time spend: 0.327323913574
+24Hamming distance = 18
+Message: replica detected
+Time spend: 0.329157114029
+25Hamming distance = 20
+Message: replica detected
+Time spend: 0.325789928436
+26Hamming distance = 20
+Message: replica detected
+Time spend: 0.325382947922
+27Hamming distance = 18
+Message: replica detected
+Time spend: 0.320821046829
+28Hamming distance = 22
+Message: replica detected
+Time spend: 0.309034824371
+29Hamming distance = 20
+Message: replica detected
+Time spend: 0.317720890045
+30Hamming distance = 19
+Message: replica detected
+Time spend: 0.32070016861
+31Hamming distance = 20
+Message: replica detected
+Time spend: 0.308187007904
+32Hamming distance = 32
+Message: replica detected
+Time spend: 0.325901985168
+33Hamming distance = 23
+Message: replica detected
+Time spend: 0.310180902481
+34Hamming distance = 21
+Message: replica detected
+Time spend: 0.314813137054
+35Hamming distance = 19
+Message: replica detected
+Time spend: 0.310883998871
+36Hamming distance = 18
+Message: replica detected
+Time spend: 0.313884973526
+37Hamming distance = 31
+Message: replica detected
+Time spend: 0.360089063644
+38Hamming distance = 24
+Message: replica detected
+Time spend: 0.313415050507
+39Hamming distance = 20
+Message: replica detected
+Time spend: 0.311192989349
+40Hamming distance = 18
+Message: replica detected
+Time spend: 0.314230918884
+41Hamming distance = 20
+Message: replica detected
+Time spend: 0.312699079514
+42Hamming distance = 26
+Message: replica detected
+Time spend: 0.311357021332
+43Hamming distance = 29
+Message: replica detected
+Time spend: 0.312391996384
+44Hamming distance = 20
+Message: replica detected
+Time spend: 0.317273855209
+45Hamming distance = 21
+Message: replica detected
+Time spend: 0.311131000519
+46Hamming distance = 21
+Message: replica detected
+Time spend: 0.315579891205
+47Hamming distance = 23
+Message: replica detected
+Time spend: 0.310422897339
+48Hamming distance = 19
+Message: replica detected
+Time spend: 0.313088178635
+49Hamming distance = 22
+Message: replica detected
+Time spend: 0.311980962753
+50Hamming distance = 17
+Message: replica detected
+Time spend: 0.315673112869
+51Hamming distance = 20
+Message: replica detected
+Time spend: 0.314644098282
+52Hamming distance = 30
+Message: replica detected
+Time spend: 0.315629005432
+53Hamming distance = 25
+Message: replica detected
+Time spend: 0.315997838974
+54Hamming distance = 15
+Message: replica detected
+Time spend: 0.314213991165
+55Hamming distance = 18
+Message: replica detected
+Time spend: 0.314025878906
+56Hamming distance = 20
+Message: replica detected
+Time spend: 0.314606904984
+57Hamming distance = 16
+Message: replica detected
+Time spend: 0.314785957336
+58Hamming distance = 18
+Message: replica detected
+Time spend: 0.31708407402
+59Hamming distance = 21
+Message: replica detected
+Time spend: 0.314032077789
+60Hamming distance = 19
+Message: replica detected
+Time spend: 0.317028045654
+61Hamming distance = 21
+Message: replica detected
+Time spend: 0.317595005035
+62Hamming distance = 23
+Message: replica detected
+Time spend: 0.320060968399
+63Hamming distance = 29
+Message: replica detected
+Time spend: 0.312884092331
+64Hamming distance = 16
+Message: replica detected
+Time spend: 0.315987110138
+65Hamming distance = 17
+Message: replica detected
+Time spend: 0.316384792328
+66Hamming distance = 29
+Message: replica detected
+Time spend: 0.317386865616
+67Hamming distance = 24
+Message: replica detected
+Time spend: 0.312547206879
+68Hamming distance = 28
+Message: replica detected
+Time spend: 0.314098119736
+69Hamming distance = 26
+Message: replica detected
+Time spend: 0.316391944885
+70Hamming distance = 20
+Message: replica detected
+Time spend: 0.316770076752
+71Hamming distance = 25
+Message: replica detected
+Time spend: 0.313985109329
+72Hamming distance = 16
+Message: replica detected
+Time spend: 0.318687915802
+73Hamming distance = 14
+Message: replica detected
+Time spend: 0.314857006073
+74Hamming distance = 14
+Message: replica detected
+Time spend: 0.321918010712
+75Hamming distance = 20
+Message: replica detected
+Time spend: 0.31331205368
+76Hamming distance = 13
+Message: replica detected
+Time spend: 0.317453861237
+77Hamming distance = 11
+Message: replica detected
+Time spend: 0.314193964005
+78Hamming distance = 21
+Message: replica detected
+Time spend: 0.32053899765
+79Hamming distance = 18
+Message: replica detected
+Time spend: 0.311892986298
+80Hamming distance = 27
+Message: replica detected
+Time spend: 0.317893981934
+81Hamming distance = 26
+Message: replica detected
+Time spend: 0.312977075577
+82Hamming distance = 20
+Message: replica detected
+Time spend: 0.317766904831
+83Hamming distance = 17
+Message: replica detected
+Time spend: 0.314961910248
+84Hamming distance = 10
+Message: replica detected
+Time spend: 0.316376209259
+85Hamming distance = 27
+Message: replica detected
+Time spend: 0.314280033112
+86Hamming distance = 18
+Message: replica detected
+Time spend: 0.322239875793
+87Hamming distance = 26
+Message: replica detected
+Time spend: 0.316906929016
+88Hamming distance = 18
+Message: replica detected
+Time spend: 0.317285060883
+89Hamming distance = 20
+Message: replica detected
+Time spend: 0.314265012741
+90Hamming distance = 12
+Message: replica detected
+Time spend: 0.315540075302
+91Hamming distance = 20
+Message: replica detected
+Time spend: 0.316703081131
+92Hamming distance = 14
+Message: replica detected
+Time spend: 0.31476688385
+93Hamming distance = 20
+Message: replica detected
+Time spend: 0.312711000443
+94Hamming distance = 17
+Message: replica detected
+Time spend: 0.317046880722
+95Hamming distance = 16
+Message: replica detected
+Time spend: 0.312515974045
+96Hamming distance = 26
+Message: replica detected
+Time spend: 0.315978050232
+97Hamming distance = 17
+Message: replica detected
+Time spend: 0.315890789032
+98Hamming distance = 19
+Message: replica detected
+Time spend: 0.317553043365
+99Hamming distance = 10
+Message: replica detected
+Time spend: 0.311525821686
+Success Ratio: 1.0

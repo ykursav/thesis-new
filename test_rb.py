@@ -11,11 +11,12 @@ import sys
 from picamera import PiCamera
 from picamera.array import PiRGBArray
 from time import sleep
+import gc
 
 
 
-##pre.cv2.setUseOptimized(True)
-
+cv2.setUseOptimized(True)
+gc.enable()
 #Define objects
 sigOrig = bitarray()
 f = open("signature.bin", "rb")
@@ -39,6 +40,7 @@ true_counter = 0
 camera.start_preview()
 time.sleep(5)
 f_report = open("Quality_Reports_Image/new_timing7.txt","w")
+
 for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
     start = time.time()
     image = frame.array
@@ -75,7 +77,7 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port 
     end = time.time()
     f_report.write("Time spend: " + str(end-start) + "\n")
     counter += 1
-    if counter == 10:
+    if counter == 100:
         ratio = true_counter / 100
         f_report.write("Success Ratio: " + str(ratio))
         break

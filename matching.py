@@ -1,9 +1,10 @@
 import numpy as np
 import cv2
 from bitarray import bitarray
+import gc
 
-##cv2.setUseOptimized(True)
-
+cv2.setUseOptimized(True)
+gc.enable()
 class SignatureMatching:
     '''This class includes functions for signature matching'''
     def __init__(self, sigOrig, tau1, tau2, tau3, tau4, tau5):
@@ -30,7 +31,7 @@ class SignatureMatching:
                 return False, sum(hamming_sig), "tau2_fail" 
             else:
                 if (sum(hamming_sig[0:119])) < self.tau3 or (sum(hamming_sig[119:238]) < self.tau4):
-                    print sum(hamming_sig[0:119]), sum(hamming_sig[119:238])
+##                    print sum(hamming_sig[0:119]), sum(hamming_sig[119:238])
                     return True, sum(hamming_sig),  "replica detected"
                 else:
                     return False, sum(hamming_sig), "tau3_fail"

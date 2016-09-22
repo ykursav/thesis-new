@@ -3,8 +3,9 @@ import cv2
 from bitarray import bitarray
 import time
 from multiprocessing import Pool
-import pathos.multiprocessing as mp
-from subprocess import call
+import gc
+##import pathos.multiprocessing as mp
+##from subprocess import call
 ##from threading import Thread
 # import copy_reg
 # import types
@@ -23,7 +24,8 @@ from subprocess import call
 
 
 
-##cv2.setUseOptimized(True)
+cv2.setUseOptimized(True)
+gc.enable()
 class SignatureExtraction:
     '''N block size, M overlapping pixels, L image size'''
     def __init__(self, N, M, L):

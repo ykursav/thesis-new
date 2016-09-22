@@ -1,10 +1,11 @@
 import math
 import cv2
 import numpy as np
+import gc
 
 # import time
-##cv2.setUseOptimized(True)
-
+cv2.setUseOptimized(True)
+gc.enable()
 SCALED_IMAGE = [128, 128]
 
 class PreProcessing:

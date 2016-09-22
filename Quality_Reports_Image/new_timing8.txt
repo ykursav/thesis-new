@@ -1,0 +1,10 @@
+Start time:0.100006
+Start time:0.100005
+Start time:0.100004
+Start time:0.100005
+Start time:0.1
+Start time:0.1
+Start time:0.100005
+Start time:0.100053
+Start time:0.100006
+Total time:0.927107

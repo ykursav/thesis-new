@@ -1,0 +1,401 @@
+Image capture time:0.025185
+Process0 started1.019131
+Process0 finished1.380437
+Process0 total time passed 0.361306
+Image capture time:0.365484
+Process1 started1.382831
+Image capture time:0.208426
+Process1 finished1.717203
+Process1 total time passed 0.334372
+Process2 started1.718744
+Image capture time:0.329672
+Process2 finished2.05455
+Process2 total time passed 0.335806
+Process3 started2.055954
+Image capture time:0.339412
+Process4 started2.298326
+Process3 finished2.458258
+Process3 total time passed 0.402304
+Image capture time:0.296652
+Process5 started2.55825
+Process4 finished2.81615
+Process4 total time passed 0.517824
+Image capture time:0.360575
+Process6 started2.920452
+Process5 finished3.141196
+Process5 total time passed 0.582946
+Image capture time:0.329024
+Process7 started3.248793
+Process6 finished3.495877
+Process6 total time passed 0.575425
+Image capture time:0.349437
+Process8 started3.59724
+Process7 finished3.860361
+Process7 total time passed 0.611568
+Image capture time:0.361313
+Process9 started3.961005
+Process8 finished4.186282
+Process8 total time passed 0.589042
+Image capture time:0.384698
+Process10 started4.345409
+Process9 finished4.477801
+Process9 total time passed 0.516796
+Image capture time:0.224849
+Process11 started4.569397
+Process10 finished4.935263
+Process10 total time passed 0.589854
+Image capture time:0.453177
+Process12 started5.024932
+Process11 finished5.180327
+Process11 total time passed 0.61093
+Image capture time:0.317751
+Process13 started5.341658
+Process12 finished5.556679
+Process12 total time passed 0.531747
+Image capture time:0.318485
+Process14 started5.669391
+Process13 finished5.910847
+Process13 total time passed 0.569189
+Image capture time:0.355183
+Process15 started6.015301
+Process14 finished6.238063
+Process14 total time passed 0.568672
+Image capture time:0.380266
+Process16 started6.396528
+Process15 finished6.540409
+Process15 total time passed 0.525108
+Image capture time:0.228093
+Process17 started6.622885
+Process16 finished7.016879
+Process16 total time passed 0.620351
+Image capture time:0.410533
+Process18 started7.038224
+Process17 finished7.282318
+Process17 total time passed 0.659433
+Image capture time:0.404666
+Process18 finished7.557254
+Process18 total time passed 0.51903
+Process19 started7.558599
+Image capture time:0.328087
+Process20 started7.768565
+Process19 finished7.904717
+Process19 total time passed 0.346118
+Image capture time:0.226515
+Process21 started7.992914
+Process20 finished8.419268
+Process20 total time passed 0.650703
+Image capture time:0.483099
+Process21 finished8.611035
+Process21 total time passed 0.618121
+Process22 started8.612494
+Process22 finished8.947327
+Process22 total time passed 0.334833
+Image capture time:0.478275
+Process23 started8.954291
+Process23 finished9.275547
+Process23 total time passed 0.321256
+Image capture time:0.331803
+Process24 started9.285975
+Image capture time:0.319409
+Process24 finished9.615489
+Process24 total time passed 0.329514
+Process25 started9.616683
+Process25 finished9.951052
+Process25 total time passed 0.334369
+Image capture time:0.3509
+Process26 started9.956592
+Image capture time:0.309611
+Process27 started10.287198
+Process26 finished10.29777
+Process26 total time passed 0.341178
+Image capture time:0.228928
+Process28 started10.503124
+Process27 finished10.646264
+Process27 total time passed 0.359066
+Image capture time:0.318522
+Process29 started10.81651
+Process28 finished11.031801
+Process28 total time passed 0.528677
+Image capture time:0.37247
+Process29 finished11.326614
+Process29 total time passed 0.510104
+Process30 started11.327849
+Image capture time:0.250732
+Process31 started11.441039
+Process30 finished11.783635
+Process30 total time passed 0.455786
+Image capture time:0.42791
+Process32 started11.866202
+Process31 finished12.076118
+Process31 total time passed 0.635079
+Image capture time:0.316847
+Process33 started12.185153
+Process32 finished12.426021
+Process32 total time passed 0.559819
+Process33 finished12.695267
+Process33 total time passed 0.510114
+Image capture time:0.51885
+Process34 started12.701919
+Process34 finished13.027625
+Process34 total time passed 0.325706
+Image capture time:0.332175
+Process35 started13.034246
+Image capture time:0.203306
+Process35 finished13.387989
+Process35 total time passed 0.353743
+Process36 started13.389344
+Image capture time:0.317462
+Process37 started13.557798
+Process36 finished13.773957
+Process36 total time passed 0.384613
+Image capture time:0.367549
+Process38 started13.933355
+Process37 finished14.075559
+Process37 total time passed 0.517761
+Image capture time:0.306532
+Process39 started14.231898
+Process38 finished14.455436
+Process38 total time passed 0.522081
+Image capture time:0.381313
+Process39 finished14.742684
+Process39 total time passed 0.510786
+Process40 started14.744236
+Process40 finished15.072733
+Process40 total time passed 0.328497
+Image capture time:0.467721
+Process41 started15.079079
+Image capture time:0.240437
+Process42 started15.422185
+Process41 finished15.422941
+Process41 total time passed 0.343862
+Process42 finished15.749051
+Process42 total time passed 0.326866
+Image capture time:0.435785
+Process43 started15.755677
+Image capture time:0.203921
+Process44 started15.962267
+Process43 finished16.095493
+Process43 total time passed 0.339816
+Image capture time:0.221697
+Process45 started16.183597
+Process44 finished16.537198
+Process44 total time passed 0.574931
+Image capture time:0.442183
+Process46 started16.626689
+Process45 finished16.781673
+Process45 total time passed 0.598076
+Image capture time:0.25197
+Process47 started16.879378
+Process46 finished17.218104
+Process46 total time passed 0.591415
+Image capture time:0.433369
+Process48 started17.311953
+Process47 finished17.465831
+Process47 total time passed 0.586453
+Image capture time:0.314973
+Process49 started17.626295
+Process48 finished17.831229
+Process48 total time passed 0.519276
+Image capture time:0.309041
+Process50 started17.935472
+Process49 finished18.201753
+Process49 total time passed 0.575458
+Image capture time:0.369429
+Process51 started18.305983
+Process50 finished18.523556
+Process50 total time passed 0.588084
+Image capture time:0.326388
+Process52 started18.630885
+Process51 finished18.886114
+Process51 total time passed 0.580131
+Image capture time:0.357317
+Process53 started18.990236
+Process52 finished19.207757
+Process52 total time passed 0.576872
+Image capture time:0.321205
+Process54 started19.311303
+Process53 finished19.583698
+Process53 total time passed 0.593462
+Image capture time:0.329549
+Process55 started19.644091
+Process54 finished19.940464
+Process54 total time passed 0.629161
+Process55 finished20.190297
+Process55 total time passed 0.546206
+Image capture time:0.557383
+Process56 started20.196425
+Image capture time:0.198303
+Process57 started20.397276
+Process56 finished20.549213
+Process56 total time passed 0.352788
+Image capture time:0.304914
+Process58 started20.702394
+Process57 finished20.924091
+Process57 total time passed 0.526815
+Image capture time:0.380516
+Process59 started21.083111
+Process58 finished21.219639
+Process58 total time passed 0.517245
+Image capture time:0.22761
+Process60 started21.309065
+Process59 finished21.725339
+Process59 total time passed 0.642228
+Image capture time:0.423154
+Process61 started21.733795
+Process60 finished21.985158
+Process60 total time passed 0.676093
+Image capture time:0.341986
+Process62 started22.076761
+Process61 finished22.34802
+Process61 total time passed 0.614225
+Image capture time:0.319663
+Process63 started22.39576
+Process62 finished22.746995
+Process62 total time passed 0.670234
+Image capture time:0.427239
+Process64 started22.821971
+Process63 finished23.020148
+Process63 total time passed 0.624388
+Image capture time:0.302666
+Process65 started23.125965
+Process64 finished23.375697
+Process64 total time passed 0.553726
+Process65 finished23.650725
+Process65 total time passed 0.52476
+Image capture time:0.53291
+Process66 started23.657034
+Image capture time:0.304426
+Process66 finished23.98484
+Process66 total time passed 0.327806
+Process67 started23.986406
+Process67 finished24.306556
+Process67 total time passed 0.32015
+Image capture time:0.333033
+Process68 started24.318026
+Image capture time:0.251726
+Process69 started24.569985
+Process68 finished24.659722
+Process68 total time passed 0.341696
+Image capture time:0.247141
+Process70 started24.817272
+Process69 finished25.078952
+Process69 total time passed 0.508967
+Image capture time:0.357146
+Process71 started25.176607
+Process70 finished25.400021
+Process70 total time passed 0.582749
+Image capture time:0.329713
+Process72 started25.519964
+Process71 finished25.753228
+Process71 total time passed 0.576621
+Image capture time:0.344409
+Process73 started25.848898
+Process72 finished26.150809
+Process72 total time passed 0.630845
+Image capture time:0.33484
+Process74 started26.185356
+Process73 finished26.535154
+Process73 total time passed 0.686256
+Image capture time:0.429577
+Process75 started26.620743
+Process74 finished26.774627
+Process74 total time passed 0.589271
+Image capture time:0.278125
+Process76 started26.893442
+Process75 finished27.178944
+Process75 total time passed 0.558201
+Image capture time:0.405795
+Process77 started27.300716
+Process76 finished27.455454
+Process76 total time passed 0.562012
+Image capture time:0.236106
+Process78 started27.537555
+Process77 finished27.915329
+Process77 total time passed 0.614613
+Process78 finished28.126305
+Process78 total time passed 0.58875
+Image capture time:0.597931
+Process79 started28.132201
+Image capture time:0.207389
+Process79 finished28.470374
+Process79 total time passed 0.338173
+Process80 started28.472779
+Image capture time:0.205613
+Process80 finished28.813231
+Process80 total time passed 0.340452
+Process81 started28.815222
+Process81 finished29.13433
+Process81 total time passed 0.319108
+Image capture time:0.467756
+Process82 started29.146464
+Process82 finished29.479298
+Process82 total time passed 0.332834
+Image capture time:0.339538
+Process83 started29.485788
+Image capture time:0.274365
+Process83 finished29.880176
+Process83 total time passed 0.394388
+Process84 started29.882426
+Image capture time:0.375786
+Process84 finished30.218763
+Process84 total time passed 0.336337
+Process85 started30.221328
+Image capture time:0.206473
+Process85 finished30.559797
+Process85 total time passed 0.338469
+Process86 started30.561979
+Image capture time:0.342967
+Process86 finished30.903865
+Process86 total time passed 0.341886
+Process87 started30.905107
+Image capture time:0.340702
+Process88 started31.190238
+Process87 finished31.254134
+Process87 total time passed 0.349027
+Image capture time:0.304334
+Process89 started31.418348
+Process88 finished31.638696
+Process88 total time passed 0.448458
+Image capture time:0.377541
+Process90 started31.795958
+Process89 finished31.996735
+Process89 total time passed 0.578387
+Image capture time:0.358449
+Process91 started32.154579
+Process90 finished32.308232
+Process90 total time passed 0.512274
+Image capture time:0.250144
+Process92 started32.416719
+Process91 finished32.759918
+Process91 total time passed 0.605339
+Image capture time:0.444334
+Process93 started32.854438
+Process92 finished33.005378
+Process92 total time passed 0.588659
+Image capture time:0.250452
+Process94 started33.101091
+Process93 finished33.467935
+Process93 total time passed 0.613497
+Image capture time:0.550838
+Process94 finished33.673914
+Process94 total time passed 0.572823
+Process95 started33.675117
+Process95 finished34.005544
+Process95 total time passed 0.330427
+Image capture time:0.368436
+Process96 started34.017452
+Image capture time:0.255218
+Process96 finished34.349119
+Process96 total time passed 0.331667
+Process97 started34.350386
+Process97 finished34.673613
+Process97 total time passed 0.323227
+Image capture time:0.412887
+Process98 started34.685524
+Image capture time:0.206351
+Process98 finished35.027575
+Process98 total time passed 0.342051
+Process99 started35.028893
+Total time:34.039856
+Process99 finished35.407071
+Process99 total time passed 0.378178
