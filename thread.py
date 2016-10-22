@@ -48,7 +48,6 @@ if __name__ == "__main__":
             break
         last = start_time
         
-    f_report.write("Small counter " + str(small_counter) + " True counter: " + str(true_counter))
     print "reached zero"
     end = time.time()
     print end - start
