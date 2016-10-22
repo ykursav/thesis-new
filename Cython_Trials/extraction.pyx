@@ -1,5 +1,5 @@
 import numpy as np
-cimport numpy as np
+cimport numpy as cnp
 import cv2
 from bitarray import bitarray
 import time
@@ -31,8 +31,8 @@ gc.enable()
 cdef class SignatureExtraction:
     '''N block size, M overlapping pixels, L image size'''
     cdef int L, N, M, width, height, number_of_blocks
-    cdef np.ndarray[DTYPE_t, ndim = 2] image_blocks, block_all
-    cdef np.ndarray[DTYPE_t, ndim = 3] image
+    cdef cnp.int32_t[:, :] image_blocks, block_all
+    cdef cnp.int32_t[:, :, :] image
     def __init__(self, N, M, L):
         self.L = L
         self.N = N
@@ -46,7 +46,7 @@ cdef class SignatureExtraction:
         self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N),dtype = DTYPE)
         #self.average_luminance = np.zeros((self.number_of_blocks, self.number_of_blocks, 1))
         #irrelevant but used in experimentally or optional it will remove or toggle comment in future
-        #self.img_name = ""
+        # self.img_name = ""
         #self.hist_eq = np.array([])
 
 
