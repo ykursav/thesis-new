@@ -431,7 +431,6 @@ cdef class SignatureExtraction:
 ##
 ##    def get_singular_energy(self, block):
 ####        return self.get_second_singular(block) / self.get_total_energy_of_block(block)
-        return 0
 
 
     def get_signature(self, list):

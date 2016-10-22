@@ -5,7 +5,7 @@
     "distutils": {
         "depends": []
     }, 
-    "module_name": "extraction_cython"
+    "module_name": "extraction"
 }
 END: Cython Metadata */
 
@@ -275,8 +275,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__extraction_cython
-#define __PYX_HAVE_API__extraction_cython
+#define __PYX_HAVE__extraction
+#define __PYX_HAVE_API__extraction
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -519,12 +519,12 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "extraction_cython.pyx",
+  "extraction.pyx",
   "__init__.pxd",
   "type.pxd",
 };
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":725
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":725
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -533,7 +533,7 @@ static const char *__pyx_f[] = {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":726
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":726
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -542,7 +542,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":727
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":727
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -551,7 +551,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":728
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":728
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -560,7 +560,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":732
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":732
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -569,7 +569,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":733
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":733
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -578,7 +578,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":734
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":734
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -587,7 +587,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":735
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":735
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -596,7 +596,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":739
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":739
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -605,7 +605,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":740
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":740
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -614,7 +614,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":749
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":749
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -623,7 +623,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":750
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":750
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -632,7 +632,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":751
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":751
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -641,7 +641,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":753
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":753
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -650,7 +650,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":754
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":754
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -659,7 +659,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":755
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":755
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -668,7 +668,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":757
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":757
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -677,7 +677,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":758
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":758
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -686,7 +686,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":760
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":760
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -695,7 +695,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":761
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":761
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -704,7 +704,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":762
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":762
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -713,14 +713,14 @@ typedef npy_double __pyx_t_5numpy_double_t;
  */
 typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
-/* "extraction_cython.pyx":15
+/* "extraction.pyx":15
  * 
  * DTYPE = np.int
  * ctypedef np.int_t DTYPE_t             # <<<<<<<<<<<<<<
  * 
  * # def _pickle_method(m):
  */
-typedef __pyx_t_5numpy_int_t __pyx_t_17extraction_cython_DTYPE_t;
+typedef __pyx_t_5numpy_int_t __pyx_t_10extraction_DTYPE_t;
 /* None.proto */
 #if CYTHON_CCOMPLEX
   #ifdef __cplusplus
@@ -745,9 +745,9 @@ typedef __pyx_t_5numpy_int_t __pyx_t_17extraction_cython_DTYPE_t;
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_17extraction_cython_SignatureExtraction;
+struct __pyx_obj_10extraction_SignatureExtraction;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":764
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":764
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -756,7 +756,7 @@ struct __pyx_obj_17extraction_cython_SignatureExtraction;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":765
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":765
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -765,7 +765,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":766
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":766
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -774,7 +774,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":768
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":768
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -783,14 +783,14 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "extraction_cython.pyx":31
+/* "extraction.pyx":31
  * cv2.setUseOptimized(True)
  * gc.enable()
  * cdef class SignatureExtraction:             # <<<<<<<<<<<<<<
  *     '''N block size, M overlapping pixels, L image size'''
  *     cdef int L, N, M, width, height, number_of_blocks
  */
-struct __pyx_obj_17extraction_cython_SignatureExtraction {
+struct __pyx_obj_10extraction_SignatureExtraction {
   PyObject_HEAD
   int L;
   int N;
@@ -1276,12 +1276,12 @@ static PyTypeObject *__pyx_ptype_5numpy_ndarray = 0;
 static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
-/* Module declarations from 'extraction_cython' */
-static PyTypeObject *__pyx_ptype_17extraction_cython_SignatureExtraction = 0;
-#define __Pyx_MODULE_NAME "extraction_cython"
-int __pyx_module_is_main_extraction_cython = 0;
+/* Module declarations from 'extraction' */
+static PyTypeObject *__pyx_ptype_10extraction_SignatureExtraction = 0;
+#define __Pyx_MODULE_NAME "extraction"
+int __pyx_module_is_main_extraction = 0;
 
-/* Implementation of 'extraction_cython' */
+/* Implementation of 'extraction' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_RuntimeError;
@@ -1403,22 +1403,22 @@ static PyObject *__pyx_n_s_warpAffine;
 static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_y;
 static PyObject *__pyx_n_s_zeros;
-static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_N, PyObject *__pyx_v_M, PyObject *__pyx_v_L); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_2get_width_height(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_4set_image(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_6get_average_luminance_of_block(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_energy_of_block(CYTHON_UNUSED struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_10get_second_singular(CYTHON_UNUSED struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rotations(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_luminance(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lum(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragment(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_fVertical0, PyObject *__pyx_v_fHorizontal0, PyObject *__pyx_v_fVertical90, PyObject *__pyx_v_fHorizontal90, PyObject *__pyx_v_fVertical180, PyObject *__pyx_v_fHorizontal180, PyObject *__pyx_v_fVertical270, PyObject *__pyx_v_fHorizontal270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fragments(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signature(CYTHON_UNUSED struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_list); /* proto */
+static int __pyx_pf_10extraction_19SignatureExtraction___init__(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_N, PyObject *__pyx_v_M, PyObject *__pyx_v_L); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_2get_width_height(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_4set_image(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_6get_average_luminance_of_block(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_8get_total_energy_of_block(CYTHON_UNUSED struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_10get_second_singular(CYTHON_UNUSED struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_12get_blocks(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_14basic_rotations(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_16get_luminance(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_18get_std_lum(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_20get_fragment(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_fVertical0, PyObject *__pyx_v_fHorizontal0, PyObject *__pyx_v_fVertical90, PyObject *__pyx_v_fHorizontal90, PyObject *__pyx_v_fVertical180, PyObject *__pyx_v_fHorizontal180, PyObject *__pyx_v_fVertical270, PyObject *__pyx_v_fHorizontal270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_22get_all_fragments(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_24get_signature(CYTHON_UNUSED struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_list); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
-static PyObject *__pyx_tp_new_17extraction_cython_SignatureExtraction(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_10extraction_SignatureExtraction(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_2;
@@ -1576,7 +1576,7 @@ static PyObject *__pyx_tuple__136;
 static PyObject *__pyx_tuple__137;
 static PyObject *__pyx_tuple__138;
 
-/* "extraction_cython.pyx":35
+/* "extraction.pyx":35
  *     cdef int L, N, M, width, height, number_of_blocks
  *     cdef np.ndarray image, image_blocks, block_all
  *     def __init__(self, N, M, L):             # <<<<<<<<<<<<<<
@@ -1585,8 +1585,8 @@ static PyObject *__pyx_tuple__138;
  */
 
 /* Python wrapper */
-static int __pyx_pw_17extraction_cython_19SignatureExtraction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_17extraction_cython_19SignatureExtraction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_10extraction_19SignatureExtraction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_10extraction_19SignatureExtraction_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_N = 0;
   PyObject *__pyx_v_M = 0;
   PyObject *__pyx_v_L = 0;
@@ -1640,18 +1640,18 @@ static int __pyx_pw_17extraction_cython_19SignatureExtraction_1__init__(PyObject
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 35, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction___init__(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), __pyx_v_N, __pyx_v_M, __pyx_v_L);
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction___init__(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), __pyx_v_N, __pyx_v_M, __pyx_v_L);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_N, PyObject *__pyx_v_M, PyObject *__pyx_v_L) {
+static int __pyx_pf_10extraction_19SignatureExtraction___init__(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_N, PyObject *__pyx_v_M, PyObject *__pyx_v_L) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -1664,7 +1664,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "extraction_cython.pyx":36
+  /* "extraction.pyx":36
  *     cdef np.ndarray image, image_blocks, block_all
  *     def __init__(self, N, M, L):
  *         self.L = L             # <<<<<<<<<<<<<<
@@ -1674,7 +1674,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
   __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_L); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L1_error)
   __pyx_v_self->L = __pyx_t_1;
 
-  /* "extraction_cython.pyx":37
+  /* "extraction.pyx":37
  *     def __init__(self, N, M, L):
  *         self.L = L
  *         self.N = N             # <<<<<<<<<<<<<<
@@ -1684,7 +1684,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
   __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_N); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L1_error)
   __pyx_v_self->N = __pyx_t_1;
 
-  /* "extraction_cython.pyx":38
+  /* "extraction.pyx":38
  *         self.L = L
  *         self.N = N
  *         self.M = M             # <<<<<<<<<<<<<<
@@ -1694,7 +1694,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
   __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_M); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 38, __pyx_L1_error)
   __pyx_v_self->M = __pyx_t_1;
 
-  /* "extraction_cython.pyx":39
+  /* "extraction.pyx":39
  *         self.N = N
  *         self.M = M
  *         self.image = np.array([])             # <<<<<<<<<<<<<<
@@ -1741,7 +1741,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
   __pyx_v_self->image = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":41
+  /* "extraction.pyx":41
  *         self.image = np.array([])
  *         #self.image = image
  *         self.width = 0             # <<<<<<<<<<<<<<
@@ -1750,7 +1750,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
  */
   __pyx_v_self->width = 0;
 
-  /* "extraction_cython.pyx":42
+  /* "extraction.pyx":42
  *         #self.image = image
  *         self.width = 0
  *         self.height = 0             # <<<<<<<<<<<<<<
@@ -1759,7 +1759,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
  */
   __pyx_v_self->height = 0;
 
-  /* "extraction_cython.pyx":43
+  /* "extraction.pyx":43
  *         self.width = 0
  *         self.height = 0
  *         self.image_blocks = np.array([])             # <<<<<<<<<<<<<<
@@ -1806,7 +1806,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
   __pyx_v_self->image_blocks = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":44
+  /* "extraction.pyx":44
  *         self.height = 0
  *         self.image_blocks = np.array([])
  *         self.number_of_blocks = ((self.L - self.N) / self.M ) + 1             # <<<<<<<<<<<<<<
@@ -1824,7 +1824,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
   }
   __pyx_v_self->number_of_blocks = (__Pyx_div_int(__pyx_t_1, __pyx_v_self->M) + 1);
 
-  /* "extraction_cython.pyx":45
+  /* "extraction.pyx":45
  *         self.image_blocks = np.array([])
  *         self.number_of_blocks = ((self.L - self.N) / self.M ) + 1
  *         self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N))             # <<<<<<<<<<<<<<
@@ -1891,7 +1891,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
   __pyx_v_self->block_all = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":48
+  /* "extraction.pyx":48
  *         #self.average_luminance = np.zeros((self.number_of_blocks, self.number_of_blocks, 1))
  *         #irrelevant but used in experimentally or optional it will remove or toggle comment in future
  *         self.img_name = ""             # <<<<<<<<<<<<<<
@@ -1900,7 +1900,7 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
  */
   if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_img_name, __pyx_kp_s_) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
 
-  /* "extraction_cython.pyx":35
+  /* "extraction.pyx":35
  *     cdef int L, N, M, width, height, number_of_blocks
  *     cdef np.ndarray image, image_blocks, block_all
  *     def __init__(self, N, M, L):             # <<<<<<<<<<<<<<
@@ -1919,14 +1919,14 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":53
+/* "extraction.pyx":53
  * 
  * 
  *     def get_width_height(self, image):             # <<<<<<<<<<<<<<
@@ -1935,26 +1935,26 @@ static int __pyx_pf_17extraction_cython_19SignatureExtraction___init__(struct __
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_3get_width_height(PyObject *__pyx_v_self, PyObject *__pyx_v_image); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_3get_width_height(PyObject *__pyx_v_self, PyObject *__pyx_v_image) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_3get_width_height(PyObject *__pyx_v_self, PyObject *__pyx_v_image); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_3get_width_height(PyObject *__pyx_v_self, PyObject *__pyx_v_image) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_width_height (wrapper)", 0);
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_2get_width_height(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_image));
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_2get_width_height(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_image));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_2get_width_height(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_2get_width_height(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   Py_ssize_t __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("get_width_height", 0);
 
-  /* "extraction_cython.pyx":54
+  /* "extraction.pyx":54
  * 
  *     def get_width_height(self, image):
  *         self.height = len(image)             # <<<<<<<<<<<<<<
@@ -1964,7 +1964,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_2get_width_h
   __pyx_t_1 = PyObject_Length(__pyx_v_image); if (unlikely(__pyx_t_1 == -1)) __PYX_ERR(0, 54, __pyx_L1_error)
   __pyx_v_self->height = __pyx_t_1;
 
-  /* "extraction_cython.pyx":55
+  /* "extraction.pyx":55
  *     def get_width_height(self, image):
  *         self.height = len(image)
  *         self.width = len(image[0,:])             # <<<<<<<<<<<<<<
@@ -1977,7 +1977,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_2get_width_h
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_self->width = __pyx_t_1;
 
-  /* "extraction_cython.pyx":53
+  /* "extraction.pyx":53
  * 
  * 
  *     def get_width_height(self, image):             # <<<<<<<<<<<<<<
@@ -1990,7 +1990,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_2get_width_h
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_width_height", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_width_height", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1998,7 +1998,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_2get_width_h
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":59
+/* "extraction.pyx":59
  * 
  * 
  *     def set_image(self, image):             # <<<<<<<<<<<<<<
@@ -2007,25 +2007,25 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_2get_width_h
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_5set_image(PyObject *__pyx_v_self, PyObject *__pyx_v_image); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_5set_image(PyObject *__pyx_v_self, PyObject *__pyx_v_image) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_5set_image(PyObject *__pyx_v_self, PyObject *__pyx_v_image); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_5set_image(PyObject *__pyx_v_self, PyObject *__pyx_v_image) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_image (wrapper)", 0);
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_4set_image(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_image));
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_4set_image(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_image));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_4set_image(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_4set_image(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("set_image", 0);
 
-  /* "extraction_cython.pyx":60
+  /* "extraction.pyx":60
  * 
  *     def set_image(self, image):
  *         self.image = image             # <<<<<<<<<<<<<<
@@ -2041,7 +2041,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_4set_image(s
   __pyx_v_self->image = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":59
+  /* "extraction.pyx":59
  * 
  * 
  *     def set_image(self, image):             # <<<<<<<<<<<<<<
@@ -2054,7 +2054,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_4set_image(s
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.set_image", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.set_image", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2062,7 +2062,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_4set_image(s
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":70
+/* "extraction.pyx":70
  *     #check again it is correct or not
  * 
  *     def get_average_luminance_of_block(self, block):             # <<<<<<<<<<<<<<
@@ -2071,20 +2071,20 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_4set_image(s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_7get_average_luminance_of_block(PyObject *__pyx_v_self, PyObject *__pyx_v_block); /*proto*/
-static char __pyx_doc_17extraction_cython_19SignatureExtraction_6get_average_luminance_of_block[] = "luminance calculation block";
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_7get_average_luminance_of_block(PyObject *__pyx_v_self, PyObject *__pyx_v_block) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_7get_average_luminance_of_block(PyObject *__pyx_v_self, PyObject *__pyx_v_block); /*proto*/
+static char __pyx_doc_10extraction_19SignatureExtraction_6get_average_luminance_of_block[] = "luminance calculation block";
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_7get_average_luminance_of_block(PyObject *__pyx_v_self, PyObject *__pyx_v_block) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_average_luminance_of_block (wrapper)", 0);
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_6get_average_luminance_of_block(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_block));
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_6get_average_luminance_of_block(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_block));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_6get_average_luminance_of_block(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_6get_average_luminance_of_block(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block) {
   PyObject *__pyx_v_lum = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -2094,7 +2094,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_6get_average
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("get_average_luminance_of_block", 0);
 
-  /* "extraction_cython.pyx":74
+  /* "extraction.pyx":74
  * ##        lum1 = [row for row in block]
  * ##        lum1 = sum(sum(lum1)) / (self.N ** 2)
  *         lum = np.sum(block) / (self.N ** 2)             # <<<<<<<<<<<<<<
@@ -2140,7 +2140,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_6get_average
   __pyx_v_lum = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "extraction_cython.pyx":75
+  /* "extraction.pyx":75
  * ##        lum1 = sum(sum(lum1)) / (self.N ** 2)
  *         lum = np.sum(block) / (self.N ** 2)
  *         return lum             # <<<<<<<<<<<<<<
@@ -2152,7 +2152,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_6get_average
   __pyx_r = __pyx_v_lum;
   goto __pyx_L0;
 
-  /* "extraction_cython.pyx":70
+  /* "extraction.pyx":70
  *     #check again it is correct or not
  * 
  *     def get_average_luminance_of_block(self, block):             # <<<<<<<<<<<<<<
@@ -2166,7 +2166,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_6get_average
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_average_luminance_of_block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_average_luminance_of_block", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_lum);
@@ -2175,7 +2175,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_6get_average
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":77
+/* "extraction.pyx":77
  *         return lum
  * 
  *     def get_total_energy_of_block(self, block):             # <<<<<<<<<<<<<<
@@ -2184,19 +2184,19 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_6get_average
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_9get_total_energy_of_block(PyObject *__pyx_v_self, PyObject *__pyx_v_block); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_9get_total_energy_of_block(PyObject *__pyx_v_self, PyObject *__pyx_v_block) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_9get_total_energy_of_block(PyObject *__pyx_v_self, PyObject *__pyx_v_block); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_9get_total_energy_of_block(PyObject *__pyx_v_self, PyObject *__pyx_v_block) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_total_energy_of_block (wrapper)", 0);
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_energy_of_block(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_block));
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_8get_total_energy_of_block(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_block));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_energy_of_block(CYTHON_UNUSED struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_8get_total_energy_of_block(CYTHON_UNUSED struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block) {
   PyObject *__pyx_v_total_energy = NULL;
   PyObject *__pyx_v_element = NULL;
   PyObject *__pyx_r = NULL;
@@ -2209,7 +2209,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
   __Pyx_RefNannySetupContext("get_total_energy_of_block", 0);
   __Pyx_INCREF(__pyx_v_block);
 
-  /* "extraction_cython.pyx":78
+  /* "extraction.pyx":78
  * 
  *     def get_total_energy_of_block(self, block):
  *         block = block.flatten()             # <<<<<<<<<<<<<<
@@ -2239,7 +2239,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
   __Pyx_DECREF_SET(__pyx_v_block, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":79
+  /* "extraction.pyx":79
  *     def get_total_energy_of_block(self, block):
  *         block = block.flatten()
  *         total_energy = 0             # <<<<<<<<<<<<<<
@@ -2249,7 +2249,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_total_energy = __pyx_int_0;
 
-  /* "extraction_cython.pyx":80
+  /* "extraction.pyx":80
  *         block = block.flatten()
  *         total_energy = 0
  *         for element in block:             # <<<<<<<<<<<<<<
@@ -2298,7 +2298,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
     __Pyx_XDECREF_SET(__pyx_v_element, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":81
+    /* "extraction.pyx":81
  *         total_energy = 0
  *         for element in block:
  *             total_energy += element ** 2             # <<<<<<<<<<<<<<
@@ -2313,7 +2313,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
     __Pyx_DECREF_SET(__pyx_v_total_energy, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":80
+    /* "extraction.pyx":80
  *         block = block.flatten()
  *         total_energy = 0
  *         for element in block:             # <<<<<<<<<<<<<<
@@ -2323,7 +2323,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":83
+  /* "extraction.pyx":83
  *             total_energy += element ** 2
  * 
  *         return total_energy             # <<<<<<<<<<<<<<
@@ -2335,7 +2335,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
   __pyx_r = __pyx_v_total_energy;
   goto __pyx_L0;
 
-  /* "extraction_cython.pyx":77
+  /* "extraction.pyx":77
  *         return lum
  * 
  *     def get_total_energy_of_block(self, block):             # <<<<<<<<<<<<<<
@@ -2348,7 +2348,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_total_energy_of_block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_total_energy_of_block", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_total_energy);
@@ -2359,7 +2359,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":85
+/* "extraction.pyx":85
  *         return total_energy
  * 
  *     def get_second_singular(self, block):             # <<<<<<<<<<<<<<
@@ -2368,19 +2368,19 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_8get_total_e
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_11get_second_singular(PyObject *__pyx_v_self, PyObject *__pyx_v_block); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_11get_second_singular(PyObject *__pyx_v_self, PyObject *__pyx_v_block) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_11get_second_singular(PyObject *__pyx_v_self, PyObject *__pyx_v_block); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_11get_second_singular(PyObject *__pyx_v_self, PyObject *__pyx_v_block) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_second_singular (wrapper)", 0);
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_10get_second_singular(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_block));
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_10get_second_singular(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_block));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_10get_second_singular(CYTHON_UNUSED struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_10get_second_singular(CYTHON_UNUSED struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_block) {
   CYTHON_UNUSED PyObject *__pyx_v_U = NULL;
   PyObject *__pyx_v_s = NULL;
   CYTHON_UNUSED PyObject *__pyx_v_V = NULL;
@@ -2394,7 +2394,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_10get_second
   PyObject *(*__pyx_t_6)(PyObject *);
   __Pyx_RefNannySetupContext("get_second_singular", 0);
 
-  /* "extraction_cython.pyx":86
+  /* "extraction.pyx":86
  * 
  *     def get_second_singular(self, block):
  *         U, s, V = np.linalg.svd(block)             # <<<<<<<<<<<<<<
@@ -2498,7 +2498,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_10get_second
   __pyx_v_V = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "extraction_cython.pyx":87
+  /* "extraction.pyx":87
  *     def get_second_singular(self, block):
  *         U, s, V = np.linalg.svd(block)
  *         return s[1] ** 2             # <<<<<<<<<<<<<<
@@ -2515,7 +2515,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_10get_second
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "extraction_cython.pyx":85
+  /* "extraction.pyx":85
  *         return total_energy
  * 
  *     def get_second_singular(self, block):             # <<<<<<<<<<<<<<
@@ -2530,7 +2530,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_10get_second
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_second_singular", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_second_singular", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_U);
@@ -2541,7 +2541,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_10get_second
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":90
+/* "extraction.pyx":90
  * 
  * 
  *     def get_blocks(self):             # <<<<<<<<<<<<<<
@@ -2550,20 +2550,20 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_10get_second
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_13get_blocks(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_17extraction_cython_19SignatureExtraction_12get_blocks[] = "Dividing cropped image N x N blocks by M overlapping";
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_13get_blocks(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_13get_blocks(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_10extraction_19SignatureExtraction_12get_blocks[] = "Dividing cropped image N x N blocks by M overlapping";
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_13get_blocks(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_blocks (wrapper)", 0);
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_12get_blocks(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_12get_blocks(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self) {
   PyObject *__pyx_v_I_vis_blur_y = NULL;
   PyObject *__pyx_v_I_vis_blur_x = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -2580,7 +2580,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("get_blocks", 0);
 
-  /* "extraction_cython.pyx":92
+  /* "extraction.pyx":92
  *     def get_blocks(self):
  *         '''Dividing cropped image N x N blocks by M overlapping'''
  *         I_vis_blur_y = np.zeros((self.number_of_blocks * self.N, self.number_of_blocks * self.N))             # <<<<<<<<<<<<<<
@@ -2633,7 +2633,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
   __pyx_v_I_vis_blur_y = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":93
+  /* "extraction.pyx":93
  *         '''Dividing cropped image N x N blocks by M overlapping'''
  *         I_vis_blur_y = np.zeros((self.number_of_blocks * self.N, self.number_of_blocks * self.N))
  *         I_vis_blur_x = np.zeros((self.L, self.number_of_blocks * self.N))             # <<<<<<<<<<<<<<
@@ -2686,7 +2686,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
   __pyx_v_I_vis_blur_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":94
+  /* "extraction.pyx":94
  *         I_vis_blur_y = np.zeros((self.number_of_blocks * self.N, self.number_of_blocks * self.N))
  *         I_vis_blur_x = np.zeros((self.L, self.number_of_blocks * self.N))
  *         for x in range(0, self.L - self.M, self.M):             # <<<<<<<<<<<<<<
@@ -2754,7 +2754,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
     __Pyx_XDECREF_SET(__pyx_v_x, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":95
+    /* "extraction.pyx":95
  *         I_vis_blur_x = np.zeros((self.L, self.number_of_blocks * self.N))
  *         for x in range(0, self.L - self.M, self.M):
  *             I_vis_blur_x[:, x * 2:x * 2 + self.N] = self.image[:, x:x + self.N]             # <<<<<<<<<<<<<<
@@ -2806,7 +2806,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":94
+    /* "extraction.pyx":94
  *         I_vis_blur_y = np.zeros((self.number_of_blocks * self.N, self.number_of_blocks * self.N))
  *         I_vis_blur_x = np.zeros((self.L, self.number_of_blocks * self.N))
  *         for x in range(0, self.L - self.M, self.M):             # <<<<<<<<<<<<<<
@@ -2816,7 +2816,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "extraction_cython.pyx":97
+  /* "extraction.pyx":97
  *             I_vis_blur_x[:, x * 2:x * 2 + self.N] = self.image[:, x:x + self.N]
  * 
  *         for y in range(0, self.L - self.M, self.M):             # <<<<<<<<<<<<<<
@@ -2884,7 +2884,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
     __Pyx_XDECREF_SET(__pyx_v_y, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":98
+    /* "extraction.pyx":98
  * 
  *         for y in range(0, self.L - self.M, self.M):
  *             I_vis_blur_y[y * 2:y * 2 + self.N, :] = I_vis_blur_x[y:y + self.N, :]             # <<<<<<<<<<<<<<
@@ -2936,7 +2936,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":97
+    /* "extraction.pyx":97
  *             I_vis_blur_x[:, x * 2:x * 2 + self.N] = self.image[:, x:x + self.N]
  * 
  *         for y in range(0, self.L - self.M, self.M):             # <<<<<<<<<<<<<<
@@ -2946,7 +2946,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "extraction_cython.pyx":101
+  /* "extraction.pyx":101
  * 
  * 
  *         return I_vis_blur_y             # <<<<<<<<<<<<<<
@@ -2958,7 +2958,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
   __pyx_r = __pyx_v_I_vis_blur_y;
   goto __pyx_L0;
 
-  /* "extraction_cython.pyx":90
+  /* "extraction.pyx":90
  * 
  * 
  *     def get_blocks(self):             # <<<<<<<<<<<<<<
@@ -2974,7 +2974,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_blocks", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_blocks", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_I_vis_blur_y);
@@ -2986,7 +2986,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":103
+/* "extraction.pyx":103
  *         return I_vis_blur_y
  * 
  *     def basic_rotations(self, image):             # <<<<<<<<<<<<<<
@@ -2995,19 +2995,19 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_12get_blocks
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_15basic_rotations(PyObject *__pyx_v_self, PyObject *__pyx_v_image); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_15basic_rotations(PyObject *__pyx_v_self, PyObject *__pyx_v_image) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_15basic_rotations(PyObject *__pyx_v_self, PyObject *__pyx_v_image); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_15basic_rotations(PyObject *__pyx_v_self, PyObject *__pyx_v_image) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("basic_rotations (wrapper)", 0);
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rotations(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_image));
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_14basic_rotations(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_image));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rotations(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_14basic_rotations(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_image) {
   PyObject *__pyx_v_center = NULL;
   PyObject *__pyx_v_M1 = NULL;
   PyObject *__pyx_v_M2 = NULL;
@@ -3033,7 +3033,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("basic_rotations", 0);
 
-  /* "extraction_cython.pyx":104
+  /* "extraction.pyx":104
  * 
  *     def basic_rotations(self, image):
  *         center = (self.N * self.number_of_blocks) / 2             # <<<<<<<<<<<<<<
@@ -3045,7 +3045,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_center = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":105
+  /* "extraction.pyx":105
  *     def basic_rotations(self, image):
  *         center = (self.N * self.number_of_blocks) / 2
  *         M1 = cv2.getRotationMatrix2D((center, center), 90, 1)             # <<<<<<<<<<<<<<
@@ -3098,7 +3098,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_M1 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":106
+  /* "extraction.pyx":106
  *         center = (self.N * self.number_of_blocks) / 2
  *         M1 = cv2.getRotationMatrix2D((center, center), 90, 1)
  *         M2 = cv2.getRotationMatrix2D((center, center), 180, 1)             # <<<<<<<<<<<<<<
@@ -3151,7 +3151,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_M2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":107
+  /* "extraction.pyx":107
  *         M1 = cv2.getRotationMatrix2D((center, center), 90, 1)
  *         M2 = cv2.getRotationMatrix2D((center, center), 180, 1)
  *         M3 = cv2.getRotationMatrix2D((center, center), 270, 1)             # <<<<<<<<<<<<<<
@@ -3204,7 +3204,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_M3 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":108
+  /* "extraction.pyx":108
  *         M2 = cv2.getRotationMatrix2D((center, center), 180, 1)
  *         M3 = cv2.getRotationMatrix2D((center, center), 270, 1)
  *         rot90 = cv2.warpAffine(image, M1, (center * 2, center * 2))             # <<<<<<<<<<<<<<
@@ -3261,7 +3261,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_rot90 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":109
+  /* "extraction.pyx":109
  *         M3 = cv2.getRotationMatrix2D((center, center), 270, 1)
  *         rot90 = cv2.warpAffine(image, M1, (center * 2, center * 2))
  *         rot180 = cv2.warpAffine(image, M2, (center * 2, center * 2))             # <<<<<<<<<<<<<<
@@ -3318,7 +3318,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_rot180 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":110
+  /* "extraction.pyx":110
  *         rot90 = cv2.warpAffine(image, M1, (center * 2, center * 2))
  *         rot180 = cv2.warpAffine(image, M2, (center * 2, center * 2))
  *         rot270 = cv2.warpAffine(image, M3, (center * 2, center * 2))             # <<<<<<<<<<<<<<
@@ -3375,7 +3375,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_rot270 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":111
+  /* "extraction.pyx":111
  *         rot180 = cv2.warpAffine(image, M2, (center * 2, center * 2))
  *         rot270 = cv2.warpAffine(image, M3, (center * 2, center * 2))
  *         fVertical0 = cv2.flip(image, 0)             # <<<<<<<<<<<<<<
@@ -3417,7 +3417,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_fVertical0 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":112
+  /* "extraction.pyx":112
  *         rot270 = cv2.warpAffine(image, M3, (center * 2, center * 2))
  *         fVertical0 = cv2.flip(image, 0)
  *         fHorizontal0 = cv2.flip(image, 1)             # <<<<<<<<<<<<<<
@@ -3459,7 +3459,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_fHorizontal0 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":113
+  /* "extraction.pyx":113
  *         fVertical0 = cv2.flip(image, 0)
  *         fHorizontal0 = cv2.flip(image, 1)
  *         fVertical90 = cv2.flip(rot90, 0)             # <<<<<<<<<<<<<<
@@ -3501,7 +3501,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_fVertical90 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":114
+  /* "extraction.pyx":114
  *         fHorizontal0 = cv2.flip(image, 1)
  *         fVertical90 = cv2.flip(rot90, 0)
  *         fHorizontal90 = cv2.flip(rot90, 1)             # <<<<<<<<<<<<<<
@@ -3543,7 +3543,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_fHorizontal90 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":115
+  /* "extraction.pyx":115
  *         fVertical90 = cv2.flip(rot90, 0)
  *         fHorizontal90 = cv2.flip(rot90, 1)
  *         fVertical180 = cv2.flip(rot180, 0)             # <<<<<<<<<<<<<<
@@ -3585,7 +3585,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_fVertical180 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":116
+  /* "extraction.pyx":116
  *         fHorizontal90 = cv2.flip(rot90, 1)
  *         fVertical180 = cv2.flip(rot180, 0)
  *         fHorizontal180 = cv2.flip(rot180, 1)             # <<<<<<<<<<<<<<
@@ -3627,7 +3627,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_fHorizontal180 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":117
+  /* "extraction.pyx":117
  *         fVertical180 = cv2.flip(rot180, 0)
  *         fHorizontal180 = cv2.flip(rot180, 1)
  *         fVertical270 = cv2.flip(rot270, 0)             # <<<<<<<<<<<<<<
@@ -3669,7 +3669,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_fVertical270 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":118
+  /* "extraction.pyx":118
  *         fHorizontal180 = cv2.flip(rot180, 1)
  *         fVertical270 = cv2.flip(rot270, 0)
  *         fHorizontal270 = cv2.flip(rot270, 1)             # <<<<<<<<<<<<<<
@@ -3711,7 +3711,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_v_fHorizontal270 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":120
+  /* "extraction.pyx":120
  *         fHorizontal270 = cv2.flip(rot270, 1)
  * 
  *         return rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \             # <<<<<<<<<<<<<<
@@ -3720,7 +3720,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "extraction_cython.pyx":121
+  /* "extraction.pyx":121
  * 
  *         return rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \
  *          fVertical270, fHorizontal270             # <<<<<<<<<<<<<<
@@ -3766,7 +3766,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "extraction_cython.pyx":103
+  /* "extraction.pyx":103
  *         return I_vis_blur_y
  * 
  *     def basic_rotations(self, image):             # <<<<<<<<<<<<<<
@@ -3781,7 +3781,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.basic_rotations", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.basic_rotations", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_center);
@@ -3804,7 +3804,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":123
+/* "extraction.pyx":123
  *          fVertical270, fHorizontal270
  * 
  *     def get_luminance(self, rot0, rot90, rot180, rot270, x, y, only_rotate):             # <<<<<<<<<<<<<<
@@ -3813,8 +3813,8 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_14basic_rota
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_17get_luminance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_17get_luminance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_17get_luminance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_17get_luminance(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_rot0 = 0;
   PyObject *__pyx_v_rot90 = 0;
   PyObject *__pyx_v_rot180 = 0;
@@ -3904,18 +3904,18 @@ static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_17get_lumina
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("get_luminance", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 123, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_luminance", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_luminance", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_16get_luminance(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), __pyx_v_rot0, __pyx_v_rot90, __pyx_v_rot180, __pyx_v_rot270, __pyx_v_x, __pyx_v_y, __pyx_v_only_rotate);
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_16get_luminance(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), __pyx_v_rot0, __pyx_v_rot90, __pyx_v_rot180, __pyx_v_rot270, __pyx_v_x, __pyx_v_y, __pyx_v_only_rotate);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_luminance(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_16get_luminance(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate) {
   PyObject *__pyx_v_group = NULL;
   PyObject *__pyx_v_lum1 = NULL;
   PyObject *__pyx_v_lum2 = NULL;
@@ -3937,7 +3937,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   Py_ssize_t __pyx_t_7;
   __Pyx_RefNannySetupContext("get_luminance", 0);
 
-  /* "extraction_cython.pyx":124
+  /* "extraction.pyx":124
  * 
  *     def get_luminance(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
  *         group = np.zeros((8, 64))             # <<<<<<<<<<<<<<
@@ -3955,7 +3955,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   __pyx_v_group = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":125
+  /* "extraction.pyx":125
  *     def get_luminance(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
  *         group = np.zeros((8, 64))
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -4004,7 +4004,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__12, __pyx_t_2) < 0)) __PYX_ERR(0, 125, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":127
+  /* "extraction.pyx":127
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  * 
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -4053,7 +4053,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__15, __pyx_t_5) < 0)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "extraction_cython.pyx":128
+  /* "extraction.pyx":128
  * 
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -4102,7 +4102,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__18, __pyx_t_1) < 0)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":129
+  /* "extraction.pyx":129
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -4151,7 +4151,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__21, __pyx_t_2) < 0)) __PYX_ERR(0, 129, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":131
+  /* "extraction.pyx":131
  *         group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  * 
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])             # <<<<<<<<<<<<<<
@@ -4191,7 +4191,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   __pyx_v_lum1 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":132
+  /* "extraction.pyx":132
  * 
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])             # <<<<<<<<<<<<<<
@@ -4231,7 +4231,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   __pyx_v_lum2 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":133
+  /* "extraction.pyx":133
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])
  *         lum3 = self.get_average_luminance_of_block(group[:, 16:24])             # <<<<<<<<<<<<<<
@@ -4271,7 +4271,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   __pyx_v_lum3 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":134
+  /* "extraction.pyx":134
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])
  *         lum3 = self.get_average_luminance_of_block(group[:, 16:24])
  *         lum4 = self.get_average_luminance_of_block(group[:, 24:32])             # <<<<<<<<<<<<<<
@@ -4311,7 +4311,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   __pyx_v_lum4 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":137
+  /* "extraction.pyx":137
  * 
  * 
  *         if only_rotate == 1:             # <<<<<<<<<<<<<<
@@ -4324,7 +4324,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_6) {
 
-    /* "extraction_cython.pyx":138
+    /* "extraction.pyx":138
  * 
  *         if only_rotate == 1:
  *             avg_lum = (lum1 + lum2 + lum3 + lum4) / 4             # <<<<<<<<<<<<<<
@@ -4345,7 +4345,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     __pyx_v_avg_lum = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "extraction_cython.pyx":140
+    /* "extraction.pyx":140
  *             avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
  * 
  *             return avg_lum             # <<<<<<<<<<<<<<
@@ -4357,7 +4357,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     __pyx_r = __pyx_v_avg_lum;
     goto __pyx_L0;
 
-    /* "extraction_cython.pyx":137
+    /* "extraction.pyx":137
  * 
  * 
  *         if only_rotate == 1:             # <<<<<<<<<<<<<<
@@ -4366,7 +4366,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
  */
   }
 
-  /* "extraction_cython.pyx":141
+  /* "extraction.pyx":141
  * 
  *             return avg_lum
  *         elif only_rotate == -1:             # <<<<<<<<<<<<<<
@@ -4379,7 +4379,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (__pyx_t_6) {
 
-    /* "extraction_cython.pyx":142
+    /* "extraction.pyx":142
  *             return avg_lum
  *         elif only_rotate == -1:
  *             avg_lum = lum1             # <<<<<<<<<<<<<<
@@ -4389,7 +4389,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     __Pyx_INCREF(__pyx_v_lum1);
     __pyx_v_avg_lum = __pyx_v_lum1;
 
-    /* "extraction_cython.pyx":144
+    /* "extraction.pyx":144
  *             avg_lum = lum1
  * 
  *             return avg_lum             # <<<<<<<<<<<<<<
@@ -4401,7 +4401,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     __pyx_r = __pyx_v_avg_lum;
     goto __pyx_L0;
 
-    /* "extraction_cython.pyx":141
+    /* "extraction.pyx":141
  * 
  *             return avg_lum
  *         elif only_rotate == -1:             # <<<<<<<<<<<<<<
@@ -4410,7 +4410,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
  */
   }
 
-  /* "extraction_cython.pyx":146
+  /* "extraction.pyx":146
  *             return avg_lum
  *         else:
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)             # <<<<<<<<<<<<<<
@@ -4455,7 +4455,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__39, __pyx_t_5) < 0)) __PYX_ERR(0, 146, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "extraction_cython.pyx":147
+    /* "extraction.pyx":147
  *         else:
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)             # <<<<<<<<<<<<<<
@@ -4499,7 +4499,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__45, __pyx_t_5) < 0)) __PYX_ERR(0, 147, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "extraction_cython.pyx":148
+    /* "extraction.pyx":148
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
  *             group[:, 48:56] = cv2.flip(group[:, 16:24], 0)             # <<<<<<<<<<<<<<
@@ -4543,7 +4543,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__51, __pyx_t_5) < 0)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "extraction_cython.pyx":149
+    /* "extraction.pyx":149
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
  *             group[:, 48:56] = cv2.flip(group[:, 16:24], 0)
  *             group[:, 56:64] = cv2.flip(group[:, 0:8], 0)             # <<<<<<<<<<<<<<
@@ -4587,7 +4587,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__57, __pyx_t_5) < 0)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "extraction_cython.pyx":151
+    /* "extraction.pyx":151
  *             group[:, 56:64] = cv2.flip(group[:, 0:8], 0)
  * 
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])             # <<<<<<<<<<<<<<
@@ -4627,7 +4627,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     __pyx_v_lum5 = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "extraction_cython.pyx":152
+    /* "extraction.pyx":152
  * 
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])             # <<<<<<<<<<<<<<
@@ -4667,7 +4667,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     __pyx_v_lum6 = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "extraction_cython.pyx":153
+    /* "extraction.pyx":153
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
  *             lum7 = self.get_average_luminance_of_block(group[:, 48:56])             # <<<<<<<<<<<<<<
@@ -4707,7 +4707,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     __pyx_v_lum7 = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "extraction_cython.pyx":154
+    /* "extraction.pyx":154
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
  *             lum7 = self.get_average_luminance_of_block(group[:, 48:56])
  *             lum8 = self.get_average_luminance_of_block(group[:, 56:64])             # <<<<<<<<<<<<<<
@@ -4747,7 +4747,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     __pyx_v_lum8 = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "extraction_cython.pyx":156
+    /* "extraction.pyx":156
  *             lum8 = self.get_average_luminance_of_block(group[:, 56:64])
  * 
  *             avg_lum = (lum1 + lum2 + lum3 + lum4 + lum5 + lum6 + lum7+ lum8) / 8             # <<<<<<<<<<<<<<
@@ -4780,7 +4780,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     __pyx_v_avg_lum = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":159
+    /* "extraction.pyx":159
  * 
  * 
  *             return avg_lum             # <<<<<<<<<<<<<<
@@ -4793,7 +4793,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
     goto __pyx_L0;
   }
 
-  /* "extraction_cython.pyx":123
+  /* "extraction.pyx":123
  *          fVertical270, fHorizontal270
  * 
  *     def get_luminance(self, rot0, rot90, rot180, rot270, x, y, only_rotate):             # <<<<<<<<<<<<<<
@@ -4808,7 +4808,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_luminance", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_luminance", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_group);
@@ -4826,7 +4826,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":162
+/* "extraction.pyx":162
  * 
  * 
  *     def get_std_lum(self, rot0, rot90, rot180, rot270, x, y, only_rotate):             # <<<<<<<<<<<<<<
@@ -4835,8 +4835,8 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_16get_lumina
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_19get_std_lum(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_19get_std_lum(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_19get_std_lum(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_19get_std_lum(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_rot0 = 0;
   PyObject *__pyx_v_rot90 = 0;
   PyObject *__pyx_v_rot180 = 0;
@@ -4926,18 +4926,18 @@ static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_19get_std_lu
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("get_std_lum", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 162, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_std_lum", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_std_lum", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lum(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), __pyx_v_rot0, __pyx_v_rot90, __pyx_v_rot180, __pyx_v_rot270, __pyx_v_x, __pyx_v_y, __pyx_v_only_rotate);
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_18get_std_lum(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), __pyx_v_rot0, __pyx_v_rot90, __pyx_v_rot180, __pyx_v_rot270, __pyx_v_x, __pyx_v_y, __pyx_v_only_rotate);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lum(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_18get_std_lum(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate) {
   PyObject *__pyx_v_group = NULL;
   PyObject *__pyx_v_lum1 = NULL;
   PyObject *__pyx_v_lum2 = NULL;
@@ -4961,7 +4961,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   Py_ssize_t __pyx_t_9;
   __Pyx_RefNannySetupContext("get_std_lum", 0);
 
-  /* "extraction_cython.pyx":163
+  /* "extraction.pyx":163
  * 
  *     def get_std_lum(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
  *         group = np.zeros((8, 64))             # <<<<<<<<<<<<<<
@@ -4979,7 +4979,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   __pyx_v_group = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":164
+  /* "extraction.pyx":164
  *     def get_std_lum(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
  *         group = np.zeros((8, 64))
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -5028,7 +5028,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__74, __pyx_t_2) < 0)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":165
+  /* "extraction.pyx":165
  *         group = np.zeros((8, 64))
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -5077,7 +5077,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__77, __pyx_t_5) < 0)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "extraction_cython.pyx":166
+  /* "extraction.pyx":166
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -5126,7 +5126,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__80, __pyx_t_1) < 0)) __PYX_ERR(0, 166, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":167
+  /* "extraction.pyx":167
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -5175,7 +5175,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__83, __pyx_t_2) < 0)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":169
+  /* "extraction.pyx":169
  *         group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  * 
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])             # <<<<<<<<<<<<<<
@@ -5215,7 +5215,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   __pyx_v_lum1 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":170
+  /* "extraction.pyx":170
  * 
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])             # <<<<<<<<<<<<<<
@@ -5255,7 +5255,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   __pyx_v_lum2 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":171
+  /* "extraction.pyx":171
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])
  *         lum3 = self.get_average_luminance_of_block(group[:, 16:24])             # <<<<<<<<<<<<<<
@@ -5295,7 +5295,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   __pyx_v_lum3 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":172
+  /* "extraction.pyx":172
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])
  *         lum3 = self.get_average_luminance_of_block(group[:, 16:24])
  *         lum4 = self.get_average_luminance_of_block(group[:, 24:32])             # <<<<<<<<<<<<<<
@@ -5335,7 +5335,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   __pyx_v_lum4 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":174
+  /* "extraction.pyx":174
  *         lum4 = self.get_average_luminance_of_block(group[:, 24:32])
  * 
  *         if only_rotate == 1:             # <<<<<<<<<<<<<<
@@ -5348,7 +5348,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_6) {
 
-    /* "extraction_cython.pyx":175
+    /* "extraction.pyx":175
  * 
  *         if only_rotate == 1:
  *             std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))             # <<<<<<<<<<<<<<
@@ -5434,7 +5434,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     __pyx_v_std_lum = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":177
+    /* "extraction.pyx":177
  *             std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
  * 
  *             return std_lum             # <<<<<<<<<<<<<<
@@ -5446,7 +5446,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     __pyx_r = __pyx_v_std_lum;
     goto __pyx_L0;
 
-    /* "extraction_cython.pyx":174
+    /* "extraction.pyx":174
  *         lum4 = self.get_average_luminance_of_block(group[:, 24:32])
  * 
  *         if only_rotate == 1:             # <<<<<<<<<<<<<<
@@ -5455,7 +5455,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
  */
   }
 
-  /* "extraction_cython.pyx":178
+  /* "extraction.pyx":178
  * 
  *             return std_lum
  *         elif only_rotate == -1:             # <<<<<<<<<<<<<<
@@ -5468,7 +5468,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_6) {
 
-    /* "extraction_cython.pyx":179
+    /* "extraction.pyx":179
  *             return std_lum
  *         elif only_rotate == -1:
  *             std_lum = 0             # <<<<<<<<<<<<<<
@@ -5478,7 +5478,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     __Pyx_INCREF(__pyx_int_0);
     __pyx_v_std_lum = __pyx_int_0;
 
-    /* "extraction_cython.pyx":181
+    /* "extraction.pyx":181
  *             std_lum = 0
  * 
  *             return std_lum             # <<<<<<<<<<<<<<
@@ -5490,7 +5490,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     __pyx_r = __pyx_v_std_lum;
     goto __pyx_L0;
 
-    /* "extraction_cython.pyx":178
+    /* "extraction.pyx":178
  * 
  *             return std_lum
  *         elif only_rotate == -1:             # <<<<<<<<<<<<<<
@@ -5499,7 +5499,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
  */
   }
 
-  /* "extraction_cython.pyx":183
+  /* "extraction.pyx":183
  *             return std_lum
  *         else:
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)             # <<<<<<<<<<<<<<
@@ -5544,7 +5544,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__101, __pyx_t_2) < 0)) __PYX_ERR(0, 183, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":184
+    /* "extraction.pyx":184
  *         else:
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)             # <<<<<<<<<<<<<<
@@ -5588,7 +5588,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__107, __pyx_t_2) < 0)) __PYX_ERR(0, 184, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":185
+    /* "extraction.pyx":185
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
  *             group[:, 48:56] = cv2.flip(group[:, 16:24], 0)             # <<<<<<<<<<<<<<
@@ -5632,7 +5632,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__113, __pyx_t_2) < 0)) __PYX_ERR(0, 185, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":186
+    /* "extraction.pyx":186
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
  *             group[:, 48:56] = cv2.flip(group[:, 16:24], 0)
  *             group[:, 56:64] = cv2.flip(group[:, 0:8], 0)             # <<<<<<<<<<<<<<
@@ -5676,7 +5676,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     if (unlikely(PyObject_SetItem(__pyx_v_group, __pyx_tuple__119, __pyx_t_2) < 0)) __PYX_ERR(0, 186, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":188
+    /* "extraction.pyx":188
  *             group[:, 56:64] = cv2.flip(group[:, 0:8], 0)
  * 
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])             # <<<<<<<<<<<<<<
@@ -5716,7 +5716,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     __pyx_v_lum5 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":189
+    /* "extraction.pyx":189
  * 
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])             # <<<<<<<<<<<<<<
@@ -5756,7 +5756,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     __pyx_v_lum6 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":190
+    /* "extraction.pyx":190
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
  *             lum7 = self.get_average_luminance_of_block(group[:, 48:56])             # <<<<<<<<<<<<<<
@@ -5796,7 +5796,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     __pyx_v_lum7 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":191
+    /* "extraction.pyx":191
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
  *             lum7 = self.get_average_luminance_of_block(group[:, 48:56])
  *             lum8 = self.get_average_luminance_of_block(group[:, 56:64])             # <<<<<<<<<<<<<<
@@ -5836,7 +5836,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     __pyx_v_lum8 = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":193
+    /* "extraction.pyx":193
  *             lum8 = self.get_average_luminance_of_block(group[:, 56:64])
  * 
  *             std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8]))             # <<<<<<<<<<<<<<
@@ -5934,7 +5934,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     __pyx_v_std_lum = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":196
+    /* "extraction.pyx":196
  * 
  * 
  *             return std_lum             # <<<<<<<<<<<<<<
@@ -5947,7 +5947,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
     goto __pyx_L0;
   }
 
-  /* "extraction_cython.pyx":162
+  /* "extraction.pyx":162
  * 
  * 
  *     def get_std_lum(self, rot0, rot90, rot180, rot270, x, y, only_rotate):             # <<<<<<<<<<<<<<
@@ -5964,7 +5964,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_std_lum", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_std_lum", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_group);
@@ -5982,7 +5982,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":268
+/* "extraction.pyx":268
  * ##            return std_sing
  * 
  *     def get_fragment(self, rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \             # <<<<<<<<<<<<<<
@@ -5991,8 +5991,8 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_18get_std_lu
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_21get_fragment(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_21get_fragment(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_21get_fragment(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_21get_fragment(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_rot0 = 0;
   PyObject *__pyx_v_rot90 = 0;
   PyObject *__pyx_v_rot180 = 0;
@@ -6154,18 +6154,18 @@ static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_21get_fragme
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("get_fragment", 1, 15, 15, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 268, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_fragment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_fragment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragment(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), __pyx_v_rot0, __pyx_v_rot90, __pyx_v_rot180, __pyx_v_rot270, __pyx_v_fVertical0, __pyx_v_fHorizontal0, __pyx_v_fVertical90, __pyx_v_fHorizontal90, __pyx_v_fVertical180, __pyx_v_fHorizontal180, __pyx_v_fVertical270, __pyx_v_fHorizontal270, __pyx_v_x, __pyx_v_y, __pyx_v_only_rotate);
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_20get_fragment(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), __pyx_v_rot0, __pyx_v_rot90, __pyx_v_rot180, __pyx_v_rot270, __pyx_v_fVertical0, __pyx_v_fHorizontal0, __pyx_v_fVertical90, __pyx_v_fHorizontal90, __pyx_v_fVertical180, __pyx_v_fHorizontal180, __pyx_v_fVertical270, __pyx_v_fHorizontal270, __pyx_v_x, __pyx_v_y, __pyx_v_only_rotate);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragment(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_fVertical0, PyObject *__pyx_v_fHorizontal0, PyObject *__pyx_v_fVertical90, PyObject *__pyx_v_fHorizontal90, PyObject *__pyx_v_fVertical180, PyObject *__pyx_v_fHorizontal180, PyObject *__pyx_v_fVertical270, PyObject *__pyx_v_fHorizontal270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_20get_fragment(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_rot0, PyObject *__pyx_v_rot90, PyObject *__pyx_v_rot180, PyObject *__pyx_v_rot270, PyObject *__pyx_v_fVertical0, PyObject *__pyx_v_fHorizontal0, PyObject *__pyx_v_fVertical90, PyObject *__pyx_v_fHorizontal90, PyObject *__pyx_v_fVertical180, PyObject *__pyx_v_fHorizontal180, PyObject *__pyx_v_fVertical270, PyObject *__pyx_v_fHorizontal270, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_only_rotate) {
   PyObject *__pyx_v_lum1 = NULL;
   PyObject *__pyx_v_lum2 = NULL;
   PyObject *__pyx_v_lum3 = NULL;
@@ -6192,7 +6192,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("get_fragment", 0);
 
-  /* "extraction_cython.pyx":289
+  /* "extraction.pyx":289
  * 
  * 
  *         if only_rotate == 1:             # <<<<<<<<<<<<<<
@@ -6205,7 +6205,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "extraction_cython.pyx":294
+    /* "extraction.pyx":294
  * ##            results = results(list)
  * 
  *             lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -6282,7 +6282,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum1 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "extraction_cython.pyx":295
+    /* "extraction.pyx":295
  * 
  *             lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -6359,7 +6359,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum2 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "extraction_cython.pyx":296
+    /* "extraction.pyx":296
  *             lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -6436,7 +6436,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum3 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "extraction_cython.pyx":297
+    /* "extraction.pyx":297
  *             lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -6513,7 +6513,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum4 = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "extraction_cython.pyx":298
+    /* "extraction.pyx":298
  *             lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             avg_lum = (lum1 + lum2 + lum3 + lum4) / 4             # <<<<<<<<<<<<<<
@@ -6534,7 +6534,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_avg_lum = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":299
+    /* "extraction.pyx":299
  *             lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
  *             std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))             # <<<<<<<<<<<<<<
@@ -6620,7 +6620,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_std_lum = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":312
+    /* "extraction.pyx":312
  * 
  * ##            return avg_lum, std_lum, avg_sing, std_sing
  *             return avg_lum, std_lum             # <<<<<<<<<<<<<<
@@ -6640,7 +6640,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_t_3 = 0;
     goto __pyx_L0;
 
-    /* "extraction_cython.pyx":289
+    /* "extraction.pyx":289
  * 
  * 
  *         if only_rotate == 1:             # <<<<<<<<<<<<<<
@@ -6649,7 +6649,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
  */
   }
 
-  /* "extraction_cython.pyx":314
+  /* "extraction.pyx":314
  *             return avg_lum, std_lum
  * 
  *         elif only_rotate == -1:             # <<<<<<<<<<<<<<
@@ -6662,7 +6662,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_2) {
 
-    /* "extraction_cython.pyx":315
+    /* "extraction.pyx":315
  * 
  *         elif only_rotate == -1:
  *             lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -6739,7 +6739,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum1 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":316
+    /* "extraction.pyx":316
  *         elif only_rotate == -1:
  *             lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             avg_lum = lum1             # <<<<<<<<<<<<<<
@@ -6749,7 +6749,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __Pyx_INCREF(__pyx_v_lum1);
     __pyx_v_avg_lum = __pyx_v_lum1;
 
-    /* "extraction_cython.pyx":317
+    /* "extraction.pyx":317
  *             lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             avg_lum = lum1
  *             std_lum = 0             # <<<<<<<<<<<<<<
@@ -6759,7 +6759,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __Pyx_INCREF(__pyx_int_0);
     __pyx_v_std_lum = __pyx_int_0;
 
-    /* "extraction_cython.pyx":324
+    /* "extraction.pyx":324
  * 
  * ##            return avg_lum, std_lum, avg_sing, std_sing
  *             return avg_lum, std_lum             # <<<<<<<<<<<<<<
@@ -6779,7 +6779,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_t_3 = 0;
     goto __pyx_L0;
 
-    /* "extraction_cython.pyx":314
+    /* "extraction.pyx":314
  *             return avg_lum, std_lum
  * 
  *         elif only_rotate == -1:             # <<<<<<<<<<<<<<
@@ -6788,7 +6788,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
  */
   }
 
-  /* "extraction_cython.pyx":336
+  /* "extraction.pyx":336
  * ##            group[:, 88:96] = fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  * 
  *             lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -6866,7 +6866,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum1 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":337
+    /* "extraction.pyx":337
  * 
  *             lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -6943,7 +6943,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum2 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":338
+    /* "extraction.pyx":338
  *             lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7020,7 +7020,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum3 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":339
+    /* "extraction.pyx":339
  *             lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7097,7 +7097,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum4 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":340
+    /* "extraction.pyx":340
  *             lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum5 = self.get_average_luminance_of_block(fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7174,7 +7174,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum5 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":341
+    /* "extraction.pyx":341
  *             lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum5 = self.get_average_luminance_of_block(fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum6 = self.get_average_luminance_of_block(fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7251,7 +7251,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum6 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":342
+    /* "extraction.pyx":342
  *             lum5 = self.get_average_luminance_of_block(fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum6 = self.get_average_luminance_of_block(fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum7 = self.get_average_luminance_of_block(fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7328,7 +7328,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum7 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":343
+    /* "extraction.pyx":343
  *             lum6 = self.get_average_luminance_of_block(fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum7 = self.get_average_luminance_of_block(fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum8 = self.get_average_luminance_of_block(fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7405,7 +7405,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum8 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":344
+    /* "extraction.pyx":344
  *             lum7 = self.get_average_luminance_of_block(fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum8 = self.get_average_luminance_of_block(fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum9 = self.get_average_luminance_of_block(fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7482,7 +7482,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum9 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":345
+    /* "extraction.pyx":345
  *             lum8 = self.get_average_luminance_of_block(fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum9 = self.get_average_luminance_of_block(fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum10 = self.get_average_luminance_of_block(fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7559,7 +7559,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum10 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":346
+    /* "extraction.pyx":346
  *             lum9 = self.get_average_luminance_of_block(fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum10 = self.get_average_luminance_of_block(fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum11 = self.get_average_luminance_of_block(fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7636,7 +7636,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum11 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":347
+    /* "extraction.pyx":347
  *             lum10 = self.get_average_luminance_of_block(fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum11 = self.get_average_luminance_of_block(fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
  *             lum12 = self.get_average_luminance_of_block(fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])             # <<<<<<<<<<<<<<
@@ -7713,7 +7713,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_lum12 = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":362
+    /* "extraction.pyx":362
  * ##            sing12 = self.get_singular_energy(group[:, 88:96])
  * 
  *             avg_lum = (lum1 + lum2 + lum3 + lum4 + lum5 + lum6 + lum7 + lum8 + lum9 + lum10 + lum11 + lum12) / 12             # <<<<<<<<<<<<<<
@@ -7758,7 +7758,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_avg_lum = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "extraction_cython.pyx":365
+    /* "extraction.pyx":365
  *             # avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
  * 
  *             std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8, lum9, lum10, lum11, lum12]))             # <<<<<<<<<<<<<<
@@ -7868,7 +7868,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     __pyx_v_std_lum = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "extraction_cython.pyx":379
+    /* "extraction.pyx":379
  * 
  * ##            return avg_lum, std_lum, avg_sing, std_sing
  *             return avg_lum, std_lum             # <<<<<<<<<<<<<<
@@ -7889,7 +7889,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
     goto __pyx_L0;
   }
 
-  /* "extraction_cython.pyx":268
+  /* "extraction.pyx":268
  * ##            return std_sing
  * 
  *     def get_fragment(self, rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \             # <<<<<<<<<<<<<<
@@ -7906,7 +7906,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_fragment", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_fragment", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_lum1);
@@ -7928,7 +7928,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":381
+/* "extraction.pyx":381
  *             return avg_lum, std_lum
  * 
  *     def get_all_fragments(self):             # <<<<<<<<<<<<<<
@@ -7937,19 +7937,19 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_20get_fragme
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_23get_all_fragments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_23get_all_fragments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_23get_all_fragments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_23get_all_fragments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_all_fragments (wrapper)", 0);
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fragments(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_22get_all_fragments(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fragments(struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_22get_all_fragments(struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self) {
   PyObject *__pyx_v_fragments_list = NULL;
   PyObject *__pyx_v_rot0 = NULL;
   PyObject *__pyx_v_rot90 = NULL;
@@ -7992,7 +7992,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   Py_ssize_t __pyx_t_17;
   __Pyx_RefNannySetupContext("get_all_fragments", 0);
 
-  /* "extraction_cython.pyx":383
+  /* "extraction.pyx":383
  *     def get_all_fragments(self):
  * ##        fragments_list = [[],[],[],[]]
  *         fragments_list = [[],[]]             # <<<<<<<<<<<<<<
@@ -8014,7 +8014,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   __pyx_v_fragments_list = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "extraction_cython.pyx":384
+  /* "extraction.pyx":384
  * ##        fragments_list = [[],[],[],[]]
  *         fragments_list = [[],[]]
  *         rot0 = self.get_blocks()             # <<<<<<<<<<<<<<
@@ -8044,7 +8044,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   __pyx_v_rot0 = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "extraction_cython.pyx":386
+  /* "extraction.pyx":386
  *         rot0 = self.get_blocks()
  *         rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
  *         fVertical180, fHorizontal180, fVertical270, fHorizontal270 = self.basic_rotations(rot0)             # <<<<<<<<<<<<<<
@@ -8163,7 +8163,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
     __pyx_L4_unpacking_done:;
   }
 
-  /* "extraction_cython.pyx":385
+  /* "extraction.pyx":385
  *         fragments_list = [[],[]]
  *         rot0 = self.get_blocks()
  *         rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \             # <<<<<<<<<<<<<<
@@ -8193,7 +8193,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   __pyx_v_fHorizontal270 = __pyx_t_12;
   __pyx_t_12 = 0;
 
-  /* "extraction_cython.pyx":387
+  /* "extraction.pyx":387
  *         rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
  *         fVertical180, fHorizontal180, fVertical270, fHorizontal270 = self.basic_rotations(rot0)
  *         counter_x = 0             # <<<<<<<<<<<<<<
@@ -8203,7 +8203,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_counter_x = __pyx_int_0;
 
-  /* "extraction_cython.pyx":388
+  /* "extraction.pyx":388
  *         fVertical180, fHorizontal180, fVertical270, fHorizontal270 = self.basic_rotations(rot0)
  *         counter_x = 0
  *         counter_y = 0             # <<<<<<<<<<<<<<
@@ -8213,7 +8213,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_counter_y = __pyx_int_0;
 
-  /* "extraction_cython.pyx":389
+  /* "extraction.pyx":389
  *         counter_x = 0
  *         counter_y = 0
  *         append_std_lum = fragments_list[0].append             # <<<<<<<<<<<<<<
@@ -8228,7 +8228,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   __pyx_v_append_std_lum = __pyx_t_12;
   __pyx_t_12 = 0;
 
-  /* "extraction_cython.pyx":390
+  /* "extraction.pyx":390
  *         counter_y = 0
  *         append_std_lum = fragments_list[0].append
  *         append_avg_lum = fragments_list[1].append             # <<<<<<<<<<<<<<
@@ -8243,7 +8243,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   __pyx_v_append_avg_lum = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "extraction_cython.pyx":394
+  /* "extraction.pyx":394
  * ##        append_avg_sing = fragments_list[3].append
  * 
  *         while(counter_x < 14 or counter_y < 14):             # <<<<<<<<<<<<<<
@@ -8266,7 +8266,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
     __pyx_L7_bool_binop_done:;
     if (!__pyx_t_15) break;
 
-    /* "extraction_cython.pyx":395
+    /* "extraction.pyx":395
  * 
  *         while(counter_x < 14 or counter_y < 14):
  *             if counter_x == 15:             # <<<<<<<<<<<<<<
@@ -8279,7 +8279,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_15) {
 
-      /* "extraction_cython.pyx":396
+      /* "extraction.pyx":396
  *         while(counter_x < 14 or counter_y < 14):
  *             if counter_x == 15:
  *                 counter_y += 1             # <<<<<<<<<<<<<<
@@ -8291,7 +8291,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
       __Pyx_DECREF_SET(__pyx_v_counter_y, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "extraction_cython.pyx":397
+      /* "extraction.pyx":397
  *             if counter_x == 15:
  *                 counter_y += 1
  *                 counter_x = counter_y             # <<<<<<<<<<<<<<
@@ -8301,7 +8301,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
       __Pyx_INCREF(__pyx_v_counter_y);
       __Pyx_DECREF_SET(__pyx_v_counter_x, __pyx_v_counter_y);
 
-      /* "extraction_cython.pyx":395
+      /* "extraction.pyx":395
  * 
  *         while(counter_x < 14 or counter_y < 14):
  *             if counter_x == 15:             # <<<<<<<<<<<<<<
@@ -8310,7 +8310,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
  */
     }
 
-    /* "extraction_cython.pyx":398
+    /* "extraction.pyx":398
  *                 counter_y += 1
  *                 counter_x = counter_y
  *             if counter_x == counter_y or counter_x == 14:             # <<<<<<<<<<<<<<
@@ -8333,7 +8333,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
     __pyx_L11_bool_binop_done:;
     if (__pyx_t_15) {
 
-      /* "extraction_cython.pyx":399
+      /* "extraction.pyx":399
  *                 counter_x = counter_y
  *             if counter_x == counter_y or counter_x == 14:
  *                 if counter_x == 14 and counter_y == 14:             # <<<<<<<<<<<<<<
@@ -8357,7 +8357,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
       __pyx_L14_bool_binop_done:;
       if (__pyx_t_15) {
 
-        /* "extraction_cython.pyx":400
+        /* "extraction.pyx":400
  *             if counter_x == counter_y or counter_x == 14:
  *                 if counter_x == 14 and counter_y == 14:
  *                     fragment_time = time.time()             # <<<<<<<<<<<<<<
@@ -8390,7 +8390,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __Pyx_XDECREF_SET(__pyx_v_fragment_time, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "extraction_cython.pyx":401
+        /* "extraction.pyx":401
  *                 if counter_x == 14 and counter_y == 14:
  *                     fragment_time = time.time()
  *                     avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \             # <<<<<<<<<<<<<<
@@ -8400,7 +8400,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __pyx_t_11 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_fragment); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 401, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
 
-        /* "extraction_cython.pyx":402
+        /* "extraction.pyx":402
  *                     fragment_time = time.time()
  *                     avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
  *     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, -1)             # <<<<<<<<<<<<<<
@@ -8524,7 +8524,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
           __pyx_L17_unpacking_done:;
         }
 
-        /* "extraction_cython.pyx":401
+        /* "extraction.pyx":401
  *                 if counter_x == 14 and counter_y == 14:
  *                     fragment_time = time.time()
  *                     avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \             # <<<<<<<<<<<<<<
@@ -8536,7 +8536,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __Pyx_XDECREF_SET(__pyx_v_std_lum, __pyx_t_10);
         __pyx_t_10 = 0;
 
-        /* "extraction_cython.pyx":403
+        /* "extraction.pyx":403
  *                     avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
  *     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, -1)
  *                     fragment_end_time = time.time()             # <<<<<<<<<<<<<<
@@ -8569,7 +8569,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __Pyx_XDECREF_SET(__pyx_v_fragment_end_time, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "extraction_cython.pyx":404
+        /* "extraction.pyx":404
  *     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, -1)
  *                     fragment_end_time = time.time()
  *                     append_std_lum(std_lum)             # <<<<<<<<<<<<<<
@@ -8604,7 +8604,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "extraction_cython.pyx":405
+        /* "extraction.pyx":405
  *                     fragment_end_time = time.time()
  *                     append_std_lum(std_lum)
  *                     append_avg_lum(avg_lum)             # <<<<<<<<<<<<<<
@@ -8639,7 +8639,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "extraction_cython.pyx":399
+        /* "extraction.pyx":399
  *                 counter_x = counter_y
  *             if counter_x == counter_y or counter_x == 14:
  *                 if counter_x == 14 and counter_y == 14:             # <<<<<<<<<<<<<<
@@ -8649,7 +8649,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         goto __pyx_L13;
       }
 
-      /* "extraction_cython.pyx":410
+      /* "extraction.pyx":410
  * ##                    break
  *                 else:
  *                     fragment_time = time.time()             # <<<<<<<<<<<<<<
@@ -8683,7 +8683,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __Pyx_XDECREF_SET(__pyx_v_fragment_time, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "extraction_cython.pyx":411
+        /* "extraction.pyx":411
  *                 else:
  *                     fragment_time = time.time()
  *                     avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \             # <<<<<<<<<<<<<<
@@ -8693,7 +8693,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __pyx_t_10 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_fragment); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 411, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_10);
 
-        /* "extraction_cython.pyx":412
+        /* "extraction.pyx":412
  *                     fragment_time = time.time()
  *                     avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
  *     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 1)             # <<<<<<<<<<<<<<
@@ -8817,7 +8817,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
           __pyx_L19_unpacking_done:;
         }
 
-        /* "extraction_cython.pyx":411
+        /* "extraction.pyx":411
  *                 else:
  *                     fragment_time = time.time()
  *                     avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \             # <<<<<<<<<<<<<<
@@ -8829,7 +8829,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __Pyx_XDECREF_SET(__pyx_v_std_lum, __pyx_t_12);
         __pyx_t_12 = 0;
 
-        /* "extraction_cython.pyx":413
+        /* "extraction.pyx":413
  *                     avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
  *     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 1)
  *                     fragment_end_time = time.time()             # <<<<<<<<<<<<<<
@@ -8862,7 +8862,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __Pyx_XDECREF_SET(__pyx_v_fragment_end_time, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "extraction_cython.pyx":414
+        /* "extraction.pyx":414
  *     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 1)
  *                     fragment_end_time = time.time()
  *                     append_std_lum(std_lum)             # <<<<<<<<<<<<<<
@@ -8897,7 +8897,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "extraction_cython.pyx":415
+        /* "extraction.pyx":415
  *                     fragment_end_time = time.time()
  *                     append_std_lum(std_lum)
  *                     append_avg_lum(avg_lum)             # <<<<<<<<<<<<<<
@@ -8934,7 +8934,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
       }
       __pyx_L13:;
 
-      /* "extraction_cython.pyx":398
+      /* "extraction.pyx":398
  *                 counter_y += 1
  *                 counter_x = counter_y
  *             if counter_x == counter_y or counter_x == 14:             # <<<<<<<<<<<<<<
@@ -8944,7 +8944,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
       goto __pyx_L10;
     }
 
-    /* "extraction_cython.pyx":419
+    /* "extraction.pyx":419
  * ##                    append_avg_sing(avg_sing)
  *             else:
  *                 avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270,fVertical0, fHorizontal0, fVertical90, fHorizontal90, \             # <<<<<<<<<<<<<<
@@ -8955,7 +8955,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
       __pyx_t_10 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_fragment); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 419, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
 
-      /* "extraction_cython.pyx":420
+      /* "extraction.pyx":420
  *             else:
  *                 avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270,fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
  *     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 0)             # <<<<<<<<<<<<<<
@@ -9079,7 +9079,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
         __pyx_L21_unpacking_done:;
       }
 
-      /* "extraction_cython.pyx":419
+      /* "extraction.pyx":419
  * ##                    append_avg_sing(avg_sing)
  *             else:
  *                 avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270,fVertical0, fHorizontal0, fVertical90, fHorizontal90, \             # <<<<<<<<<<<<<<
@@ -9091,7 +9091,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
       __Pyx_XDECREF_SET(__pyx_v_std_lum, __pyx_t_11);
       __pyx_t_11 = 0;
 
-      /* "extraction_cython.pyx":421
+      /* "extraction.pyx":421
  *                 avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270,fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
  *     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 0)
  *                 append_std_lum(std_lum)             # <<<<<<<<<<<<<<
@@ -9126,7 +9126,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "extraction_cython.pyx":422
+      /* "extraction.pyx":422
  *     fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 0)
  *                 append_std_lum(std_lum)
  *                 append_avg_lum(avg_lum)             # <<<<<<<<<<<<<<
@@ -9163,7 +9163,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
     }
     __pyx_L10:;
 
-    /* "extraction_cython.pyx":425
+    /* "extraction.pyx":425
  * ##                append_std_sing(std_sing)
  * ##                append_avg_sing(avg_sing)
  *             counter_x += 1             # <<<<<<<<<<<<<<
@@ -9176,7 +9176,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
     __pyx_t_3 = 0;
   }
 
-  /* "extraction_cython.pyx":426
+  /* "extraction.pyx":426
  * ##                append_avg_sing(avg_sing)
  *             counter_x += 1
  *         return fragments_list             # <<<<<<<<<<<<<<
@@ -9188,7 +9188,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   __pyx_r = __pyx_v_fragments_list;
   goto __pyx_L0;
 
-  /* "extraction_cython.pyx":381
+  /* "extraction.pyx":381
  *             return avg_lum, std_lum
  * 
  *     def get_all_fragments(self):             # <<<<<<<<<<<<<<
@@ -9211,7 +9211,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_all_fragments", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_all_fragments", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_fragments_list);
@@ -9240,7 +9240,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
   return __pyx_r;
 }
 
-/* "extraction_cython.pyx":437
+/* "extraction.pyx":437
  * 
  * 
  *     def get_signature(self, list):             # <<<<<<<<<<<<<<
@@ -9249,19 +9249,19 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_22get_all_fr
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_25get_signature(PyObject *__pyx_v_self, PyObject *__pyx_v_list); /*proto*/
-static PyObject *__pyx_pw_17extraction_cython_19SignatureExtraction_25get_signature(PyObject *__pyx_v_self, PyObject *__pyx_v_list) {
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_25get_signature(PyObject *__pyx_v_self, PyObject *__pyx_v_list); /*proto*/
+static PyObject *__pyx_pw_10extraction_19SignatureExtraction_25get_signature(PyObject *__pyx_v_self, PyObject *__pyx_v_list) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_signature (wrapper)", 0);
-  __pyx_r = __pyx_pf_17extraction_cython_19SignatureExtraction_24get_signature(((struct __pyx_obj_17extraction_cython_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_list));
+  __pyx_r = __pyx_pf_10extraction_19SignatureExtraction_24get_signature(((struct __pyx_obj_10extraction_SignatureExtraction *)__pyx_v_self), ((PyObject *)__pyx_v_list));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signature(CYTHON_UNUSED struct __pyx_obj_17extraction_cython_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_list) {
+static PyObject *__pyx_pf_10extraction_19SignatureExtraction_24get_signature(CYTHON_UNUSED struct __pyx_obj_10extraction_SignatureExtraction *__pyx_v_self, PyObject *__pyx_v_list) {
   PyObject *__pyx_v_signature = NULL;
   CYTHON_UNUSED long __pyx_v_counter_list;
   CYTHON_UNUSED long __pyx_v_counter_fragment;
@@ -9282,7 +9282,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
   int __pyx_t_11;
   __Pyx_RefNannySetupContext("get_signature", 0);
 
-  /* "extraction_cython.pyx":438
+  /* "extraction.pyx":438
  * 
  *     def get_signature(self, list):
  *         signature = bitarray()             # <<<<<<<<<<<<<<
@@ -9312,7 +9312,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
   __pyx_v_signature = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":439
+  /* "extraction.pyx":439
  *     def get_signature(self, list):
  *         signature = bitarray()
  *         counter_list = 0             # <<<<<<<<<<<<<<
@@ -9321,7 +9321,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
  */
   __pyx_v_counter_list = 0;
 
-  /* "extraction_cython.pyx":440
+  /* "extraction.pyx":440
  *         signature = bitarray()
  *         counter_list = 0
  *         counter_fragment = 0             # <<<<<<<<<<<<<<
@@ -9330,7 +9330,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
  */
   __pyx_v_counter_fragment = 0;
 
-  /* "extraction_cython.pyx":441
+  /* "extraction.pyx":441
  *         counter_list = 0
  *         counter_fragment = 0
  *         for features in list:             # <<<<<<<<<<<<<<
@@ -9379,7 +9379,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
     __Pyx_XDECREF_SET(__pyx_v_features, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "extraction_cython.pyx":442
+    /* "extraction.pyx":442
  *         counter_fragment = 0
  *         for features in list:
  *             for x in range(0, len(features) -1):             # <<<<<<<<<<<<<<
@@ -9443,7 +9443,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
       __Pyx_XDECREF_SET(__pyx_v_x, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "extraction_cython.pyx":443
+      /* "extraction.pyx":443
  *         for features in list:
  *             for x in range(0, len(features) -1):
  *                 if features[x] < features[x + 1]:             # <<<<<<<<<<<<<<
@@ -9464,7 +9464,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       if (__pyx_t_10) {
 
-        /* "extraction_cython.pyx":444
+        /* "extraction.pyx":444
  *             for x in range(0, len(features) -1):
  *                 if features[x] < features[x + 1]:
  *                     signature.append(True)             # <<<<<<<<<<<<<<
@@ -9473,7 +9473,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
  */
         __pyx_t_11 = __Pyx_PyObject_Append(__pyx_v_signature, Py_True); if (unlikely(__pyx_t_11 == -1)) __PYX_ERR(0, 444, __pyx_L1_error)
 
-        /* "extraction_cython.pyx":443
+        /* "extraction.pyx":443
  *         for features in list:
  *             for x in range(0, len(features) -1):
  *                 if features[x] < features[x + 1]:             # <<<<<<<<<<<<<<
@@ -9483,7 +9483,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
         goto __pyx_L7;
       }
 
-      /* "extraction_cython.pyx":446
+      /* "extraction.pyx":446
  *                     signature.append(True)
  *                 else:
  *                     signature.append(False)             # <<<<<<<<<<<<<<
@@ -9495,7 +9495,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
       }
       __pyx_L7:;
 
-      /* "extraction_cython.pyx":442
+      /* "extraction.pyx":442
  *         counter_fragment = 0
  *         for features in list:
  *             for x in range(0, len(features) -1):             # <<<<<<<<<<<<<<
@@ -9505,7 +9505,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "extraction_cython.pyx":441
+    /* "extraction.pyx":441
  *         counter_list = 0
  *         counter_fragment = 0
  *         for features in list:             # <<<<<<<<<<<<<<
@@ -9515,7 +9515,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":448
+  /* "extraction.pyx":448
  *                     signature.append(False)
  * 
  *         return signature             # <<<<<<<<<<<<<<
@@ -9525,7 +9525,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
   __pyx_r = __pyx_v_signature;
   goto __pyx_L0;
 
-  /* "extraction_cython.pyx":437
+  /* "extraction.pyx":437
  * 
  * 
  *     def get_signature(self, list):             # <<<<<<<<<<<<<<
@@ -9540,7 +9540,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("extraction_cython.SignatureExtraction.get_signature", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("extraction.SignatureExtraction.get_signature", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_signature);
@@ -9551,7 +9551,7 @@ static PyObject *__pyx_pf_17extraction_cython_19SignatureExtraction_24get_signat
   return __pyx_r;
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":197
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -9598,7 +9598,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_GIVEREF(__pyx_v_info->obj);
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":203
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":203
  *             # of flags
  * 
  *             if info == NULL: return             # <<<<<<<<<<<<<<
@@ -9611,7 +9611,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L0;
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":206
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":206
  * 
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -9620,7 +9620,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_endian_detector = 1;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":207
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":207
  *             cdef int copy_shape, i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -9629,7 +9629,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":209
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":209
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
  * 
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -9638,7 +9638,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_ndim = PyArray_NDIM(__pyx_v_self);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":211
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":211
  *             ndim = PyArray_NDIM(self)
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -9648,7 +9648,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":212
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":212
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 copy_shape = 1             # <<<<<<<<<<<<<<
@@ -9657,7 +9657,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_copy_shape = 1;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":211
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":211
  *             ndim = PyArray_NDIM(self)
  * 
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -9667,7 +9667,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L4;
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":214
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":214
  *                 copy_shape = 1
  *             else:
  *                 copy_shape = 0             # <<<<<<<<<<<<<<
@@ -9679,7 +9679,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L4:;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":216
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -9693,7 +9693,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L6_bool_binop_done;
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":217
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":217
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -9704,7 +9704,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L6_bool_binop_done:;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":216
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -9713,7 +9713,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (__pyx_t_1) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":218
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -9726,7 +9726,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 218, __pyx_L1_error)
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":216
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":216
  *                 copy_shape = 0
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -9735,7 +9735,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":220
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -9749,7 +9749,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L9_bool_binop_done;
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":221
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":221
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -9760,7 +9760,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L9_bool_binop_done:;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":220
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -9769,7 +9769,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (__pyx_t_1) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":222
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -9782,7 +9782,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 222, __pyx_L1_error)
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":220
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":220
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -9791,7 +9791,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":224
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":224
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
  * 
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
@@ -9800,7 +9800,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->buf = PyArray_DATA(__pyx_v_self);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":225
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":225
  * 
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
@@ -9809,7 +9809,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->ndim = __pyx_v_ndim;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":226
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":226
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if copy_shape:             # <<<<<<<<<<<<<<
@@ -9819,7 +9819,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (__pyx_v_copy_shape != 0);
   if (__pyx_t_1) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":229
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":229
  *                 # Allocate new buffer for strides and shape info.
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)             # <<<<<<<<<<<<<<
@@ -9828,7 +9828,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->strides = ((Py_ssize_t *)malloc((((sizeof(Py_ssize_t)) * ((size_t)__pyx_v_ndim)) * 2)));
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":230
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":230
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim             # <<<<<<<<<<<<<<
@@ -9837,7 +9837,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->shape = (__pyx_v_info->strides + __pyx_v_ndim);
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":231
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":231
  *                 info.strides = <Py_ssize_t*>stdlib.malloc(sizeof(Py_ssize_t) * <size_t>ndim * 2)
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):             # <<<<<<<<<<<<<<
@@ -9848,7 +9848,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
       __pyx_v_i = __pyx_t_5;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":232
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":232
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]             # <<<<<<<<<<<<<<
@@ -9857,7 +9857,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
       (__pyx_v_info->strides[__pyx_v_i]) = (PyArray_STRIDES(__pyx_v_self)[__pyx_v_i]);
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":233
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":233
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]
  *                     info.shape[i] = PyArray_DIMS(self)[i]             # <<<<<<<<<<<<<<
@@ -9867,7 +9867,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       (__pyx_v_info->shape[__pyx_v_i]) = (PyArray_DIMS(__pyx_v_self)[__pyx_v_i]);
     }
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":226
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":226
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if copy_shape:             # <<<<<<<<<<<<<<
@@ -9877,7 +9877,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L11;
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":235
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":235
  *                     info.shape[i] = PyArray_DIMS(self)[i]
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -9887,7 +9887,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->strides = ((Py_ssize_t *)PyArray_STRIDES(__pyx_v_self));
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":236
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":236
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -9898,7 +9898,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L11:;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":237
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":237
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL             # <<<<<<<<<<<<<<
@@ -9907,7 +9907,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->suboffsets = NULL;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":238
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":238
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
@@ -9916,7 +9916,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(__pyx_v_self);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":239
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":239
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
@@ -9925,7 +9925,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->readonly = (!(PyArray_ISWRITEABLE(__pyx_v_self) != 0));
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":242
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":242
  * 
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
@@ -9934,7 +9934,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_f = NULL;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":243
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":243
  *             cdef int t
  *             cdef char* f = NULL
  *             cdef dtype descr = self.descr             # <<<<<<<<<<<<<<
@@ -9946,7 +9946,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_v_descr = ((PyArray_Descr *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":246
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":246
  *             cdef int offset
  * 
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)             # <<<<<<<<<<<<<<
@@ -9955,7 +9955,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_hasfields = PyDataType_HASFIELDS(__pyx_v_descr);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":248
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":248
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
  * 
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
@@ -9973,7 +9973,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_L15_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":250
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":250
  *             if not hasfields and not copy_shape:
  *                 # do not call releasebuffer
  *                 info.obj = None             # <<<<<<<<<<<<<<
@@ -9986,7 +9986,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_v_info->obj);
     __pyx_v_info->obj = Py_None;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":248
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":248
  *             cdef bint hasfields = PyDataType_HASFIELDS(descr)
  * 
  *             if not hasfields and not copy_shape:             # <<<<<<<<<<<<<<
@@ -9996,7 +9996,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L14;
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":253
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":253
  *             else:
  *                 # need to call releasebuffer
  *                 info.obj = self             # <<<<<<<<<<<<<<
@@ -10012,7 +10012,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L14:;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":255
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":255
  *                 info.obj = self
  * 
  *             if not hasfields:             # <<<<<<<<<<<<<<
@@ -10022,7 +10022,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = ((!(__pyx_v_hasfields != 0)) != 0);
   if (__pyx_t_1) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":256
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":256
  * 
  *             if not hasfields:
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
@@ -10032,7 +10032,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_4 = __pyx_v_descr->type_num;
     __pyx_v_t = __pyx_t_4;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":257
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":257
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -10052,7 +10052,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     }
     __pyx_L20_next_or:;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":258
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":258
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -10069,7 +10069,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_1 = __pyx_t_2;
     __pyx_L19_bool_binop_done:;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":257
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":257
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -10078,7 +10078,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     if (__pyx_t_1) {
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":259
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":259
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -10091,7 +10091,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 259, __pyx_L1_error)
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":257
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":257
  *             if not hasfields:
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -10100,7 +10100,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     }
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":260
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":260
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"             # <<<<<<<<<<<<<<
@@ -10112,7 +10112,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"b");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":261
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":261
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"             # <<<<<<<<<<<<<<
@@ -10123,7 +10123,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"B");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":262
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":262
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"             # <<<<<<<<<<<<<<
@@ -10134,7 +10134,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"h");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":263
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":263
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"             # <<<<<<<<<<<<<<
@@ -10145,7 +10145,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"H");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":264
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":264
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"             # <<<<<<<<<<<<<<
@@ -10156,7 +10156,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"i");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":265
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":265
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"             # <<<<<<<<<<<<<<
@@ -10167,7 +10167,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"I");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":266
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":266
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"             # <<<<<<<<<<<<<<
@@ -10178,7 +10178,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"l");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":267
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":267
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"             # <<<<<<<<<<<<<<
@@ -10189,7 +10189,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"L");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":268
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":268
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"             # <<<<<<<<<<<<<<
@@ -10200,7 +10200,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"q");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":269
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":269
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"             # <<<<<<<<<<<<<<
@@ -10211,7 +10211,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Q");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":270
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":270
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"             # <<<<<<<<<<<<<<
@@ -10222,7 +10222,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"f");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":271
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":271
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"             # <<<<<<<<<<<<<<
@@ -10233,7 +10233,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"d");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":272
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":272
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"             # <<<<<<<<<<<<<<
@@ -10244,7 +10244,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"g");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":273
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":273
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"             # <<<<<<<<<<<<<<
@@ -10255,7 +10255,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Zf");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":274
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"             # <<<<<<<<<<<<<<
@@ -10266,7 +10266,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Zd");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":275
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":275
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"             # <<<<<<<<<<<<<<
@@ -10277,7 +10277,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __pyx_v_f = ((char *)"Zg");
       break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":276
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":276
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"
  *                 elif t == NPY_OBJECT:      f = "O"             # <<<<<<<<<<<<<<
@@ -10289,7 +10289,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       default:
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":278
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":278
  *                 elif t == NPY_OBJECT:      f = "O"
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -10315,7 +10315,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
     }
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":279
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":279
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f             # <<<<<<<<<<<<<<
@@ -10324,7 +10324,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->format = __pyx_v_f;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":280
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":280
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f
  *                 return             # <<<<<<<<<<<<<<
@@ -10334,7 +10334,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":255
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":255
  *                 info.obj = self
  * 
  *             if not hasfields:             # <<<<<<<<<<<<<<
@@ -10343,7 +10343,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":282
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":282
  *                 return
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)             # <<<<<<<<<<<<<<
@@ -10353,7 +10353,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->format = ((char *)malloc(0xFF));
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":283
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":283
  *             else:
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment             # <<<<<<<<<<<<<<
@@ -10362,7 +10362,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     (__pyx_v_info->format[0]) = '^';
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":284
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":284
  *                 info.format = <char*>stdlib.malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0             # <<<<<<<<<<<<<<
@@ -10371,7 +10371,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_offset = 0;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":285
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":285
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0
  *                 f = _util_dtypestring(descr, info.format + 1,             # <<<<<<<<<<<<<<
@@ -10381,7 +10381,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_7 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 0xFF), (&__pyx_v_offset)); if (unlikely(__pyx_t_7 == NULL)) __PYX_ERR(1, 285, __pyx_L1_error)
     __pyx_v_f = __pyx_t_7;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":288
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":288
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = c'\0' # Terminate format string             # <<<<<<<<<<<<<<
@@ -10391,7 +10391,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     (__pyx_v_f[0]) = '\x00';
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":197
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":197
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -10423,7 +10423,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   return __pyx_r;
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":290
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":290
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -10447,7 +10447,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__releasebuffer__", 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":291
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":291
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -10457,7 +10457,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (PyArray_HASFIELDS(__pyx_v_self) != 0);
   if (__pyx_t_1) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":292
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":292
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)             # <<<<<<<<<<<<<<
@@ -10466,7 +10466,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     free(__pyx_v_info->format);
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":291
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":291
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -10475,7 +10475,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":293
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":293
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -10485,7 +10485,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":294
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":294
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 stdlib.free(info.strides)             # <<<<<<<<<<<<<<
@@ -10494,7 +10494,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     free(__pyx_v_info->strides);
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":293
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":293
  *             if PyArray_HASFIELDS(self):
  *                 stdlib.free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -10503,7 +10503,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":290
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":290
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -10515,7 +10515,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":770
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":770
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -10529,7 +10529,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":771
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":771
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -10543,7 +10543,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":770
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":770
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -10562,7 +10562,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":773
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":773
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -10576,7 +10576,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":774
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":774
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -10590,7 +10590,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":773
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":773
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -10609,7 +10609,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":776
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":776
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -10623,7 +10623,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":777
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":777
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -10637,7 +10637,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":776
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":776
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -10656,7 +10656,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":779
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":779
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -10670,7 +10670,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":780
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":780
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -10684,7 +10684,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":779
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":779
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -10703,7 +10703,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":782
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -10717,7 +10717,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":783
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":783
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -10731,7 +10731,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":782
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -10750,7 +10750,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":785
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -10779,7 +10779,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   char *__pyx_t_9;
   __Pyx_RefNannySetupContext("_util_dtypestring", 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":790
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":790
  * 
  *     cdef dtype child
  *     cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -10788,7 +10788,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_endian_detector = 1;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":791
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":791
  *     cdef dtype child
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -10797,7 +10797,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":794
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":794
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -10820,7 +10820,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_childname, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":795
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":795
  * 
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
@@ -10837,7 +10837,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_fields, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":796
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":796
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
@@ -10876,7 +10876,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_new_offset, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":798
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":798
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -10893,7 +10893,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((((__pyx_v_end - __pyx_v_f) - ((int)__pyx_t_5)) < 15) != 0);
     if (__pyx_t_6) {
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":799
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":799
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -10906,7 +10906,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 799, __pyx_L1_error)
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":798
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":798
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -10915,7 +10915,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":801
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":801
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -10935,7 +10935,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L8_next_or:;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":802
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":802
  * 
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -10952,7 +10952,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = __pyx_t_7;
     __pyx_L7_bool_binop_done:;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":801
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":801
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -10961,7 +10961,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     if (__pyx_t_6) {
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":803
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":803
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -10974,7 +10974,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 803, __pyx_L1_error)
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":801
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":801
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -10983,7 +10983,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":813
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":813
  * 
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
@@ -10999,7 +10999,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (!__pyx_t_6) break;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":814
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":814
  *         # Output padding bytes
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte             # <<<<<<<<<<<<<<
@@ -11008,7 +11008,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       (__pyx_v_f[0]) = 0x78;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":815
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":815
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
@@ -11017,7 +11017,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":816
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":816
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
@@ -11028,7 +11028,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + 1);
     }
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":818
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":818
  *             offset[0] += 1
  * 
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
@@ -11038,7 +11038,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_8 = 0;
     (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + __pyx_v_child->elsize);
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":820
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":820
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -11048,7 +11048,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((!(PyDataType_HASFIELDS(__pyx_v_child) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":821
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":821
  * 
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
@@ -11060,7 +11060,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":822
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":822
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -11070,7 +11070,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_t_6 = (((__pyx_v_end - __pyx_v_f) < 5) != 0);
       if (__pyx_t_6) {
 
-        /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":823
+        /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":823
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -11083,7 +11083,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __PYX_ERR(1, 823, __pyx_L1_error)
 
-        /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":822
+        /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":822
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -11092,7 +11092,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":826
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":826
  * 
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
@@ -11110,7 +11110,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":827
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":827
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"             # <<<<<<<<<<<<<<
@@ -11128,7 +11128,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":828
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":828
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"             # <<<<<<<<<<<<<<
@@ -11146,7 +11146,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":829
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":829
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"             # <<<<<<<<<<<<<<
@@ -11164,7 +11164,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":830
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":830
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"             # <<<<<<<<<<<<<<
@@ -11182,7 +11182,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":831
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":831
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"             # <<<<<<<<<<<<<<
@@ -11200,7 +11200,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":832
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":832
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"             # <<<<<<<<<<<<<<
@@ -11218,7 +11218,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":833
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":833
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"             # <<<<<<<<<<<<<<
@@ -11236,7 +11236,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":834
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":834
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"             # <<<<<<<<<<<<<<
@@ -11254,7 +11254,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":835
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":835
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"             # <<<<<<<<<<<<<<
@@ -11272,7 +11272,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":836
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":836
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"             # <<<<<<<<<<<<<<
@@ -11290,7 +11290,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":837
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":837
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"             # <<<<<<<<<<<<<<
@@ -11308,7 +11308,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":838
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":838
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"             # <<<<<<<<<<<<<<
@@ -11326,7 +11326,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":839
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":839
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf             # <<<<<<<<<<<<<<
@@ -11346,7 +11346,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":840
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":840
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd             # <<<<<<<<<<<<<<
@@ -11366,7 +11366,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":841
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":841
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg             # <<<<<<<<<<<<<<
@@ -11386,7 +11386,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":842
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":842
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"             # <<<<<<<<<<<<<<
@@ -11404,7 +11404,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":844
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":844
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -11428,7 +11428,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       }
       __pyx_L15:;
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":845
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":845
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *             f += 1             # <<<<<<<<<<<<<<
@@ -11437,7 +11437,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":820
+      /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":820
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -11447,7 +11447,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       goto __pyx_L13;
     }
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":849
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":849
  *             # Cython ignores struct boundary information ("T{...}"),
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
@@ -11460,7 +11460,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L13:;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":794
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":794
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -11470,7 +11470,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":850
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":850
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
@@ -11480,7 +11480,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":785
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -11505,7 +11505,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   return __pyx_r;
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":966
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -11520,7 +11520,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   int __pyx_t_2;
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":968
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":968
  * cdef inline void set_array_base(ndarray arr, object base):
  *      cdef PyObject* baseptr
  *      if base is None:             # <<<<<<<<<<<<<<
@@ -11531,7 +11531,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":969
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":969
  *      cdef PyObject* baseptr
  *      if base is None:
  *          baseptr = NULL             # <<<<<<<<<<<<<<
@@ -11540,7 +11540,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
     __pyx_v_baseptr = NULL;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":968
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":968
  * cdef inline void set_array_base(ndarray arr, object base):
  *      cdef PyObject* baseptr
  *      if base is None:             # <<<<<<<<<<<<<<
@@ -11550,7 +11550,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
     goto __pyx_L3;
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":971
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":971
  *          baseptr = NULL
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!             # <<<<<<<<<<<<<<
@@ -11560,7 +11560,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   /*else*/ {
     Py_INCREF(__pyx_v_base);
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":972
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":972
  *      else:
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base             # <<<<<<<<<<<<<<
@@ -11571,7 +11571,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   }
   __pyx_L3:;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":973
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":973
  *          Py_INCREF(base) # important to do this before decref below!
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)             # <<<<<<<<<<<<<<
@@ -11580,7 +11580,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_XDECREF(__pyx_v_arr->base);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":974
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":974
  *          baseptr = <PyObject*>base
  *      Py_XDECREF(arr.base)
  *      arr.base = baseptr             # <<<<<<<<<<<<<<
@@ -11589,7 +11589,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   __pyx_v_arr->base = __pyx_v_baseptr;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":966
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":966
  * 
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -11601,7 +11601,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":976
+/* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":976
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -11615,7 +11615,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":977
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":977
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
@@ -11625,7 +11625,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_arr->base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":978
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":978
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -11637,7 +11637,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None;
     goto __pyx_L0;
 
-    /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":977
+    /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":977
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     if arr.base is NULL:             # <<<<<<<<<<<<<<
@@ -11646,7 +11646,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":980
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":980
  *         return None
  *     else:
  *         return <object>arr.base             # <<<<<<<<<<<<<<
@@ -11658,7 +11658,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     goto __pyx_L0;
   }
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":976
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":976
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -11673,8 +11673,8 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-static PyObject *__pyx_tp_new_17extraction_cython_SignatureExtraction(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_17extraction_cython_SignatureExtraction *p;
+static PyObject *__pyx_tp_new_10extraction_SignatureExtraction(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_10extraction_SignatureExtraction *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -11682,15 +11682,15 @@ static PyObject *__pyx_tp_new_17extraction_cython_SignatureExtraction(PyTypeObje
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_17extraction_cython_SignatureExtraction *)o);
+  p = ((struct __pyx_obj_10extraction_SignatureExtraction *)o);
   p->image = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
   p->image_blocks = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
   p->block_all = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_17extraction_cython_SignatureExtraction(PyObject *o) {
-  struct __pyx_obj_17extraction_cython_SignatureExtraction *p = (struct __pyx_obj_17extraction_cython_SignatureExtraction *)o;
+static void __pyx_tp_dealloc_10extraction_SignatureExtraction(PyObject *o) {
+  struct __pyx_obj_10extraction_SignatureExtraction *p = (struct __pyx_obj_10extraction_SignatureExtraction *)o;
   #if PY_VERSION_HEX >= 0x030400a1
   if (unlikely(Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -11703,9 +11703,9 @@ static void __pyx_tp_dealloc_17extraction_cython_SignatureExtraction(PyObject *o
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static int __pyx_tp_traverse_17extraction_cython_SignatureExtraction(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_10extraction_SignatureExtraction(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_17extraction_cython_SignatureExtraction *p = (struct __pyx_obj_17extraction_cython_SignatureExtraction *)o;
+  struct __pyx_obj_10extraction_SignatureExtraction *p = (struct __pyx_obj_10extraction_SignatureExtraction *)o;
   if (p->image) {
     e = (*v)(((PyObject*)p->image), a); if (e) return e;
   }
@@ -11718,9 +11718,9 @@ static int __pyx_tp_traverse_17extraction_cython_SignatureExtraction(PyObject *o
   return 0;
 }
 
-static int __pyx_tp_clear_17extraction_cython_SignatureExtraction(PyObject *o) {
+static int __pyx_tp_clear_10extraction_SignatureExtraction(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_17extraction_cython_SignatureExtraction *p = (struct __pyx_obj_17extraction_cython_SignatureExtraction *)o;
+  struct __pyx_obj_10extraction_SignatureExtraction *p = (struct __pyx_obj_10extraction_SignatureExtraction *)o;
   tmp = ((PyObject*)p->image);
   p->image = ((PyArrayObject *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -11733,28 +11733,28 @@ static int __pyx_tp_clear_17extraction_cython_SignatureExtraction(PyObject *o) {
   return 0;
 }
 
-static PyMethodDef __pyx_methods_17extraction_cython_SignatureExtraction[] = {
-  {"get_width_height", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_3get_width_height, METH_O, 0},
-  {"set_image", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_5set_image, METH_O, 0},
-  {"get_average_luminance_of_block", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_7get_average_luminance_of_block, METH_O, __pyx_doc_17extraction_cython_19SignatureExtraction_6get_average_luminance_of_block},
-  {"get_total_energy_of_block", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_9get_total_energy_of_block, METH_O, 0},
-  {"get_second_singular", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_11get_second_singular, METH_O, 0},
-  {"get_blocks", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_13get_blocks, METH_NOARGS, __pyx_doc_17extraction_cython_19SignatureExtraction_12get_blocks},
-  {"basic_rotations", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_15basic_rotations, METH_O, 0},
-  {"get_luminance", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_17get_luminance, METH_VARARGS|METH_KEYWORDS, 0},
-  {"get_std_lum", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_19get_std_lum, METH_VARARGS|METH_KEYWORDS, 0},
-  {"get_fragment", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_21get_fragment, METH_VARARGS|METH_KEYWORDS, 0},
-  {"get_all_fragments", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_23get_all_fragments, METH_NOARGS, 0},
-  {"get_signature", (PyCFunction)__pyx_pw_17extraction_cython_19SignatureExtraction_25get_signature, METH_O, 0},
+static PyMethodDef __pyx_methods_10extraction_SignatureExtraction[] = {
+  {"get_width_height", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_3get_width_height, METH_O, 0},
+  {"set_image", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_5set_image, METH_O, 0},
+  {"get_average_luminance_of_block", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_7get_average_luminance_of_block, METH_O, __pyx_doc_10extraction_19SignatureExtraction_6get_average_luminance_of_block},
+  {"get_total_energy_of_block", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_9get_total_energy_of_block, METH_O, 0},
+  {"get_second_singular", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_11get_second_singular, METH_O, 0},
+  {"get_blocks", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_13get_blocks, METH_NOARGS, __pyx_doc_10extraction_19SignatureExtraction_12get_blocks},
+  {"basic_rotations", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_15basic_rotations, METH_O, 0},
+  {"get_luminance", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_17get_luminance, METH_VARARGS|METH_KEYWORDS, 0},
+  {"get_std_lum", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_19get_std_lum, METH_VARARGS|METH_KEYWORDS, 0},
+  {"get_fragment", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_21get_fragment, METH_VARARGS|METH_KEYWORDS, 0},
+  {"get_all_fragments", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_23get_all_fragments, METH_NOARGS, 0},
+  {"get_signature", (PyCFunction)__pyx_pw_10extraction_19SignatureExtraction_25get_signature, METH_O, 0},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_17extraction_cython_SignatureExtraction = {
+static PyTypeObject __pyx_type_10extraction_SignatureExtraction = {
   PyVarObject_HEAD_INIT(0, 0)
-  "extraction_cython.SignatureExtraction", /*tp_name*/
-  sizeof(struct __pyx_obj_17extraction_cython_SignatureExtraction), /*tp_basicsize*/
+  "extraction.SignatureExtraction", /*tp_name*/
+  sizeof(struct __pyx_obj_10extraction_SignatureExtraction), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_17extraction_cython_SignatureExtraction, /*tp_dealloc*/
+  __pyx_tp_dealloc_10extraction_SignatureExtraction, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -11776,13 +11776,13 @@ static PyTypeObject __pyx_type_17extraction_cython_SignatureExtraction = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   "N block size, M overlapping pixels, L image size", /*tp_doc*/
-  __pyx_tp_traverse_17extraction_cython_SignatureExtraction, /*tp_traverse*/
-  __pyx_tp_clear_17extraction_cython_SignatureExtraction, /*tp_clear*/
+  __pyx_tp_traverse_10extraction_SignatureExtraction, /*tp_traverse*/
+  __pyx_tp_clear_10extraction_SignatureExtraction, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_17extraction_cython_SignatureExtraction, /*tp_methods*/
+  __pyx_methods_10extraction_SignatureExtraction, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -11790,9 +11790,9 @@ static PyTypeObject __pyx_type_17extraction_cython_SignatureExtraction = {
   0, /*tp_descr_get*/
   0, /*tp_descr_set*/
   0, /*tp_dictoffset*/
-  __pyx_pw_17extraction_cython_19SignatureExtraction_1__init__, /*tp_init*/
+  __pyx_pw_10extraction_19SignatureExtraction_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_17extraction_cython_SignatureExtraction, /*tp_new*/
+  __pyx_tp_new_10extraction_SignatureExtraction, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -11818,7 +11818,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "extraction_cython",
+    "extraction",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -11904,7 +11904,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "extraction_cython.pyx":55
+  /* "extraction.pyx":55
  *     def get_width_height(self, image):
  *         self.height = len(image)
  *         self.width = len(image[0,:])             # <<<<<<<<<<<<<<
@@ -11918,7 +11918,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "extraction_cython.pyx":95
+  /* "extraction.pyx":95
  *         I_vis_blur_x = np.zeros((self.L, self.number_of_blocks * self.N))
  *         for x in range(0, self.L - self.M, self.M):
  *             I_vis_blur_x[:, x * 2:x * 2 + self.N] = self.image[:, x:x + self.N]             # <<<<<<<<<<<<<<
@@ -11932,7 +11932,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__5);
   __Pyx_GIVEREF(__pyx_slice__5);
 
-  /* "extraction_cython.pyx":98
+  /* "extraction.pyx":98
  * 
  *         for y in range(0, self.L - self.M, self.M):
  *             I_vis_blur_y[y * 2:y * 2 + self.N, :] = I_vis_blur_x[y:y + self.N, :]             # <<<<<<<<<<<<<<
@@ -11946,7 +11946,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__7);
   __Pyx_GIVEREF(__pyx_slice__7);
 
-  /* "extraction_cython.pyx":124
+  /* "extraction.pyx":124
  * 
  *     def get_luminance(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
  *         group = np.zeros((8, 64))             # <<<<<<<<<<<<<<
@@ -11960,7 +11960,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "extraction_cython.pyx":125
+  /* "extraction.pyx":125
  *     def get_luminance(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
  *         group = np.zeros((8, 64))
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -11977,7 +11977,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "extraction_cython.pyx":127
+  /* "extraction.pyx":127
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  * 
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -11994,7 +11994,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "extraction_cython.pyx":128
+  /* "extraction.pyx":128
  * 
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -12011,7 +12011,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "extraction_cython.pyx":129
+  /* "extraction.pyx":129
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -12028,7 +12028,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
 
-  /* "extraction_cython.pyx":131
+  /* "extraction.pyx":131
  *         group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  * 
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])             # <<<<<<<<<<<<<<
@@ -12045,7 +12045,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
 
-  /* "extraction_cython.pyx":132
+  /* "extraction.pyx":132
  * 
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])             # <<<<<<<<<<<<<<
@@ -12062,7 +12062,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
 
-  /* "extraction_cython.pyx":133
+  /* "extraction.pyx":133
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])
  *         lum3 = self.get_average_luminance_of_block(group[:, 16:24])             # <<<<<<<<<<<<<<
@@ -12079,7 +12079,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
 
-  /* "extraction_cython.pyx":134
+  /* "extraction.pyx":134
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])
  *         lum3 = self.get_average_luminance_of_block(group[:, 16:24])
  *         lum4 = self.get_average_luminance_of_block(group[:, 24:32])             # <<<<<<<<<<<<<<
@@ -12096,7 +12096,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
 
-  /* "extraction_cython.pyx":146
+  /* "extraction.pyx":146
  *             return avg_lum
  *         else:
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)             # <<<<<<<<<<<<<<
@@ -12122,7 +12122,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__39);
   __Pyx_GIVEREF(__pyx_tuple__39);
 
-  /* "extraction_cython.pyx":147
+  /* "extraction.pyx":147
  *         else:
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)             # <<<<<<<<<<<<<<
@@ -12148,7 +12148,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__45);
   __Pyx_GIVEREF(__pyx_tuple__45);
 
-  /* "extraction_cython.pyx":148
+  /* "extraction.pyx":148
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
  *             group[:, 48:56] = cv2.flip(group[:, 16:24], 0)             # <<<<<<<<<<<<<<
@@ -12174,7 +12174,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__51);
   __Pyx_GIVEREF(__pyx_tuple__51);
 
-  /* "extraction_cython.pyx":149
+  /* "extraction.pyx":149
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
  *             group[:, 48:56] = cv2.flip(group[:, 16:24], 0)
  *             group[:, 56:64] = cv2.flip(group[:, 0:8], 0)             # <<<<<<<<<<<<<<
@@ -12200,7 +12200,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__57);
   __Pyx_GIVEREF(__pyx_tuple__57);
 
-  /* "extraction_cython.pyx":151
+  /* "extraction.pyx":151
  *             group[:, 56:64] = cv2.flip(group[:, 0:8], 0)
  * 
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])             # <<<<<<<<<<<<<<
@@ -12217,7 +12217,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__60);
   __Pyx_GIVEREF(__pyx_tuple__60);
 
-  /* "extraction_cython.pyx":152
+  /* "extraction.pyx":152
  * 
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])             # <<<<<<<<<<<<<<
@@ -12234,7 +12234,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__63);
   __Pyx_GIVEREF(__pyx_tuple__63);
 
-  /* "extraction_cython.pyx":153
+  /* "extraction.pyx":153
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
  *             lum7 = self.get_average_luminance_of_block(group[:, 48:56])             # <<<<<<<<<<<<<<
@@ -12251,7 +12251,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__66);
   __Pyx_GIVEREF(__pyx_tuple__66);
 
-  /* "extraction_cython.pyx":154
+  /* "extraction.pyx":154
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
  *             lum7 = self.get_average_luminance_of_block(group[:, 48:56])
  *             lum8 = self.get_average_luminance_of_block(group[:, 56:64])             # <<<<<<<<<<<<<<
@@ -12268,7 +12268,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__69);
   __Pyx_GIVEREF(__pyx_tuple__69);
 
-  /* "extraction_cython.pyx":163
+  /* "extraction.pyx":163
  * 
  *     def get_std_lum(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
  *         group = np.zeros((8, 64))             # <<<<<<<<<<<<<<
@@ -12282,7 +12282,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__71);
   __Pyx_GIVEREF(__pyx_tuple__71);
 
-  /* "extraction_cython.pyx":164
+  /* "extraction.pyx":164
  *     def get_std_lum(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
  *         group = np.zeros((8, 64))
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -12299,7 +12299,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__74);
   __Pyx_GIVEREF(__pyx_tuple__74);
 
-  /* "extraction_cython.pyx":165
+  /* "extraction.pyx":165
  *         group = np.zeros((8, 64))
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -12316,7 +12316,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__77);
   __Pyx_GIVEREF(__pyx_tuple__77);
 
-  /* "extraction_cython.pyx":166
+  /* "extraction.pyx":166
  *         group[:, 0:8] = rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -12333,7 +12333,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__80);
   __Pyx_GIVEREF(__pyx_tuple__80);
 
-  /* "extraction_cython.pyx":167
+  /* "extraction.pyx":167
  *         group[:, 8:16] = rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 16:24] = rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  *         group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]             # <<<<<<<<<<<<<<
@@ -12350,7 +12350,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__83);
   __Pyx_GIVEREF(__pyx_tuple__83);
 
-  /* "extraction_cython.pyx":169
+  /* "extraction.pyx":169
  *         group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
  * 
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])             # <<<<<<<<<<<<<<
@@ -12367,7 +12367,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__86);
   __Pyx_GIVEREF(__pyx_tuple__86);
 
-  /* "extraction_cython.pyx":170
+  /* "extraction.pyx":170
  * 
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])             # <<<<<<<<<<<<<<
@@ -12384,7 +12384,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__89);
   __Pyx_GIVEREF(__pyx_tuple__89);
 
-  /* "extraction_cython.pyx":171
+  /* "extraction.pyx":171
  *         lum1 = self.get_average_luminance_of_block(group[:, 0:8])
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])
  *         lum3 = self.get_average_luminance_of_block(group[:, 16:24])             # <<<<<<<<<<<<<<
@@ -12401,7 +12401,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__92);
   __Pyx_GIVEREF(__pyx_tuple__92);
 
-  /* "extraction_cython.pyx":172
+  /* "extraction.pyx":172
  *         lum2 = self.get_average_luminance_of_block(group[:, 8:16])
  *         lum3 = self.get_average_luminance_of_block(group[:, 16:24])
  *         lum4 = self.get_average_luminance_of_block(group[:, 24:32])             # <<<<<<<<<<<<<<
@@ -12418,7 +12418,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__95);
   __Pyx_GIVEREF(__pyx_tuple__95);
 
-  /* "extraction_cython.pyx":183
+  /* "extraction.pyx":183
  *             return std_lum
  *         else:
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)             # <<<<<<<<<<<<<<
@@ -12444,7 +12444,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__101);
   __Pyx_GIVEREF(__pyx_tuple__101);
 
-  /* "extraction_cython.pyx":184
+  /* "extraction.pyx":184
  *         else:
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)             # <<<<<<<<<<<<<<
@@ -12470,7 +12470,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__107);
   __Pyx_GIVEREF(__pyx_tuple__107);
 
-  /* "extraction_cython.pyx":185
+  /* "extraction.pyx":185
  *             group[:, 32:40] = cv2.flip(group[:, 24:32], 1)
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
  *             group[:, 48:56] = cv2.flip(group[:, 16:24], 0)             # <<<<<<<<<<<<<<
@@ -12496,7 +12496,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__113);
   __Pyx_GIVEREF(__pyx_tuple__113);
 
-  /* "extraction_cython.pyx":186
+  /* "extraction.pyx":186
  *             group[:, 40:48] = cv2.flip(group[:, 8:16], 1)
  *             group[:, 48:56] = cv2.flip(group[:, 16:24], 0)
  *             group[:, 56:64] = cv2.flip(group[:, 0:8], 0)             # <<<<<<<<<<<<<<
@@ -12522,7 +12522,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__119);
   __Pyx_GIVEREF(__pyx_tuple__119);
 
-  /* "extraction_cython.pyx":188
+  /* "extraction.pyx":188
  *             group[:, 56:64] = cv2.flip(group[:, 0:8], 0)
  * 
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])             # <<<<<<<<<<<<<<
@@ -12539,7 +12539,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__122);
   __Pyx_GIVEREF(__pyx_tuple__122);
 
-  /* "extraction_cython.pyx":189
+  /* "extraction.pyx":189
  * 
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])             # <<<<<<<<<<<<<<
@@ -12556,7 +12556,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__125);
   __Pyx_GIVEREF(__pyx_tuple__125);
 
-  /* "extraction_cython.pyx":190
+  /* "extraction.pyx":190
  *             lum5 = self.get_average_luminance_of_block(group[:, 32:40])
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
  *             lum7 = self.get_average_luminance_of_block(group[:, 48:56])             # <<<<<<<<<<<<<<
@@ -12573,7 +12573,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__128);
   __Pyx_GIVEREF(__pyx_tuple__128);
 
-  /* "extraction_cython.pyx":191
+  /* "extraction.pyx":191
  *             lum6 = self.get_average_luminance_of_block(group[:, 40:48])
  *             lum7 = self.get_average_luminance_of_block(group[:, 48:56])
  *             lum8 = self.get_average_luminance_of_block(group[:, 56:64])             # <<<<<<<<<<<<<<
@@ -12590,7 +12590,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__131);
   __Pyx_GIVEREF(__pyx_tuple__131);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":218
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":218
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -12601,7 +12601,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__132);
   __Pyx_GIVEREF(__pyx_tuple__132);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":222
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":222
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -12612,7 +12612,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__133);
   __Pyx_GIVEREF(__pyx_tuple__133);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":259
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":259
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -12623,7 +12623,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__134);
   __Pyx_GIVEREF(__pyx_tuple__134);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":799
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":799
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -12634,7 +12634,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__135);
   __Pyx_GIVEREF(__pyx_tuple__135);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":803
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":803
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -12645,7 +12645,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__136);
   __Pyx_GIVEREF(__pyx_tuple__136);
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":823
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":823
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -12656,7 +12656,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__137);
   __Pyx_GIVEREF(__pyx_tuple__137);
 
-  /* "extraction_cython.pyx":29
+  /* "extraction.pyx":29
  * 
  * 
  * cv2.setUseOptimized(True)             # <<<<<<<<<<<<<<
@@ -12700,11 +12700,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initextraction_cython(void); /*proto*/
-PyMODINIT_FUNC initextraction_cython(void)
+PyMODINIT_FUNC initextraction(void); /*proto*/
+PyMODINIT_FUNC initextraction(void)
 #else
-PyMODINIT_FUNC PyInit_extraction_cython(void); /*proto*/
-PyMODINIT_FUNC PyInit_extraction_cython(void)
+PyMODINIT_FUNC PyInit_extraction(void); /*proto*/
+PyMODINIT_FUNC PyInit_extraction(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -12720,7 +12720,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_extraction_cython(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_extraction(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -12749,7 +12749,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("extraction_cython", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("extraction", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -12766,14 +12766,14 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_extraction_cython) {
+  if (__pyx_module_is_main_extraction) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "extraction_cython")) {
-      if (unlikely(PyDict_SetItemString(modules, "extraction_cython", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "extraction")) {
+      if (unlikely(PyDict_SetItemString(modules, "extraction", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -12785,10 +12785,10 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_17extraction_cython_SignatureExtraction) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
-  __pyx_type_17extraction_cython_SignatureExtraction.tp_print = 0;
-  if (PyObject_SetAttrString(__pyx_m, "SignatureExtraction", (PyObject *)&__pyx_type_17extraction_cython_SignatureExtraction) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
-  __pyx_ptype_17extraction_cython_SignatureExtraction = &__pyx_type_17extraction_cython_SignatureExtraction;
+  if (PyType_Ready(&__pyx_type_10extraction_SignatureExtraction) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_type_10extraction_SignatureExtraction.tp_print = 0;
+  if (PyObject_SetAttrString(__pyx_m, "SignatureExtraction", (PyObject *)&__pyx_type_10extraction_SignatureExtraction) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_ptype_10extraction_SignatureExtraction = &__pyx_type_10extraction_SignatureExtraction;
   /*--- Type import code ---*/
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType(__Pyx_BUILTIN_MODULE_NAME, "type", 
   #if CYTHON_COMPILING_IN_PYPY
@@ -12809,7 +12809,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "extraction_cython.pyx":1
+  /* "extraction.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
  * import cv2
@@ -12819,7 +12819,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":3
+  /* "extraction.pyx":3
  * import numpy as np
  * cimport numpy as np
  * import cv2             # <<<<<<<<<<<<<<
@@ -12831,7 +12831,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_cv2, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":4
+  /* "extraction.pyx":4
  * cimport numpy as np
  * import cv2
  * from bitarray import bitarray             # <<<<<<<<<<<<<<
@@ -12852,7 +12852,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":5
+  /* "extraction.pyx":5
  * import cv2
  * from bitarray import bitarray
  * import time             # <<<<<<<<<<<<<<
@@ -12864,7 +12864,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_time, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":6
+  /* "extraction.pyx":6
  * from bitarray import bitarray
  * import time
  * from multiprocessing import Pool             # <<<<<<<<<<<<<<
@@ -12885,7 +12885,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":7
+  /* "extraction.pyx":7
  * import time
  * from multiprocessing import Pool
  * import gc             # <<<<<<<<<<<<<<
@@ -12897,7 +12897,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_gc, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "extraction_cython.pyx":14
+  /* "extraction.pyx":14
  * # import types
  * 
  * DTYPE = np.int             # <<<<<<<<<<<<<<
@@ -12912,7 +12912,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE, __pyx_t_2) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":29
+  /* "extraction.pyx":29
  * 
  * 
  * cv2.setUseOptimized(True)             # <<<<<<<<<<<<<<
@@ -12929,7 +12929,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":30
+  /* "extraction.pyx":30
  * 
  * cv2.setUseOptimized(True)
  * gc.enable()             # <<<<<<<<<<<<<<
@@ -12961,7 +12961,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "extraction_cython.pyx":1
+  /* "extraction.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
  * import cv2
@@ -12971,7 +12971,7 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "C:/Users/emrek/Anaconda2/lib/site-packages/Cython/Includes/numpy/__init__.pxd":976
+  /* "../../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":976
  *      arr.base = baseptr
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -12988,11 +12988,11 @@ PyMODINIT_FUNC PyInit_extraction_cython(void)
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init extraction_cython", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init extraction", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init extraction_cython");
+    PyErr_SetString(PyExc_ImportError, "init extraction");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
