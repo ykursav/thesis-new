@@ -16,17 +16,19 @@ import sys
 image = []
 
 class ThreadTest:
-    def __init__(self, image, N, M, L, tau1, tau2, tau3, tau4, tau5, counter):
+    def __init__(self, image, N, M, L, tau1, tau2, tau3, tau4, tau5, counter, f_report):
         self.start_time = time.time()
         self.start_date = datetime.now()
         self.N = N
         self.M = M
         self.L = L
-        self.true_counter = 0
         self.counter = counter
         self.image = image
+        self.image_preprocessed = np.array([])
         self.sigOrig = bitarray()
+        self.sigGen = bitarray()
         f = open("signature.bin", "rb")
+        self.f_report = f_report
         self.sigOrig.fromfile(f)
         self.pre_process = pre.PreProcessing(L, False)
         self.extract_process = extract.SignatureExtraction(N, M, L)
@@ -43,34 +45,44 @@ class ThreadTest:
         self.pre_process.set_image(self.image)
         points  = self.pre_process.get_contour(3)
         check = self.pre_process.get_perspective(points, self.counter)
-        if not check:
-            self.f_report.write("ERROR:Contour not detected\n") 
+        if check == 10:
+            return 10
+        elif check == 20:
+            return 20
         else:
             image2 = self.pre_process.get_scaled()
             image3 = self.pre_process.get_cropped()
-            return image3
+            self.image_preprocessed = image3
+            return 0
         
 
     def extractprocess(self):
         
-        self.extract_process.set_image(self.preprocess())        
+        self.extract_process.set_image(self.image_preprocessed)        
         fragments_list = self.extract_process.get_all_fragments()
         sigGen = self.extract_process.get_signature(fragments_list)
-        return sigGen
+        self.sigGen = sigGen
 
     def matchingprocess(self):
-        self.matching_process.set_signature(self.extractprocess())
+        self.matching_process.set_signature(self.sigGen)
         if self.matching_process.signature_rejection()[0]:
-            self.true_counter += 1.0
+            return 30
             
 ##        self.f_report.write(str(self.counter) + "\tHamming distance = " + str(self.matching_process.signature_rejection()[1]) \
 ##                       + "\n" + "Message: " + self.matching_process.signature_rejection()[2] + "\n")        
 
     def mainprocess(self):
         counter = 0
-        
-        self.matchingprocess()
-        end = time.time()
+        check = self.preprocess()
+        if check == 10:
+            self.f_report.write("ERROR:Contour not detected\n")
+            return 10
+        elif check == 20:
+            self.f_report.write("ERROR:Contour is too small \n")
+            return 20
+        else:
+            self.extractprocess()
+            self.matchingprocess()
 ##        if (end - self.start_time < 0.6):
 ##            self.f_report.write("Time spend: " + str(end-self.start_time) + "\n")
 ##        else:

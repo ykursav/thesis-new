@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import math
 import cv2
 import numpy as np
@@ -170,7 +171,7 @@ class PreProcessing:
 
     def get_perspective(self, points, counter):
         if len(points) != 1:
-
+            self.width, self.height = self.get_width_height(self.image)
             ordered_points = self.order_contour(points)
             width_top = self.distance_calculator(ordered_points[0], ordered_points[1])
             width_bottom = self.distance_calculator(ordered_points[2], ordered_points[3])
@@ -184,7 +185,8 @@ class PreProcessing:
 
             img_size = np.array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
                 [0, height_perspective - 1]], dtype = "float32")
-
+            if width_perspective < (self.width / 4) or height_perspective < (self.height / 4):
+                return 20
             #3x3 blur mask
             gray = self.gray_image(self.image)
             M = cv2.getPerspectiveTransform(ordered_points, img_size)
@@ -195,12 +197,11 @@ class PreProcessing:
                 warped_image = cv2.resize(warped_image, (300, 500), cv2.INTER_LINEAR)            
             blurred = self.get_blurred(warped_image, 3)
             self.warped = blurred
-            cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
-            return True
-
+            #cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
+            return 30
 
         else:
-            return False
+            return 10
 
 
     def get_scaled(self):
