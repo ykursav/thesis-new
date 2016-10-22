@@ -31,21 +31,22 @@ gc.enable()
 cdef class SignatureExtraction:
     '''N block size, M overlapping pixels, L image size'''
     cdef int L, N, M, width, height, number_of_blocks
-    cdef np.ndarray image, image_blocks, block_all
+    cdef np.ndarray[DTYPE_t, ndim = 2] image_blocks, block_all
+    cdef np.ndarray[DTYPE_t, ndim = 3] image
     def __init__(self, N, M, L):
         self.L = L
         self.N = N
         self.M = M
-        self.image = np.array([])
+        self.image = np.array([], dtype = DTYPE)
         #self.image = image
         self.width = 0
         self.height = 0
-        self.image_blocks = np.array([])
+        self.image_blocks = np.array([], dtype = DTYPE)
         self.number_of_blocks = ((self.L - self.N) / self.M ) + 1
-        self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N))
+        self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N),dtype = DTYPE)
         #self.average_luminance = np.zeros((self.number_of_blocks, self.number_of_blocks, 1))
         #irrelevant but used in experimentally or optional it will remove or toggle comment in future
-        self.img_name = ""
+        #self.img_name = ""
         #self.hist_eq = np.array([])
 
 
@@ -71,6 +72,7 @@ cdef class SignatureExtraction:
         '''luminance calculation block'''
 ##        lum1 = [row for row in block]
 ##        lum1 = sum(sum(lum1)) / (self.N ** 2)
+        cdef float lum
         lum = np.sum(block) / (self.N ** 2)
         return lum
 
