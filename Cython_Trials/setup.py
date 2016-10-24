@@ -7,6 +7,6 @@ pyximport.install(setup_args={"script_args":["--compiler=mingw32"],
                   reload_support=True)
 
 setup(
-    ext_modules=cythonize("extraction.pyx"),
+    ext_modules=cythonize("preprocessing.pyx"),
     include_dirs=[numpy.get_include()]
 )
