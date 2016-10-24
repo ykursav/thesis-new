@@ -3,16 +3,13 @@ import math
 import cv2
 import numpy as np
 import gc
-from libc.math cimport sqrt
 
 # import time
 cv2.setUseOptimized(True)
 gc.enable()
 SCALED_IMAGE = [128, 128]
 
-cdef class PreProcessing:
-    cdef int L, width, height
-    cdef np.ndarray image, cropped_image, resized_image, warped
+class PreProcessing:
     def __init__(self, L, hist_eq):
 
 
@@ -20,16 +17,16 @@ cdef class PreProcessing:
         # cv2.waitKey(0)
         # cv2.destroyAllWindows()
         # start_time = time.time()
-        self.image = np.empty([544, 400], dtype = np.int)
+        self.image = np.array([])
         self.L = L
-        #self.hist_eq = hist_eq
+        self.hist_eq = hist_eq
         self.width = 0
         self.height = 0
-        self.cropped_image = np.empty([128, 128], dtype = np.int)
+        self.cropped_image = np.array([])
         self.resized_image = np.array([])
-        self.warped = np.empty([248, 248], dtype = np.int)
-        #self.contours = self.image.copy()
-        #self.threshold = 0
+        self.warped = np.array([])
+        self.contours = self.image.copy()
+        self.threshold = 0
         # end_time = time.time()
 
         # print end_time - start_time
@@ -62,39 +59,42 @@ cdef class PreProcessing:
     #         print "ERROR: This image is not exist or unknown format."
 
     # def get_image_name(self):
-    #     return self.img_name
+    #     return self.img_name 
 
-    cpdef gray_image(self, image):
-        return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    def gray_image(self, image):
+        image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        return image_gray
 
-    cpdef set_image(self, image):
+    def set_image(self, image):
 ##        height, width = image.shape[:2]
 ##        image = cv2.resize(image, (int(width * (400.0 / height)), 400), cv2.INTER_LINEAR)
         self.image = image
 
-    cpdef get_width_height(self, image):
-        cdef height, width
+    def get_width_height(self, image):
         height, width = image.shape[:2]
         return [width, height]
 
-    cpdef get_edged(self, G):
-        cdef np.ndarray blur
-        blur = self.get_blurred(self.gray_image(self.image), G)
-        #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU) #Deprecated because it is not used new version
+    def get_edged(self, G):
+        gray = self.gray_image(self.image)
+        blur = self.get_blurred(gray, G)
+        th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
+        ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
         ##edge =  cv2.Canny(blur, ret * 0.5, ret)
+        kernel = np.ones((3,3),np.uint8)
+        dilation = cv2.dilate(th,kernel,iterations = 1)
         # cv2.imwrite("Adaptive.jpg", th)
 ##        cv2.imshow("th", dilation)
 ##        cv2.waitKey(0)
 ##        cv2.destroyAllWindows()
-        return cv2.dilate(cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2), np.ones((3,3), np.uint8),iterations = 1)
+        return dilation
 
-    cpdef get_contour(self, G):
-        cdef np.ndarray approx, new_approx, last_cnt
-        cdef bool first, no_contour
-        cdef float epsilon
-        __, contours, hierarchy = cv2.findContours(self.get_edged(G), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    def get_contour(self, G):
+        edged = self.get_edged(G)
+        __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        approx = 0
         first = False
         no_contour = True
+        last_cnt = 0
         ##approx_cnt = cv2.drawContours(self.contours, contours, -1, (0, 255, 0), -1)
         for cnt in contours:
             epsilon = 0.05 * cv2.arcLength(cnt, True)
@@ -111,8 +111,8 @@ cdef class PreProcessing:
                     approx = new_approx
                     no_contour = False
 
-
-
+        
+        
         ##approx_cnt = cv2.drawContours(self.contours, [approx], -1, (0, 255, 0), -1)
 ##        cv2.imshow("approx cnt", approx_cnt)
 ##        cv2.waitKey(0)
@@ -130,17 +130,17 @@ cdef class PreProcessing:
             return -1
         else:
             return approx
-
-    cpdef order_contour(self, points):
-        ordered_points = np.zeros((4, 2), dtype = np.int) #!!!!Why float? changed to int if there is any problem change to float32 again!!!!!
+        
+    def order_contour(self, points):
+        ordered_points = np.zeros((4, 2), dtype = "float32")
         #sum of point to detect max and minimum sums
         #maximum sum is the right bottom corner and minimum left top corner
         #points are arranged starting from top left to clock wise indexing
         sum_point = points.sum(axis = 2)
-
+        
         ordered_points[0] = points[np.argmin(sum_point)].flatten()
         ordered_points[2] = points[np.argmax(sum_point)].flatten()
-
+        
         points = np.delete(points, np.argmin(sum_point), 0)
         points = np.delete(points, np.argmax(sum_point) - 1, 0)
         if points[0][0][0] > points[1][0][0]:
@@ -158,56 +158,54 @@ cdef class PreProcessing:
         # cv2.imwrite("ordere_points.jpg", new_image)
         return ordered_points
 
-    cpdef check_points(self, points):
+    def check_points(self, points):
         '''Checking there is four points to make a rectangle shape or not'''
         if len(points) == 4:
-            return True
+            return True 
         else:
             return False
 
-    cpdef distance_calculator(self, p1, p2):
+    def distance_calculator(self, p1, p2):
         '''Calculates distance between 2 points'''
-        return sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
+        return math.sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
 
-    cpdef get_perspective(self, points, counter):
-        cdef np.ndarray ordere_points, img_size, M
-        cdef int width_top, width_bottom, width_perspective, height_left, height_right, height_perspective
+    def get_perspective(self, points, counter):
         if len(points) != 1:
             self.width, self.height = self.get_width_height(self.image)
             ordered_points = self.order_contour(points)
-            width_top = (int)self.distance_calculator(ordered_points[0], ordered_points[1])
-            width_bottom = (int)self.distance_calculator(ordered_points[2], ordered_points[3])
+            width_top = self.distance_calculator(ordered_points[0], ordered_points[1])
+            width_bottom = self.distance_calculator(ordered_points[2], ordered_points[3])
+            
+            width_perspective = int(max(width_top, width_bottom))
+            
+            height_left = self.distance_calculator(ordered_points[0], ordered_points[3])
+            height_right = self.distance_calculator(ordered_points[1], ordered_points[2])
 
-            width_perspective = max(width_top, width_bottom)
-
-            height_left = (int)self.distance_calculator(ordered_points[0], ordered_points[3])
-            height_right = (int)self.distance_calculator(ordered_points[1], ordered_points[2])
-
-            height_perspective = max(height_left, height_right)
+            height_perspective = int(max(height_left, height_right))
 
             img_size = np.array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
-                [0, height_perspective - 1]], dtype = "float32") #Whu float 32 it is converted to int
+                [0, height_perspective - 1]], dtype = "float32")
             if width_perspective < (self.width / 4) or height_perspective < (self.height / 4):
                 return 20
             #3x3 blur mask
-
+            gray = self.gray_image(self.image)
             M = cv2.getPerspectiveTransform(ordered_points, img_size)
-            warped_image = cv2.warpPerspective(self.gray_image(self.image), M, (width_perspective, height_perspective))
-            if width_perspective > height_perspective:
+            warped_image = cv2.warpPerspective(gray, M, (width_perspective, height_perspective))
+            if width_perspective > height_perspective:     
                 warped_image = cv2.resize(warped_image, (500, 300), cv2.INTER_LINEAR)
             elif height_perspective > width_perspective:
-                warped_image = cv2.resize(warped_image, (300, 500), cv2.INTER_LINEAR)
-            self.warped = self.get_blurred(warped_image, 3)
-            cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
+                warped_image = cv2.resize(warped_image, (300, 500), cv2.INTER_LINEAR)            
+            blurred = self.get_blurred(warped_image, 3)
+            self.warped = blurred
+            #cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
             return 30
 
         else:
             return 10
 
 
-    cpdef get_scaled(self):
+    def get_scaled(self):
         '''Scales image short edge to L value '''
-        cdef int new_width, new_height
         self.width, self.height = self.get_width_height(self.warped)
         new_width = 0
         new_height = 0
@@ -222,29 +220,28 @@ cdef class PreProcessing:
             new_height = self.L
         self.resized_image = cv2.resize(self.warped, (new_width, new_height), \
         interpolation = cv2.INTER_LINEAR)
+        return self.resized_image
 
-    # def get_scaled_main(self, image, L):
-    #     '''Scales image short edge to L value '''
-    #     self.width, self.height = self.get_width_height(image)
-    #     new_width = 0
-    #     new_height = 0
-    #     if self.height > self.width:
-    #         new_height = int(np.floor(float(self.height) * (L / float(self.width))))
-    #         new_width = L
-    #     elif self.height < self.width:
-    #         new_width = int(np.floor(float(self.width) * (L / float(self.height))))
-    #         new_height = L
-    #     elif self.height == self.width:
-    #         new_width = L
-    #         new_height = L
-    #     self.resized_image = cv2.resize(image, (new_width, new_height), \
-    #     interpolation = cv2.INTER_LINEAR)
-    #     return self.resized_image
+    def get_scaled_main(self, image, L):
+        '''Scales image short edge to L value '''
+        self.width, self.height = self.get_width_height(image)
+        new_width = 0
+        new_height = 0
+        if self.height > self.width:
+            new_height = int(np.floor(float(self.height) * (L / float(self.width))))
+            new_width = L
+        elif self.height < self.width:
+            new_width = int(np.floor(float(self.width) * (L / float(self.height))))
+            new_height = L
+        elif self.height == self.width:
+            new_width = L
+            new_height = L
+        self.resized_image = cv2.resize(image, (new_width, new_height), \
+        interpolation = cv2.INTER_LINEAR)
+        return self.resized_image
 
-    cpdef get_cropped(self):
+    def get_cropped(self):
         '''Cropping image middle part L x L'''
-        cdef crop_width, crop_height
-        self.get_scaled()
         [self.width, self.height] = self.get_width_height(self.resized_image)
         if self.width != self.height:
             if self.width > self.height:
@@ -265,9 +262,10 @@ cdef class PreProcessing:
         return self.cropped_image
 
 
-    cpdef get_blurred(self, image, G):
+    def get_blurred(self, image, G):
         '''Blurring cropped image'''
-        return cv2.GaussianBlur(image, (G, G), 0, 0)
+        image = cv2.GaussianBlur(image, (G, G), 0, 0)
+        return image
 
     # #(optional area)
     # def get_hist_eq(self):
@@ -290,7 +288,7 @@ cdef class PreProcessing:
     #     counter = 0
     #     for line in lines:
     #         #v is a vector storing one line information
-    #         # v = line[0]
+    #         # v = line[0] 
     #         # m = 0
     #         # if (v[0] - v[2]) != 0:
     #         #     m = (float(v[1]) - float(v[3])) / (float(v[0]) - float(v[2]))
@@ -314,7 +312,7 @@ cdef class PreProcessing:
     #         #     extended_lines[counter].append(element)
 
     #         # counter += 1
-
+            
     #         #print m, b
     #         # line_draw = []
     #         # line[0][0] = 0
@@ -322,7 +320,7 @@ cdef class PreProcessing:
     #         # line[0][2] = width_resized
     #         # line[0][3] = float(((v[1] - v[3]) / (v[0] - v[2])) * (width_resized - v[2]) + v[3])
     #         cv2.line(image,(line[0][0], line[0][1]), (line[0][2], line[0][3]),(0,255,0),2)
-
+            
     #     return image, lines
 
     # def intersection_vis(self, image, intersection_points):
@@ -391,7 +389,7 @@ cdef class PreProcessing:
     #     if checker == 0:
     #         return intersection_points
 
-
+        
 
 
     # def calculate_distances(self, intersection_points):
@@ -420,15 +418,15 @@ cdef class PreProcessing:
 
     # def order_points(self, points):
     #     rect = np.zeros((4, 2), dtype = "float32")
-
+     
     #     s = points.sum(axis = 1)
     #     rect[0] = points[np.argmin(s)]
     #     rect[2] = points[np.argmax(s)]
-
+     
     #     diff = np.diff(points, axis = 1)
     #     rect[1] = points[np.argmin(diff)]
     #     rect[3] = points[np.argmax(diff)]
-
+     
     #     return rect
 
     # def get_perspective(self, image, points):
@@ -460,7 +458,7 @@ cdef class PreProcessing:
     #     image = cv2.resize(image, (int(width * (500.0 / height)), 500), cv2.INTER_LINEAR)
     #     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     #     blur = self.get_blurred(gray, G)
-
+        
     #     __, cnts, hierarchy = cv2.findContours(edge.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     #     cv2.namedWindow('image')
     #     def nothing(x):

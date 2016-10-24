@@ -1,5 +1,4 @@
 import numpy as np
-cimport numpy as cnp
 import cv2
 from bitarray import bitarray
 import time
@@ -11,8 +10,7 @@ import gc
 # import copy_reg
 # import types
 
-DTYPE = np.int
-ctypedef np.int_t DTYPE_t
+
 
 # def _pickle_method(m):
 #     if m.im_self is None:
@@ -28,29 +26,26 @@ ctypedef np.int_t DTYPE_t
 
 cv2.setUseOptimized(True)
 gc.enable()
-cdef class SignatureExtraction:
+class SignatureExtraction:
     '''N block size, M overlapping pixels, L image size'''
-    cdef int L, N, M, width, height, number_of_blocks
-    cdef cnp.int32_t[:, :] image_blocks, block_all
-    cdef cnp.int32_t[:, :, :] image
     def __init__(self, N, M, L):
         self.L = L
         self.N = N
         self.M = M
-        self.image = np.array([], dtype = DTYPE)
+        self.image = np.array([])
         #self.image = image
         self.width = 0
         self.height = 0
-        self.image_blocks = np.array([], dtype = DTYPE)
+        self.image_blocks = np.array([])
         self.number_of_blocks = ((self.L - self.N) / self.M ) + 1
-        self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N),dtype = DTYPE)
-        #self.average_luminance = np.zeros((self.number_of_blocks, self.number_of_blocks, 1))
+        self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N))
+        self.average_luminance = np.zeros((self.number_of_blocks, self.number_of_blocks, 1))
         #irrelevant but used in experimentally or optional it will remove or toggle comment in future
-        # self.img_name = ""
+        self.img_name = ""
         #self.hist_eq = np.array([])
 
 
-
+    
     def get_width_height(self, image):
         self.height = len(image)
         self.width = len(image[0,:])
@@ -59,7 +54,7 @@ cdef class SignatureExtraction:
 
     def set_image(self, image):
         self.image = image
-
+    
     #(optional area)
     # def get_hist_eq(self):
     #     '''Histogram equalization for cropped image'''
@@ -72,7 +67,6 @@ cdef class SignatureExtraction:
         '''luminance calculation block'''
 ##        lum1 = [row for row in block]
 ##        lum1 = sum(sum(lum1)) / (self.N ** 2)
-        cdef float lum
         lum = np.sum(block) / (self.N ** 2)
         return lum
 
@@ -276,10 +270,10 @@ cdef class SignatureExtraction:
 ##        group[:, 24:32] = rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]
 
 
-
+        
 ##        pool = mp.ProcessingPool(nodes = 8)
 ##        sings = pool.map(self.get_singular_energy, (group[:, 0:8],group[:, 8:16],group[:, 16:24],group[:, 24:32]))
-##
+##        
 
 
 ##        sing1 = sings[0]
@@ -304,7 +298,7 @@ cdef class SignatureExtraction:
 ##            sing2 = self.get_singular_energy(group[:, 8:16])
 ##            sing3 = self.get_singular_energy(group[:, 16:24])
 ##            sing4 = self.get_singular_energy(group[:, 24:32])
-
+        
 ##            avg_sing = (sing1 + sing2 + sing3 + sing4) / 4
 ##            std_sing = np.std(np.array([sing1, sing2, sing3, sing4]))
 ##            avg_sing = 0
@@ -321,7 +315,7 @@ cdef class SignatureExtraction:
 ##            sing1 = self.get_singular_energy(group[:, 0:8])
 ##            avg_sing = sing1
 ##            std_sing = 0
-
+            
 ##            return avg_lum, std_lum, avg_sing, std_sing
             return avg_lum, std_lum
 
@@ -370,7 +364,7 @@ cdef class SignatureExtraction:
 ##            avg_sing = 0
 ##            avg_sing = (sing1 + sing2 + sing3 + sing4 + sing5 + sing6 + sing7 + sing8 + sing9 + sing10 + sing11 + sing12) / 12
             # avg_sing = (sing1 + sing2 + sing3 + sing4) / 4
-
+            
 ##            std_sing = 0
 ##            std_sing = np.std(np.array([sing1, sing2, sing3, sing4, sing5, sing6, sing7, sing8, sing9, sing10, sing11, sing12]))
             # std_sing = np.std(np.array([sing1, sing2, sing3, sing4]))
@@ -433,8 +427,9 @@ cdef class SignatureExtraction:
 ##
 ##    def get_singular_energy(self, block):
 ####        return self.get_second_singular(block) / self.get_total_energy_of_block(block)
+        return 0
 
-
+ 
     def get_signature(self, list):
         signature = bitarray()
         counter_list = 0
@@ -447,3 +442,6 @@ cdef class SignatureExtraction:
                     signature.append(False)
 
         return signature
+
+
+
