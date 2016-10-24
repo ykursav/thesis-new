@@ -175,13 +175,13 @@ cdef class PreProcessing:
         if len(points) != 1:
             self.width, self.height = self.get_width_height(self.image)
             ordered_points = self.order_contour(points)
-            width_top = (int)self.distance_calculator(ordered_points[0], ordered_points[1])
-            width_bottom = (int)self.distance_calculator(ordered_points[2], ordered_points[3])
+            width_top = int(self.distance_calculator(ordered_points[0], ordered_points[1]))
+            width_bottom = int(self.distance_calculator(ordered_points[2], ordered_points[3]))
 
             width_perspective = max(width_top, width_bottom)
 
-            height_left = (int)self.distance_calculator(ordered_points[0], ordered_points[3])
-            height_right = (int)self.distance_calculator(ordered_points[1], ordered_points[2])
+            height_left = int(self.distance_calculator(ordered_points[0], ordered_points[3]))
+            height_right = int(self.distance_calculator(ordered_points[1], ordered_points[2]))
 
             height_perspective = max(height_left, height_right)
 
