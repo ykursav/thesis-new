@@ -1,0 +1,201 @@
+Start time:1478250326.03
+Under Real_time Point:0.107982873917
+Start time:1478250326.13
+Under Real_time Point:0.221124887466
+Start time:1478250326.35
+Under Real_time Point:0.141938924789
+Start time:1478250326.5
+Under Real_time Point:0.127380132675
+Start time:1478250326.62
+Under Real_time Point:0.140503883362
+Start time:1478250326.76
+Under Real_time Point:0.13258099556
+Start time:1478250326.9
+Under Real_time Point:0.110298871994
+Start time:1478250327.01
+Under Real_time Point:0.139080047607
+Start time:1478250327.15
+Under Real_time Point:0.132230043411
+Start time:1478250327.28
+Under Real_time Point:0.241170883179
+Start time:1478250327.52
+Under Real_time Point:0.259239912033
+Start time:1478250327.78
+Under Real_time Point:0.210259914398
+Start time:1478250327.99
+Under Real_time Point:0.121094942093
+Start time:1478250328.11
+Under Real_time Point:0.145253896713
+Start time:1478250328.26
+Under Real_time Point:0.131662845612
+Start time:1478250328.39
+Under Real_time Point:0.177628040314
+Start time:1478250328.57
+Under Real_time Point:0.153834104538
+Start time:1478250328.72
+Under Real_time Point:0.147125959396
+Start time:1478250328.87
+Under Real_time Point:0.157577037811
+Start time:1478250329.02
+Under Real_time Point:0.176702976227
+Start time:1478250329.2
+Under Real_time Point:0.153231143951
+Start time:1478250329.35
+Under Real_time Point:0.174674987793
+Start time:1478250329.53
+Under Real_time Point:0.148543119431
+Start time:1478250329.68
+Under Real_time Point:0.188943862915
+Start time:1478250329.87
+Under Real_time Point:0.12344789505
+Start time:1478250329.99
+Under Real_time Point:0.137923002243
+Start time:1478250330.13
+Under Real_time Point:0.110348939896
+Start time:1478250330.24
+Under Real_time Point:0.174911975861
+Start time:1478250330.41
+Under Real_time Point:0.245559930801
+Start time:1478250330.66
+Under Real_time Point:0.160743951797
+Start time:1478250330.82
+Under Real_time Point:0.124870061874
+Start time:1478250330.94
+Under Real_time Point:0.185389041901
+Start time:1478250331.13
+Under Real_time Point:0.184144973755
+Start time:1478250331.31
+Under Real_time Point:0.218129873276
+Start time:1478250331.53
+Under Real_time Point:0.196962118149
+Start time:1478250331.73
+Under Real_time Point:0.108874797821
+Start time:1478250331.84
+Under Real_time Point:0.150520086288
+Start time:1478250331.99
+Under Real_time Point:0.132644891739
+Start time:1478250332.12
+Under Real_time Point:0.110601902008
+Start time:1478250332.23
+Under Real_time Point:0.153969049454
+Start time:1478250332.39
+Under Real_time Point:0.121189832687
+Start time:1478250332.51
+Under Real_time Point:0.167364120483
+Start time:1478250332.68
+Under Real_time Point:0.181066036224
+Start time:1478250332.86
+Under Real_time Point:0.21742606163
+Start time:1478250333.08
+Under Real_time Point:0.167166948318
+Start time:1478250333.25
+Under Real_time Point:0.154587030411
+Start time:1478250333.4
+Under Real_time Point:0.163927793503
+Start time:1478250333.57
+Under Real_time Point:0.161170959473
+Start time:1478250333.73
+Under Real_time Point:0.151625156403
+Start time:1478250333.88
+Under Real_time Point:0.190190076828
+Start time:1478250334.07
+Under Real_time Point:0.135743141174
+Start time:1478250334.21
+Under Real_time Point:0.193253993988
+Start time:1478250334.4
+Under Real_time Point:0.129158973694
+Start time:1478250334.53
+Under Real_time Point:0.181829929352
+Start time:1478250334.71
+Under Real_time Point:0.141864776611
+Start time:1478250334.85
+Under Real_time Point:0.139428853989
+Start time:1478250334.99
+Under Real_time Point:0.177555084229
+Start time:1478250335.17
+Under Real_time Point:0.154808044434
+Start time:1478250335.32
+Under Real_time Point:0.182890892029
+Start time:1478250335.51
+Under Real_time Point:0.129931926727
+Start time:1478250335.64
+Under Real_time Point:0.147342205048
+Start time:1478250335.78
+Under Real_time Point:0.151969909668
+Start time:1478250335.94
+Under Real_time Point:0.166999101639
+Start time:1478250336.1
+Under Real_time Point:0.17168879509
+Start time:1478250336.28
+Under Real_time Point:0.151141881943
+Start time:1478250336.43
+Under Real_time Point:0.168600082397
+Start time:1478250336.6
+Under Real_time Point:0.149322032928
+Start time:1478250336.75
+Under Real_time Point:0.161988973618
+Start time:1478250336.91
+Under Real_time Point:0.165638923645
+Start time:1478250337.07
+Under Real_time Point:0.132345914841
+Start time:1478250337.21
+Under Real_time Point:0.206976890564
+Start time:1478250337.41
+Under Real_time Point:0.145471096039
+Start time:1478250337.56
+Under Real_time Point:0.167971134186
+Start time:1478250337.73
+Under Real_time Point:0.1692070961
+Start time:1478250337.9
+Under Real_time Point:0.184340953827
+Start time:1478250338.08
+Under Real_time Point:0.129337072372
+Start time:1478250338.21
+Under Real_time Point:0.230304956436
+Start time:1478250338.44
+Under Real_time Point:0.156881809235
+Start time:1478250338.6
+Under Real_time Point:0.160938978195
+Start time:1478250338.76
+Under Real_time Point:0.159991025925
+Start time:1478250338.92
+Under Real_time Point:0.144815206528
+Start time:1478250339.06
+Under Real_time Point:0.186130046844
+Start time:1478250339.25
+Under Real_time Point:0.136486053467
+Start time:1478250339.39
+Under Real_time Point:0.112801790237
+Start time:1478250339.5
+Under Real_time Point:0.134387016296
+Start time:1478250339.64
+Under Real_time Point:0.233419179916
+Start time:1478250339.87
+Under Real_time Point:0.169354915619
+Start time:1478250340.04
+Under Real_time Point:0.171308040619
+Start time:1478250340.21
+Under Real_time Point:0.144582986832
+Start time:1478250340.36
+Under Real_time Point:0.171872138977
+Start time:1478250340.53
+Under Real_time Point:0.138662099838
+Start time:1478250340.67
+Under Real_time Point:0.179363965988
+Start time:1478250340.85
+ERROR:Contour is too small 
+Under Real_time Point:0.145733118057
+Start time:1478250340.99
+Under Real_time Point:0.106175899506
+Start time:1478250341.1
+Under Real_time Point:0.141795873642
+Start time:1478250341.24
+Under Real_time Point:0.152281999588
+Start time:1478250341.39
+Under Real_time Point:0.156045913696
+Start time:1478250341.55
+ERROR:Contour is too small 
+Under Real_time Point:0.152031898499
+Start time:1478250341.7
+Under Real_time Point:0.119511127472
+Start time:1478250341.82
