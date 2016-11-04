@@ -28,7 +28,7 @@ cv2.setUseOptimized(True)
 cdef class SignatureExtraction:
     '''N block size, M overlapping pixels, L image size'''
     cdef int L, N, M, width, height, number_of_blocks
-    cdef np.ndarray image, image_blockssu
+    cdef np.ndarray image
     def __init__(self, N, M, L):
         self.L = L
         self.N = N
@@ -37,7 +37,7 @@ cdef class SignatureExtraction:
         #self.image = image
         self.width = 0
         self.height = 0
-        self.image_blocks = np.array([])
+        #self.image_blocks = np.array([])
         self.number_of_blocks = ((self.L - self.N) / self.M ) + 1
         #self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N))
         #self.average_luminance = np.zeros((self.number_of_blocks, self.number_of_blocks, 1))
@@ -47,13 +47,13 @@ cdef class SignatureExtraction:
 
 
 
-    cdef get_width_height(self, np.ndarray image):
+    cpdef get_width_height(self, np.ndarray image):
         self.height = len(image)
         self.width = len(image[0,:])
 
 
 
-    cdef set_image(self, np.ndarray image):
+    cpdef set_image(self, np.ndarray image):
         self.image = image
 
     #(optional area)
@@ -64,7 +64,7 @@ cdef class SignatureExtraction:
 
     #check again it is correct or not
 
-    cdef get_average_luminance_of_block(self, np.ndarray block):
+    cpdef get_average_luminance_of_block(self, np.ndarray block):
         '''luminance calculation block'''
 ##        lum1 = [row for row in block]
 ##        lum1 = sum(sum(lum1)) / (self.N ** 2)
@@ -101,15 +101,16 @@ cdef class SignatureExtraction:
 
     cpdef basic_rotations(self, np.ndarray image):
         cdef int center
+        cdef np.ndarray rot90, rot180, rot270
         # cdef np.ndarray M1, M2, M3, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
         # fVertical180, fHorizontal180, fVertical270, fHorizontal270
         center = (self.N * self.number_of_blocks) / 2
         # M1 = cv2.getRotationMatrix2D((center, center), 90, 1)
         # M2 = cv2.getRotationMatrix2D((center, center), 180, 1)
         # M3 = cv2.getRotationMatrix2D((center, center), 270, 1)
-        # rot90 = cv2.warpAffine(image, M1, (center * 2, center * 2))
-        # rot180 = cv2.warpAffine(image, M2, (center * 2, center * 2))
-        # rot270 = cv2.warpAffine(image, M3, (center * 2, center * 2))
+        rot90 = cv2.warpAffine(image, cv2.getRotationMatrix2D((center, center), 90, 1), (center * 2, center * 2))
+        rot180 = cv2.warpAffine(image, cv2.getRotationMatrix2D((center, center), 180, 1), (center * 2, center * 2))
+        rot270 = cv2.warpAffine(image, cv2.getRotationMatrix2D((center, center), 270, 1), (center * 2, center * 2))
         # fVertical0 = cv2.flip(image, 0)
         # fHorizontal0 = cv2.flip(image, 1)
         # fVertical90 = cv2.flip(rot90, 0)
@@ -119,9 +120,7 @@ cdef class SignatureExtraction:
         # fVertical270 = cv2.flip(rot270, 0)
         # fHorizontal270 = cv2.flip(rot270, 1)
 
-        return cv2.warpAffine(image, cv2.getRotationMatrix2D((center, center), 90, 1), (center * 2, center * 2)), \
-        cv2.warpAffine(image, cv2.getRotationMatrix2D((center, center), 180, 1), (center * 2, center * 2)), \
-        cv2.warpAffine(image, cv2.getRotationMatrix2D((center, center), 270, 1), (center * 2, center * 2)), \
+        return rot90, rot180, rot270, \
         cv2.flip(image, 0), cv2.flip(image, 1), cv2.flip(rot90, 0), cv2.flip(rot90, 1), \
         cv2.flip(rot180, 0), cv2.flip(rot180, 1), cv2.flip(rot270, 0), cv2.flip(rot270, 1)
 
@@ -317,7 +316,7 @@ cdef class SignatureExtraction:
 
 ##            return avg_lum, std_lum, avg_sing, std_sing
             return ((self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]) + self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]) \
-            + lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]) + self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])) / 4), \
+            + self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]) + self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])) / 4), \
             np.std(np.array([self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]), self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]), \
             self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N]), self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])]))
 
@@ -452,7 +451,6 @@ cdef class SignatureExtraction:
 ##
 ##    def get_singular_energy(self, block):
 ####        return self.get_second_singular(block) / self.get_total_energy_of_block(block)
-        return 0
 
 
     cpdef get_signature(self, list):

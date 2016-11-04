@@ -8,20 +8,17 @@ import time
 import multiprocessing
 import sys
 import datetime
-
-pre.cv2.setUseOptimized(True)
-
-##img_name = raw_input("Please enter image name which will process for feature extraction: ")
-##img_name += ".jpg"
+import gc
 
 
-image = 0
+start_time = time.time()
 try:
     image = cv2.imread("flash1.jpg", 1)
 ##    image = pre.cv2.imread(img_name, 1)
 except:
     print "ERROR: This image is not exist or unknown format."
-
+    sys.exit(0)
+    
 extract_process = extract.SignatureExtraction(8, 4, 128)
 pre_process = pre.PreProcessing(128, False)
 sigOrig = bitarray()
@@ -29,7 +26,7 @@ f = open("signature.bin", "rb")
 #signatures must import from a binary file
 sigOrig.fromfile(f)
 matching_process = match.SignatureMatching(sigOrig[0:238], 24, 38, 4, 28, 22)
-start_time = time.time()
+
 print "start" + str(datetime.datetime.now())
 pre_process.set_image(image)
 # pre_install_time = time.time()
@@ -40,42 +37,24 @@ if not check:
     print "ERROR:Contour not detected"
     sys.exit(0)
 # warped_time = time.time()
-image2 = pre_process.get_scaled()
 # scaled_time = time.time()
-image3 = pre_process.get_cropped()
 # cropped_time = time.time()
 # vis1 = pre_process.get_edged(9)
 # edge_time = time.time()
 
 
 
-extract_process.set_image(image3)
-extract_install = time.time()
+extract_process.set_image(pre_process.get_cropped())
 
-
-
-
-fragments_list = extract_process.get_all_fragments()
-extraction_time = time.time()
-
-
-
-sigGen = extract_process.get_signature(fragments_list)
+sigGen = extract_process.get_signature()
 
 # print "Signature len:",len(sigGen)
-
-signature_time = time.time()
-
-
 # print sigOrig, len(sigOrig)
 # print sigGen, len(sigGen)
 
 matching_process.set_signature(sigGen)
-print len(sigGen)
-print len(sigOrig)
 print matching_process.signature_rejection()
 end_time = time.time()
-print datetime.datetime.now()
 # print "Preinstall time:" + str(pre_install_time - start_time)
 # print "Points time:" + str(pre_point_time - pre_install_time)
 # print "warped_time" + str(warped_time - pre_point_time)

@@ -1,0 +1,6 @@
+start2016-11-03 08:41:52.483473
+(True, 26, 'replica detected')
+Total time:0.314801931381
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+

@@ -1,0 +1,54 @@
+start2016-11-03 10:24:00.389271
+(True, 28, 'replica detected')
+Total time:0.376482963562
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.063664 s
+File: preprocessing.py
+Function: get_edged at line 29
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    29                                               @profile
+    30                                               def get_edged(self, G):
+    31         1         8968   8968.0     14.1          gray = self.gray_image(self.image)
+    32         1        15716  15716.0     24.7          blur = self.get_blurred(gray, G)
+    33         1        29659  29659.0     46.6          th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
+    34                                           
+    35         1         9321   9321.0     14.6          return cv2.dilate(th, np.ones((3,3),np.uint8), iterations = 1)
+
+Total time: 0.139525 s
+File: preprocessing.py
+Function: get_contour at line 37
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    37                                               @profile
+    38                                               def get_contour(self, G):
+    39         1        63874  63874.0     45.8          edged = self.get_edged(G)
+    40         1        14765  14765.0     10.6          __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    41         1           19     19.0      0.0          approx = 0
+    42         1           10     10.0      0.0          first = False
+    43         1            8      8.0      0.0          no_contour = True
+    44         1            7      7.0      0.0          last_cnt = 0
+    45       633         4702      7.4      3.4          for cnt in contours:
+    46       632        11478     18.2      8.2              epsilon = 0.05 * cv2.arcLength(cnt, True)
+    47       632        20886     33.0     15.0              new_approx = cv2.approxPolyDP(cnt, epsilon, True)
+    48       632         5496      8.7      3.9              if first == False:
+    49         1           39     39.0      0.0                  if self.check_points(new_approx):
+    50         1            8      8.0      0.0                      last_cnt = cnt
+    51         1           39     39.0      0.0                      approx = cv2.approxPolyDP(cnt, epsilon, True)
+    52         1            8      8.0      0.0                      first = True
+    53         1            8      8.0      0.0                      no_contour = False
+    54       631        17247     27.3     12.4              elif (cv2.contourArea(last_cnt) < cv2.contourArea(cnt)):
+    55        41          729     17.8      0.5                  if self.check_points(new_approx):
+    56         8           61      7.6      0.0                      last_cnt = cnt
+    57         8           65      8.1      0.0                      approx = new_approx
+    58         8           61      7.6      0.0                      no_contour = False
+    59                                                               
+    60         1            8      8.0      0.0          if first == False:
+    61                                                       return -1
+    62                                                   else:
+    63         1            7      7.0      0.0              return approx
+

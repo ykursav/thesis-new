@@ -1,0 +1,346 @@
+Start time:1478214711.36
+Under Real_time Point:0.100181102753
+Start time:1478214711.46
+ERROR:Contour is too small 
+ERROR:Contour is too small 
+Under Real_time Point:0.100091934204
+Start time:1478214711.56
+Under Real_time Point:0.100110054016
+Start time:1478214711.66
+2	Hamming distance = 97
+Message: tau1_fail
+Under Real_time Point:0.129390954971
+Start time:1478214711.79
+Under Real_time Point:0.100370883942
+Start time:1478214711.89
+3	Hamming distance = 97
+Message: tau1_fail
+Under Real_time Point:0.100616931915
+Start time:1478214711.99
+4	Hamming distance = 108
+Message: tau1_fail
+Start time:1478214712.18
+5	Hamming distance = 117
+Message: tau2_fail
+ERROR:Contour is too small 
+Under Real_time Point:0.100144147873
+Start time:1478214712.28
+Start time:1478214712.4
+7	Hamming distance = 115
+Message: tau1_fail
+ERROR:Contour is too small 
+ERROR:Contour is too small 
+Under Real_time Point:0.100090026855
+Start time:1478214712.5
+ERROR:Contour is too small 
+Under Real_time Point:0.100086927414
+Start time:1478214712.6
+ERROR:Contour is too small 
+Under Real_time Point:0.100083112717
+Start time:1478214712.7
+Under Real_time Point:0.100153207779
+Start time:1478214712.8
+12	Hamming distance = 113
+Message: tau2_fail
+Under Real_time Point:0.100118160248
+Start time:1478214712.9
+13	Hamming distance = 108
+Message: tau2_fail
+Start time:1478214713.04
+Under Real_time Point:0.106230020523
+Start time:1478214713.15
+14	Hamming distance = 106
+Message: tau3_fail
+Under Real_time Point:0.122328042984
+Start time:1478214713.27
+15	Hamming distance = 113
+Message: tau1_fail
+Start time:1478214713.4
+16	Hamming distance = 110
+Message: tau2_fail
+Start time:1478214713.56
+17	Hamming distance = 107
+Message: tau2_fail
+18	Hamming distance = 105
+Message: tau2_fail
+Start time:1478214713.7
+Under Real_time Point:0.109920978546
+Start time:1478214713.81
+19	Hamming distance = 104
+Message: tau2_fail
+20	Hamming distance = 109
+Message: tau2_fail
+Start time:1478214713.96
+Under Real_time Point:0.100208997726
+Start time:1478214714.06
+21	Hamming distance = 104
+Message: tau2_fail
+Start time:1478214714.23
+22	Hamming distance = 112
+Message: tau1_fail
+23	Hamming distance = 107
+Message: tau2_fail
+Under Real_time Point:0.143624067307
+Start time:1478214714.38
+Start time:1478214714.5
+24	Hamming distance = 111
+Message: tau2_fail
+Under Real_time Point:0.106086015701
+Start time:1478214714.61
+25	Hamming distance = 108
+Message: tau2_fail
+Under Real_time Point:0.100146055222
+Start time:1478214714.71
+Under Real_time Point:0.100406169891
+Start time:1478214714.81
+26	Hamming distance = 112
+Message: tau2_fail
+Start time:1478214714.93
+27	Hamming distance = 109
+Message: tau2_fail
+Under Real_time Point:0.10039806366
+Start time:1478214715.03
+28	Hamming distance = 108
+Message: tau2_fail
+Start time:1478214715.14
+29	Hamming distance = 108
+Message: tau2_fail
+Start time:1478214715.24
+30	Hamming distance = 110
+Message: tau1_fail
+Under Real_time Point:0.100185871124
+Start time:1478214715.34
+31	Hamming distance = 105
+Message: tau2_fail
+32	Hamming distance = 110
+Message: tau1_fail
+Start time:1478214715.51
+33	Hamming distance = 111
+Message: tau2_fail
+Start time:1478214715.65
+34	Hamming distance = 110
+Message: tau2_fail
+Under Real_time Point:0.100142002106
+Start time:1478214715.75
+35	Hamming distance = 103
+Message: tau2_fail
+Under Real_time Point:0.100136995316
+Start time:1478214715.85
+36	Hamming distance = 109
+Message: tau2_fail
+Start time:1478214715.99
+37	Hamming distance = 112
+Message: tau2_fail
+Under Real_time Point:0.100125074387
+Start time:1478214716.09
+Under Real_time Point:0.100512981415
+Start time:1478214716.19
+38	Hamming distance = 105
+Message: tau2_fail
+39	Hamming distance = 107
+Message: tau2_fail
+Under Real_time Point:0.100172042847
+Start time:1478214716.29
+40	Hamming distance = 107
+Message: tau2_fail
+Start time:1478214716.44
+41	Hamming distance = 110
+Message: tau2_fail
+Under Real_time Point:0.100214004517
+Start time:1478214716.54
+42	Hamming distance = 107
+Message: tau2_fail
+Under Real_time Point:0.100392103195
+Start time:1478214716.64
+Under Real_time Point:0.131012201309
+Start time:1478214716.77
+44	Hamming distance = 108
+Message: tau2_fail
+43	Hamming distance = 104
+Message: tau2_fail
+Under Real_time Point:0.100142002106
+Start time:1478214716.87
+45	Hamming distance = 114
+Message: tau2_fail
+Under Real_time Point:0.105606079102
+Start time:1478214716.97
+47	Hamming distance = 110
+Message: tau2_fail
+Start time:1478214717.13
+46	Hamming distance = 112
+Message: tau2_fail
+48	Hamming distance = 112
+Message: tau2_fail
+Start time:1478214717.31
+Start time:1478214717.44
+49	Hamming distance = 105
+Message: tau2_fail
+Start time:1478214717.54
+50	Hamming distance = 108
+Message: tau2_fail
+Under Real_time Point:0.100121021271
+Start time:1478214717.64
+51	Hamming distance = 106
+Message: tau2_fail
+Under Real_time Point:0.102790117264
+Start time:1478214717.74
+52	Hamming distance = 113
+Message: tau2_fail
+Start time:1478214717.88
+53	Hamming distance = 112
+Message: tau2_fail
+Under Real_time Point:0.100183010101
+Start time:1478214717.98
+54	Hamming distance = 114
+Message: tau2_fail
+Start time:1478214718.1
+ERROR:Contour is too small 
+55	Hamming distance = 111
+Message: tau2_fail
+Under Real_time Point:0.100148916245
+Start time:1478214718.2
+Under Real_time Point:0.113458871841
+Start time:1478214718.31
+57	Hamming distance = 105
+Message: tau1_fail
+Under Real_time Point:0.109644889832
+Start time:1478214718.42
+58	Hamming distance = 105
+Message: tau2_fail
+ERROR:Contour is too small 
+Under Real_time Point:0.100116968155
+Start time:1478214718.52
+Under Real_time Point:0.100246906281
+Start time:1478214718.62
+59	Hamming distance = 102
+Message: tau1_fail
+ERROR:Contour is too small 
+Under Real_time Point:0.100119829178
+Start time:1478214718.72
+62	Hamming distance = 103
+Message: tau1_fail
+Start time:1478214718.82
+ERROR:Contour is too small 
+Under Real_time Point:0.100154876709
+Start time:1478214718.92
+64	Hamming distance = 110
+Message: tau1_fail
+Under Real_time Point:0.100107192993
+Start time:1478214719.02
+Under Real_time Point:0.120182037354
+Start time:1478214719.15
+65	Hamming distance = 120
+Message: tau1_fail
+66	Hamming distance = 97
+Message: tau1_fail
+Start time:1478214719.28
+Under Real_time Point:0.100158929825
+Start time:1478214719.38
+67	Hamming distance = 101
+Message: tau1_fail
+68	Hamming distance = 101
+Message: tau1_fail
+Start time:1478214719.54
+Under Real_time Point:0.100279092789
+Start time:1478214719.65
+69	Hamming distance = 100
+Message: tau1_fail
+Start time:1478214719.81
+70	Hamming distance = 103
+Message: tau1_fail
+71	Hamming distance = 147
+Message: tau1_fail
+Start time:1478214719.96
+Under Real_time Point:0.111882209778
+Start time:1478214720.08
+72	Hamming distance = 147
+Message: tau1_fail
+73	Hamming distance = 109
+Message: tau1_fail
+Start time:1478214720.22
+Under Real_time Point:0.100425004959
+Start time:1478214720.32
+74	Hamming distance = 111
+Message: tau1_fail
+75	Hamming distance = 106
+Message: tau2_fail
+Start time:1478214720.49
+ERROR:Contour is too small 
+Under Real_time Point:0.100824117661
+Start time:1478214720.59
+76	Hamming distance = 127
+Message: tau1_fail
+Start time:1478214720.7
+Under Real_time Point:0.101526975632
+Start time:1478214720.8
+78	Hamming distance = 125
+Message: tau1_fail
+ERROR:Contour is too small 
+Start time:1478214720.93
+80	Hamming distance = 91
+Message: tau2_fail
+Under Real_time Point:0.103353977203
+Start time:1478214721.04
+Under Real_time Point:0.109701156616
+Start time:1478214721.15
+81	Hamming distance = 107
+Message: tau1_fail
+Start time:1478214721.26
+82	Hamming distance = 103
+Message: tau1_fail
+83	Hamming distance = 110
+Message: tau1_fail
+Start time:1478214721.48
+84	Hamming distance = 93
+Message: tau2_fail
+Under Real_time Point:0.100125074387
+Start time:1478214721.58
+Under Real_time Point:0.105000972748
+Start time:1478214721.69
+85	Hamming distance = 113
+Message: tau1_fail
+Start time:1478214721.8
+86	Hamming distance = 98
+Message: tau1_fail
+Under Real_time Point:0.100432872772
+Start time:1478214721.9
+Under Real_time Point:0.101161956787
+Start time:1478214722.01
+87	Hamming distance = 113
+Message: tau1_fail
+Start time:1478214722.13
+88	Hamming distance = 101
+Message: tau1_fail
+Under Real_time Point:0.100425004959
+Start time:1478214722.23
+89	Hamming distance = 102
+Message: tau1_fail
+Under Real_time Point:0.100503921509
+Start time:1478214722.33
+90	Hamming distance = 103
+Message: tau1_fail
+91	Hamming distance = 109
+Message: tau1_fail
+Start time:1478214722.51
+92	Hamming distance = 109
+Message: tau1_fail
+Under Real_time Point:0.100113868713
+Start time:1478214722.61
+ERROR:Contour is too small 
+Start time:1478214722.73
+93	Hamming distance = 104
+Message: tau1_fail
+Under Real_time Point:0.108337879181
+Start time:1478214722.84
+94	Hamming distance = 111
+Message: tau1_fail
+ERROR:Contour is too small 
+Under Real_time Point:0.100145101547
+Start time:1478214722.94
+97	Hamming distance = 100
+Message: tau1_fail
+Start time:1478214723.06
+98	Hamming distance = 100
+Message: tau1_fail
+99	Hamming distance = 114
+Message: tau1_fail

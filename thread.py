@@ -8,8 +8,8 @@ import cv2
 import io
 import numpy as np
 import Queue
-cmd = "python /home/pi/master-thesis/threading_test.py image"
-f_report = open("Quality_Reports_Image/new_timing13.txt", "w")
+##cmd = "python /home/pi/master-thesis/threading_test.py image"
+f_report = open("Quality_Reports_Image/new_timing15.txt", "w")
 
 def process_thread(image, counter):
     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
@@ -26,6 +26,9 @@ if __name__ == "__main__":
     rawCapture = PiRGBArray(camera, size = (544, 400))
     start = time.time()
     camera.start_preview()
+##    time.sleep(3)
+##    camera.stop_preview()
+##    time.sleep(2)
     time.sleep(5)
     counter = 0
     last = 0
@@ -33,7 +36,7 @@ if __name__ == "__main__":
         if last != 0:
             if (last + 0.1) - time.time() > 0:
                 time.sleep((last + 0.1) - time.time())
-            else:
+##            else:
                 f_report.write('Under Real_time Point:' + str(time.time() - last) + '\n')
         start_time = time.time()
         f_report.write('Start time:' +str(start_time) + '\n')
@@ -48,7 +51,7 @@ if __name__ == "__main__":
             break
         last = start_time
         
-    print "reached zero"
+##    print "reached zero"
     end = time.time()
     print end - start
 

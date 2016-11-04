@@ -1,0 +1,101 @@
+start2016-11-03 08:21:49.689728
+(True, 26, 'replica detected')
+Total time:0.421706914902
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.155352 s
+File: extraction.py
+Function: get_fragment at line 82
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    82                                               @profile
+    83                                               def get_fragment(self, rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
+    84                                               fVertical180, fHorizontal180, fVertical270, fHorizontal270, x, y, only_rotate):
+    85                                           
+    86                                           
+    87       120         1000      8.3      0.6          if only_rotate == 1:
+    88        28         3738    133.5      2.4              lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+    89        28         3173    113.3      2.0              lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+    90        28         3129    111.8      2.0              lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+    91        28         3080    110.0      2.0              lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+    92        28          473     16.9      0.3              avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
+    93                                                       #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
+    94                                                       
+    95        28         4470    159.6      2.9              std_lum = libextraction.calculateSD(np.array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
+    96                                                       
+    97        28          316     11.3      0.2              return avg_lum, std_lum
+    98                                           
+    99        92          743      8.1      0.5          elif only_rotate == -1:
+   100         1          151    151.0      0.1              lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   101         1            9      9.0      0.0              avg_lum = lum1
+   102         1            7      7.0      0.0              std_lum = 0
+   103                                                       
+   104         1            7      7.0      0.0              return avg_lum, std_lum
+   105                                           
+   106                                                   else:
+   107        91        10513    115.5      6.8              lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   108        91         9968    109.5      6.4              lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   109        91         9904    108.8      6.4              lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   110        91         9697    106.6      6.2              lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   111        91         9617    105.7      6.2              lum5 = self.get_average_luminance_of_block(fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   112        91         9747    107.1      6.3              lum6 = self.get_average_luminance_of_block(fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   113        91         9905    108.8      6.4              lum7 = self.get_average_luminance_of_block(fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   114        91        10015    110.1      6.4              lum8 = self.get_average_luminance_of_block(fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   115        91         9607    105.6      6.2              lum9 = self.get_average_luminance_of_block(fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   116        91         9753    107.2      6.3              lum10 = self.get_average_luminance_of_block(fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   117        91         9775    107.4      6.3              lum11 = self.get_average_luminance_of_block(fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   118        91         9631    105.8      6.2              lum12 = self.get_average_luminance_of_block(fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   119                                           
+   120        91         2154     23.7      1.4              avg_lum = (lum1 + lum2 + lum3 + lum4 + lum5 + lum6 + lum7 + lum8 + lum9 + lum10 + lum11 + lum12) / 12
+   121                                           
+   122                                                       #std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8, lum9, lum10, lum11, lum12]))
+   123        91        13849    152.2      8.9              std_lum = libextraction.calculateSD(np.array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
+   124                                           
+   125                                           
+   126        91          921     10.1      0.6              return avg_lum, std_lum
+
+Total time: 0.243137 s
+File: extraction.py
+Function: get_all_fragments at line 128
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   128                                               @profile
+   129                                               def get_all_fragments(self):
+   130         1           19     19.0      0.0          fragments_list = [[],[]]
+   131         1         4136   4136.0      1.7          rot0 = self.get_blocks()
+   132                                                   rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
+   133         1        53472  53472.0     22.0          fVertical180, fHorizontal180, fVertical270, fHorizontal270 = self.basic_rotations(rot0)
+   134         1          144    144.0      0.1          counter_x = 0
+   135         1           10     10.0      0.0          counter_y = 0
+   136         1           16     16.0      0.0          append_std_lum = fragments_list[0].append
+   137         1           30     30.0      0.0          append_avg_lum = fragments_list[1].append
+   138       121          910      7.5      0.4          while(counter_x < 14 or counter_y < 14):
+   139       120          838      7.0      0.3              if counter_x == 15:
+   140        14           95      6.8      0.0                  counter_y += 1
+   141        14           95      6.8      0.0                  counter_x = counter_y
+   142       120          880      7.3      0.4              if counter_x == counter_y or counter_x == 14:
+   143        29          222      7.7      0.1                  if counter_x == 14 and counter_y == 14:
+   144         1           10     10.0      0.0                      fragment_time = time.time()
+   145         1            9      9.0      0.0                      avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
+   146         1          293    293.0      0.1      fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, -1)
+   147         1           10     10.0      0.0                      fragment_end_time = time.time()
+   148         1            8      8.0      0.0                      append_std_lum(std_lum)
+   149         1            8      8.0      0.0                      append_avg_lum(avg_lum)
+   150                                                           else:
+   151        28          276      9.9      0.1                      fragment_time = time.time()
+   152        28          261      9.3      0.1                      avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
+   153        28        22029    786.8      9.1      fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 1)
+   154        28          298     10.6      0.1                      fragment_end_time = time.time()
+   155        28          216      7.7      0.1                      append_std_lum(std_lum)
+   156        28          238      8.5      0.1                      append_avg_lum(avg_lum)
+   157                                                       else:
+   158        91          771      8.5      0.3                  avg_lum, std_lum = self.get_fragment(rot0, rot90, rot180, rot270,fVertical0, fHorizontal0, fVertical90, fHorizontal90, \
+   159        91       155297   1706.6     63.9      fVertical180, fHorizontal180, fVertical270, fHorizontal270, counter_x, counter_y, 0)
+   160        91          865      9.5      0.4                  append_std_lum(std_lum)
+   161        91          710      7.8      0.3                  append_avg_lum(avg_lum)
+   162       120          964      8.0      0.4              counter_x += 1
+   163         1            7      7.0      0.0          return fragments_list
+

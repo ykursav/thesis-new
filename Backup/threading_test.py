@@ -59,7 +59,8 @@ class ThreadTest:
     def extractprocess(self):
         
         self.extract_process.set_image(self.image_preprocessed)        
-        sigGen = self.extract_process.get_signature()
+        fragments_list = self.extract_process.get_all_fragments()
+        sigGen = self.extract_process.get_signature(fragments_list)
         self.sigGen = sigGen
 
     def matchingprocess(self):
@@ -67,8 +68,8 @@ class ThreadTest:
         if self.matching_process.signature_rejection()[0]:
             return 30
             
-        self.f_report.write(str(self.counter) + "\tHamming distance = " + str(self.matching_process.signature_rejection()[1]) \
-                       + "\n" + "Message: " + self.matching_process.signature_rejection()[2] + "\n")        
+##        self.f_report.write(str(self.counter) + "\tHamming distance = " + str(self.matching_process.signature_rejection()[1]) \
+##                       + "\n" + "Message: " + self.matching_process.signature_rejection()[2] + "\n")        
 
     def mainprocess(self):
         counter = 0

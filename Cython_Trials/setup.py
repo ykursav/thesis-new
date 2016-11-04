@@ -7,6 +7,6 @@ pyximport.install(setup_args={"script_args":["--compiler=mingw32"],
                   reload_support=True)
 
 setup(
-    ext_modules=cythonize("preprocessing.pyx"),
+    ext_modules=cythonize("threading_test.pyx"),
     include_dirs=[numpy.get_include()]
 )
