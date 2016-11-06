@@ -1,148 +1,295 @@
-Start time:1478250969.92
-Under Real_time Point:0.100200891495
-Start time:1478250970.02
-Start time:1478250970.18
-Start time:1478250970.31
-Start time:1478250970.46
-Under Real_time Point:0.116449117661
-Start time:1478250970.58
-Start time:1478250970.73
-Start time:1478250970.88
-Under Real_time Point:0.102830171585
-Start time:1478250970.98
-Start time:1478250971.12
-Under Real_time Point:0.122089147568
-Start time:1478250971.24
-Under Real_time Point:0.142465114594
-Start time:1478250971.38
-Start time:1478250971.53
-Start time:1478250971.69
-Under Real_time Point:0.10315990448
-Start time:1478250971.8
-Under Real_time Point:0.100344896317
-Start time:1478250971.9
-Start time:1478250972.07
-Under Real_time Point:0.101165056229
-Start time:1478250972.17
-Start time:1478250972.35
-Under Real_time Point:0.100290060043
-Start time:1478250972.45
-Start time:1478250972.6
-Under Real_time Point:0.103132963181
-Start time:1478250972.71
-Start time:1478250972.89
-Under Real_time Point:0.100126981735
-Start time:1478250972.99
-Start time:1478250973.09
+Start time:1478474543.33
+ERROR:Contour is too small 
+Start time:1478474543.46
+ERROR:Contour is too small 
+Start time:1478474543.58
+ERROR:Contour is too small 
+Under Real_time Point:0.100120067596
+Start time:1478474543.68
+ERROR:Contour is too small 
+Under Real_time Point:0.100086927414
+Start time:1478474543.78
+ERROR:Contour is too small 
+Under Real_time Point:0.100082874298
+Start time:1478474543.89
+ERROR:Contour is too small 
+Under Real_time Point:0.100086212158
+Start time:1478474543.99
+ERROR:Contour is too small 
+Under Real_time Point:0.100089073181
+Start time:1478474544.09
+ERROR:Contour is too small 
+Under Real_time Point:0.100088834763
+Start time:1478474544.19
+ERROR:Contour is too small 
+Under Real_time Point:0.100091934204
+Start time:1478474544.29
+ERROR:Contour is too small 
+Under Real_time Point:0.100092172623
+Start time:1478474544.39
+ERROR:Contour is too small 
+Under Real_time Point:0.100084066391
+Start time:1478474544.49
+ERROR:Contour is too small 
+Under Real_time Point:0.100088119507
+Start time:1478474544.59
+ERROR:Contour is too small 
+Under Real_time Point:0.100089788437
+Start time:1478474544.69
+ERROR:Contour is too small 
+Under Real_time Point:0.100088834763
+Start time:1478474544.79
+ERROR:Contour is too small 
+Under Real_time Point:0.100080966949
+Start time:1478474544.89
+ERROR:Contour is too small 
+Under Real_time Point:0.100094079971
+Start time:1478474544.99
+ERROR:Contour is too small 
+Under Real_time Point:0.100084781647
+Start time:1478474545.09
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474545.19
+ERROR:Contour is too small 
+Under Real_time Point:0.100090026855
+Start time:1478474545.29
+ERROR:Contour is too small 
+Under Real_time Point:0.100087881088
+Start time:1478474545.39
+ERROR:Contour is too small 
+Under Real_time Point:0.10009098053
+Start time:1478474545.49
+ERROR:Contour is too small 
+Under Real_time Point:0.100106954575
+Start time:1478474545.59
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474545.69
+ERROR:Contour is too small 
+Under Real_time Point:0.100087881088
+Start time:1478474545.79
+ERROR:Contour is too small 
+Under Real_time Point:0.100082874298
+Start time:1478474545.89
+ERROR:Contour is too small 
+Under Real_time Point:0.100093126297
+Start time:1478474545.99
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474546.09
+ERROR:Contour is too small 
+Under Real_time Point:0.100090026855
+Start time:1478474546.19
+ERROR:Contour is too small 
+Under Real_time Point:0.100092172623
+Start time:1478474546.29
+ERROR:Contour is too small 
+Under Real_time Point:0.10009098053
+Start time:1478474546.39
+ERROR:Contour is too small 
+Under Real_time Point:0.100090026855
+Start time:1478474546.49
+ERROR:Contour is too small 
+Under Real_time Point:0.100086927414
+Start time:1478474546.59
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474546.69
+ERROR:Contour is too small 
+Under Real_time Point:0.100091934204
+Start time:1478474546.79
+ERROR:Contour is too small 
+Under Real_time Point:0.100084066391
+Start time:1478474546.89
+ERROR:Contour is too small 
+Under Real_time Point:0.100108146667
+Start time:1478474546.99
+ERROR:Contour is too small 
+Start time:1478474547.12
+ERROR:Contour is too small 
+Under Real_time Point:0.100116968155
+Start time:1478474547.22
+ERROR:Contour is too small 
+Under Real_time Point:0.100084066391
+Start time:1478474547.32
+ERROR:Contour is too small 
+Under Real_time Point:0.100105047226
+Start time:1478474547.42
+ERROR:Contour is too small 
+Under Real_time Point:0.100088119507
+Start time:1478474547.52
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474547.62
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474547.72
+ERROR:Contour is too small 
+Under Real_time Point:0.100088119507
+Start time:1478474547.82
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474547.92
+ERROR:Contour is too small 
+Under Real_time Point:0.100091934204
+Start time:1478474548.02
+ERROR:Contour is too small 
+Under Real_time Point:0.100086927414
+Start time:1478474548.12
+ERROR:Contour is too small 
+Under Real_time Point:0.100087165833
+Start time:1478474548.22
+ERROR:Contour is too small 
+Under Real_time Point:0.100086927414
+Start time:1478474548.32
+ERROR:Contour is too small 
+Under Real_time Point:0.100089073181
+Start time:1478474548.42
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474548.52
+ERROR:Contour is too small 
+Under Real_time Point:0.10009098053
+Start time:1478474548.62
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474548.72
+ERROR:Contour is too small 
+Under Real_time Point:0.100088834763
+Start time:1478474548.82
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474548.92
+ERROR:Contour is too small 
+Under Real_time Point:0.100091934204
+Start time:1478474549.02
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474549.12
+ERROR:Contour is too small 
+Under Real_time Point:0.100088834763
+Start time:1478474549.22
+ERROR:Contour is too small 
+Under Real_time Point:0.100087881088
+Start time:1478474549.32
+ERROR:Contour is too small 
+Under Real_time Point:0.100081920624
+Start time:1478474549.42
+ERROR:Contour is too small 
+Under Real_time Point:0.100083827972
+Start time:1478474549.52
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474549.62
+ERROR:Contour is too small 
+Under Real_time Point:0.100082159042
+Start time:1478474549.72
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474549.82
+ERROR:Contour is too small 
+Under Real_time Point:0.100083112717
+Start time:1478474549.92
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474550.02
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474550.12
+ERROR:Contour is too small 
+Under Real_time Point:0.100089073181
+Start time:1478474550.22
+ERROR:Contour is too small 
+Start time:1478474550.35
+ERROR:Contour is too small 
 Under Real_time Point:0.100118875504
-Start time:1478250973.19
-Start time:1478250973.36
-Start time:1478250973.57
-Under Real_time Point:0.100102901459
-Start time:1478250973.67
-Under Real_time Point:0.146614789963
-Start time:1478250973.82
-Under Real_time Point:0.103636026382
-Start time:1478250973.92
-Under Real_time Point:0.100156068802
-Start time:1478250974.02
-Under Real_time Point:0.100130081177
-Start time:1478250974.12
-Under Real_time Point:0.100162029266
-Start time:1478250974.22
-Under Real_time Point:0.101006984711
-Start time:1478250974.32
-Start time:1478250974.44
-Under Real_time Point:0.100353956223
-Start time:1478250974.54
-Start time:1478250974.72
-Under Real_time Point:0.100135087967
-Start time:1478250974.82
-Under Real_time Point:0.100987911224
-Start time:1478250974.92
-Start time:1478250975.03
-Start time:1478250975.2
-Start time:1478250975.31
-Start time:1478250975.44
-Under Real_time Point:0.100128889084
-Start time:1478250975.54
-Start time:1478250975.69
-Start time:1478250975.79
-Under Real_time Point:0.100112915039
-Start time:1478250975.89
-Start time:1478250976.03
-Start time:1478250976.14
-Under Real_time Point:0.10427904129
-Start time:1478250976.24
-Under Real_time Point:0.108824968338
-Start time:1478250976.35
-Start time:1478250976.47
-Under Real_time Point:0.103031873703
-Start time:1478250976.57
-Start time:1478250976.7
-Under Real_time Point:0.100430011749
-Start time:1478250976.8
-Under Real_time Point:0.100157022476
-Start time:1478250976.9
-Start time:1478250977.03
-Start time:1478250977.15
-Under Real_time Point:0.103924036026
-Start time:1478250977.25
-Start time:1478250977.36
-Under Real_time Point:0.100614070892
-Start time:1478250977.46
-Start time:1478250977.64
-Under Real_time Point:0.100514888763
-Start time:1478250977.74
-Start time:1478250977.9
-Start time:1478250978.03
-Under Real_time Point:0.116418838501
-Start time:1478250978.15
-Under Real_time Point:0.100131034851
-Start time:1478250978.25
-Start time:1478250978.37
-Start time:1478250978.49
-Start time:1478250978.62
-Under Real_time Point:0.100110054016
-Start time:1478250978.72
-Under Real_time Point:0.100950956345
-Start time:1478250978.82
-Start time:1478250978.98
-Under Real_time Point:0.100157022476
-Start time:1478250979.08
-Start time:1478250979.22
-Under Real_time Point:0.1029920578
-Start time:1478250979.32
-Start time:1478250979.44
-Under Real_time Point:0.109676837921
-Start time:1478250979.55
-Start time:1478250979.65
-Under Real_time Point:0.104574918747
-Start time:1478250979.76
-Start time:1478250979.91
-Start time:1478250980.08
-Start time:1478250980.18
-Under Real_time Point:0.103307962418
-Start time:1478250980.28
-Start time:1478250980.39
-Under Real_time Point:0.100489854813
-Start time:1478250980.49
-Start time:1478250980.63
-Start time:1478250980.75
-Under Real_time Point:0.100422859192
-Start time:1478250980.85
-Start time:1478250980.99
-Start time:1478250981.12
-Under Real_time Point:0.100456953049
-Start time:1478250981.22
-Under Real_time Point:0.100116014481
-Start time:1478250981.32
-Under Real_time Point:0.103033065796
-Start time:1478250981.42
-Start time:1478250981.57
-Under Real_time Point:0.100115060806
-Start time:1478250981.67
-Start time:1478250981.8
-Under Real_time Point:0.112931013107
-Start time:1478250981.91
-Start time:1478250982.03
+Start time:1478474550.45
+ERROR:Contour is too small 
+Under Real_time Point:0.100093126297
+Start time:1478474550.55
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474550.65
+ERROR:Contour is too small 
+Under Real_time Point:0.100082874298
+Start time:1478474550.75
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474550.85
+ERROR:Contour is too small 
+Under Real_time Point:0.100080013275
+Start time:1478474550.95
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474551.05
+ERROR:Contour is too small 
+Under Real_time Point:0.100082159042
+Start time:1478474551.15
+ERROR:Contour is too small 
+Under Real_time Point:0.100087165833
+Start time:1478474551.25
+ERROR:Contour is too small 
+Under Real_time Point:0.100087165833
+Start time:1478474551.35
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474551.45
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474551.55
+ERROR:Contour is too small 
+Under Real_time Point:0.100080966949
+Start time:1478474551.65
+ERROR:Contour is too small 
+Under Real_time Point:0.100090026855
+Start time:1478474551.75
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474551.85
+ERROR:Contour is too small 
+Under Real_time Point:0.10009598732
+Start time:1478474551.95
+ERROR:Contour is too small 
+Under Real_time Point:0.100092887878
+Start time:1478474552.05
+ERROR:Contour is too small 
+Under Real_time Point:0.100088834763
+Start time:1478474552.15
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474552.25
+ERROR:Contour is too small 
+Under Real_time Point:0.100085020065
+Start time:1478474552.35
+ERROR:Contour is too small 
+Under Real_time Point:0.100088119507
+Start time:1478474552.45
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474552.55
+ERROR:Contour is too small 
+Under Real_time Point:0.100087165833
+Start time:1478474552.65
+ERROR:Contour is too small 
+Under Real_time Point:0.10009098053
+Start time:1478474552.75
+ERROR:Contour is too small 
+Under Real_time Point:0.100083827972
+Start time:1478474552.85
+ERROR:Contour is too small 
+Under Real_time Point:0.100077867508
+Start time:1478474552.95
+ERROR:Contour is too small 
+Under Real_time Point:0.100090026855
+Start time:1478474553.05
+ERROR:Contour is too small 
+Under Real_time Point:0.100084066391
+Start time:1478474553.15
+ERROR:Contour is too small 
+Under Real_time Point:0.10008597374
+Start time:1478474553.25
+ERROR:Contour is too small 
+Under Real_time Point:0.100084066391
+Start time:1478474553.35
+ERROR:Contour is too small 
