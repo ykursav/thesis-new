@@ -1,54 +1,20 @@
-start2016-11-03 10:45:19.726287
+start2016-11-08 10:39:48.330553
 (True, 26, 'replica detected')
-Total time:0.369122982025
+Total time:0.224336862564
 Wrote profile results to mainprocess.py.lprof
 Timer unit: 1e-06 s
 
-Total time: 0.054467 s
+Total time: 0.044223 s
 File: preprocessing.py
-Function: get_edged at line 29
+Function: get_edged at line 33
 
 Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
-    29                                               @profile
-    30                                               def get_edged(self, G):
-    31         1         8535   8535.0     15.7          gray = self.gray_image(self.image)
-    32         1         7362   7362.0     13.5          blur = self.get_blurred(gray, G)
-    33         1        29140  29140.0     53.5          th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
-    34                                           
-    35         1         9430   9430.0     17.3          return cv2.dilate(th, np.ones((3,3),np.uint8), iterations = 1)
-
-Total time: 0.1384 s
-File: preprocessing.py
-Function: get_contour at line 37
-
-Line #      Hits         Time  Per Hit   % Time  Line Contents
-==============================================================
-    37                                               @profile
-    38                                               def get_contour(self, G):
-    39         1        54685  54685.0     39.5          edged = self.get_edged(G)
-    40         1        15682  15682.0     11.3          __, contours, hierarchy = cv2.findContours(edged, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-    41         1           20     20.0      0.0          approx = 0
-    42         1           10     10.0      0.0          first = False
-    43         1            7      7.0      0.0          no_contour = True
-    44         1            7      7.0      0.0          last_cnt = 0
-    45       707         5359      7.6      3.9          for cnt in contours:
-    46       706        13073     18.5      9.4              epsilon = 0.05 * cv2.arcLength(cnt, True)
-    47       706        23172     32.8     16.7              new_approx = cv2.approxPolyDP(cnt, epsilon, True)
-    48       706         6281      8.9      4.5              if first == False:
-    49         1           41     41.0      0.0                  if self.check_points(new_approx):
-    50         1            8      8.0      0.0                      last_cnt = cnt
-    51         1           43     43.0      0.0                      approx = cv2.approxPolyDP(cnt, epsilon, True)
-    52         1            8      8.0      0.0                      first = True
-    53         1            8      8.0      0.0                      no_contour = False
-    54       705        19141     27.2     13.8              elif (cv2.contourArea(last_cnt) < cv2.contourArea(cnt)):
-    55        39          702     18.0      0.5                  if self.check_points(new_approx):
-    56         6           45      7.5      0.0                      last_cnt = cnt
-    57         6           48      8.0      0.0                      approx = new_approx
-    58         6           45      7.5      0.0                      no_contour = False
-    59                                                               
-    60         1            8      8.0      0.0          if first == False:
-    61                                                       return -1
-    62                                                   else:
-    63         1            7      7.0      0.0              return approx
+    33                                               @profile
+    34                                               def get_edged(self, G):
+    35         1         6349   6349.0     14.4          gray = self.gray_image(self.image)
+    36         1         5986   5986.0     13.5          blur = self.get_blurred(gray, G)
+    37         1        23962  23962.0     54.2          th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+    38                                           
+    39         1         7926   7926.0     17.9          return dilate(th, ones((3,3), uint8), iterations = 1)
 

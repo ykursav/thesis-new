@@ -1,10 +1,7 @@
-import numpy as np
-import cv2
 from bitarray import bitarray
-import gc
+from gc import enable
 
-cv2.setUseOptimized(True)
-gc.enable()
+enable()
 class SignatureMatching:
     '''This class includes functions for signature matching'''
     def __init__(self, sigOrig, tau1, tau2, tau3, tau4, tau5):

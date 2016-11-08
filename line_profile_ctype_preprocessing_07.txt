@@ -1,0 +1,22 @@
+start2016-11-08 11:00:18.304049
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.037116 s
+File: preprocessing.py
+Function: get_edged at line 33
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    33                                               @profile
+    34                                               def get_edged(self, G):
+    35         1         6475   6475.0     17.4          gray = self.gray_image(self.image)
+    36         1         6596   6596.0     17.8          blur = self.get_blurred(gray, G)
+    37         1         5345   5345.0     14.4          v = median(gray)
+    38                                                   #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+    39         1           27     27.0      0.1          lower = int(max(0, (1.0 - 0.33) * v))
+    40         1           13     13.0      0.0          upper = int(max(255, (1.0 + 0.33) * v))
+    41         1        11176  11176.0     30.1          canny = Canny(gray, lower, upper)
+    42                                                   
+    43         1         7484   7484.0     20.2          return dilate(canny, ones((3,3), uint8), iterations = 1)
+

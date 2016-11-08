@@ -3,9 +3,9 @@ from math import sqrt
 from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      , approxPolyDP, contourArea, warpPerspective, getPerspectiveTransform, resize, \
      INTER_LINEAR, GaussianBlur, COLOR_BGR2GRAY, ADAPTIVE_THRESH_GAUSSIAN_C, \
-     THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite
+     THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny
      
-from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor
+from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median
 import gc
 
 # import time
@@ -34,9 +34,13 @@ class PreProcessing:
     def get_edged(self, G):
         gray = self.gray_image(self.image)
         blur = self.get_blurred(gray, G)
-        th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+        v = median(gray)
+        #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+        lower = int(max(0, (1.0 - 0.33) * v))
+        upper = int(max(255, (1.0 + 0.33) * v))
+        canny = Canny(gray, lower, upper)
 
-        return dilate(th, ones((3,3), uint8), iterations = 1)
+        return dilate(canny, ones((5,5), uint8), iterations = 1)
 
     #@profile
     def get_contour(self, G):
@@ -105,7 +109,7 @@ class PreProcessing:
         return sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
 
     def get_perspective(self, points, counter):
-        if len(points) != 1:
+        if len(points) != 1: 
             self.width, self.height = self.get_width_height(self.image)
             ordered_points = self.order_contour(points)
             
@@ -114,21 +118,23 @@ class PreProcessing:
 
             height_perspective = int(max(self.distance_calculator(ordered_points[0], ordered_points[3]), \
                                          self.distance_calculator(ordered_points[1], ordered_points[2])))
-
+            
             img_size = array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
                 [0, height_perspective - 1]], dtype = "float32")
-            if width_perspective < (self.width / 4) or height_perspective < (self.height / 4):
-                return 20
+##            if width_perspective < (self.width / 4) or height_perspective < (self.height / 4):
+##                return 20
             #3x3 blur mask
             warped_image = warpPerspective(self.gray_image(self.image), \
                                                getPerspectiveTransform(ordered_points, img_size), \
                                                (width_perspective, height_perspective))
+            
             if width_perspective > height_perspective:     
                 warped_image = resize(warped_image, (500, 300), INTER_LINEAR)
             elif height_perspective > width_perspective:
                 warped_image = resize(warped_image, (300, 500), INTER_LINEAR)            
             self.warped = self.get_blurred(warped_image, 3)
-            #cv2.imwrite("warped_images/warped" + str(counter) + ".jpg",warped_image)
+            imwrite("warped_images/warped" + str(counter) + ".jpg", warped_image)
+
             return 30
 
         else:
