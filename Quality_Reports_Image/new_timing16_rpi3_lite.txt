@@ -1,0 +1,152 @@
+Start time:1478611814.63
+Under Real_time Point:0.100138902664
+Start time:1478611814.73
+Start time:1478611814.86
+Start time:1478611814.96
+Under Real_time Point:0.133052110672
+Start time:1478611815.1
+Start time:1478611815.2
+Under Real_time Point:0.121731042862
+Start time:1478611815.33
+Start time:1478611815.43
+Start time:1478611815.55
+Under Real_time Point:0.100219011307
+Start time:1478611815.65
+Start time:1478611815.79
+Under Real_time Point:0.100109815598
+Start time:1478611815.89
+Under Real_time Point:0.100251197815
+Start time:1478611815.99
+Start time:1478611816.13
+Under Real_time Point:0.110653877258
+Start time:1478611816.24
+Start time:1478611816.35
+Under Real_time Point:0.10010099411
+Start time:1478611816.45
+Start time:1478611816.57
+Under Real_time Point:0.102792978287
+Start time:1478611816.68
+Start time:1478611816.8
+Under Real_time Point:0.100136041641
+Start time:1478611816.9
+Start time:1478611817.12
+Start time:1478611817.27
+Under Real_time Point:0.133194923401
+Start time:1478611817.41
+Under Real_time Point:0.103291988373
+Start time:1478611817.51
+Under Real_time Point:0.101044178009
+Start time:1478611817.61
+Under Real_time Point:0.100294828415
+Start time:1478611817.71
+Start time:1478611817.83
+Under Real_time Point:0.111485958099
+Start time:1478611817.94
+Under Real_time Point:0.102418899536
+Start time:1478611818.05
+Start time:1478611818.18
+Under Real_time Point:0.100094795227
+Start time:1478611818.28
+Start time:1478611818.39
+Start time:1478611818.5
+Under Real_time Point:0.111835002899
+Start time:1478611818.61
+Under Real_time Point:0.100095033646
+Start time:1478611818.71
+Start time:1478611818.83
+Under Real_time Point:0.100284814835
+Start time:1478611818.93
+Start time:1478611819.04
+Start time:1478611819.17
+Start time:1478611819.28
+Start time:1478611819.4
+Under Real_time Point:0.10010099411
+Start time:1478611819.5
+Under Real_time Point:0.120515108109
+Start time:1478611819.62
+Start time:1478611819.76
+Under Real_time Point:0.100126981735
+Start time:1478611819.86
+Under Real_time Point:0.107517957687
+Start time:1478611819.97
+Start time:1478611820.09
+Start time:1478611820.22
+Under Real_time Point:0.135149002075
+Start time:1478611820.36
+Under Real_time Point:0.10010099411
+Start time:1478611820.46
+Under Real_time Point:0.132406949997
+Start time:1478611820.59
+Start time:1478611820.74
+Under Real_time Point:0.100139141083
+Start time:1478611820.84
+Start time:1478611820.95
+Start time:1478611821.08
+Under Real_time Point:0.100520849228
+Start time:1478611821.18
+Start time:1478611821.39
+Under Real_time Point:0.106518030167
+Start time:1478611821.5
+Under Real_time Point:0.100131034851
+Start time:1478611821.6
+Under Real_time Point:0.101264953613
+Start time:1478611821.7
+Start time:1478611821.81
+Under Real_time Point:0.10102891922
+Start time:1478611821.91
+Start time:1478611822.03
+Start time:1478611822.14
+Start time:1478611822.27
+Under Real_time Point:0.100564002991
+Start time:1478611822.37
+Start time:1478611822.5
+Under Real_time Point:0.100123167038
+Start time:1478611822.6
+Under Real_time Point:0.116857051849
+Start time:1478611822.72
+Start time:1478611822.83
+Under Real_time Point:0.107399940491
+Start time:1478611822.93
+Start time:1478611823.04
+Start time:1478611823.17
+Start time:1478611823.3
+Under Real_time Point:0.100126981735
+Start time:1478611823.4
+Start time:1478611823.52
+Under Real_time Point:0.10012793541
+Start time:1478611823.62
+Start time:1478611823.74
+Under Real_time Point:0.101325035095
+Start time:1478611823.84
+Start time:1478611823.95
+Under Real_time Point:0.100288152695
+Start time:1478611824.05
+Start time:1478611824.17
+Under Real_time Point:0.100152015686
+Start time:1478611824.28
+Start time:1478611824.43
+Under Real_time Point:0.134118080139
+Start time:1478611824.57
+Under Real_time Point:0.100116014481
+Start time:1478611824.67
+Under Real_time Point:0.103151082993
+Start time:1478611824.77
+Start time:1478611824.9
+Under Real_time Point:0.10010099411
+Start time:1478611825.0
+Start time:1478611825.26
+Under Real_time Point:0.154719114304
+Start time:1478611825.42
+Under Real_time Point:0.143832921982
+Start time:1478611825.56
+Under Real_time Point:0.106439113617
+Start time:1478611825.72
+Under Real_time Point:0.108024120331
+Start time:1478611825.83
+Start time:1478611825.94
+Under Real_time Point:0.100099086761
+Start time:1478611826.04
+Start time:1478611826.15
+Start time:1478611826.26
+Under Real_time Point:0.100108146667
+Start time:1478611826.36

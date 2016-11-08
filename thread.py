@@ -9,7 +9,7 @@ import io
 import numpy as np
 import Queue
 ##cmd = "python /home/pi/master-thesis/threading_test.py image"
-f_report = open("Quality_Reports_Image/new_timing15.txt", "w")
+f_report = open("Quality_Reports_Image/new_timing16_rpi3_lite.txt", "w")
 
 def process_thread(image, counter):
     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
