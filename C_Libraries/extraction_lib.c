@@ -23,20 +23,26 @@ double calculateSD(double *data)
     double sum = 0.0, mean, standardDeviation = 0.0;
 
     int i;
+    int counter = sizeof(data);
 
-    for(i=0; i< sizeof(data); ++i)
+    for(i=0; i< counter; ++i)
     {
         sum += data[i];
     }
 
-    mean = sum/sizeof(data);
+    mean = sum/counter;
 
-    for(i=0; i<sizeof(data); ++i)
+    for(i=0; i<counter; ++i)
         standardDeviation += pow(data[i] - mean, 2);
 
-    return sqrt(standardDeviation/sizeof(data));
+    return sqrt(standardDeviation/counter);
 }
 
+double calSqrt(double *p1, double *p2)
+{
+	printf("%f", p1[0]);
+	return sqrt(pow(p1[0] - p2[0], 2) + pow(p1[1] - p2[1], 2));
+}
 
 int main(int argc, char *argv[]){
 	

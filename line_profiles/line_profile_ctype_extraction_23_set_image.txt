@@ -1,0 +1,16 @@
+start2016-11-08 13:57:07.732619
+(True, 37, 'replica detected')
+Total time:0.185881853104
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 1.1e-05 s
+File: extraction.py
+Function: set_image at line 37
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    37                                               @profile
+    38                                               def set_image(self, image):
+    39         1           11     11.0    100.0          self.image = image
+

@@ -3,10 +3,14 @@ from math import sqrt
 from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      , approxPolyDP, contourArea, warpPerspective, getPerspectiveTransform, resize, \
      INTER_LINEAR, GaussianBlur, COLOR_BGR2GRAY, ADAPTIVE_THRESH_GAUSSIAN_C, \
-     THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny
+     THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST
      
 from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median
 import gc
+import ctypes
+
+libextraction = ctypes.cdll.LoadLibrary("./C_Libraries/libextraction.so")
+libextraction.calSqrt.restype = ctypes.c_double
 
 # import time
 SCALED_IMAGE = [128, 128]
@@ -34,7 +38,7 @@ class PreProcessing:
     def get_edged(self, G):
         gray = self.gray_image(self.image)
         blur = self.get_blurred(gray, G)
-        v = median(gray)
+        v = median(blur)
         #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
         lower = int(max(0, (1.0 - 0.33) * v))
         upper = int(max(255, (1.0 + 0.33) * v))
@@ -69,7 +73,7 @@ class PreProcessing:
             return -1
         else:
             return approx
-        
+    #@profile
     def order_contour(self, points):
         ordered_points = zeros((4, 2), dtype = "float32")
         #sum of point to detect max and minimum sums
@@ -79,7 +83,7 @@ class PreProcessing:
         
         ordered_points[0] = points[argmin(sum_point)].flatten()
         ordered_points[2] = points[argmax(sum_point)].flatten()
-        
+
         points = delete(points, argmin(sum_point), 0)
         points = delete(points, argmax(sum_point) - 1, 0)
         if points[0][0][0] > points[1][0][0]:
@@ -103,11 +107,14 @@ class PreProcessing:
             return True 
         else:
             return False
-
+    #@profile
     def distance_calculator(self, p1, p2):
         '''Calculates distance between 2 points'''
+##        print libextraction.calSqrt(array(p1[0], p1[1]).ctypes.data_as(ctypes.c_void_p), array(p2[0], p2[1]).ctypes.data_as(ctypes.c_void_p))
+##        print p1
         return sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
 
+    #@profile
     def get_perspective(self, points, counter):
         if len(points) != 1: 
             self.width, self.height = self.get_width_height(self.image)
@@ -129,18 +136,18 @@ class PreProcessing:
                                                (width_perspective, height_perspective))
             
             if width_perspective > height_perspective:     
-                warped_image = resize(warped_image, (500, 300), INTER_LINEAR)
+                warped_image = resize(warped_image, (500, 300), INTER_NEAREST)
             elif height_perspective > width_perspective:
-                warped_image = resize(warped_image, (300, 500), INTER_LINEAR)            
+                warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
             self.warped = self.get_blurred(warped_image, 3)
-            imwrite("warped_images/warped" + str(counter) + ".jpg", warped_image)
+            #imwrite("warped_images/warped" + str(counter) + ".jpg", warped_image)
 
             return 30
 
         else:
             return 10
 
-
+    #@profile
     def get_scaled(self):
         '''Scales image short edge to L value '''
         self.width, self.height = self.get_width_height(self.warped)
@@ -156,8 +163,9 @@ class PreProcessing:
             new_width = self.L
             new_height = self.L
         self.resized_image = resize(self.warped, (new_width, new_height), \
-        interpolation = INTER_LINEAR)
-        
+        interpolation = INTER_NEAREST)
+        #imwrite("scaled.jpg", self.resized_image)
+    #@profile    
     def get_cropped(self):
         '''Cropping image middle part L x L'''
         self.get_scaled()
@@ -179,7 +187,7 @@ class PreProcessing:
                     return self.resized_image[crop_height - (self.L/ 2 - 1):crop_height + (self.L/ 2 + 1), :]
 
 
-
+    #@profile
     def get_blurred(self, image, G):
         '''Blurring cropped image'''
         return GaussianBlur(image, (G, G), 0, 0)

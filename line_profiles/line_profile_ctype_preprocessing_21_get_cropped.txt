@@ -1,0 +1,33 @@
+start2016-11-08 13:47:27.371938
+(True, 37, 'replica detected')
+Total time:0.193571090698
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.000527 s
+File: preprocessing.py
+Function: get_cropped at line 168
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   168                                               @profile    
+   169                                               def get_cropped(self):
+   170                                                   '''Cropping image middle part L x L'''
+   171         1          461    461.0     87.5          self.get_scaled()
+   172         1           22     22.0      4.2          [self.width, self.height] = self.get_width_height(self.resized_image)
+   173         1            5      5.0      0.9          if self.width != self.height:
+   174         1            4      4.0      0.8              if self.width > self.height:
+   175         1            6      6.0      1.1                  if self.width % 2 == 0:
+   176                                                               crop_width = self.width / 2 - 1
+   177                                                               return self.resized_image[:, crop_width - self.L / 2:crop_width + self.L / 2]
+   178                                                           else:
+   179         1            7      7.0      1.3                      crop_width = self.width / 2 - 1
+   180         1           22     22.0      4.2                      return self.resized_image[:, crop_width - (self.L/ 2 - 1):crop_width + (self.L/ 2 + 1)]
+   181                                                       else:
+   182                                                           if self.height % 2 == 0:
+   183                                                               crop_height = self.height / 2 - 1
+   184                                                               return self.resized_image[crop_height - self.L / 2:crop_height + self.L / 2, :]
+   185                                                           else:
+   186                                                               crop_height = self.height / 2 - 1
+   187                                                               return self.resized_image[crop_height - (self.L/ 2 - 1):crop_height + (self.L/ 2 + 1), :]
+

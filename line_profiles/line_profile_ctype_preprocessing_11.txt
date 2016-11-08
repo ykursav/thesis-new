@@ -1,0 +1,40 @@
+start2016-11-08 11:54:05.005036
+(True, 37, 'replica detected')
+Total time:0.21401309967
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.05034 s
+File: preprocessing.py
+Function: get_contour at line 45
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    45                                               @profile
+    46                                               def get_contour(self, G):
+    47         1        37817  37817.0     75.1          edged = self.get_edged(G)
+    48         1         5212   5212.0     10.4          __, contours, hierarchy = findContours(edged, RETR_LIST, CHAIN_APPROX_SIMPLE)
+    49         1           12     12.0      0.0          approx = 0
+    50         1            7      7.0      0.0          first = False
+    51         1            6      6.0      0.0          no_contour = True
+    52         1            5      5.0      0.0          last_cnt = 0
+    53       106          552      5.2      1.1          for cnt in contours:
+    54       105         1367     13.0      2.7              epsilon = 0.05 * arcLength(cnt, True)
+    55       105         2622     25.0      5.2              new_approx = approxPolyDP(cnt, epsilon, True)
+    56       105          612      5.8      1.2              if first == False:
+    57         1           26     26.0      0.1                  if self.check_points(new_approx):
+    58         1            5      5.0      0.0                      last_cnt = cnt
+    59         1           25     25.0      0.0                      approx = approxPolyDP(cnt, epsilon, True)
+    60         1            6      6.0      0.0                      first = True
+    61         1            6      6.0      0.0                      no_contour = False
+    62       104         1849     17.8      3.7              elif (contourArea(last_cnt) < contourArea(cnt)):
+    63        10          122     12.2      0.2                  if self.check_points(new_approx):
+    64         5           26      5.2      0.1                      last_cnt = cnt
+    65         5           27      5.4      0.1                      approx = new_approx
+    66         5           26      5.2      0.1                      no_contour = False
+    67                                                               
+    68         1            5      5.0      0.0          if first == False:
+    69                                                       return -1
+    70                                                   else:
+    71         1            5      5.0      0.0              return approx
+

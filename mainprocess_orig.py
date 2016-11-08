@@ -49,7 +49,7 @@ extraction_time = time.time()
 
 
 
-sigOrig = extract_process.get_signature(fragments_list)
+sigOrig = extract_process.get_signature()
 
 print sigOrig
 f = open("signature.bin", "wb")

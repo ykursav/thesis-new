@@ -1,0 +1,17 @@
+start2016-11-08 13:49:21.734578
+(True, 37, 'replica detected')
+Total time:0.186784029007
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.009409 s
+File: preprocessing.py
+Function: get_blurred at line 190
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   190                                               @profile
+   191                                               def get_blurred(self, image, G):
+   192                                                   '''Blurring cropped image'''
+   193         2         9409   4704.5    100.0          return GaussianBlur(image, (G, G), 0, 0)
+

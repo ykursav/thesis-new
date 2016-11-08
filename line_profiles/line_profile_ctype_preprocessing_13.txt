@@ -1,0 +1,58 @@
+start2016-11-08 12:15:41.492807
+(True, 37, 'replica detected')
+Total time:0.334532022476
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.172018 s
+File: preprocessing.py
+Function: get_edged at line 33
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    33                                               @profile
+    34                                               def get_edged(self, G):
+    35         1         6310   6310.0      3.7          gray = self.gray_image(self.image)
+    36         1       138313 138313.0     80.4          blur = bilateralFilter(gray, 11, 17, 17)
+    37         1         4631   4631.0      2.7          v = median(blur)
+    38                                                   #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+    39         1           26     26.0      0.0          lower = int(max(0, (1.0 - 0.33) * v))
+    40         1           13     13.0      0.0          upper = int(max(255, (1.0 + 0.33) * v))
+    41         1        12049  12049.0      7.0          canny = Canny(gray, lower, upper)
+    42                                           
+    43         1        10676  10676.0      6.2          return dilate(canny, ones((5,5), uint8), iterations = 1)
+
+Total time: 0.000944 s
+File: preprocessing.py
+Function: order_contour at line 72
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    72                                               @profile
+    73                                               def order_contour(self, points):
+    74         1           44     44.0      4.7          ordered_points = zeros((4, 2), dtype = "float32")
+    75                                                   #sum of point to detect max and minimum sums
+    76                                                   #maximum sum is the right bottom corner and minimum left top corner
+    77                                                   #points are arranged starting from top left to clock wise indexing
+    78         1          186    186.0     19.7          sum_point = points.sum(axis = 2)
+    79                                                   
+    80         1           78     78.0      8.3          ordered_points[0] = points[argmin(sum_point)].flatten()
+    81         1           46     46.0      4.9          ordered_points[2] = points[argmax(sum_point)].flatten()
+    82                                                   
+    83         1          304    304.0     32.2          points = delete(points, argmin(sum_point), 0)
+    84         1          225    225.0     23.8          points = delete(points, argmax(sum_point) - 1, 0)
+    85         1           19     19.0      2.0          if points[0][0][0] > points[1][0][0]:
+    86         1           19     19.0      2.0              ordered_points[1] = points[0][0].copy()
+    87         1           18     18.0      1.9              ordered_points[3] = points[1][0].copy()
+    88                                                   else:
+    89                                                       ordered_points[1] = points[1][0].copy()
+    90                                                       ordered_points[3] = points[0][0].copy()
+    91                                           
+    92                                                   # new_image = self.image.copy()
+    93                                                   # cv2.circle(new_image,tuple(ordered_points[0]),5,[0,255,0],-1)
+    94                                                   # cv2.circle(new_image,tuple(ordered_points[1]),5,[0,255,0],-1)
+    95                                                   # cv2.circle(new_image,tuple(ordered_points[2]),5,[0,255,0],-1)
+    96                                                   # cv2.circle(new_image,tuple(ordered_points[3]),5,[0,255,0],-1)
+    97                                                   # cv2.imwrite("ordere_points.jpg", new_image)
+    98         1            5      5.0      0.5          return ordered_points
+

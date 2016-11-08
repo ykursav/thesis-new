@@ -1,0 +1,40 @@
+start2016-11-08 11:56:39.914732
+(True, 37, 'replica detected')
+Total time:0.201143026352
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.000923 s
+File: preprocessing.py
+Function: order_contour at line 72
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    72                                               @profile
+    73                                               def order_contour(self, points):
+    74         1           44     44.0      4.8          ordered_points = zeros((4, 2), dtype = "float32")
+    75                                                   #sum of point to detect max and minimum sums
+    76                                                   #maximum sum is the right bottom corner and minimum left top corner
+    77                                                   #points are arranged starting from top left to clock wise indexing
+    78         1          180    180.0     19.5          sum_point = points.sum(axis = 2)
+    79                                                   
+    80         1           76     76.0      8.2          ordered_points[0] = points[argmin(sum_point)].flatten()
+    81         1           46     46.0      5.0          ordered_points[2] = points[argmax(sum_point)].flatten()
+    82                                                   
+    83         1          301    301.0     32.6          points = delete(points, argmin(sum_point), 0)
+    84         1          218    218.0     23.6          points = delete(points, argmax(sum_point) - 1, 0)
+    85         1           18     18.0      2.0          if points[0][0][0] > points[1][0][0]:
+    86         1           19     19.0      2.1              ordered_points[1] = points[0][0].copy()
+    87         1           16     16.0      1.7              ordered_points[3] = points[1][0].copy()
+    88                                                   else:
+    89                                                       ordered_points[1] = points[1][0].copy()
+    90                                                       ordered_points[3] = points[0][0].copy()
+    91                                           
+    92                                                   # new_image = self.image.copy()
+    93                                                   # cv2.circle(new_image,tuple(ordered_points[0]),5,[0,255,0],-1)
+    94                                                   # cv2.circle(new_image,tuple(ordered_points[1]),5,[0,255,0],-1)
+    95                                                   # cv2.circle(new_image,tuple(ordered_points[2]),5,[0,255,0],-1)
+    96                                                   # cv2.circle(new_image,tuple(ordered_points[3]),5,[0,255,0],-1)
+    97                                                   # cv2.imwrite("ordere_points.jpg", new_image)
+    98         1            5      5.0      0.5          return ordered_points
+

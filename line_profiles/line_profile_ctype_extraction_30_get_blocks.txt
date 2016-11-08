@@ -1,0 +1,39 @@
+start2016-11-08 14:17:58.073950
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0 s
+File: extraction.py
+Function: get_average_luminance_of_block at line 41
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    41                                               @profile
+    42                                               def get_average_luminance_of_block(self, block):
+    43                                                   '''luminance calculation block'''
+    44                                           ##        blockpp = (block.__array_interface__['data'][0] + np.arange(block.shape[0]) * block.strides[0]).astype(np.uintp)
+    45                                           ##        block_sum = libextraction.sum(blockpp, ctypes.c_int(self.N))
+    46                                                   #print block_sum
+    47                                                   return sum(block) / (self.N * self.N)
+
+Total time: 0.000736 s
+File: extraction.py
+Function: get_blocks at line 49
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    49                                               @profile
+    50                                               def get_blocks(self):
+    51                                                   '''Dividing cropped image N x N blocks by M overlapping'''
+    52         1           91     91.0     12.4          I_vis_blur_y = zeros((self.number_of_blocks * self.N, self.number_of_blocks * self.N))
+    53         1          249    249.0     33.8          I_vis_blur_x = zeros((self.L, self.number_of_blocks * self.N))
+    54                                           ##        for x in xrange(0, self.L - self.M, self.M):
+    55        32          396     12.4     53.8          I_vis_blur_x[:, x * 2:x * 2 + self.N] = [self.image[:, x:x + self.N] for x in xrange(0, self.L - self.M, self.M)]
+    56                                           ##            I_vis_blur_x[:, x * 2:x * 2 + self.N] = self.image[:, x:x + self.N]
+    57                                           
+    58                                                   for y in xrange(0, self.L - self.M, self.M):
+    59                                                       I_vis_blur_y[y * 2:y * 2 + self.N, :] = I_vis_blur_x[y:y + self.N, :]
+    60                                           
+    61                                           
+    62                                                   return I_vis_blur_y
+

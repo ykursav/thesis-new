@@ -1,0 +1,24 @@
+start2016-11-08 11:47:40.383545
+(True, 37, 'replica detected')
+Total time:0.230149030685
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.049206 s
+File: preprocessing.py
+Function: get_edged at line 33
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    33                                               @profile
+    34                                               def get_edged(self, G):
+    35         1         7376   7376.0     15.0          gray = self.gray_image(self.image)
+    36         1         7710   7710.0     15.7          blur = self.get_blurred(gray, G)
+    37         1         3961   3961.0      8.0          v = median(blur)
+    38                                                   #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+    39         1           41     41.0      0.1          lower = int(max(0, (1.0 - 0.33) * v))
+    40         1           14     14.0      0.0          upper = int(max(255, (1.0 + 0.33) * v))
+    41         1        18587  18587.0     37.8          canny = Canny(gray, lower, upper)
+    42                                           
+    43         1        11517  11517.0     23.4          return dilate(canny, ones((5,5), uint8), iterations = 1)
+

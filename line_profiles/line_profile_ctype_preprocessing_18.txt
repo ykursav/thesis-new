@@ -1,0 +1,19 @@
+start2016-11-08 13:31:42.937967
+(True, 37, 'replica detected')
+Total time:0.204951047897
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.000284 s
+File: preprocessing.py
+Function: distance_calculator at line 110
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   110                                               @profile
+   111                                               def distance_calculator(self, p1, p2):
+   112                                                   '''Calculates distance between 2 points'''
+   113                                           ##        print libextraction.calSqrt(array(p1[0], p1[1]).ctypes.data_as(ctypes.c_void_p), array(p2[0], p2[1]).ctypes.data_as(ctypes.c_void_p))
+   114                                           ##        print p1
+   115         4          284     71.0    100.0          return sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
+

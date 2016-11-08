@@ -1,0 +1,30 @@
+start2016-11-08 13:32:39.098707
+(True, 37, 'replica detected')
+Total time:0.188676834106
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.001328 s
+File: preprocessing.py
+Function: get_scaled at line 150
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   150                                               @profile
+   151                                               def get_scaled(self):
+   152                                                   '''Scales image short edge to L value '''
+   153         1           34     34.0      2.6          self.width, self.height = self.get_width_height(self.warped)
+   154         1            5      5.0      0.4          new_width = 0
+   155         1            4      4.0      0.3          new_height = 0
+   156         1            5      5.0      0.4          if self.height > self.width:
+   157                                                       new_height = int(floor(float(self.height) * (self.L / float(self.width))))
+   158                                                       new_width = self.L
+   159         1            6      6.0      0.5          elif self.height < self.width:
+   160         1           68     68.0      5.1              new_width = int(floor(float(self.width) * (self.L / float(self.height))))
+   161         1            5      5.0      0.4              new_height = self.L
+   162                                                   elif self.height == self.width:
+   163                                                       new_width = self.L
+   164                                                       new_height = self.L
+   165         1            6      6.0      0.5          self.resized_image = resize(self.warped, (new_width, new_height), \
+   166         1         1195   1195.0     90.0          interpolation = INTER_LINEAR)
+

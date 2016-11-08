@@ -1,0 +1,21 @@
+start2016-11-08 14:12:39.446300
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.400809 s
+File: extraction.py
+Function: get_average_luminance_of_block at line 41
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    41                                               @profile
+    42                                               def get_average_luminance_of_block(self, block):
+    43                                                   '''luminance calculation block'''
+    44                                           ##        blockpp = (block.__array_interface__['data'][0] + np.arange(block.shape[0]) * block.strides[0]).astype(np.uintp)
+    45                                           ##        block_sum = libextraction.sum(blockpp, ctypes.c_int(self.N))
+    46                                                   #print block_sum
+    47      1205         5027      4.2      1.3          sum_el = 0
+    48     10845        67501      6.2     16.8          for elements in block:
+    49      9640       218244     22.6     54.5              sum_el += sum(elements)
+    50      1205       110037     91.3     27.5          return sum(block) / (self.N * self.N)
+

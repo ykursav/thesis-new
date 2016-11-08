@@ -1,0 +1,45 @@
+start2016-11-08 13:31:00.370737
+(True, 37, 'replica detected')
+Total time:0.19322514534
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.018584 s
+File: preprocessing.py
+Function: get_perspective at line 117
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   117                                               @profile
+   118                                               def get_perspective(self, points, counter):
+   119         1           15     15.0      0.1          if len(points) != 1: 
+   120         1           28     28.0      0.2              self.width, self.height = self.get_width_height(self.image)
+   121         1          934    934.0      5.0              ordered_points = self.order_contour(points)
+   122                                                       
+   123         1          113    113.0      0.6              width_perspective = int(max(self.distance_calculator(ordered_points[0], ordered_points[1]), \
+   124         1           80     80.0      0.4                                          self.distance_calculator(ordered_points[2], ordered_points[3])))
+   125                                           
+   126         1           71     71.0      0.4              height_perspective = int(max(self.distance_calculator(ordered_points[0], ordered_points[3]), \
+   127         1           74     74.0      0.4                                           self.distance_calculator(ordered_points[1], ordered_points[2])))
+   128                                                       
+   129         1           10     10.0      0.1              img_size = array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
+   130         1           52     52.0      0.3                  [0, height_perspective - 1]], dtype = "float32")
+   131                                           ##            if width_perspective < (self.width / 4) or height_perspective < (self.height / 4):
+   132                                           ##                return 20
+   133                                                       #3x3 blur mask
+   134         1         1374   1374.0      7.4              warped_image = warpPerspective(self.gray_image(self.image), \
+   135         1          223    223.0      1.2                                                 getPerspectiveTransform(ordered_points, img_size), \
+   136         1         9830   9830.0     52.9                                                 (width_perspective, height_perspective))
+   137                                                       
+   138         1           13     13.0      0.1              if width_perspective > height_perspective:     
+   139         1         2242   2242.0     12.1                  warped_image = resize(warped_image, (500, 300), INTER_LINEAR)
+   140                                                       elif height_perspective > width_perspective:
+   141                                                           warped_image = resize(warped_image, (300, 500), INTER_LINEAR)            
+   142         1         3516   3516.0     18.9              self.warped = self.get_blurred(warped_image, 3)
+   143                                                       #imwrite("warped_images/warped" + str(counter) + ".jpg", warped_image)
+   144                                           
+   145         1            9      9.0      0.0              return 30
+   146                                           
+   147                                                   else:
+   148                                                       return 10
+

@@ -1,0 +1,14 @@
+start2016-11-08 13:08:51.828976
+11400314880.0
+[ 68.  47.]
+11164712960.0
+[ 499.  275.]
+11164712960.0
+[ 68.  47.]
+11404247040.0
+[ 487.   41.]
+(True, 37, 'replica detected')
+Total time:0.212847948074
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+

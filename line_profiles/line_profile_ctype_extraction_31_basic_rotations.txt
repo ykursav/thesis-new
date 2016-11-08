@@ -1,0 +1,30 @@
+start2016-11-08 14:45:32.947552
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.007249 s
+File: extraction.py
+Function: basic_rotations at line 62
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    62                                               @profile
+    63                                               def basic_rotations(self, image):
+    64         1           19     19.0      0.3          center = (self.N * self.number_of_blocks) / 2
+    65         1           72     72.0      1.0          rot_matrix = getRotationMatrix2D((center, center), 90, 1)
+    66         1         7128   7128.0     98.3          rot90 = warpAffine(image, rot_matrix, (center * 2, center * 2))
+    67         1           30     30.0      0.4          rot90(image)
+    68                                                   rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
+    69                                                   rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
+    70                                                   fVertical0 = flip(image, 0)
+    71                                                   fHorizontal0 = flip(image, 1)
+    72                                                   fVertical90 = flip(rot90, 0)
+    73                                                   fHorizontal90 = flip(rot90, 1)
+    74                                                   fVertical180 = flip(rot180, 0)
+    75                                                   fHorizontal180 = flip(rot180, 1)
+    76                                                   fVertical270 = flip(rot270, 0)
+    77                                                   fHorizontal270 = flip(rot270, 1)
+    78                                           
+    79                                                   return rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \
+    80                                                    fVertical270, fHorizontal270
+

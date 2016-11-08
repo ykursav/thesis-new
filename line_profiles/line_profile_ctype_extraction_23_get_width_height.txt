@@ -1,0 +1,17 @@
+start2016-11-08 13:56:00.717842
+(True, 37, 'replica detected')
+Total time:0.187660932541
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0 s
+File: extraction.py
+Function: get_width_height at line 31
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    31                                               @profile
+    32                                               def get_width_height(self, image):
+    33                                                   self.height = len(image)
+    34                                                   self.width = len(image[0,:])
+
