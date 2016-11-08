@@ -1,6 +1,6 @@
-import preprocessing as pre
-import extraction as extract
-import matching as match
+from preprocessing import PreProcessing
+from extraction import SignatureExtraction
+from matching import SignatureMatching
 import cv2
 import numpy as np
 from bitarray import bitarray
@@ -19,13 +19,13 @@ except:
     print "ERROR: This image is not exist or unknown format."
     sys.exit(0)
     
-extract_process = extract.SignatureExtraction(8, 4, 128)
-pre_process = pre.PreProcessing(128, False)
+extract_process = SignatureExtraction(8, 4, 128)
+pre_process = PreProcessing(128, False)
 sigOrig = bitarray()
 f = open("signature.bin", "rb")
 #signatures must import from a binary file
 sigOrig.fromfile(f)
-matching_process = match.SignatureMatching(sigOrig[0:238], 24, 38, 4, 28, 22)
+matching_process = SignatureMatching(sigOrig[0:238], 24, 38, 4, 28, 22)
 
 print "start" + str(datetime.datetime.now())
 pre_process.set_image(image)

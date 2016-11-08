@@ -1,8 +1,7 @@
-import numpy as np
-import cv2
+from numpy import uintp, array, zeros, sum
+from cv2 import getRotationMatrix2D, warpAffine, flip, setUseOptimized
 from bitarray import bitarray
 import time
-from multiprocessing import Pool
 import gc
 from ctypes import *
 import ctypes
@@ -10,10 +9,10 @@ from numpy.ctypeslib import ndpointer
 
 libextraction = cdll.LoadLibrary("./C_Libraries/libextraction.so")
 libextraction.sum.restype = ctypes.c_double
-_doublepp = ndpointer(dtype = np.uintp, ndim = 1, flags = 'C')
+_doublepp = ndpointer(dtype = uintp, ndim = 1, flags = 'C')
 libextraction.sum.argtypes = [_doublepp, ctypes.c_int]
 libextraction.calculateSD.restype = ctypes.c_double
-cv2.setUseOptimized(True)
+setUseOptimized(True)
 ##gc.enable()
 class SignatureExtraction:
     '''N block size, M overlapping pixels, L image size'''
@@ -21,12 +20,12 @@ class SignatureExtraction:
         self.L = L
         self.N = N
         self.M = M
-        self.image = np.array([])
+        self.image = array([])
         #self.image = image
         self.width = 0
         self.height = 0
         self.number_of_blocks = ((self.L - self.N) / self.M ) + 1
-        self.block_all = np.zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N))
+        self.block_all = zeros((self.number_of_blocks, self.number_of_blocks, self.N, self.N))
 
 
     
@@ -44,12 +43,12 @@ class SignatureExtraction:
 ##        blockpp = (block.__array_interface__['data'][0] + np.arange(block.shape[0]) * block.strides[0]).astype(np.uintp)
 ##        block_sum = libextraction.sum(blockpp, ctypes.c_int(self.N))
         #print block_sum
-        return np.sum(block) / (self.N * self.N)
+        return sum(block) / (self.N * self.N)
 
     def get_blocks(self):
         '''Dividing cropped image N x N blocks by M overlapping'''
-        I_vis_blur_y = np.zeros((self.number_of_blocks * self.N, self.number_of_blocks * self.N))
-        I_vis_blur_x = np.zeros((self.L, self.number_of_blocks * self.N))
+        I_vis_blur_y = zeros((self.number_of_blocks * self.N, self.number_of_blocks * self.N))
+        I_vis_blur_x = zeros((self.L, self.number_of_blocks * self.N))
         for x in range(0, self.L - self.M, self.M):
             I_vis_blur_x[:, x * 2:x * 2 + self.N] = self.image[:, x:x + self.N]
 
@@ -61,18 +60,18 @@ class SignatureExtraction:
     #@profile
     def basic_rotations(self, image):
         center = (self.N * self.number_of_blocks) / 2
-        rot_matrix = cv2.getRotationMatrix2D((center, center), 90, 1)
-        rot90 = cv2.warpAffine(image, rot_matrix, (center * 2, center * 2))
-        rot180 = cv2.warpAffine(rot90, rot_matrix, (center * 2, center * 2))
-        rot270 = cv2.warpAffine(rot180, rot_matrix, (center * 2, center * 2))
-        fVertical0 = cv2.flip(image, 0)
-        fHorizontal0 = cv2.flip(image, 1)
-        fVertical90 = cv2.flip(rot90, 0)
-        fHorizontal90 = cv2.flip(rot90, 1)
-        fVertical180 = cv2.flip(rot180, 0)
-        fHorizontal180 = cv2.flip(rot180, 1)
-        fVertical270 = cv2.flip(rot270, 0)
-        fHorizontal270 = cv2.flip(rot270, 1)
+        rot_matrix = getRotationMatrix2D((center, center), 90, 1)
+        rot90 = warpAffine(image, rot_matrix, (center * 2, center * 2))
+        rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
+        rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
+        fVertical0 = flip(image, 0)
+        fHorizontal0 = flip(image, 1)
+        fVertical90 = flip(rot90, 0)
+        fHorizontal90 = flip(rot90, 1)
+        fVertical180 = flip(rot180, 0)
+        fHorizontal180 = flip(rot180, 1)
+        fVertical270 = flip(rot270, 0)
+        fHorizontal270 = flip(rot270, 1)
 
         return rot90, rot180, rot270, fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \
          fVertical270, fHorizontal270
@@ -90,7 +89,7 @@ class SignatureExtraction:
             avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
             #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
             
-            std_lum = libextraction.calculateSD(np.array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
+            std_lum = libextraction.calculateSD(array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
             
             return avg_lum, std_lum
 
@@ -118,7 +117,7 @@ class SignatureExtraction:
             avg_lum = (lum1 + lum2 + lum3 + lum4 + lum5 + lum6 + lum7 + lum8 + lum9 + lum10 + lum11 + lum12) / 12
 
             #std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8, lum9, lum10, lum11, lum12]))
-            std_lum = libextraction.calculateSD(np.array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
+            std_lum = libextraction.calculateSD(array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
 
 
             return avg_lum, std_lum
@@ -165,12 +164,13 @@ class SignatureExtraction:
         signature = bitarray()
         counter_list = 0
         counter_fragment = 0
+        sig_append = signature.append
         for features in self.get_all_fragments():
             for x in range(0, len(features) -1):
                 if features[x] < features[x + 1]:
-                    signature.append(True)
+                    sig_append(True)
                 else:
-                    signature.append(False)
+                    sig_append(False)
 
         return signature
 
