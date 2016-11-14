@@ -9,7 +9,7 @@ import io
 import numpy as np
 import Queue
 ##cmd = "python /home/pi/master-thesis/threading_test.py image"
-f_report = open("Quality_Reports_Image/new_timing16_rpi3_lite.txt", "w")
+f_report = open("Quality_Reports_Image/new_timing17_rpi3_lite.txt", "w")
 
 def process_thread(image, counter):
     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     camera = PiCamera()
     camera.resolution = (544, 400)
     rawCapture = PiRGBArray(camera, size = (544, 400))
-    start = time.time()
+    #start = time.time()
     camera.start_preview()
 ##    time.sleep(3)
 ##    camera.stop_preview()
@@ -36,7 +36,7 @@ if __name__ == "__main__":
         if last != 0:
             if (last + 0.1) - time.time() > 0:
                 time.sleep((last + 0.1) - time.time())
-##            else:
+            else:
                 f_report.write('Under Real_time Point:' + str(time.time() - last) + '\n')
         start_time = time.time()
         f_report.write('Start time:' +str(start_time) + '\n')
@@ -52,7 +52,7 @@ if __name__ == "__main__":
         last = start_time
         
 ##    print "reached zero"
-    end = time.time()
-    print end - start
+    #end = time.time()
+    #f_report.write("Total time:", end - start)
 
     

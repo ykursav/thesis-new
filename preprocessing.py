@@ -140,7 +140,7 @@ class PreProcessing:
             elif height_perspective > width_perspective:
                 warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
             self.warped = self.get_blurred(warped_image, 3)
-            #imwrite("warped_images/warped" + str(counter) + ".jpg", warped_image)
+            imwrite("warped_images/warped" + str(counter) + ".jpg", warped_image)
 
             return 30
 
