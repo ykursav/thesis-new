@@ -15,6 +15,10 @@ libextraction.sum.argtypes = [_doublepp, ctypes.c_int]
 libextraction.calculateSD.restype = ctypes.c_double
 setUseOptimized(True)
 ##gc.enable()
+
+def unwrap_self_f(arg, **kwarg):
+    return SignatureExtraction.get_average_luminance_of_block(*arg, **kwarg)
+
 class SignatureExtraction:
     '''N block size, M overlapping pixels, L image size'''
     def __init__(self, N, M, L):
@@ -86,7 +90,7 @@ class SignatureExtraction:
         p = Pool(processes=4)
         blocks = [rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N], rot90[y * 8:y * 8 + self.N], rot180[y * 8: y * 8 + self.N, x * 8:x * 8 + self.N], rot270[y * 8:y * 8 + self.N,x * 8:x * 8 + self.N]]
         if only_rotate == 1:
-            [lum1, lum2, lum3, lum4] = p.map(self.get_average_luminance_of_block, blocks)
+            [lum1, lum2, lum3, lum4] = p.map(unwrap_self_f, blocks)
             #lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
             #lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
             #lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
