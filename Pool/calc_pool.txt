@@ -1,0 +1,286 @@
+         1691 function calls (1677 primitive calls) in 0.072 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.002    0.002    0.072    0.072 calc_pool.py:1(<module>)
+        1    0.000    0.000    0.046    0.046 pool.py:136(__init__)
+        1    0.000    0.000    0.032    0.032 pool.py:232(_setup_queues)
+        2    0.000    0.000    0.029    0.014 queues.py:350(__init__)
+        2    0.001    0.000    0.028    0.014 __init__.py:102(Pipe)
+        2    0.002    0.001    0.028    0.014 connection.py:35(<module>)
+        1    0.003    0.003    0.020    0.020 __init__.py:44(<module>)
+        1    0.005    0.005    0.016    0.016 util.py:35(<module>)
+        1    0.014    0.014    0.015    0.015 socket.py:45(<module>)
+        1    0.001    0.001    0.011    0.011 tempfile.py:18(<module>)
+        4    0.006    0.002    0.008    0.002 threading.py:309(wait)
+        3    0.000    0.000    0.008    0.003 threading.py:726(start)
+        1    0.001    0.001    0.007    0.007 random.py:40(<module>)
+        3    0.000    0.000    0.007    0.002 threading.py:603(wait)
+        1    0.002    0.002    0.006    0.006 subprocess.py:387(<module>)
+        1    0.001    0.001    0.005    0.005 pool.py:210(_repopulate_pool)
+        1    0.002    0.002    0.005    0.005 threading.py:1(<module>)
+        1    0.000    0.000    0.004    0.004 random.py:91(__init__)
+        1    0.000    0.000    0.004    0.004 random.py:100(seed)
+        1    0.001    0.001    0.004    0.004 pickle.py:25(<module>)
+        3    0.001    0.000    0.004    0.001 process.py:116(start)
+        1    0.003    0.003    0.003    0.003 {function seed at 0x768bd4f0}
+      119    0.001    0.000    0.003    0.000 re.py:230(_compile)
+        1    0.001    0.001    0.003    0.003 pool.py:35(<module>)
+        3    0.000    0.000    0.003    0.001 forking.py:116(__init__)
+        1    0.001    0.001    0.003    0.003 io.py:34(<module>)
+        1    0.001    0.001    0.002    0.002 queues.py:35(<module>)
+        3    0.002    0.001    0.002    0.001 {posix.fork}
+        3    0.000    0.000    0.002    0.001 sre_compile.py:567(compile)
+      117    0.000    0.000    0.002    0.000 re.py:138(match)
+       24    0.002    0.000    0.002    0.000 {method 'acquire' of 'thread.lock' objects}
+        1    0.001    0.001    0.002    0.002 synchronize.py:36(<module>)
+        1    0.001    0.001    0.002    0.002 hashlib.py:56(<module>)
+        1    0.000    0.000    0.002    0.002 pool.py:246(map)
+        1    0.000    0.000    0.002    0.002 warnings.py:46(filterwarnings)
+        2    0.000    0.000    0.001    0.001 re.py:192(compile)
+        1    0.000    0.000    0.001    0.001 pool.py:713(ThreadPool)
+        3    0.000    0.000    0.001    0.000 sre_parse.py:686(parse)
+        1    0.000    0.000    0.001    0.001 pool.py:551(get)
+        1    0.000    0.000    0.001    0.001 pool.py:543(wait)
+        1    0.001    0.001    0.001    0.001 process.py:35(<module>)
+        1    0.001    0.001    0.001    0.001 collections.py:1(<module>)
+        3    0.000    0.000    0.001    0.000 sre_parse.py:310(_parse_sub)
+        3    0.001    0.000    0.001    0.000 sre_parse.py:388(_parse)
+        4    0.000    0.000    0.001    0.000 threading.py:656(__init__)
+        1    0.001    0.001    0.001    0.001 __init__.py:36(<module>)
+        3    0.000    0.000    0.001    0.000 sre_compile.py:552(_code)
+        8    0.000    0.000    0.001    0.000 abc.py:105(register)
+        4    0.000    0.000    0.001    0.000 synchronize.py:146(__init__)
+        3    0.001    0.000    0.001    0.000 process.py:94(__init__)
+        4    0.000    0.000    0.001    0.000 synchronize.py:74(__init__)
+        4    0.000    0.000    0.001    0.000 abc.py:86(__new__)
+       12    0.000    0.000    0.001    0.000 threading.py:242(Condition)
+    28/17    0.000    0.000    0.001    0.000 {issubclass}
+        8    0.000    0.000    0.001    0.000 abc.py:148(__subclasscheck__)
+        2    0.001    0.000    0.001    0.000 {posix.urandom}
+       12    0.000    0.000    0.001    0.000 threading.py:260(__init__)
+        4    0.000    0.000    0.000    0.000 threading.py:542(Event)
+        1    0.000    0.000    0.000    0.000 forking.py:35(<module>)
+      4/3    0.000    0.000    0.000    0.000 sre_compile.py:64(_compile)
+        4    0.000    0.000    0.000    0.000 threading.py:561(__init__)
+        3    0.000    0.000    0.000    0.000 {thread.start_new_thread}
+        3    0.000    0.000    0.000    0.000 sre_compile.py:433(_compile_info)
+        1    0.000    0.000    0.000    0.000 os.py:35(_get_exports_list)
+        1    0.000    0.000    0.000    0.000 random.py:655(WichmannHill)
+       41    0.000    0.000    0.000    0.000 sre_parse.py:210(get)
+      117    0.000    0.000    0.000    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
+        2    0.000    0.000    0.000    0.000 {dir}
+        8    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x2d4c48}
+        1    0.000    0.000    0.000    0.000 Queue.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 pool.py:298(map_async)
+        3    0.000    0.000    0.000    0.000 process.py:76(_cleanup)
+        3    0.000    0.000    0.000    0.000 sre_compile.py:228(_compile_charset)
+       47    0.000    0.000    0.000    0.000 sre_parse.py:191(__next)
+        1    0.000    0.000    0.000    0.000 threading.py:1090(__init__)
+        3    0.000    0.000    0.000    0.000 sre_compile.py:256(_optimize_charset)
+       19    0.000    0.000    0.000    0.000 _weakrefset.py:58(__iter__)
+        3    0.000    0.000    0.000    0.000 forking.py:131(poll)
+        1    0.000    0.000    0.000    0.000 Queue.py:26(__init__)
+        4    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        4    0.000    0.000    0.000    0.000 util.py:161(register_after_fork)
+        1    0.000    0.000    0.000    0.000 socket.py:179(_socketobject)
+        1    0.000    0.000    0.000    0.000 pool.py:580(__init__)
+      5/4    0.000    0.000    0.000    0.000 sre_parse.py:149(getwidth)
+        1    0.000    0.000    0.000    0.000 posixpath.py:365(abspath)
+        2    0.000    0.000    0.000    0.000 connection.py:183(Pipe)
+       47    0.000    0.000    0.000    0.000 {getattr}
+      144    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+       19    0.000    0.000    0.000    0.000 _weakrefset.py:36(__init__)
+        1    0.000    0.000    0.000    0.000 process.py:301(__init__)
+        4    0.000    0.000    0.000    0.000 weakref.py:98(__setitem__)
+        3    0.000    0.000    0.000    0.000 threading.py:629(_newname)
+        3    0.000    0.000    0.000    0.000 threading.py:709(_set_daemon)
+        1    0.000    0.000    0.000    0.000 heapq.py:31(<module>)
+  144/143    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {math.exp}
+        1    0.000    0.000    0.000    0.000 pool.py:528(__init__)
+        6    0.000    0.000    0.000    0.000 hashlib.py:100(__get_openssl_constructor)
+        2    0.000    0.000    0.000    0.000 {posix.pipe}
+        7    0.000    0.000    0.000    0.000 util.py:72(debug)
+        1    0.000    0.000    0.000    0.000 Queue.py:107(put)
+        3    0.000    0.000    0.000    0.000 process.py:165(name)
+        1    0.000    0.000    0.000    0.000 pickle.py:827(Unpickler)
+        6    0.000    0.000    0.000    0.000 threading.py:300(_is_owned)
+        1    0.000    0.000    0.000    0.000 posixpath.py:336(normpath)
+       25    0.000    0.000    0.000    0.000 sre_parse.py:147(append)
+        1    0.000    0.000    0.000    0.000 __future__.py:48(<module>)
+        8    0.000    0.000    0.000    0.000 _weakrefset.py:26(__exit__)
+       16    0.000    0.000    0.000    0.000 _weakrefset.py:83(add)
+       31    0.000    0.000    0.000    0.000 {isinstance}
+        1    0.000    0.000    0.000    0.000 util.py:176(__init__)
+       20    0.000    0.000    0.000    0.000 threading.py:59(__init__)
+        3    0.000    0.000    0.000    0.000 {posix.waitpid}
+        4    0.000    0.000    0.000    0.000 abc.py:89(<genexpr>)
+        3    0.000    0.000    0.000    0.000 process.py:177(daemon)
+        4    0.000    0.000    0.000    0.000 threading.py:1152(currentThread)
+        2    0.000    0.000    0.000    0.000 threading.py:373(notify)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:411(_mk_bitmap)
+        1    0.000    0.000    0.000    0.000 process.py:86(Process)
+        3    0.000    0.000    0.000    0.000 sre_parse.py:187(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:576(set)
+        1    0.000    0.000    0.000    0.000 pickle.py:171(Pickler)
+        1    0.000    0.000    0.000    0.000 collections.py:26(OrderedDict)
+        1    0.000    0.000    0.000    0.000 threading.py:640(Thread)
+       10    0.000    0.000    0.000    0.000 sre_parse.py:204(match)
+        4    0.000    0.000    0.000    0.000 threading.py:294(_release_save)
+        4    0.000    0.000    0.000    0.000 weakref.py:262(__new__)
+        8    0.000    0.000    0.000    0.000 _weakrefset.py:20(__enter__)
+       11    0.000    0.000    0.000    0.000 {method 'release' of 'thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 posixpath.py:59(isabs)
+        1    0.000    0.000    0.000    0.000 random.py:72(Random)
+        9    0.000    0.000    0.000    0.000 {hasattr}
+       16    0.000    0.000    0.000    0.000 {thread.allocate_lock}
+        6    0.000    0.000    0.000    0.000 process.py:107(<genexpr>)
+        6    0.000    0.000    0.000    0.000 sre_parse.py:139(__getitem__)
+        1    0.000    0.000    0.000    0.000 subprocess.py:647(Popen)
+        1    0.000    0.000    0.000    0.000 {binascii.hexlify}
+       27    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 keyword.py:11(<module>)
+        6    0.000    0.000    0.000    0.000 sre_compile.py:546(isstring)
+        1    0.000    0.000    0.000    0.000 tempfile.py:505(SpooledTemporaryFile)
+        1    0.000    0.000    0.000    0.000 forking.py:60(ForkingPickler)
+        1    0.000    0.000    0.000    0.000 pool.py:130(Pool)
+       14    0.000    0.000    0.000    0.000 {setattr}
+        8    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 weakref.py:47(__init__)
+        1    0.000    0.000    0.000    0.000 threading.py:400(notifyAll)
+        1    0.000    0.000    0.000    0.000 Queue.py:204(_put)
+        3    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+       28    0.000    0.000    0.000    0.000 {ord}
+        6    0.000    0.000    0.000    0.000 {method 'flush' of 'file' objects}
+        1    0.000    0.000    0.000    0.000 atexit.py:6(<module>)
+        7    0.000    0.000    0.000    0.000 {range}
+        4    0.000    0.000    0.000    0.000 weakref.py:267(__init__)
+        4    0.000    0.000    0.000    0.000 threading.py:297(_acquire_restore)
+        3    0.000    0.000    0.000    0.000 threading.py:1024(daemon)
+        5    0.000    0.000    0.000    0.000 {method 'setter' of 'property' objects}
+        2    0.000    0.000    0.000    0.000 queues.py:370(_make_methods)
+        9    0.000    0.000    0.000    0.000 _weakrefset.py:70(__contains__)
+       11    0.000    0.000    0.000    0.000 {method 'find' of 'bytearray' objects}
+        3    0.000    0.000    0.000    0.000 {_sre.compile}
+        8    0.000    0.000    0.000    0.000 {min}
+        1    0.000    0.000    0.000    0.000 socket.py:235(_fileobject)
+        1    0.000    0.000    0.000    0.000 Queue.py:21(Queue)
+        1    0.000    0.000    0.000    0.000 queues.py:56(Queue)
+        8    0.000    0.000    0.000    0.000 _weakrefset.py:52(_commit_removals)
+        1    0.000    0.000    0.000    0.000 {math.sqrt}
+        8    0.000    0.000    0.000    0.000 _weakrefset.py:16(__init__)
+       12    0.000    0.000    0.000    0.000 {_sre.getlower}
+        1    0.000    0.000    0.000    0.000 tempfile.py:108(_RandomNameSequence)
+        1    0.000    0.000    0.000    0.000 collections.py:390(Counter)
+        1    0.000    0.000    0.000    0.000 sre_compile.py:428(_simple)
+        4    0.000    0.000    0.000    0.000 synchronize.py:84(_make_methods)
+        1    0.000    0.000    0.000    0.000 weakref.py:282(__init__)
+        1    0.000    0.000    0.000    0.000 connection.py:43(Listener)
+        2    0.000    0.000    0.000    0.000 {math.log}
+        3    0.000    0.000    0.000    0.000 sre_parse.py:67(__init__)
+        5    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 connection.py:117(Listener)
+        6    0.000    0.000    0.000    0.000 threading.py:570(isSet)
+        7    0.000    0.000    0.000    0.000 __future__.py:75(__init__)
+        4    0.000    0.000    0.000    0.000 forking.py:63(register)
+        9    0.000    0.000    0.000    0.000 threading.py:64(_note)
+        3    0.000    0.000    0.000    0.000 threading.py:1008(daemon)
+        7    0.000    0.000    0.000    0.000 {posix.getpid}
+        1    0.000    0.000    0.000    0.000 {method 'union' of 'set' objects}
+        4    0.000    0.000    0.000    0.000 sre_parse.py:135(__len__)
+        6    0.000    0.000    0.000    0.000 {thread.get_ident}
+        1    0.000    0.000    0.000    0.000 tempfile.py:372(_TemporaryFileWrapper)
+        1    0.000    0.000    0.000    0.000 threading.py:125(_RLock)
+        1    0.000    0.000    0.000    0.000 __init__.py:88(Condition)
+        1    0.000    0.000    0.000    0.000 queues.py:295(JoinableQueue)
+        4    0.000    0.000    0.000    0.000 sre_parse.py:90(__init__)
+        4    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:131(Value)
+        1    0.000    0.000    0.000    0.000 Queue.py:212(PriorityQueue)
+        1    0.000    0.000    0.000    0.000 threading.py:255(_Condition)
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_md5}
+        8    0.000    0.000    0.000    0.000 {method '__subclasshook__' of 'object' objects}
+        1    0.000    0.000    0.000    0.000 {posix.sysconf}
+        1    0.000    0.000    0.000    0.000 {posix.getcwd}
+        1    0.000    0.000    0.000    0.000 synchronize.py:299(Event)
+        8    0.000    0.000    0.000    0.000 {method '__subclasses__' of 'type' objects}
+        1    0.000    0.000    0.000    0.000 random.py:805(SystemRandom)
+        1    0.000    0.000    0.000    0.000 forking.py:114(Popen)
+        1    0.000    0.000    0.000    0.000 synchronize.py:195(Condition)
+        1    0.000    0.000    0.000    0.000 threading.py:515(_BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 util.py:172(Finalize)
+        1    0.000    0.000    0.000    0.000 threading.py:423(_Semaphore)
+        1    0.000    0.000    0.000    0.000 __init__.py:61(DummyProcess)
+        1    0.000    0.000    0.000    0.000 io.py:69(IOBase)
+        1    0.000    0.000    0.000    0.000 threading.py:552(_Event)
+        1    0.000    0.000    0.000    0.000 synchronize.py:72(SemLock)
+        1    0.000    0.000    0.000    0.000 atexit.py:37(register)
+        8    0.000    0.000    0.000    0.000 {method 'remove' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 subprocess.py:400(CalledProcessError)
+        1    0.000    0.000    0.000    0.000 pool.py:623(IMapIterator)
+        1    0.000    0.000    0.000    0.000 Queue.py:197(_init)
+        4    0.000    0.000    0.000    0.000 {id}
+        1    0.000    0.000    0.000    0.000 connection.py:247(SocketListener)
+        1    0.000    0.000    0.000    0.000 pool.py:526(ApplyResult)
+        1    0.000    0.000    0.000    0.000 {divmod}
+        1    0.000    0.000    0.000    0.000 Queue.py:231(LifoQueue)
+        1    0.000    0.000    0.000    0.000 UserDict.py:4(__init__)
+        1    0.000    0.000    0.000    0.000 connection.py:463(XmlListener)
+        1    0.000    0.000    0.000    0.000 threading.py:789(_set_ident)
+        1    0.000    0.000    0.000    0.000 threading.py:1058(_Timer)
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 connection.py:441(ConnectionWrapper)
+        1    0.000    0.000    0.000    0.000 io.py:76(BufferedIOBase)
+        6    0.000    0.000    0.000    0.000 {globals}
+        1    0.000    0.000    0.000    0.000 {method 'translate' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 socket.py:167(_closedsocket)
+        1    0.000    0.000    0.000    0.000 queues.py:348(SimpleQueue)
+        3    0.000    0.000    0.000    0.000 process.py:161(name)
+        1    0.000    0.000    0.000    0.000 synchronize.py:108(Semaphore)
+        1    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'insert' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 __future__.py:74(_Feature)
+        1    0.000    0.000    0.000    0.000 pool.py:71(MaybeEncodingError)
+        1    0.000    0.000    0.000    0.000 threading.py:1128(_DummyThread)
+        1    0.000    0.000    0.000    0.000 synchronize.py:169(RLock)
+        1    0.000    0.000    0.000    0.000 __init__.py:113(Namespace)
+        1    0.000    0.000    0.000    0.000 io.py:79(TextIOBase)
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha1}
+        1    0.000    0.000    0.000    0.000 util.py:346(ForkAwareLocal)
+        1    0.000    0.000    0.000    0.000 connection.py:68(Connection)
+        1    0.000    0.000    0.000    0.000 threading.py:57(_Verbose)
+        1    0.000    0.000    0.000    0.000 pickle.py:58(PickleError)
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha256}
+        1    0.000    0.000    0.000    0.000 util.py:336(ForkAwareThreadLock)
+        1    0.000    0.000    0.000    0.000 threading.py:1088(_MainThread)
+        1    0.000    0.000    0.000    0.000 Queue.py:17(Full)
+        1    0.000    0.000    0.000    0.000 io.py:73(RawIOBase)
+        1    0.000    0.000    0.000    0.000 synchronize.py:127(BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha384}
+        1    0.000    0.000    0.000    0.000 pickle.py:69(UnpicklingError)
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha224}
+        1    0.000    0.000    0.000    0.000 <string>:1(<module>)
+        1    0.000    0.000    0.000    0.000 __init__.py:71(ProcessError)
+        1    0.000    0.000    0.000    0.000 pickle.py:1261(_EmptyClass)
+        1    0.000    0.000    0.000    0.000 pool.py:696(IMapUnorderedIterator)
+        1    0.000    0.000    0.000    0.000 synchronize.py:144(Lock)
+        1    0.000    0.000    0.000    0.000 pool.py:578(MapResult)
+        1    0.000    0.000    0.000    0.000 {_hashlib.openssl_sha512}
+        1    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 process.py:285(AuthenticationString)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:143(__setitem__)
+        1    0.000    0.000    0.000    0.000 pickle.py:62(PicklingError)
+        1    0.000    0.000    0.000    0.000 __init__.py:80(AuthenticationError)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 Queue.py:13(Empty)
+        1    0.000    0.000    0.000    0.000 process.py:299(_MainProcess)
+        1    0.000    0.000    0.000    0.000 pickle.py:82(_Stop)
+        1    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+        1    0.000    0.000    0.000    0.000 __init__.py:74(BufferTooShort)
+        1    0.000    0.000    0.000    0.000 threading.py:1097(_set_daemon)
+        1    0.000    0.000    0.000    0.000 __init__.py:77(TimeoutError)
+
+

@@ -6,6 +6,7 @@ import gc
 from ctypes import *
 import ctypes
 from numpy.ctypeslib import ndpointer
+from multiprocessing.pool import Pool
 
 libextraction = cdll.LoadLibrary("./C_Libraries/libextraction.so")
 libextraction.sum.restype = ctypes.c_double
@@ -82,12 +83,14 @@ class SignatureExtraction:
     #@profile
     def get_fragment(self, rot0, rot90, rot180, rot270, x, y, only_rotate):
 
-
+        p = Pool(processes=4)
+        blocks = [rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N], rot90[y * 8:y * 8 + self.N], rot180[y * 8: y * 8 + self.N, x * 8:x * 8 + self.N], rot270[y * 8:y * 8 + self.N,x * 8:x * 8 + self.N]]
         if only_rotate == 1:
-            lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
-            lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
-            lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
-            lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            [lum1, lum2, lum3, lum4] = p.map(self.get_average_luminance_of_block, blocks)
+            #lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            #lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            #lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+            #lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
             avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
             #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
             
