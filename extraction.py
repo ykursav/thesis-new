@@ -73,22 +73,24 @@ def basic_rotations(rot0):
 ##         fVertical270, fHorizontal270
 
 
-
 def get_fragment(rot0, rot90, rot180, rot270, x, y, only_rotate):
 
     blocks = [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N], rot90[y * 8:y * 8 + N], rot180[y * 8: y * 8 + N, x * 8:x * 8 + N], rot270[y * 8:y * 8 + N,x * 8:x * 8 + N]]
     if only_rotate == 1:
-        p = Pool(processes=2)
-        results = p.map(get_average_luminance_of_block, blocks)
+        p = Pool(processes =4)
+        results = p.apply_async(get_average_luminance_of_block)
         p.close()
         p.join()
-        #lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
-        #lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
-        #lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
-        #lum4 = get_average_luminance_of_block(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N])
-        avg_lum = (results[0] + results[1] + results[2] + results[3]) / 4
+        lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        lum4 = get_average_luminance_of_block(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        print results.get()
+        avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
+        
+        print results
         #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
-        std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3]]).ctypes.data_as(c_void_p))
+        std_lum = libextraction.calculateSD(array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
         return avg_lum, std_lum
 
     elif only_rotate == -1:
