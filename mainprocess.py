@@ -1,5 +1,5 @@
 from preprocessing import PreProcessing
-from extraction import SignatureExtraction
+from extraction import set_initials, get_signature
 from matching import SignatureMatching
 import cv2
 import numpy as np
@@ -19,7 +19,7 @@ except:
     print "ERROR: This image is not exist or unknown format."
     sys.exit(0)
     
-extract_process = SignatureExtraction(8, 4, 128)
+#extract_process = SignatureExtraction(8, 4, 128)
 pre_process = PreProcessing(128, False)
 sigOrig = bitarray()
 f = open("signature.bin", "rb")
@@ -44,9 +44,9 @@ if not check:
 
 
 
-extract_process.set_image(pre_process.get_cropped())
+set_initials(8, 4, 128, pre_process.get_cropped())
 
-sigGen = extract_process.get_signature()
+sigGen = get_signature()
 
 # print "Signature len:",len(sigGen)
 # print sigOrig, len(sigOrig)

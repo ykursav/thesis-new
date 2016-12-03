@@ -7,6 +7,7 @@ from ctypes import *
 import ctypes
 from numpy.ctypeslib import ndpointer
 from multiprocessing.pool import Pool
+import threading
 
 libextraction = cdll.LoadLibrary("./C_Libraries/libextraction.so")
 libextraction.sum.restype = ctypes.c_double
@@ -21,19 +22,22 @@ L = 0
 image = array([])
 width = 0
 height = 0
-def set_initials(N, M, L, image):
-    N = N
-    M = M
-    L = L
-    image = image
-
-number_of_blocks = ((L - N) / M ) + 1
+number_of_block = 0
+def set_initials(N_f, M_f, L_f, image_f):
+    global N, M, L, image, number_of_blocks
+    N = N_f
+    M = M_f 
+    L = L_f
+    print N, M, L
+    image = image_f
+    number_of_blocks = ((L - N) / M) + 1
 
 def get_average_luminance_of_block(block):
     '''luminance calculation block'''
 ##        blockpp = (block.__array_interface__['data'][0] + np.arange(block.shape[0]) * block.strides[0]).astype(np.uintp)
 ##        block_sum = libextraction.sum(blockpp, ctypes.c_int(self.N))
     #print block_sum
+    
     return sum(block) / (N * N)
 
 def get_blocks():
@@ -49,10 +53,10 @@ def get_blocks():
 
     return I_vis_blur_y
 
-def basic_rotations():
+def basic_rotations(rot0):
     center = (N * number_of_blocks) / 2
     rot_matrix = getRotationMatrix2D((center, center), 90, 1)
-    rot90 = warpAffine(image, rot_matrix, (center * 2, center * 2))
+    rot90 = warpAffine(rot0, rot_matrix, (center * 2, center * 2))
     rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
     rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
 ##        fVertical0 = flip(image, 0)
@@ -70,22 +74,21 @@ def basic_rotations():
 
 
 
-
 def get_fragment(rot0, rot90, rot180, rot270, x, y, only_rotate):
 
-    p = Pool(processes=4)
     blocks = [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N], rot90[y * 8:y * 8 + N], rot180[y * 8: y * 8 + N, x * 8:x * 8 + N], rot270[y * 8:y * 8 + N,x * 8:x * 8 + N]]
     if only_rotate == 1:
-        [lum1, lum2, lum3, lum4] = p.map(unwrap_self_f, blocks)
-        #lum1 = self.get_average_luminance_of_block(rot0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
-        #lum2 = self.get_average_luminance_of_block(rot90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
-        #lum3 = self.get_average_luminance_of_block(rot180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
-        #lum4 = self.get_average_luminance_of_block(rot270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
-        avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
+        p = Pool(processes=2)
+        results = p.map(get_average_luminance_of_block, blocks)
+        p.close()
+        p.join()
+        #lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        #lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        #lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        #lum4 = get_average_luminance_of_block(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        avg_lum = (results[0] + results[1] + results[2] + results[3]) / 4
         #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
-        
-        std_lum = libextraction.calculateSD(array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
-        
+        std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3]]).ctypes.data_as(c_void_p))
         return avg_lum, std_lum
 
     elif only_rotate == -1:
