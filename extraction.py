@@ -78,14 +78,17 @@ def get_fragment(rot0, rot90, rot180, rot270, x, y, only_rotate):
     blocks = [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N], rot90[y * 8:y * 8 + N], rot180[y * 8: y * 8 + N, x * 8:x * 8 + N], rot270[y * 8:y * 8 + N,x * 8:x * 8 + N]]
     if only_rotate == 1:
         p = Pool(processes =4)
-        results = p.apply_async(get_average_luminance_of_block)
+        results1 = p.apply_async(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+        results2 = p.apply_async(get_average_luminance_of_block, [rot90[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+        results3 = p.apply_async(get_average_luminance_of_block, [rot180[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+        results4 = p.apply_async(get_average_luminance_of_block, [rot270[y * 8:y * 8 + N, x * 8:x * 8 + N]])
         p.close()
         p.join()
         lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum4 = get_average_luminance_of_block(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N])
-        print results.get()
+        print results1
         avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
         
         print results
