@@ -1,5 +1,5 @@
 import preprocessing as pre
-import extraction as extract
+from extraction import set_initials, get_signature
 import matching as match
 import cv2
 import numpy as np
@@ -31,7 +31,7 @@ class ThreadTest:
         self.f_report = f_report
         self.sigOrig.fromfile(f)
         self.pre_process = pre.PreProcessing(L, False)
-        self.extract_process = extract.SignatureExtraction(N, M, L)
+        #self.extract_process = extract.SignatureExtraction(N, M, L)
         self.matching_process = match.SignatureMatching(self.sigOrig[0:238], tau1, tau2, tau3, tau4, tau5)
 
     
@@ -58,9 +58,8 @@ class ThreadTest:
 
     def extractprocess(self):
         
-        self.extract_process.set_image(self.image_preprocessed)        
-        sigGen = self.extract_process.get_signature()
-        self.sigGen = sigGen
+        set_initials(self.N, self.M, self.L, pre_process.get_cropped())
+        self.sigGen = get_signature()
 
     def matchingprocess(self):
         self.matching_process.set_signature(self.sigGen)
