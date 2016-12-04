@@ -58,7 +58,7 @@ class ThreadTest:
 
     def extractprocess(self):
         
-        set_initials(self.N, self.M, self.L, pre_process.get_cropped())
+        set_initials(self.N, self.M, self.L, self.image_preprocessed)
         self.sigGen = get_signature()
 
     def matchingprocess(self):
