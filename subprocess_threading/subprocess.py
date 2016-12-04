@@ -18,6 +18,7 @@ def get_average_luminance_of_block(block, N):
 
 def process_thread(i):
     print "Thread: %d" % i
+    
     start_time = time.time()
     call ([cmd], shell=True)
     end_time = time.time()
