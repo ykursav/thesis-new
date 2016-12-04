@@ -23,7 +23,10 @@ image = array([])
 width = 0
 height = 0
 number_of_block = 0
-rot0, rot90, rot180, rot270 = array([])
+rot0 = array([])
+rot90 = array([])
+rot180 = array([])
+rot270 = array([])
 def set_initials(N_f, M_f, L_f, image_f):
     global N, M, L, image, number_of_blocks
     N = N_f
@@ -33,8 +36,7 @@ def set_initials(N_f, M_f, L_f, image_f):
     image = image_f
     number_of_blocks = ((L - N) / M) + 1
 
-def get_average_luminance_of_block(x, y, rots, num):
-    global rot0, rot90, rot180, rot270
+def get_average_luminance_of_block_pro(x, y, rots, num):
     '''luminance calculation block'''
 ##        blockpp = (block.__array_interface__['data'][0] + np.arange(block.shape[0]) * block.strides[0]).astype(np.uintp)
 ##        block_sum = libextraction.sum(blockpp, ctypes.c_int(self.N))
@@ -48,6 +50,8 @@ def get_average_luminance_of_block(x, y, rots, num):
     elif rots == 3:
         num.value = sum(rot270[y * 8:y * 8 + N,x * 8:x * 8 + N]) / (N * N)
     
+def get_average_luminance_of_block(block):
+    return sum(block) / (N * N)
 
 def get_blocks():
     '''Dividing cropped image N x N blocks by M overlapping'''
@@ -92,12 +96,15 @@ def get_fragment(x, y, only_rotate):
         # p.close()
         # p.join
         results = []
-        results = results.append
+        jobs = []
         num = Value('d', 0.0)
         for rots in xrange(4):
-            proc = Process(target = get_average_luminance_of_block, args =(x, y, rots, num,))
-            results(num.value)
-        
+            proc = Process(target = get_average_luminance_of_block_pro, args =(x, y, rots, num,))
+            results.append(num.value)
+            jobs.append(proc)
+            proc.start
+        for proc in jobs:
+            proc.join()
         lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
@@ -154,18 +161,18 @@ def get_all_fragments():
         if counter_x == counter_y or counter_x == 14:
             if counter_x == 14 and counter_y == 14:
                 fragment_time = time.time()
-                avg_lum, std_lum = get_fragment(rot0, rot90, rot180, rot270, counter_x, counter_y, -1)
+                avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
                 fragment_end_time = time.time()
                 append_std_lum(std_lum)
                 append_avg_lum(avg_lum)
             else:
                 fragment_time = time.time()
-                avg_lum, std_lum = get_fragment(rot0, rot90, rot180, rot270, counter_x, counter_y, 1)
+                avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)
                 fragment_end_time = time.time()
                 append_std_lum(std_lum)
                 append_avg_lum(avg_lum)
         else:
-            avg_lum, std_lum = get_fragment(rot0, rot90, rot180, rot270, counter_x, counter_y, 0)
+            avg_lum, std_lum = get_fragment(counter_x, counter_y, 0)
             append_std_lum(std_lum)
             append_avg_lum(avg_lum)
         counter_x += 1
