@@ -6,8 +6,10 @@ import gc
 from ctypes import *
 import ctypes
 from numpy.ctypeslib import ndpointer
-from multiprocessing.pool import Pool, Process, Value
+#from multiprocessing.pool import Pool, Process, Value
 import threading
+import subprocess
+import Queue
 
 libextraction = cdll.LoadLibrary("./C_Libraries/libextraction.so")
 libextraction.sum.restype = ctypes.c_double
@@ -36,19 +38,19 @@ def set_initials(N_f, M_f, L_f, image_f):
     image = image_f
     number_of_blocks = ((L - N) / M) + 1
 
-def get_average_luminance_of_block_pro(x, y, rots, num):
-    '''luminance calculation block'''
-##        blockpp = (block.__array_interface__['data'][0] + np.arange(block.shape[0]) * block.strides[0]).astype(np.uintp)
-##        block_sum = libextraction.sum(blockpp, ctypes.c_int(self.N))
-    #print block_sum
-    if rots == 0:
-        num.value = sum(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N]) / (N * N)
-    elif rots == 1:
-        num.value = sum(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N]) / (N * N)
-    elif rots == 2:
-        num.value = sum(rot180[y * 8: y * 8 + N, x * 8:x * 8 + N]) / (N * N)
-    elif rots == 3:
-        num.value = sum(rot270[y * 8:y * 8 + N,x * 8:x * 8 + N]) / (N * N)
+# def get_average_luminance_of_block_pro(x, y, rots, num):
+#     '''luminance calculation block'''
+# ##        blockpp = (block.__array_interface__['data'][0] + np.arange(block.shape[0]) * block.strides[0]).astype(np.uintp)
+# ##        block_sum = libextraction.sum(blockpp, ctypes.c_int(self.N))
+#     #print block_sum
+#     if rots == 0:
+#         num.value = sum(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N]) / (N * N)
+#     elif rots == 1:
+#         num.value = sum(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N]) / (N * N)
+#     elif rots == 2:
+#         num.value = sum(rot180[y * 8: y * 8 + N, x * 8:x * 8 + N]) / (N * N)
+#     elif rots == 3:
+#         num.value = sum(rot270[y * 8:y * 8 + N,x * 8:x * 8 + N]) / (N * N)
     
 def get_average_luminance_of_block(block):
     return sum(block) / (N * N)
@@ -85,8 +87,17 @@ def basic_rotations(rot0):
 ##    fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \
 ##         fVertical270, fHorizontal270
 
+def thread_luminance(block, q):
+    print "Thread: %d" % i
+    start_time = time.time()
+    out = subprocess.check_output(["python luminance.py", block])
+    q.put(out)
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print "Thread %s took %.2f seconds" % (i, elapsed_time)
 
 def get_fragment(x, y, only_rotate):
+    q = Queue()
     if only_rotate == 1:
         # p = Pool(processes =4)
         # results1 = p.apply_async(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N]])
@@ -95,16 +106,35 @@ def get_fragment(x, y, only_rotate):
         # results4 = p.apply_async(get_average_luminance_of_block, [rot270[y * 8:y * 8 + N, x * 8:x * 8 + N]])
         # p.close()
         # p.join
-        results = []
-        jobs = []
-        num = Value('d', 0.0)
-        for rots in xrange(4):
-            proc = Process(target = get_average_luminance_of_block_pro, args =(x, y, rots, num,))
-            results.append(num.value)
-            jobs.append(proc)
-            proc.start
-        for proc in jobs:
-            proc.join()
+        #results = []
+        #jobs = []
+        #num = Value('d', 0.0)
+        # for rots in xrange(4):
+        #     proc = Process(target = get_average_luminance_of_block_pro, args =(x, y, rots, num,))
+        #     results.append(num.value)
+        #     jobs.append(proc)
+        #     proc.start
+        # for proc in jobs:
+        #     proc.join()
+        for i in range(4):
+            if i == 0:
+                t1 = Thread(target=thread_luminance, args=(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+                t1.start()
+            elif i == 1:
+                t2 = Thread(target=thread_luminance, args=(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+                t2.start()
+            elif i == 2:
+                t3 = Thread(target=thread_luminance, args=(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+                t3.start()
+            else:
+                t4 = Thread(target=thread_luminance, args=(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+                t4.start()
+
+        t1.join()
+        t2.join()
+        t3.join()
+        t4.join()
+
         lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
