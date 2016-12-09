@@ -30,14 +30,14 @@ def set_initials_match(sigOrig_m, sigGen_m, tau1_m, tau2_m, tau3_m, tau4_m, tau5
 #         self.tau4 = tau4
 #         self.tau5 = tau5
 
-def set_signature(self, sigGen_m):
+def set_signature(sigGen_m):
     global sigGen
     sigGen = sigGen_m
         
-def signature_hamming(self):
+def signature_hamming():
     return sigOrig ^ sigGen
 
-def signature_rejection(self):
+def signature_rejection():
     hamming_sig = signature_hamming()
     if sum(hamming_sig[0:60]) > tau1:
         return False, sum(hamming_sig), "tau1_fail"

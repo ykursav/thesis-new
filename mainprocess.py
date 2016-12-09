@@ -27,7 +27,7 @@ sigOrig = bitarray()
 f = open("signature.bin", "rb")
 #signatures must import from a binary file
 sigOrig.fromfile(f)
-matching_process = SignatureMatching(sigOrig[0:238], 24, 38, 4, 28, 22)
+#matching_process = SignatureMatching(sigOrig[0:238], 24, 38, 4, 28, 22)
 
 print("start" + str(datetime.datetime.now()))
 #pre_process.set_image(image)
