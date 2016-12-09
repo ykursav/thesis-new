@@ -1,6 +1,6 @@
 from preprocessing import set_initials_pre, get_contour, get_perspective, get_cropped
 from extraction import set_initials, get_signature
-from matching import SignatureMatching
+from matching import set_initials_match, signature_rejection
 import cv2
 import numpy as np
 from bitarray import bitarray
@@ -50,12 +50,13 @@ set_initials(8, 4, 128, get_cropped())
 
 sigGen = get_signature()
 
+set_initials_match(sigOrig[0:238], sigGen, 24, 38, 4, 28, 22)
 # print "Signature len:",len(sigGen)
 # print sigOrig, len(sigOrig)
 # print sigGen, len(sigGen)
 
-matching_process.set_signature(sigGen)
-print(matching_process.signature_rejection())
+#matching_process.set_signature(sigGen)
+print(signature_rejection())
 end_time = time.time()
 # print "Preinstall time:" + str(pre_install_time - start_time)
 # print "Points time:" + str(pre_point_time - pre_install_time)
