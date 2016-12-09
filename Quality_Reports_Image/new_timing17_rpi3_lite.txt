@@ -1,125 +1,101 @@
-Start time:1480859382.56
-Start time:1480859382.67
-Start time:1480859382.77
-Start time:1480859382.87
-Under Real_time Point:0.146780014038
-Start time:1480859383.01
-Start time:1480859383.11
-Start time:1480859383.21
-Start time:1480859383.34
-Start time:1480859383.47
-Under Real_time Point:0.127982139587
-Start time:1480859383.6
-Under Real_time Point:0.119350194931
-Start time:1480859383.72
-Start time:1480859383.85
-Start time:1480859383.98
-Start time:1480859384.11
-Start time:1480859384.23
-Under Real_time Point:0.124904870987
-Start time:1480859384.36
-Under Real_time Point:0.132576227188
-Start time:1480859384.49
-Start time:1480859384.59
-Start time:1480859384.7
-Under Real_time Point:0.116674184799
-Start time:1480859384.81
-Start time:1480859384.91
-Under Real_time Point:0.102445840836
-Start time:1480859385.02
-Start time:1480859385.12
-Start time:1480859385.22
-Start time:1480859385.32
-Under Real_time Point:0.181592941284
-Start time:1480859385.5
-Under Real_time Point:0.125205039978
-Start time:1480859385.62
-Start time:1480859385.74
-Start time:1480859385.86
-Start time:1480859385.96
-Under Real_time Point:0.121877908707
-Start time:1480859386.09
-Start time:1480859386.19
-Start time:1480859386.29
-Start time:1480859386.39
-Under Real_time Point:0.102072954178
-Start time:1480859386.49
-Start time:1480859386.59
-Start time:1480859386.69
-Start time:1480859386.79
-Under Real_time Point:0.124366998672
-Start time:1480859386.91
-Under Real_time Point:0.182562828064
-Start time:1480859387.1
-Under Real_time Point:0.134066104889
-Start time:1480859387.23
-Start time:1480859387.36
-Under Real_time Point:0.127542972565
-Start time:1480859387.49
-Start time:1480859387.62
-Start time:1480859387.74
-Start time:1480859387.86
-Start time:1480859388.01
-Start time:1480859388.11
-Start time:1480859388.21
-Start time:1480859388.31
-Start time:1480859388.41
-Start time:1480859388.51
-Start time:1480859388.61
-Start time:1480859388.71
-Start time:1480859388.81
-Start time:1480859388.91
-Start time:1480859389.01
-Start time:1480859389.11
-Start time:1480859389.21
-Start time:1480859389.35
-Start time:1480859389.45
-Start time:1480859389.55
-Start time:1480859389.66
-Start time:1480859389.76
-Start time:1480859389.86
-Under Real_time Point:0.186589002609
-Start time:1480859390.05
-Start time:1480859390.15
-Start time:1480859390.27
-Start time:1480859390.37
-Under Real_time Point:0.110700130463
-Start time:1480859390.48
-Start time:1480859390.58
-Under Real_time Point:0.17924284935
-Start time:1480859390.76
-Start time:1480859390.89
-Under Real_time Point:0.103517055511
-Start time:1480859390.99
-Start time:1480859391.09
-Start time:1480859391.19
-Under Real_time Point:0.106413125992
-Start time:1480859391.3
-Start time:1480859391.4
-Under Real_time Point:0.103205919266
-Start time:1480859391.5
-Start time:1480859391.6
-Under Real_time Point:0.102425098419
-Start time:1480859391.71
-Start time:1480859391.81
-Start time:1480859391.91
-Start time:1480859392.01
-Start time:1480859392.11
-Under Real_time Point:0.178364992142
-Start time:1480859392.28
-Start time:1480859392.42
-Start time:1480859392.55
-Start time:1480859392.66
-Start time:1480859392.8
-Start time:1480859392.93
-Start time:1480859393.08
-Start time:1480859393.2
-Start time:1480859393.3
-Under Real_time Point:0.107856035233
-Start time:1480859393.41
-Start time:1480859393.51
-Under Real_time Point:0.177793979645
-Start time:1480859393.69
-Start time:1480859393.81
-Start time:1480859393.94
-Start time:1480859394.06
+Start time:1480860776.08
+Start time:1480860776.18
+Under Real_time Point:0.17401599884
+Start time:1480860776.35
+Start time:1480860776.45
+Start time:1480860776.55
+Start time:1480860776.65
+Start time:1480860776.75
+Start time:1480860776.85
+Start time:1480860776.95
+Start time:1480860777.05
+Start time:1480860777.15
+Start time:1480860777.25
+Start time:1480860777.35
+Start time:1480860777.45
+Start time:1480860777.55
+Start time:1480860777.65
+Start time:1480860777.75
+Start time:1480860777.85
+Start time:1480860777.95
+Start time:1480860778.05
+Start time:1480860778.15
+Start time:1480860778.25
+Start time:1480860778.35
+Start time:1480860778.45
+Start time:1480860778.55
+Start time:1480860778.65
+Start time:1480860778.75
+Start time:1480860778.85
+Start time:1480860778.95
+Start time:1480860779.05
+Start time:1480860779.15
+Start time:1480860779.25
+Start time:1480860779.35
+Start time:1480860779.45
+Start time:1480860779.55
+Start time:1480860779.65
+Start time:1480860779.75
+Start time:1480860779.85
+Start time:1480860779.95
+Start time:1480860780.05
+Start time:1480860780.15
+Start time:1480860780.25
+Start time:1480860780.35
+Start time:1480860780.45
+Start time:1480860780.55
+Start time:1480860780.65
+Start time:1480860780.75
+Start time:1480860780.85
+Start time:1480860780.95
+Start time:1480860781.05
+Start time:1480860781.15
+Start time:1480860781.25
+Start time:1480860781.35
+Start time:1480860781.45
+Start time:1480860781.55
+Start time:1480860781.65
+Start time:1480860781.75
+Start time:1480860781.85
+Start time:1480860781.95
+Start time:1480860782.05
+Start time:1480860782.15
+Start time:1480860782.26
+Start time:1480860782.36
+Start time:1480860782.46
+Start time:1480860782.56
+Start time:1480860782.66
+Start time:1480860782.76
+Start time:1480860782.86
+Start time:1480860782.96
+Start time:1480860783.06
+Start time:1480860783.16
+Start time:1480860783.26
+Start time:1480860783.36
+Start time:1480860783.46
+Start time:1480860783.56
+Start time:1480860783.66
+Start time:1480860783.76
+Start time:1480860783.86
+Start time:1480860783.96
+Start time:1480860784.06
+Start time:1480860784.16
+Start time:1480860784.26
+Start time:1480860784.36
+Start time:1480860784.46
+Start time:1480860784.56
+Start time:1480860784.66
+Start time:1480860784.76
+Start time:1480860784.86
+Start time:1480860784.96
+Start time:1480860785.06
+Start time:1480860785.16
+Start time:1480860785.26
+Start time:1480860785.36
+Start time:1480860785.46
+Start time:1480860785.56
+Start time:1480860785.66
+Start time:1480860785.76
+Start time:1480860785.86
+Start time:1480860785.96
+Start time:1480860786.06

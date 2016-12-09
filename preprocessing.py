@@ -20,10 +20,9 @@ warped = array([])
 L = 0
 
 def set_initials_pre(L_f, image_f):
-    global L, image, number_of_blocks
+    global L, image
     L = L_f
     image = image_f
-    number_of_blocks = ((L - N) / M) + 1
 # class PreProcessing:
 #     def __init__(self, L, hist_eq):
 #         self.image = array([])
