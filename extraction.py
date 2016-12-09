@@ -10,6 +10,7 @@ from numpy.ctypeslib import ndpointer
 import threading
 import subprocess
 import Queue
+from threading import Thread
 
 libextraction = cdll.LoadLibrary("./C_Libraries/libextraction.so")
 libextraction.sum.restype = ctypes.c_double
@@ -54,6 +55,9 @@ def set_initials(N_f, M_f, L_f, image_f):
 def get_average_luminance_of_block(block):
     return sum(block) / (N * N)
 
+def thread_luminance(block, q):
+    q.put(sum(block) / (N * N))
+
 def get_blocks():
     '''Dividing cropped image N x N blocks by M overlapping'''
     I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N))
@@ -86,7 +90,7 @@ def basic_rotations(rot0):
 ##    fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \
 ##         fVertical270, fHorizontal270
 
-
+@profile
 def get_fragment(x, y, only_rotate):
     if only_rotate == 1:
         # p = Pool(processes =4)
@@ -124,11 +128,25 @@ def get_fragment(x, y, only_rotate):
         # t2.join()
         # t3.join()
         # t4.join()
-
+        q1 = Queue.Queue()
+        t1 = Thread(target=thread_luminance, args=(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+        t2 = Thread(target=thread_luminance, args=(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+        t3 = Thread(target=thread_luminance, args=(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+        t4 = Thread(target=thread_luminance, args=(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+        t1.start()
+        t2.start()
+        t3.start()
+        t4.start()
+        t1.join()
+        t2.join()
+        t3.join()
+        t4.join()
+        print q1.get()
         lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
         lum4 = get_average_luminance_of_block(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        print lum1
         avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
         #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
         std_lum = libextraction.calculateSD(array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
