@@ -1,0 +1,675 @@
+start2016-12-09 22:18:40.750356
+7711.0
+7662.0
+6832.0
+4828.0
+7626.0
+8929.0
+3494.0
+6244.0
+7607.0
+10230.0
+2989.0
+6201.0
+7595.0
+10817.0
+2957.0
+4091.0
+7455.0
+10558.0
+2689.0
+3589.0
+7280.0
+11957.0
+2654.0
+4272.0
+7173.0
+12812.0
+4257.0
+5023.0
+7251.0
+11391.0
+6746.0
+6007.0
+7344.0
+9457.0
+10139.0
+6963.0
+7369.0
+8675.0
+11467.0
+6447.0
+7565.0
+8303.0
+11518.0
+6670.0
+7822.0
+8434.0
+11413.0
+7685.0
+7899.0
+9585.0
+11295.0
+7022.0
+7893.0
+10363.0
+11315.0
+6690.0
+7863.0
+10577.0
+11391.0
+8762.0
+10608.0
+9564.0
+4399.0
+4110.0
+9871.0
+10663.0
+3809.0
+3698.0
+8916.0
+12169.0
+3750.0
+3557.0
+8388.0
+11687.0
+3677.0
+3976.0
+8176.0
+11739.0
+3724.0
+4846.0
+8021.0
+11843.0
+7640.0
+5803.0
+8052.0
+12198.0
+13609.0
+7008.0
+8081.0
+12016.0
+14859.0
+8188.0
+8086.0
+10193.0
+15078.0
+7559.0
+8352.0
+9287.0
+15023.0
+7069.0
+8646.0
+9914.0
+14949.0
+8400.0
+8646.0
+11367.0
+14888.0
+8745.0
+8574.0
+12111.0
+14871.0
+8357.0
+8591.0
+12517.0
+14834.0
+11084.0
+11313.0
+9243.0
+4306.0
+3165.0
+10614.0
+10927.0
+4195.0
+3316.0
+8918.0
+12217.0
+4163.0
+3880.0
+7687.0
+11483.0
+4233.0
+4788.0
+7449.0
+10295.0
+6323.0
+5756.0
+7360.0
+11873.0
+12467.0
+7007.0
+7277.0
+12381.0
+14855.0
+8311.0
+7310.0
+10829.0
+15030.0
+8047.0
+7622.0
+11285.0
+15014.0
+7084.0
+7909.0
+12161.0
+15032.0
+7317.0
+7916.0
+12577.0
+15041.0
+8737.0
+7829.0
+12336.0
+15047.0
+9861.0
+7817.0
+12930.0
+15045.0
+12402.0
+11925.0
+9272.0
+5084.0
+3313.0
+10727.0
+10916.0
+5069.0
+3841.0
+8723.0
+11948.0
+4937.0
+4789.0
+8115.0
+11341.0
+5070.0
+5849.0
+8155.0
+12485.0
+7464.0
+7095.0
+7570.0
+11837.0
+11617.0
+8204.0
+7123.0
+10101.0
+14117.0
+8247.0
+7255.0
+12322.0
+14469.0
+7613.0
+7491.0
+14331.0
+14533.0
+6771.0
+7484.0
+13170.0
+14540.0
+7507.0
+7383.0
+12597.0
+14542.0
+9869.0
+7335.0
+12839.0
+14506.0
+12455.0
+12266.0
+8788.0
+6139.0
+3806.0
+11111.0
+9444.0
+5658.0
+4777.0
+10419.0
+10348.0
+5341.0
+6066.0
+11500.0
+10563.0
+5087.0
+7153.0
+11350.0
+8883.0
+6330.0
+7922.0
+10645.0
+7162.0
+10272.0
+8058.0
+9776.0
+8307.0
+12894.0
+7603.0
+8581.0
+11431.0
+13172.0
+6971.0
+7525.0
+12102.0
+13126.0
+7334.0
+7146.0
+11982.0
+13181.0
+9237.0
+7102.0
+11012.0
+13267.0
+10754.0
+12909.0
+7867.0
+6086.0
+4902.0
+11963.0
+7504.0
+5759.0
+5842.0
+12677.0
+7199.0
+5545.0
+6781.0
+13123.0
+6865.0
+4967.0
+7469.0
+13318.0
+6562.0
+5661.0
+7557.0
+13122.0
+6315.0
+8845.0
+7167.0
+12187.0
+6906.0
+10238.0
+7383.0
+10189.0
+8596.0
+10404.0
+9302.0
+7957.0
+9542.0
+10549.0
+11283.0
+6970.0
+9938.0
+10520.0
+9467.0
+10323.0
+7253.0
+5931.0
+5459.0
+10081.0
+6966.0
+5673.0
+6094.0
+10316.0
+6755.0
+5198.0
+6897.0
+11016.0
+6537.0
+4627.0
+6763.0
+12130.0
+6326.0
+5343.0
+6419.0
+13096.0
+6070.0
+6440.0
+7400.0
+12385.0
+6042.0
+6638.0
+10983.0
+9655.0
+7453.0
+6840.0
+12957.0
+7428.0
+10565.0
+7012.0
+8600.0
+8101.0
+6826.0
+5726.0
+5947.0
+8226.0
+6664.0
+5464.0
+6356.0
+8568.0
+6515.0
+4698.0
+6306.0
+9380.0
+6381.0
+4234.0
+6480.0
+10466.0
+6329.0
+4346.0
+7604.0
+11053.0
+6944.0
+4452.0
+10459.0
+10231.0
+8095.0
+4485.0
+12721.0
+8401.0
+9364.0
+4489.0
+9243.0
+7623.0
+7014.0
+5641.0
+6055.0
+7637.0
+7205.0
+4737.0
+6283.0
+7992.0
+7330.0
+4032.0
+6992.0
+8668.0
+7741.0
+4207.0
+8005.0
+9280.0
+8532.0
+4330.0
+9400.0
+9442.0
+8994.0
+4324.0
+12490.0
+8764.0
+8640.0
+4294.0
+12746.0
+7440.0
+8589.0
+5015.0
+6305.0
+7495.0
+8669.0
+4231.0
+7274.0
+7805.0
+9041.0
+4432.0
+8387.0
+8230.0
+9102.0
+4602.0
+9459.0
+8579.0
+8515.0
+4671.0
+11715.0
+9222.0
+7694.0
+4664.0
+13211.0
+7179.0
+9223.0
+5095.0
+7084.0
+7287.0
+10384.0
+4800.0
+8688.0
+7624.0
+9889.0
+4876.0
+11035.0
+8417.0
+8342.0
+5019.0
+11203.0
+10676.0
+7124.0
+4874.0
+10623.0
+6681.0
+11892.0
+5733.0
+8053.0
+7123.0
+9957.0
+5367.0
+12147.0
+8291.0
+8155.0
+5394.0
+10894.0
+10211.0
+6972.0
+5438.0
+9660.0
+6637.0
+9309.0
+7107.0
+11278.0
+7556.0
+7855.0
+6835.0
+10342.0
+8203.0
+6854.0
+6759.0
+7851.0
+6812.0
+7701.0
+8948.0
+8346.0
+7240.0
+6810.0
+7497.0
+5774.0
+7049.0
+(True, 11, 'replica detected')
+Total time:0.165462017059
+Wrote profile results to mainprocess.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.014168 s
+File: extraction.py
+Function: basic_rotations at line 75
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    75                                           @profile
+    76                                           def basic_rotations(rot0):
+    77         1            7      7.0      0.0      center = (N * number_of_blocks) / 2
+    78         1           70     70.0      0.5      rot_matrix = getRotationMatrix2D((center, center), 90, 1)
+    79         1         4739   4739.0     33.4      rot90 = warpAffine(rot0, rot_matrix, (center * 2, center * 2))
+    80         1         4680   4680.0     33.0      rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
+    81         1         4618   4618.0     32.6      rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
+    82         1           36     36.0      0.3      rot90 = rot90[0:120, 0:120]
+    83         1            8      8.0      0.1      rot180 = rot180[0:120, 0:120]
+    84         1            6      6.0      0.0      rot270 = rot270[0:120, 0:120]
+    85                                           ##        fVertical0 = flip(image, 0)
+    86                                           ##        fHorizontal0 = flip(image, 1)
+    87                                           ##        fVertical90 = flip(rot90, 0)
+    88                                           ##        fHorizontal90 = flip(rot90, 1)
+    89                                           ##        fVertical180 = flip(rot180, 0)
+    90                                           ##        fHorizontal180 = flip(rot180, 1)
+    91                                           ##        fVertical270 = flip(rot270, 0)
+    92                                           ##        fHorizontal270 = flip(rot270, 1)
+    93                                           
+    94         1            4      4.0      0.0      return rot90, rot180, rot270
+
+Total time: 0.058383 s
+File: extraction.py
+Function: get_fragment at line 98
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    98                                           @profile
+    99                                           def get_fragment(x, y, only_rotate):
+   100       120          435      3.6      0.7      if only_rotate == 1:
+   101                                                   # p = Pool(processes =4)
+   102                                                   # results1 = p.apply_async(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   103                                                   # results2 = p.apply_async(get_average_luminance_of_block, [rot90[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   104                                                   # results3 = p.apply_async(get_average_luminance_of_block, [rot180[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   105                                                   # results4 = p.apply_async(get_average_luminance_of_block, [rot270[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   106                                                   # p.close()
+   107                                                   # p.join
+   108                                                   #results = []
+   109                                                   #jobs = []
+   110                                                   #num = Value('d', 0.0)
+   111                                                   # for rots in xrange(4):
+   112                                                   #     proc = Process(target = get_average_luminance_of_block_pro, args =(x, y, rots, num,))
+   113                                                   #     results.append(num.value)
+   114                                                   #     jobs.append(proc)
+   115                                                   #     proc.start
+   116                                                   # for proc in jobs:
+   117                                                   #     proc.join()
+   118                                                   # for i in range(4):
+   119                                                   #     if i == 0:
+   120                                                   #         t1 = Thread(target=thread_luminance, args=(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+   121                                                   #         t1.start()
+   122                                                   #     elif i == 1:
+   123                                                   #         t2 = Thread(target=thread_luminance, args=(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+   124                                                   #         t2.start()
+   125                                                   #     elif i == 2:
+   126                                                   #         t3 = Thread(target=thread_luminance, args=(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+   127                                                   #         t3.start()
+   128                                                   #     else:
+   129                                                   #         t4 = Thread(target=thread_luminance, args=(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+   130                                                   #         t4.start()
+   131                                           
+   132                                                   # t1.join()
+   133                                                   # t2.join()
+   134                                                   # t3.join()
+   135                                                   # t4.join()
+   136                                                   # q1 = Queue.Queue()
+   137                                                   # t1 = Thread(target=thread_luminance, args=(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+   138                                                   # t2 = Thread(target=thread_luminance, args=(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+   139                                                   # t3 = Thread(target=thread_luminance, args=(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+   140                                                   # t4 = Thread(target=thread_luminance, args=(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+   141                                                   # t1.start()
+   142                                                   # t2.start()
+   143                                                   # t3.start()
+   144                                                   # t4.start()
+   145                                                   # t1.join()
+   146                                                   # t2.join()
+   147                                                   # t3.join()
+   148                                                   # t4.join()
+   149                                                   # print q1.get()
+   150        28          368     13.1      0.6          results = map(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N], rot90[y * 8:y * 8 + N, x * 8:x * 8 + N], \
+   151        28        11109    396.8     19.0              rot180[y * 8:y * 8 + N, x * 8:x * 8 + N], rot270[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   152                                                   #lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   153                                                   #lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   154                                                   #lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   155                                                   #lum4 = get_average_luminance_of_block(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   156                                                   # print lum1
+   157        28          240      8.6      0.4          avg_lum = (results[0] + results[1] + results[2] + results[3]) / 4
+   158                                                   #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
+   159        28         1926     68.8      3.3          std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3]]).ctypes.data_as(c_void_p))
+   160        28          123      4.4      0.2          return avg_lum, std_lum
+   161                                           
+   162        92          316      3.4      0.5      elif only_rotate == -1:
+   163         1          107    107.0      0.2          lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   164         1            5      5.0      0.0          avg_lum = lum1
+   165         1            3      3.0      0.0          std_lum = 0
+   166                                                   
+   167         1            3      3.0      0.0          return avg_lum, std_lum
+   168                                           
+   169                                               else:
+   170        91         1176     12.9      2.0          results = map(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N], rot90[y * 8:y * 8 + N, x * 8:x * 8 + N], \
+   171        91        35407    389.1     60.6              rot180[y * 8:y * 8 + N, x * 8:x * 8 + N], rot270[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   172                                                   #lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   173                                                   #lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   174                                                   #lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   175                                                   #lum4 = get_average_luminance_of_block(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   176                                           ##            lum5 = self.get_average_luminance_of_block(fVertical0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   177                                           ##            lum6 = self.get_average_luminance_of_block(fHorizontal0[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   178                                           ##            lum7 = self.get_average_luminance_of_block(fVertical90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   179                                           ##            lum8 = self.get_average_luminance_of_block(fHorizontal90[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   180                                           ##            lum9 = self.get_average_luminance_of_block(fVertical180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   181                                           ##            lum10 = self.get_average_luminance_of_block(fHorizontal180[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   182                                           ##            lum11 = self.get_average_luminance_of_block(fVertical270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   183                                           ##            lum12 = self.get_average_luminance_of_block(fHorizontal270[y * 8:y * 8 + self.N, x * 8:x * 8 + self.N])
+   184                                           
+   185                                                  # avg_lum = (lum1 + lum2 + lum3 + lum4) / 4
+   186        91          797      8.8      1.4          avg_lum = (results[0] + results[1] + results[2] + results[3]) / 4
+   187                                           
+   188                                                   #std_lum = np.std(np.array([lum1, lum2, lum3, lum4, lum5, lum6, lum7, lum8, lum9, lum10, lum11, lum12]))
+   189                                                   #std_lum = libextraction.calculateSD(array([lum1, lum2, lum3, lum4]).ctypes.data_as(c_void_p))
+   190        91         5987     65.8     10.3          std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3]]).ctypes.data_as(c_void_p))
+   191                                           
+   192                                           
+   193        91          381      4.2      0.7          return avg_lum, std_lum
+
+Total time: 0.08334 s
+File: extraction.py
+Function: get_all_fragments at line 194
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   194                                           @profile
+   195                                           def get_all_fragments():
+   196                                               global rot0, rot90, rot180, rot270
+   197         1            4      4.0      0.0      fragments_list = [[],[]]
+   198         1         1874   1874.0      2.2      rot0 = get_blocks()
+   199         1        14323  14323.0     17.2      rot90, rot180, rot270 = basic_rotations(rot0)
+   200         1            3      3.0      0.0      counter_x = 0
+   201         1            3      3.0      0.0      counter_y = 0
+   202         1            6      6.0      0.0      append_std_lum = fragments_list[0].append
+   203         1            4      4.0      0.0      append_avg_lum = fragments_list[1].append
+   204       121          402      3.3      0.5      while(counter_x < 14 or counter_y < 14):
+   205       120          392      3.3      0.5          if counter_x == 15:
+   206        14           45      3.2      0.1              counter_y += 1
+   207        14           45      3.2      0.1              counter_x = counter_y
+   208       120          417      3.5      0.5          if counter_x == counter_y or counter_x == 14:
+   209        29           97      3.3      0.1              if counter_x == 14 and counter_y == 14:
+   210         1            4      4.0      0.0                  fragment_time = time.time()
+   211         1          170    170.0      0.2                  avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
+   212         1            5      5.0      0.0                  fragment_end_time = time.time()
+   213         1            3      3.0      0.0                  append_std_lum(std_lum)
+   214         1            4      4.0      0.0                  append_avg_lum(avg_lum)
+   215                                                       else:
+   216        28          129      4.6      0.2                  fragment_time = time.time()
+   217        28        15131    540.4     18.2                  avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)
+   218        28          139      5.0      0.2                  fragment_end_time = time.time()
+   219        28          107      3.8      0.1                  append_std_lum(std_lum)
+   220        28          103      3.7      0.1                  append_avg_lum(avg_lum)
+   221                                                   else:
+   222        91        48785    536.1     58.5              avg_lum, std_lum = get_fragment(counter_x, counter_y, 0)
+   223        91          378      4.2      0.5              append_std_lum(std_lum)
+   224        91          330      3.6      0.4              append_avg_lum(avg_lum)
+   225       120          434      3.6      0.5          counter_x += 1
+   226         1            3      3.0      0.0      return fragments_list
+
+Total time: 0.088981 s
+File: extraction.py
+Function: get_signature at line 228
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   228                                           @profile
+   229                                           def get_signature():
+   230         1           12     12.0      0.0      signature = bitarray()
+   231         1            3      3.0      0.0      counter_list = 0
+   232         1            3      3.0      0.0      counter_fragment = 0
+   233         1            5      5.0      0.0      sig_append = signature.append
+   234         1        86566  86566.0     97.3      fragments = get_all_fragments()
+   235         3           10      3.3      0.0      for features in fragments:
+   236       240          708      3.0      0.8          for x in range(0, len(features) -1):
+   237       238          856      3.6      1.0              if features[x] < features[x + 1]:
+   238       141          492      3.5      0.6                  sig_append(True)
+   239                                                       else:
+   240        97          324      3.3      0.4                  sig_append(False)
+   241                                           
+   242         1            2      2.0      0.0      return signature
+

@@ -3,15 +3,16 @@ from math import sqrt
 from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      , approxPolyDP, contourArea, warpPerspective, getPerspectiveTransform, resize, \
      INTER_LINEAR, GaussianBlur, COLOR_BGR2GRAY, ADAPTIVE_THRESH_GAUSSIAN_C, \
-     THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST
+     THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST, \
+     setUseOptimized
      
 from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median
 import gc
 import ctypes
 
+setUseOptimized(True)
 libextraction = ctypes.cdll.LoadLibrary("./C_Libraries/libextraction.so")
 libextraction.calSqrt.restype = ctypes.c_double
-
 # import time
 SCALED_IMAGE = [128, 128]
 image = array([])
@@ -32,17 +33,18 @@ def set_initials_pre(L_f, image_f):
 #         self.height = 0
 #         self.resized_image = array([])
 #         self.warped = array([])
-
+@profile
 def gray_image(image):
     return cvtColor(image, COLOR_BGR2GRAY)
 
     # def set_image(self, image):
     #     self.image = image
-
+@profile
 def get_width_height(image):
     height, width = image.shape[:2]
     return [width, height]
-    #@profile
+
+@profile
 def get_edged(G):
     gray = gray_image(image)
     blur = get_blurred(gray, G)
@@ -54,7 +56,7 @@ def get_edged(G):
 
     return dilate(canny, ones((5,5), uint8), iterations = 1)
 
-    #@profile
+@profile
 def get_contour(G):
     edged = get_edged(G)
     __, contours, hierarchy = findContours(edged, RETR_LIST, CHAIN_APPROX_SIMPLE)
@@ -81,7 +83,8 @@ def get_contour(G):
         return -1
     else:
         return approx
-    #@profile
+
+@profile
 def order_contour(points):
     ordered_points = zeros((4, 2), dtype = "float32")
     #sum of point to detect max and minimum sums
@@ -109,20 +112,22 @@ def order_contour(points):
     # cv2.imwrite("ordere_points.jpg", new_image)
     return ordered_points
 
+@profile
 def check_points(points):
     '''Checking there is four points to make a rectangle shape or not'''
     if len(points) == 4:
         return True 
     else:
         return False
-    #@profile
+
+@profile
 def distance_calculator(p1, p2):
     '''Calculates distance between 2 points'''
 ##        print libextraction.calSqrt(array(p1[0], p1[1]).ctypes.data_as(ctypes.c_void_p), array(p2[0], p2[1]).ctypes.data_as(ctypes.c_void_p))
 ##        print p1
     return sqrt((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2)
 
-    #@profile
+@profile
 def get_perspective(points, counter):
     global warped
     if len(points) != 1: 
@@ -149,14 +154,14 @@ def get_perspective(points, counter):
         elif height_perspective > width_perspective:
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
-        imwrite("warped_images/warped" + str(counter) + ".jpg", warped_image)
+        #imwrite("warped_images/warped" + str(counter) + ".jpg", warped_image)
 
         return 30
 
     else:
         return 10
 
-    #@profile
+@profile
 def get_scaled():
     global resized_image
     '''Scales image short edge to L value '''
@@ -175,7 +180,8 @@ def get_scaled():
     resized_image = resize(warped, (new_width, new_height), \
     interpolation = INTER_NEAREST)
     #imwrite("scaled.jpg", self.resized_image)
-    #@profile    
+
+@profile    
 def get_cropped():
     '''Cropping image middle part L x L'''
     get_scaled()
@@ -197,7 +203,7 @@ def get_cropped():
                 return resized_image[crop_height - (L/ 2 - 1):crop_height + (L/ 2 + 1), :]
 
 
-#@profile
+@profile
 def get_blurred(image, G):
     '''Blurring cropped image'''
     return GaussianBlur(image, (G, G), 0, 0)
