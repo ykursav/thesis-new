@@ -37,19 +37,10 @@ def initialize_set(image):
 ##    call([cmd], shell=True)
 
 @profile
-if __name__ == "__main__":
-    camera = PiCamera()
-    camera.resolution = (544, 400)
-    rawCapture = PiRGBArray(camera, size = (544, 400))
-    camera.framerate = 30
-    start = time.time()
-    camera.start_preview()
-##    time.sleep(3)
-##    camera.stop_preview()
-##    time.sleep(2)
-    time.sleep(3)
+def main(camera):
     counter = 0
     last = 0
+    start = time.time()
     for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
         #if last != 0:
             #if (last + 0.1) - time.time() > 0:
@@ -71,5 +62,20 @@ if __name__ == "__main__":
 ##    print "reached zero"
     end = time.time()
     logging.debug("Total time:", end - start)
+
+@profile
+if __name__ == "__main__":
+    camera = PiCamera()
+    camera.resolution = (544, 400)
+    rawCapture = PiRGBArray(camera, size = (544, 400))
+    camera.framerate = 30
+    camera.start_preview()
+##    time.sleep(3)
+##    camera.stop_preview()
+##    time.sleep(2)
+    time.sleep(3)
+    main(camera)
+
+
 
     
