@@ -10,7 +10,10 @@ import sys
 import datetime
 import gc
 
-
+sigOrig = bitarray()
+f = open("signature.bin", "rb")
+sigOrig.fromfile(f)
+f.close()
 start_time = time.time()
 try:
     image = cv2.imread("flash1.jpg", 1)
@@ -23,10 +26,10 @@ points = get_contour(3)
 check = get_perspective(points, 0)
 #extract_process = SignatureExtraction(8, 4, 128)
 #pre_process = PreProcessing(128, False)
-sigOrig = bitarray()
-f = open("signature.bin", "rb")
+#sigOrig = bitarray()
+#f = open("signature.bin", "rb")
 #signatures must import from a binary file
-sigOrig.fromfile(f)
+#sigOrig.fromfile(f)
 #matching_process = SignatureMatching(sigOrig[0:238], 24, 38, 4, 28, 22)
 
 #print("start" + str(datetime.datetime.now()))
@@ -68,7 +71,7 @@ end_time = time.time()
 # print "Extraction time:" + str(extraction_time - extract_install)
 # print "Signature time:" + str(signature_time - extraction_time)
 # print "Matching time:" + str(end_time - signature_time)
-print("Total time:" + str(end_time - start_time))
+#print("Total time:" + str(end_time - start_time))
 # print matching_process.signature_rejection()
 # cv2.imwrite("outputv2/" + img_name[0:-4] + '_contour.jpg', image1)
 # cv2.imwrite("outputv2/" + img_name[0:-4] + '_scaled.jpg', image2)
