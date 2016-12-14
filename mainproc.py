@@ -1,5 +1,6 @@
 import time
 from PiVideoStream import PiVideoStream
+#from datetime import datetime
 from bitarray import bitarray
 from preprocessing import set_initials_pre, get_contour, get_perspective, get_cropped
 from extraction import set_initials, get_signature
@@ -18,11 +19,12 @@ import argparse
 #import Queue
 ##cmd = "python /home/pi/master-thesis/threading_test.py image"
 #f_report = open("Quality_Reports_Image/WithoutThread/new_timing00_rpi3_lite.txt", "w")
-ap = argparse.ArgumentParser()
-ap.add_argument("-n", "--num-frames", type=int, default=100,
-    help="Number of frames which will be processed should be defined in that area")
-args = vars(ap.parse_args())
-
+#ap = argparse.ArgumentParser()
+#ap.add_argument("-n", "--num-frames", type=int, default=100,
+ #   help="Number of frames which will be processed should be defined in that area")
+#args = vars(ap.parse_args())
+#startt = time.time()
+#starttt = time.clock()
 f = open("signature.bin", "r")
 sigOrig = bitarray()
 sigOrig.fromfile(f)
@@ -30,7 +32,7 @@ f.close()
 # def process_thread(image, counter):
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()
-logging.basicConfig(filename='debug_log03.log', level = logging.DEBUG)
+#logging.basicConfig(filename='debug_log09.log', level = logging.DEBUG)
 #
 #@profile
 
@@ -50,11 +52,11 @@ def initialize_set(image, counter):
 def main(camera):
     counter = 0
     last = 0
-    start = time.time()
     for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
         if last != 0:
             if (last + 0.1) - time.time() > 0:
                 time.sleep((last + 0.1) - time.time())
+                logging.debug("On time\n")
             else:
                 logging.debug('Under Real_time Point:' + str(time.time() - last) + '\n')
         start_time = time.time()
@@ -72,20 +74,37 @@ def main(camera):
         
 ##    print "reached zero"
     end = time.time()
-    logging.debug("Total time:", end - start)
+    print("Total time:" + str(end - start))
 
+@profile
 def pi_stream(vs):
     counter = 0
-    start_time = time.time()
-    while counter < args["num_frames"]:
+    start = time.time()
+    #starr = time.time()
+    last = 0
+    while counter < 100:
+#args["num_frames"]:
+        if last != 0:
+            if (last + 0.1) - time.time() > 0:
+                time.sleep((last + 0.1) - time.time())
+                #logging.debug("On time\n")
+            #else:
+                #logging.debug('Under real time point:' + str(time.time() -last) + "\n")
+        start_time = time.time()
         frame = vs.read()
-        initialize_set(frame, counter)
+        try:
+            initialize_set(frame, counter)
+        except TypeError:
+            #logging.debug("Type error:")
+            pass
         counter += 1
+        last = start_time
     vs.stop()
     end_time = time.time()
-    print(end_time - start_time)
-
-    
+    #endr = time.time()
+    #logging.debug("Total time" + str(end_time - start))
+    print(end_time - start)
+    #print(endr -starr)
     
 
 if __name__ == "__main__":
@@ -103,7 +122,10 @@ if __name__ == "__main__":
     #p1.start()
     #p1.join()
     pi_stream(vs)
-
+    #endd = time.time()
+    #enddd = time.clock()
+    #print(endd - startt)
+    #print(enddd - starttt)
 
 
 
