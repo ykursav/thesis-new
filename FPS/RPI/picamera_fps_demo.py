@@ -16,10 +16,10 @@ ap.add_argument("-d", "--display", type=int, default=-1,
 args = vars(ap.parse_args())
 
 camera = PiCamera()
-camera.resolution(544, 400)
+camera.resolution = (544, 400)
 camera.framerate = 32
 rawCapture = PiRGBArray(camera, size=(544, 400))
-stream = camera.capture_continous(rawCapture, format="bgr",
+stream = camera.capture_continuous(rawCapture, format="bgr",
     use_video_port=True)
 
 print("[INFO] sampling frames from 'picamera' module...")
