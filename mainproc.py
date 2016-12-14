@@ -35,8 +35,8 @@ logging.basicConfig(filename='debug_log03.log', level = logging.DEBUG)
 #@profile
 
 
-def initialize_set(image):
-    set_initials_pre(128, image)
+def initialize_set(image, counter):
+    set_initials_pre(128, image, counter)
     points = get_contour(3)
     check = get_perspective(points, 0)
     set_initials(8, 4, 128, get_cropped())
@@ -51,12 +51,12 @@ def main(camera):
     counter = 0
     last = 0
     start = time.time()
-   # for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
-        #if last != 0:
-            #if (last + 0.1) - time.time() > 0:
-              #  time.sleep((last + 0.1) - time.time())
-            #else:
-             #   logging.debug('Under Real_time Point:' + str(time.time() - last) + '\n')
+    for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
+        if last != 0:
+            if (last + 0.1) - time.time() > 0:
+                time.sleep((last + 0.1) - time.time())
+            else:
+                logging.debug('Under Real_time Point:' + str(time.time() - last) + '\n')
         start_time = time.time()
         logging.debug('Start time:' +str(start_time) + '\n')
         image = frame.array
@@ -74,12 +74,16 @@ def main(camera):
     end = time.time()
     logging.debug("Total time:", end - start)
 
-def pi_stream(pistream):
+def pi_stream(vs):
     counter = 0
+    start_time = time.time()
     while counter < args["num_frames"]:
-        frame = pistream.read()
-        initialize_set(frame)
+        frame = vs.read()
+        initialize_set(frame, counter)
         counter += 1
+    vs.stop()
+    end_time = time.time()
+    print(end_time - start_time)
 
     
     
@@ -93,12 +97,12 @@ if __name__ == "__main__":
 ##    time.sleep(3)
 ##    camera.stop_preview()
 ##    time.sleep(2)
-    pistream = PiVideoStream.start()
-    time.sleep(3)
+    vs = PiVideoStream().start()
+    time.sleep(2)
     #p1 = Thread(target = main, args = (camera, ))
     #p1.start()
     #p1.join()
-    pi_stream(pistream)
+    pi_stream(vs)
 
 
 

@@ -19,11 +19,12 @@ image = array([])
 resized_image = array([])
 warped = array([])
 L = 0
-
-def set_initials_pre(L_f, image_f):
-    global L, image
+counter_warped = 0
+def set_initials_pre(L_f, image_f, counter_warped_f):
+    global L, image, counter_warped
     L = L_f
     image = image_f
+    counter_warped = counter_warped_f
 # class PreProcessing:
 #     def __init__(self, L, hist_eq):
 #         self.image = array([])
@@ -154,7 +155,7 @@ def get_perspective(points, counter):
         elif height_perspective > width_perspective:
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
-        #imwrite("warped_images/warped" + str(counter) + ".jpg", warped_image)
+        imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
 
         return 30
 
