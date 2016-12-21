@@ -6,7 +6,7 @@ from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST, \
      setUseOptimized
      
-from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median
+from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray
 import gc
 import ctypes
 
@@ -83,6 +83,7 @@ def get_contour(G):
     if first == False:
         return -1
     else:
+        print len(approx)
         return approx
 
 #@profile
@@ -131,7 +132,9 @@ def distance_calculator(p1, p2):
 #@profile
 def get_perspective(points, counter):
     global warped
-    if len(points) != 1: 
+    if type(points) is not ndarray:
+        return 10
+    if len(points) != 1:
         width, height = get_width_height(image)
         ordered_points = order_contour(points)
         
@@ -155,7 +158,7 @@ def get_perspective(points, counter):
         elif height_perspective > width_perspective:
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
-        imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
+        # imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
 
         return 30
 

@@ -30,7 +30,7 @@ f.close()
 # def process_thread(image, counter):
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()
-logging.basicConfig(filename='debug_log03.log', level = logging.DEBUG)
+logging.basicConfig(filename='debug_log11.log', level = logging.DEBUG)
 #
 #@profile
 
@@ -39,8 +39,14 @@ def initialize_set(image, counter):
     set_initials_pre(128, image, counter)
     points = get_contour(3)
     check = get_perspective(points, 0)
+    if check == 10:
+        return
     set_initials(8, 4, 128, get_cropped())
-    sigGen = get_signature()
+    try:
+        sigGen = get_signature()
+    except:
+        logging.debug("Nonetype")
+        return
     set_initials_match(sigOrig[0:238], sigGen, 24, 38, 4, 28, 22)
         
     
@@ -55,10 +61,9 @@ def main(camera):
         if last != 0:
             if (last + 0.1) - time.time() > 0:
                 time.sleep((last + 0.1) - time.time())
-            else:
-                logging.debug('Under Real_time Point:' + str(time.time() - last) + '\n')
-        start_time = time.time()
-        logging.debug('Start time:' +str(start_time) + '\n')
+            #else:
+                #logging.debug('Under Real_time Point:' + str(time.time() - last) + '\n')
+        #logging.debug('Start time:' +str(start_time) + '\n')
         image = frame.array
         #t = Thread(target = process_thread, args = (image, counter, ))
         #t.start()
@@ -68,7 +73,7 @@ def main(camera):
         counter += 1
         if counter == 100:
             break
-        last = start_time
+        last = time.time()
         
 ##    print "reached zero"
     end = time.time()
@@ -76,14 +81,21 @@ def main(camera):
 
 def pi_stream(vs):
     counter = 0
-    start_time = time.time()
+    #start_time = time.time()
+    start = 0
     while counter < args["num_frames"]:
+        if (start + 0.1) - time.time() > 0:
+            time.sleep((start + 0.1) - time.time())
+            logging.debug("Real time" + str(time.time()) + "\n")
+        else:
+            logging.debug("Under real time Point " + str(time.time() - start) + "\n")
+        start = time.time()
         frame = vs.read()
         initialize_set(frame, counter)
         counter += 1
     vs.stop()
-    end_time = time.time()
-    print(end_time - start_time)
+    #end_time = time.time()
+    #logging.debug("Total time:" + str(end_time - start_time))
 
     
     
