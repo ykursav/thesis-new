@@ -31,7 +31,7 @@ f.close()
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()
 logging.basicConfig(filename='debug_log11.log', level = logging.DEBUG)
-#
+
 #@profile
 
 
