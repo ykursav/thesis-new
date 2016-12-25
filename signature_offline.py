@@ -7,7 +7,6 @@ def initialize_set(image, counter):
     set_initials_pre(128, image, counter)
     set_initials(8, 4, 128, get_cropped())
     sigGen = get_signature()
-    set_initials_match(sigOrig[0:238], sigGen, 24, 38, 4, 28, 22)
     return sigGen
 
 
@@ -20,8 +19,9 @@ if __name__ == "__main__":
         ret, frame = cap.read()
         if ret != True:
             break
-
-        f.write(initialize_set(frame, counter).tobytes())
+	sigGen = initialize_set(frame, counter)
+        print sigGen
+        f.write(sigGen.tobytes())
 
     cap.release()
     f.close()

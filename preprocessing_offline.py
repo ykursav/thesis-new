@@ -1,4 +1,5 @@
-from cv2 import resize, INTER_NEAREST 
+from cv2 import resize, INTER_NEAREST, cvtColor, COLOR_BGR2GRAY, GaussianBlur 
+from numpy import floor
 
 def set_initials_pre(L_f, image_f, counter_warped_f):
     global L, image, counter_warped
@@ -27,12 +28,12 @@ def get_width_height(image):
     return [width, height]
 
 #@profile
-def get_scaled(warped):
+def get_scaled():
     global resized_image
     '''Scales image short edge to L value '''
-    warped = resize(warped, (544, 400))
-    warped = gray_image(warped)
-    warped = get_blurred(warped, 3)
+    resized = resize(image, (544, 400))
+    gray = gray_image(resized)
+    warped = get_blurred(gray, 3)
     width = 544
     height = 400
     new_width = 0
