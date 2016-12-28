@@ -23,10 +23,10 @@ ap.add_argument("-n", "--num-frames", type=int, default=100,
     help="Number of frames which will be processed should be defined in that area")
 args = vars(ap.parse_args())
 
-f = open("signature.bin", "r")
-sigOrig = bitarray()
-sigOrig.fromfile(f)
-f.close()
+#f = open("signature.bin", "r")
+# sigOrig = bitarray()
+# sigOrig.fromfile(f)
+# f.close()
 # def process_thread(image, counter):
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()

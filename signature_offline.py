@@ -1,6 +1,6 @@
 from preprocessing_offline import set_initials_pre, get_cropped
 from extraction import set_initials, get_signature
-from matching import set_initials_match, signature_rejection
+
 from cv2 import VideoCapture
 
 def initialize_set(image, counter):
@@ -22,7 +22,7 @@ if __name__ == "__main__":
         if ret != True:
             break
 	sigGen = initialize_set(frame, counter)
-        f.write(sigGen)
+        f.write(sigGen.tobytes())
         counter += 1
 
     cap.release()
