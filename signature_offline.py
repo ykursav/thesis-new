@@ -1,12 +1,12 @@
 from preprocessing_offline import set_initials_pre, get_cropped
 from extraction import set_initials, get_signature
 from matching import set_initials_match, signature_rejection
-from cv2 import VideoCapture, imwrite
+from cv2 import VideoCapture
 
 def initialize_set(image, counter):
     set_initials_pre(128, image, counter)
     image2 = get_cropped()
-    imwrite("resized_images/cropped" + str(counter) + ".jpg", image2)
+    #simwrite("resized_images/cropped" + str(counter) + ".jpg", image2)
     set_initials(8, 4, 128, image2)
     sigGen = get_signature()
     return sigGen

@@ -1,7 +1,6 @@
 from bitarray import bitarray
 from gc import enable
 
-
 enable()
 tau1 = 0
 tau2 = 0
@@ -10,11 +9,6 @@ tau4 = 0
 tau5 = 0
 sigOrig = bitarray()
 sigGen = bitarray()
-f = open("signature_test2.bin", "r")
-sigOrig = bitarray()
-sigOrig.fromfile(f)
-f.close()
-print sigOrig
 def set_initials_match(sigOrig_m, sigGen_m, tau1_m, tau2_m, tau3_m, tau4_m, tau5_m):
     global tau1, tau2, tau3, tau4, tau5, sigOrig, sigGen
     sigOrig = sigOrig_m

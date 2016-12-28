@@ -1,4 +1,4 @@
-from cv2 import resize, INTER_NEAREST, cvtColor, COLOR_BGR2GRAY, GaussianBlur, imwrite
+from cv2 import resize, INTER_NEAREST, cvtColor, COLOR_BGR2GRAY, GaussianBlur
 from numpy import floor, array
 
 L = 0
@@ -54,7 +54,7 @@ def get_scaled():
         new_height = L
     resized_image = resize(warped, (new_width, new_height), \
     interpolation = INTER_NEAREST)
-    imwrite("resized_images/scaled" + str(counter_warped) + ".jpg", resized_image)
+    #imwrite("resized_images/scaled" + str(counter_warped) + ".jpg", resized_image)
 
 #@profile    
 def get_cropped():
