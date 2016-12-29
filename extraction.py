@@ -240,6 +240,9 @@ def get_signature():
             else:
                 sig_append(False)
 
+    sig_append(False)
+    sig_append(False)
+
     return signature
 
 

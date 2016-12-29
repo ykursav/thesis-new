@@ -30,54 +30,63 @@ args = vars(ap.parse_args())
 # def process_thread(image, counter):
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()
-logging.basicConfig(filename='debug_log11.log', level = logging.DEBUG)
-
+logging.basicConfig(filename='debug_log12.log', level = logging.DEBUG)
+counter = 0
 #@profile
+sigGen = bitarray()
 
-
-def initialize_set(image, counter):
+def initialize_set(image):
+    global counter
     set_initials_pre(128, image, counter)
     points = get_contour(3)
     check = get_perspective(points, 0)
     if check == 10:
+        counter -= 1
         return
     set_initials(8, 4, 128, get_cropped())
     try:
-        sigGen = get_signature()
+        if counter < 5:
+           sigGen.extend(get_signature())
+        else:
+            sigGen = sigGen[240:]
+            sigGen[960:] = get_signature()
     except:
         logging.debug("Nonetype")
+        counter -= 1
         return
-    set_initials_match(sigOrig[0:238], sigGen, 24, 38, 4, 28, 22)
+    if counter >= 4:
+        logging.debug(sigGen)
+        set_initials_match(sigOrig, sigGen, 24, 38, 4, 28, 22)
         
     
 ##    call([cmd], shell=True)
 
 #@profile
-def main(camera):
-    counter = 0
-    last = 0
-    start = time.time()
-    for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
-        if last != 0:
-            if (last + 0.1) - time.time() > 0:
-                time.sleep((last + 0.1) - time.time())
-            #else:
-                #logging.debug('Under Real_time Point:' + str(time.time() - last) + '\n')
-        #logging.debug('Start time:' +str(start_time) + '\n')
-        image = frame.array
-        #t = Thread(target = process_thread, args = (image, counter, ))
-        #t.start()
-        initialize_set(image)
-       # t.start()
-        rawCapture.truncate(0)
-        counter += 1
-        if counter == 100:
-            break
-        last = time.time()
+# def main(camera):
+#     global counter
+#     last = 0
+#     start = time.time()
+#     for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
+#         if last != 0:
+#             if (last + 0.1) - time.time() > 0:
+#                 time.sleep((last + 0.1) - time.time())
+#             #else:
+#                 #logging.debug('Under Real_time Point:' + str(time.time() - last) + '\n')
+#         #logging.debug('Start time:' +str(start_time) + '\n')
+#         image = frame.array
+#         #t = Thread(target = process_thread, args = (image, counter, ))
+#         #t.start()
+#         initialize_set(image)
+#        # t.start()
+#         rawCapture.truncate(0)
+#         counter += 1
+#         if counter == 100:
+#             break
+#         last = time.time()
         
-##    print "reached zero"
-    end = time.time()
-    logging.debug("Total time:", end - start)
+# ##    print "reached zero"
+#     end = time.time()
+#     logging.debug("Total time:", end - start)
 
 def pi_stream(vs):
     counter = 0
