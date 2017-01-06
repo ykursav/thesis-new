@@ -1,0 +1,12 @@
+from bitarray import bitarray
+
+f = open("signature_test2.bin", "r")
+m = bitarray()
+counter = 0 
+while True:
+    m = bitarray()
+    m.fromfile(f, 8)
+    print str(m) + "\n"
+    counter += 1
+
+print counter

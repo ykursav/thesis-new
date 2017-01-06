@@ -30,7 +30,7 @@ args = vars(ap.parse_args())
 # def process_thread(image, counter):
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()
-logging.basicConfig(filename='debug_log12.log', level = logging.DEBUG)
+logging.basicConfig(filename='debug_log15.log', level = logging.DEBUG)
 counter = 0
 #@profile
 sigGen = bitarray()
@@ -41,9 +41,11 @@ def initialize_set(image):
     points = get_contour(3)
     check = get_perspective(points, 0)
     if check == 10:
-        counter -= 1
+        #counter -= 1
         return
-    set_initials(8, 4, 128, get_cropped())
+    crop = get_cropped()
+    
+    set_initials(8, 4, 128, crop)
     try:
         if counter < 5:
            sigGen.extend(get_signature())
@@ -52,7 +54,7 @@ def initialize_set(image):
             sigGen[960:] = get_signature()
     except:
         logging.debug("Nonetype")
-        counter -= 1
+        #counter -= 1
         return
     if counter >= 4:
         logging.debug(sigGen)
@@ -89,7 +91,7 @@ def initialize_set(image):
 #     logging.debug("Total time:", end - start)
 
 def pi_stream(vs):
-    counter = 0
+    global counter
     #start_time = time.time()
     start = 0
     while counter < args["num_frames"]:
@@ -100,7 +102,7 @@ def pi_stream(vs):
             logging.debug("Under real time Point " + str(time.time() - start) + "\n")
         start = time.time()
         frame = vs.read()
-        initialize_set(frame, counter)
+        initialize_set(frame)
         counter += 1
     vs.stop()
     #end_time = time.time()

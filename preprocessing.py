@@ -83,7 +83,6 @@ def get_contour(G):
     if first == False:
         return -1
     else:
-        print len(approx)
         return approx
 
 #@profile

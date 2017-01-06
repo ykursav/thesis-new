@@ -45,7 +45,7 @@ def signature_scan():
     result_buffer = []
     result_buffer = result_buffer.append
     for x in range(0, len(sigOrig / 240)):
-       result_buffer(self.signature_hamming(sigOrig[x * 240, (x + 1) * 240 * 5)]))
+       result_buffer(self.signature_hamming(sigOrig[x * 240, (x + 1) * 240 * 5]))
 
     #print signature_scan
 
