@@ -3,7 +3,7 @@ from PiVideoStream import PiVideoStream
 from bitarray import bitarray
 from preprocessing import set_initials_pre, get_contour, get_perspective, get_cropped
 from extraction import set_initials, get_signature
-from matching import set_initials_match, signature_rejection, signature_scan
+from matching import set_initials_match, signature_rejection
 #from subprocess import call
 from threading import Thread, active_count
 from picamera import PiCamera
@@ -30,13 +30,14 @@ args = vars(ap.parse_args())
 # def process_thread(image, counter):
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()
-logging.basicConfig(filename='debug_log18.log', level = logging.DEBUG)
+logging.basicConfig(filename='debug_log16.log', level = logging.DEBUG)
 counter = 0
 #@profile
 sigGen = bitarray()
 
 def initialize_set(image):
-    global counter, sigGen
+    global counter
+    print "Enter"
     set_initials_pre(128, image, counter)
     points = get_contour(3)
     check = get_perspective(points, 0)
@@ -44,9 +45,11 @@ def initialize_set(image):
         counter -= 1
         return
     crop = get_cropped()
-    sig = bitarray()
     set_initials(8, 4, 128, crop)
+    print "Enter2"
     try:
+        print "Enter3"
+        print counter
         sig = get_signature()
         if counter < 5:
            sigGen.extend(sig)
@@ -60,7 +63,6 @@ def initialize_set(image):
     if counter >= 4:
         logging.debug(sigGen)
         set_initials_match(sigGen, 24, 38, 4, 28, 22)
-        #logging.debug(signature_scan())
         
         
     
@@ -104,8 +106,7 @@ def pi_stream(vs):
         else:
             logging.debug("Under real time Point " + str(time.time() - start) + "\n")
         start = time.time()
-        frame = vs.read()
-        counter_old = counter
+        frame = vs.read
         initialize_set(frame)
         counter += 1
     vs.stop()
