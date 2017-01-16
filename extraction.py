@@ -29,12 +29,14 @@ rot0 = array([])
 rot90 = array([])
 rot180 = array([])
 rot270 = array([])
-def set_initials(N_f, M_f, L_f, image_f):
+counter = 0
+def set_initials(N_f, M_f, L_f, image_f, counter_f):
     global N, M, L, image, number_of_blocks
     N = N_f
     M = M_f 
     L = L_f
     image = image_f
+    counter = counter_f
     number_of_blocks = ((L - N) / M) + 1
 
 # def get_average_luminance_of_block_pro(x, y, rots, num):
@@ -59,7 +61,7 @@ def get_average_luminance_of_block(block):
  #   q.put(sum(block) / (N * N))
 
 #@profile
-def get_blocks(counter):
+def get_blocks():
     '''Dividing cropped image N x N blocks by M overlapping'''
     I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N))
     I_vis_blur_x = zeros((L, number_of_blocks * N))

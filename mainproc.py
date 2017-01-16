@@ -46,7 +46,7 @@ def initialize_set(image):
         return
     crop = get_cropped()
     sig = bitarray()
-    set_initials(16, 8, 128, crop)
+    set_initials(16, 8, 128, crop, counter)
     try:
         if counter < 50:
            sigGen.extend(get_signature())
