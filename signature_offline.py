@@ -7,7 +7,7 @@ def initialize_set(image, counter):
     set_initials_pre(128, image, counter)
     image2 = get_cropped()
     #simwrite("resized_images/cropped" + str(counter) + ".jpg", image2)
-    set_initials(8, 4, 128, image2)
+    set_initials(16, 8, 128, image2)
     sigGen = get_signature()
     return sigGen
 

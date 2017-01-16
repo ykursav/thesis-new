@@ -1,4 +1,4 @@
-import time
+import times
 from PiVideoStream import PiVideoStream
 from bitarray import bitarray
 from preprocessing import set_initials_pre, get_contour, get_perspective, get_cropped
@@ -46,13 +46,13 @@ def initialize_set(image):
         return
     crop = get_cropped()
     sig = bitarray()
-    set_initials(8, 4, 128, crop)
+    set_initials(16, 8, 128, crop)
     try:
         if counter < 50:
            sigGen.extend(get_signature())
         else:
-           sigGen = sigGen[240:]
-           sigGen[11760:] = get_signature()
+           sigGen = sigGen[72:]
+           sigGen[3528:] = get_signature()
     except:
         logging.debug("Nonetype")
         counter -= 1
@@ -61,7 +61,7 @@ def initialize_set(image):
         #logging.debug(sigGen)
         set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
-        buffer = signature_scan()
+        #buffer = signature_scan()
         
         
     

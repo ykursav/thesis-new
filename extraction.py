@@ -1,7 +1,6 @@
 from numpy import uintp, array, zeros, sum
 from cv2 import getRotationMatrix2D, warpAffine, flip, setUseOptimized, imwrite
 from bitarray import bitarray
-import time
 import gc
 from ctypes import *
 import ctypes
@@ -52,15 +51,15 @@ def set_initials(N_f, M_f, L_f, image_f):
 #     elif rots == 3:
 #         num.value = sum(rot270[y * 8:y * 8 + N,x * 8:x * 8 + N]) / (N * N)
 
-@profile    
+#@profile    
 def get_average_luminance_of_block(block):
     return sum(block) / (8 * 8)
 
 #def thread_luminance(block, q):
  #   q.put(sum(block) / (N * N))
 
-@profile
-def get_blocks():
+#@profile
+def get_blocks(counter):
     '''Dividing cropped image N x N blocks by M overlapping'''
     I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N))
     I_vis_blur_x = zeros((L, number_of_blocks * N))
@@ -70,10 +69,13 @@ def get_blocks():
     for y in xrange(0, L - M, M):
         I_vis_blur_y[y * 2:y * 2 + N, :] = I_vis_blur_x[y:y + N, :]
 
-
+    imwrite("Blocked/blocked " + str(counter) + ".jpg", I_vis_blur_y)
+    height, width = I_vis_blur_y.shape[:2]
+    print height
+    print width
     return I_vis_blur_y
 
-@profile
+#@profile
 def basic_rotations(rot0):
     center = (N * number_of_blocks) / 2
     rot_matrix = getRotationMatrix2D((center, center), 90, 1)
@@ -96,7 +98,7 @@ def basic_rotations(rot0):
 ##    fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \
 ##         fVertical270, fHorizontal270
 
-@profile
+#@profile
 def get_fragment(x, y, only_rotate):
     if only_rotate == 1:
         # p = Pool(processes =4)
@@ -148,8 +150,8 @@ def get_fragment(x, y, only_rotate):
         # t3.join()
         # t4.join()
         # print q1.get()
-        results = map(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N], rot90[y * 8:y * 8 + N, x * 8:x * 8 + N], \
-            rot180[y * 8:y * 8 + N, x * 8:x * 8 + N], rot270[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+        results = map(get_average_luminance_of_block, [rot0[y * N:y * N + N, x * N:x * N + N], rot90[y * N:y * N + N, x * N:x * N + N], \
+            rot180[y * N:y * N + N, x * N:x * N + N], rot270[y * N:y * N + N, x * N:x * N + N]])
         #lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
         #lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
         #lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
@@ -161,7 +163,7 @@ def get_fragment(x, y, only_rotate):
         return avg_lum, std_lum
 
     elif only_rotate == -1:
-        lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
+        lum1 = get_average_luminance_of_block(rot0[y * N:y * N + N, x * N:x * N + N])
         avg_lum = lum1
         std_lum = 0
         
@@ -192,7 +194,7 @@ def get_fragment(x, y, only_rotate):
 
 
 #        return avg_lum, std_lum
-@profile
+#@profile
 def get_all_fragments():
     global rot0, rot90, rot180, rot270
     fragments_list = [[],[]]
@@ -202,21 +204,17 @@ def get_all_fragments():
     counter_y = 0
     append_std_lum = fragments_list[0].append
     append_avg_lum = fragments_list[1].append
-    while(counter_x < 14 or counter_y < 14):
-        if counter_x == 15:
+    while(counter_x < number_of_blocks / 2 or counter_y < number_of_blocks / 2):
+        if counter_x == (number_of_blocks / 2) + 1:
             counter_y += 1
             counter_x = counter_y
-        if counter_x == counter_y or counter_x == 14:
-            if counter_x == 14 and counter_y == 14:
-                fragment_time = time.time()
+        if counter_x == counter_y or counter_x == number_of_blocks / 2:
+            if counter_x == number_of_blocks / 2 and counter_y == number_of_blocks / 2:
                 avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
-                fragment_end_time = time.time()
                 append_std_lum(std_lum)
                 append_avg_lum(avg_lum)
             else:
-                fragment_time = time.time()
                 avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)
-                fragment_end_time = time.time()
                 append_std_lum(std_lum)
                 append_avg_lum(avg_lum)
         else:
@@ -226,7 +224,7 @@ def get_all_fragments():
         counter_x += 1
     return fragments_list
 
-@profile
+#@profile
 def get_signature():
     signature = bitarray()
     counter_list = 0
@@ -242,7 +240,7 @@ def get_signature():
 
     sig_append(False)
     sig_append(False)
-
+    print len(signature)
     return signature
 
 
