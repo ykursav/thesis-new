@@ -43,7 +43,7 @@ def set_signature(sigGen_m):
 def signature_hamming(sigOrig_h):
     return bitdiff(sigOrig_h, sigGen)
 
-@profile
+#@profile
 def signature_scan():
     result_buffer = []
     for x in range(0, (len(sigOrig) / 3600) - 1):

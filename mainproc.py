@@ -1,4 +1,4 @@
-import times
+import time
 from PiVideoStream import PiVideoStream
 from bitarray import bitarray
 from preprocessing import set_initials_pre, get_contour, get_perspective, get_cropped
@@ -35,7 +35,7 @@ counter = 0
 #@profile
 sigGen = bitarray()
 
-@profile
+#@profile
 def initialize_set(image):
     global counter, sigGen
     set_initials_pre(128, image, counter)
