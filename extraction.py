@@ -31,7 +31,7 @@ rot180 = array([])
 rot270 = array([])
 counter = 0
 def set_initials(N_f, M_f, L_f, image_f, counter_f):
-    global N, M, L, image, number_of_blocks
+    global N, M, L, image, number_of_blocks, counter
     N = N_f
     M = M_f 
     L = L_f
@@ -55,13 +55,14 @@ def set_initials(N_f, M_f, L_f, image_f, counter_f):
 
 #@profile    
 def get_average_luminance_of_block(block):
-    return sum(block) / (8 * 8)
+    return sum(block) / (N * N)
 
 #def thread_luminance(block, q):
  #   q.put(sum(block) / (N * N))
 
 #@profile
 def get_blocks():
+    global counter
     '''Dividing cropped image N x N blocks by M overlapping'''
     I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N))
     I_vis_blur_x = zeros((L, number_of_blocks * N))
@@ -72,9 +73,6 @@ def get_blocks():
         I_vis_blur_y[y * 2:y * 2 + N, :] = I_vis_blur_x[y:y + N, :]
 
     imwrite("Blocked/blocked " + str(counter) + ".jpg", I_vis_blur_y)
-    height, width = I_vis_blur_y.shape[:2]
-    print height
-    print width
     return I_vis_blur_y
 
 #@profile
@@ -242,7 +240,7 @@ def get_signature():
 
     sig_append(False)
     sig_append(False)
-    print("Generated signature length:%d",len(signature))
+    #print("Generated signature length:%d",len(signature))
     return signature
 
 
