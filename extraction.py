@@ -52,14 +52,14 @@ def set_initials(N_f, M_f, L_f, image_f):
 #     elif rots == 3:
 #         num.value = sum(rot270[y * 8:y * 8 + N,x * 8:x * 8 + N]) / (N * N)
 
-#@profile    
+@profile    
 def get_average_luminance_of_block(block):
     return sum(block) / (8 * 8)
 
 #def thread_luminance(block, q):
  #   q.put(sum(block) / (N * N))
 
-#@profile
+@profile
 def get_blocks():
     '''Dividing cropped image N x N blocks by M overlapping'''
     I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N))
@@ -73,7 +73,7 @@ def get_blocks():
 
     return I_vis_blur_y
 
-#@profile
+@profile
 def basic_rotations(rot0):
     center = (N * number_of_blocks) / 2
     rot_matrix = getRotationMatrix2D((center, center), 90, 1)
@@ -96,7 +96,7 @@ def basic_rotations(rot0):
 ##    fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \
 ##         fVertical270, fHorizontal270
 
-#@profile
+@profile
 def get_fragment(x, y, only_rotate):
     if only_rotate == 1:
         # p = Pool(processes =4)
@@ -192,7 +192,7 @@ def get_fragment(x, y, only_rotate):
 
 
 #        return avg_lum, std_lum
-#@profile
+@profile
 def get_all_fragments():
     global rot0, rot90, rot180, rot270
     fragments_list = [[],[]]
@@ -226,7 +226,7 @@ def get_all_fragments():
         counter_x += 1
     return fragments_list
 
-#@profile
+@profile
 def get_signature():
     signature = bitarray()
     counter_list = 0

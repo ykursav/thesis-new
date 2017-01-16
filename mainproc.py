@@ -30,12 +30,12 @@ args = vars(ap.parse_args())
 # def process_thread(image, counter):
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()
-logging.basicConfig(filename='debug_log23.log', level = logging.DEBUG)
+logging.basicConfig(filename='debug_log24.log', level = logging.DEBUG)
 counter = 0
 #@profile
 sigGen = bitarray()
 
-#@profile
+@profile
 def initialize_set(image):
     global counter, sigGen
     set_initials_pre(128, image, counter)
@@ -48,12 +48,11 @@ def initialize_set(image):
     sig = bitarray()
     set_initials(8, 4, 128, crop)
     try:
-        sig = get_signature()
         if counter < 50:
-           sigGen.extend(sig)
+           sigGen.extend(get_signature())
         else:
            sigGen = sigGen[240:]
-           sigGen[11760:] = sig
+           sigGen[11760:] = get_signature()
     except:
         logging.debug("Nonetype")
         counter -= 1

@@ -1,6 +1,8 @@
 from bitarray import bitarray, bitdiff
 from gc import enable
-
+#from multiprocessing import Process, Queue
+#from threading import Thread
+#from Queue import Queue
 
 enable()
 tau1 = 0
@@ -44,11 +46,15 @@ def signature_hamming(sigOrig_h):
 @profile
 def signature_scan():
     result_buffer = []
+    result_buffer = result_buffer.append
     for x in range(0, (len(sigOrig) / 60000) - 1):
        #print "Generated signature length" + str(len(sigGen))
        #print "Original signature length" + str(len(sigOrig[x * 12000:(x+1) * 12000]))
-       result = bitdiff(sigOrig[x * 12000:(x + 1) * 12000], sigGen)
-       result_buffer.append(result)
+       #p = Thread(target = signature_hamming, args = (sigOrig[x * 12000:(x + 1) * 12000], q, ))
+       #result = bitdiff(sigOrig[x * 12000:(x + 1) * 12000], sigGen)
+       #p.start()
+       #jobs.append(p)
+       result_buffer(signature_hamming(sigOrig[x * 12000:(x + 1) * 12000]))
 
     return result_buffer
     #print signature_scan

@@ -1,0 +1,59 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 10.7759 s
+File: mainproc.py
+Function: initialize_set at line 38
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    38                                           @profile
+    39                                           def initialize_set(image):
+    40                                               global counter, sigGen
+    41       100        17634    176.3      0.2      set_initials_pre(128, image, counter)
+    42       100      3299632  32996.3     30.6      points = get_contour(3)
+    43       100      1013525  10135.2      9.4      check = get_perspective(points, 0)
+    44       100         1252     12.5      0.0      if check == 10:
+    45                                                   counter -= 1
+    46                                                   return
+    47       100        48621    486.2      0.5      crop = get_cropped()
+    48       100         1283     12.8      0.0      sig = bitarray()
+    49       100         2079     20.8      0.0      set_initials(8, 4, 128, crop)
+    50       100          376      3.8      0.0      try:
+    51       100      5757480  57574.8     53.4          sig = get_signature()
+    52       100         1013     10.1      0.0          if counter < 50:
+    53        50         1020     20.4      0.0             sigGen.extend(sig)
+    54                                                   else:
+    55        50        21237    424.7      0.2             sigGen = sigGen[240:]
+    56        50         1195     23.9      0.0             sigGen[11760:] = sig
+    57                                               except:
+    58                                                   logging.debug("Nonetype")
+    59                                                   counter -= 1
+    60                                                   return
+    61       100          422      4.2      0.0      if counter >= 49:
+    62                                                   #logging.debug(sigGen)
+    63        51          895     17.5      0.0          set_initials_match(sigGen, 24, 38, 4, 28, 22)
+    64                                                   #logging.debug(signature_scan())
+    65        51       608234  11926.2      5.6          buffer = signature_scan()
+
+Total time: 0.595734 s
+File: matching.py
+Function: signature_scan at line 46
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    46                                           @profile
+    47                                           def signature_scan():
+    48        51          161      3.2      0.0      result_buffer = []
+    49        51          185      3.6      0.0      result_buffer = result_buffer.append
+    50      1377         4728      3.4      0.8      for x in range(0, (len(sigOrig) / 60000) - 1):
+    51                                                  #print "Generated signature length" + str(len(sigGen))
+    52                                                  #print "Original signature length" + str(len(sigOrig[x * 12000:(x+1) * 12000]))
+    53                                                  #p = Thread(target = signature_hamming, args = (sigOrig[x * 12000:(x + 1) * 12000], q, ))
+    54                                                  #result = bitdiff(sigOrig[x * 12000:(x + 1) * 12000], sigGen)
+    55                                                  #p.start()
+    56                                                  #jobs.append(p)
+    57      1326       590527    445.3     99.1         result_buffer(signature_hamming(sigOrig[x * 12000:(x + 1) * 12000]))
+    58                                           
+    59        51          133      2.6      0.0      return result_buffer
+

@@ -1,0 +1,257 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 2.29895 s
+File: extraction.py
+Function: get_average_luminance_of_block at line 55
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    55                                           @profile    
+    56                                           def get_average_luminance_of_block(block):
+    57     47700      2298946     48.2    100.0      return sum(block) / (8 * 8)
+
+Total time: 0.217071 s
+File: extraction.py
+Function: get_blocks at line 62
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    62                                           @profile
+    63                                           def get_blocks():
+    64                                               '''Dividing cropped image N x N blocks by M overlapping'''
+    65       100        30344    303.4     14.0      I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N))
+    66       100        15894    158.9      7.3      I_vis_blur_x = zeros((L, number_of_blocks * N))
+    67      3200        11696      3.7      5.4      for x in xrange(0, L - M, M):
+    68      3100        74745     24.1     34.4          I_vis_blur_x[:, x * 2:x * 2 + N] = image[:, x:x + N]
+    69                                           
+    70      3200        11180      3.5      5.2      for y in xrange(0, L - M, M):
+    71      3100        72881     23.5     33.6          I_vis_blur_y[y * 2:y * 2 + N, :] = I_vis_blur_x[y:y + N, :]
+    72                                           
+    73                                           
+    74       100          331      3.3      0.2      return I_vis_blur_y
+
+Total time: 1.54321 s
+File: extraction.py
+Function: basic_rotations at line 76
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    76                                           @profile
+    77                                           def basic_rotations(rot0):
+    78       100          837      8.4      0.1      center = (N * number_of_blocks) / 2
+    79       100         7593     75.9      0.5      rot_matrix = getRotationMatrix2D((center, center), 90, 1)
+    80       100       495413   4954.1     32.1      rot90 = warpAffine(rot0, rot_matrix, (center * 2, center * 2))
+    81       100       497733   4977.3     32.3      rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
+    82       100       536084   5360.8     34.7      rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
+    83       100         3598     36.0      0.2      rot90 = rot90[0:120, 0:120]
+    84       100          700      7.0      0.0      rot180 = rot180[0:120, 0:120]
+    85       100          874      8.7      0.1      rot270 = rot270[0:120, 0:120]
+    86                                           ##        fVertical0 = flip(image, 0)
+    87                                           ##        fHorizontal0 = flip(image, 1)
+    88                                           ##        fVertical90 = flip(rot90, 0)
+    89                                           ##        fHorizontal90 = flip(rot90, 1)
+    90                                           ##        fVertical180 = flip(rot180, 0)
+    91                                           ##        fHorizontal180 = flip(rot180, 1)
+    92                                           ##        fVertical270 = flip(rot270, 0)
+    93                                           ##        fHorizontal270 = flip(rot270, 1)
+    94                                           
+    95       100          379      3.8      0.0      return rot90, rot180, rot270
+
+Total time: 4.73197 s
+File: extraction.py
+Function: get_fragment at line 99
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    99                                           @profile
+   100                                           def get_fragment(x, y, only_rotate):
+   101     12000        45811      3.8      1.0      if only_rotate == 1:
+   102                                                   # p = Pool(processes =4)
+   103                                                   # results1 = p.apply_async(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   104                                                   # results2 = p.apply_async(get_average_luminance_of_block, [rot90[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   105                                                   # results3 = p.apply_async(get_average_luminance_of_block, [rot180[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   106                                                   # results4 = p.apply_async(get_average_luminance_of_block, [rot270[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   107                                                   # p.close()
+   108                                                   # p.join
+   109                                                   #results = []
+   110                                                   #jobs = []
+   111                                                   #num = Value('d', 0.0)
+   112                                                   # for rots in xrange(4):
+   113                                                   #     proc = Process(target = get_average_luminance_of_block_pro, args =(x, y, rots, num,))
+   114                                                   #     results.append(num.value)
+   115                                                   #     jobs.append(proc)
+   116                                                   #     proc.start
+   117                                                   # for proc in jobs:
+   118                                                   #     proc.join()
+   119                                                   # for i in range(4):
+   120                                                   #     if i == 0:
+   121                                                   #         t1 = Thread(target=thread_luminance, args=(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+   122                                                   #         t1.start()
+   123                                                   #     elif i == 1:
+   124                                                   #         t2 = Thread(target=thread_luminance, args=(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+   125                                                   #         t2.start()
+   126                                                   #     elif i == 2:
+   127                                                   #         t3 = Thread(target=thread_luminance, args=(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+   128                                                   #         t3.start()
+   129                                                   #     else:
+   130                                                   #         t4 = Thread(target=thread_luminance, args=(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N],q,))
+   131                                                   #         t4.start()
+   132                                           
+   133                                                   # t1.join()
+   134                                                   # t2.join()
+   135                                                   # t3.join()
+   136                                                   # t4.join()
+   137                                                   # q1 = Queue.Queue()
+   138                                                   # t1 = Thread(target=thread_luminance, args=(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+   139                                                   # t2 = Thread(target=thread_luminance, args=(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+   140                                                   # t3 = Thread(target=thread_luminance, args=(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+   141                                                   # t4 = Thread(target=thread_luminance, args=(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N],q1,))
+   142                                                   # t1.start()
+   143                                                   # t2.start()
+   144                                                   # t3.start()
+   145                                                   # t4.start()
+   146                                                   # t1.join()
+   147                                                   # t2.join()
+   148                                                   # t3.join()
+   149                                                   # t4.join()
+   150                                                   # print q1.get()
+   151     11900       177618     14.9      3.8          results = map(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N], rot90[y * 8:y * 8 + N, x * 8:x * 8 + N], \
+   152     11900      3306522    277.9     69.9              rot180[y * 8:y * 8 + N, x * 8:x * 8 + N], rot270[y * 8:y * 8 + N, x * 8:x * 8 + N]])
+   153                                                   #lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   154                                                   #lum2 = get_average_luminance_of_block(rot90[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   155                                                   #lum3 = get_average_luminance_of_block(rot180[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   156                                                   #lum4 = get_average_luminance_of_block(rot270[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   157                                                   # print lum1
+   158     11900       108068      9.1      2.3          avg_lum = (results[0] + results[1] + results[2] + results[3]) / 4
+   159                                                   #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
+   160     11900      1030612     86.6     21.8          std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3]]).ctypes.data_as(c_void_p))
+   161     11900        54122      4.5      1.1          return avg_lum, std_lum
+   162                                           
+   163       100          362      3.6      0.0      elif only_rotate == -1:
+   164       100         7723     77.2      0.2          lum1 = get_average_luminance_of_block(rot0[y * 8:y * 8 + N, x * 8:x * 8 + N])
+   165       100          408      4.1      0.0          avg_lum = lum1
+   166       100          353      3.5      0.0          std_lum = 0
+   167                                                   
+   168       100          367      3.7      0.0          return avg_lum, std_lum
+
+Total time: 7.43931 s
+File: extraction.py
+Function: get_all_fragments at line 195
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   195                                           @profile
+   196                                           def get_all_fragments():
+   197                                               global rot0, rot90, rot180, rot270
+   198       100          457      4.6      0.0      fragments_list = [[],[]]
+   199       100       262652   2626.5      3.5      rot0 = get_blocks()
+   200       100      1565671  15656.7     21.0      rot90, rot180, rot270 = basic_rotations(rot0)
+   201       100          497      5.0      0.0      counter_x = 0
+   202       100          332      3.3      0.0      counter_y = 0
+   203       100          540      5.4      0.0      append_std_lum = fragments_list[0].append
+   204       100          416      4.2      0.0      append_avg_lum = fragments_list[1].append
+   205     12100        43585      3.6      0.6      while(counter_x < 14 or counter_y < 14):
+   206     12000        40898      3.4      0.5          if counter_x == 15:
+   207      1400         4716      3.4      0.1              counter_y += 1
+   208      1400         4613      3.3      0.1              counter_x = counter_y
+   209     12000        43967      3.7      0.6          if counter_x == counter_y or counter_x == 14:
+   210      2900        10159      3.5      0.1              if counter_x == 14 and counter_y == 14:
+   211       100          427      4.3      0.0                  fragment_time = time.time()
+   212       100        13971    139.7      0.2                  avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
+   213       100          480      4.8      0.0                  fragment_end_time = time.time()
+   214       100          381      3.8      0.0                  append_std_lum(std_lum)
+   215       100          370      3.7      0.0                  append_avg_lum(avg_lum)
+   216                                                       else:
+   217      2800        13914      5.0      0.2                  fragment_time = time.time()
+   218      2800      1271792    454.2     17.1                  avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)
+   219      2800        14849      5.3      0.2                  fragment_end_time = time.time()
+   220      2800        11151      4.0      0.1                  append_std_lum(std_lum)
+   221      2800        10518      3.8      0.1                  append_avg_lum(avg_lum)
+   222                                                   else:
+   223      9100      4000887    439.7     53.8              avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)
+   224      9100        40902      4.5      0.5              append_std_lum(std_lum)
+   225      9100        35115      3.9      0.5              append_avg_lum(avg_lum)
+   226     12000        45720      3.8      0.6          counter_x += 1
+   227       100          330      3.3      0.0      return fragments_list
+
+Total time: 8.02992 s
+File: extraction.py
+Function: get_signature at line 229
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   229                                           @profile
+   230                                           def get_signature():
+   231       100          523      5.2      0.0      signature = bitarray()
+   232       100          366      3.7      0.0      counter_list = 0
+   233       100          289      2.9      0.0      counter_fragment = 0
+   234       100          401      4.0      0.0      sig_append = signature.append
+   235       100      7770405  77704.1     96.8      fragments = get_all_fragments()
+   236       300         1023      3.4      0.0      for features in fragments:
+   237     24000        71798      3.0      0.9          for x in range(0, len(features) -1):
+   238     23800        96199      4.0      1.2              if features[x] < features[x + 1]:
+   239     11683        40950      3.5      0.5                  sig_append(True)
+   240                                                       else:
+   241     12117        44117      3.6      0.5                  sig_append(False)
+   242                                           
+   243       100         3207     32.1      0.0      sig_append(False)
+   244       100          359      3.6      0.0      sig_append(False)
+   245                                           
+   246       100          284      2.8      0.0      return signature
+
+Total time: 13.257 s
+File: mainproc.py
+Function: initialize_set at line 38
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    38                                           @profile
+    39                                           def initialize_set(image):
+    40                                               global counter, sigGen
+    41       100        16559    165.6      0.1      set_initials_pre(128, image, counter)
+    42       100      3283721  32837.2     24.8      points = get_contour(3)
+    43       100      1048031  10480.3      7.9      check = get_perspective(points, 0)
+    44       100         1245     12.4      0.0      if check == 10:
+    45                                                   counter -= 1
+    46                                                   return
+    47       100        41416    414.2      0.3      crop = get_cropped()
+    48       100         1225     12.2      0.0      sig = bitarray()
+    49       100         2106     21.1      0.0      set_initials(8, 4, 128, crop)
+    50       100          402      4.0      0.0      try:
+    51       100          444      4.4      0.0          if counter < 50:
+    52        50      4184698  83694.0     31.6             sigGen.extend(get_signature())
+    53                                                   else:
+    54        50        22013    440.3      0.2             sigGen = sigGen[240:]
+    55        50      4060339  81206.8     30.6             sigGen[11760:] = get_signature()
+    56                                               except:
+    57                                                   logging.debug("Nonetype")
+    58                                                   counter -= 1
+    59                                                   return
+    60       100          497      5.0      0.0      if counter >= 49:
+    61                                                   #logging.debug(sigGen)
+    62        51          906     17.8      0.0          set_initials_match(sigGen, 24, 38, 4, 28, 22)
+    63                                                   #logging.debug(signature_scan())
+    64        51       593444  11636.2      4.5          buffer = signature_scan()
+
+Total time: 0.584468 s
+File: matching.py
+Function: signature_scan at line 46
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    46                                           @profile
+    47                                           def signature_scan():
+    48        51          168      3.3      0.0      result_buffer = []
+    49        51          208      4.1      0.0      result_buffer = result_buffer.append
+    50      1377         4711      3.4      0.8      for x in range(0, (len(sigOrig) / 60000) - 1):
+    51                                                  #print "Generated signature length" + str(len(sigGen))
+    52                                                  #print "Original signature length" + str(len(sigOrig[x * 12000:(x+1) * 12000]))
+    53                                                  #p = Thread(target = signature_hamming, args = (sigOrig[x * 12000:(x + 1) * 12000], q, ))
+    54                                                  #result = bitdiff(sigOrig[x * 12000:(x + 1) * 12000], sigGen)
+    55                                                  #p.start()
+    56                                                  #jobs.append(p)
+    57      1326       579237    436.8     99.1         result_buffer(signature_hamming(sigOrig[x * 12000:(x + 1) * 12000]))
+    58                                           
+    59        51          144      2.8      0.0      return result_buffer
+
