@@ -1,0 +1,19 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.595508 s
+File: matching.py
+Function: signature_scan at line 44
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    44                                           @profile
+    45                                           def signature_scan():
+    46        51          428      8.4      0.1      result_buffer = []
+    47      1377         4694      3.4      0.8      for x in range(0, (len(sigOrig) / 60000) - 1):
+    48                                                  #print "Generated signature length" + str(len(sigGen))
+    49                                                  #print "Original signature length" + str(len(sigOrig[x * 12000:(x+1) * 12000]))
+    50      1326       590242    445.1     99.1         result_buffer.append(bitdiff(sigOrig[x * 12000:(x + 1) * 12000], sigGen))
+    51                                           
+    52        51          144      2.8      0.0      return result_buffer
+
