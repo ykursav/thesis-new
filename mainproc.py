@@ -69,7 +69,7 @@ def initialize_set(image):
         set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
         scan_sig = signature_scan()
-        logging.debug(str(min(scan_sig)))
+        #logging.debug(str(min(scan_sig)))
         
         
     

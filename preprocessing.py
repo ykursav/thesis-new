@@ -4,7 +4,7 @@ from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      , approxPolyDP, contourArea, warpPerspective, getPerspectiveTransform, resize, \
      INTER_LINEAR, GaussianBlur, COLOR_BGR2GRAY, ADAPTIVE_THRESH_GAUSSIAN_C, \
      THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST, \
-     setUseOptimized
+     setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU
      
 from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray
 import gc
@@ -45,17 +45,19 @@ def get_width_height(image):
     height, width = image.shape[:2]
     return [width, height]
 
-def get_edged(self, G):
+def get_edged(G):
     gray = gray_image(image)
     blur = get_blurred(gray, G)
-    th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
+    #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+    ret, th = threshold(blur, 0, 255, THRESH_BINARY+THRESH_OTSU)
     #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     ##edge =  cv2.Canny(blur, ret * 0.5, ret)
     # cv2.imwrite("Adaptive.jpg", th)
 ##        cv2.imshow("th", dilation)
 ##        cv2.waitKey(0)
 ##        cv2.destroyAllWindows()
-    return dilate(th, ones((3,3),np.uint8),iterations = 1)
+    imwrite("otsu.jpg", th)
+    return dilate(th, ones((3,3), uint8),iterations = 1)
 # #@profile
 # def get_edged(G):
 #     gray = gray_image(image)
