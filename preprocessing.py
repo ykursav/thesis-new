@@ -45,17 +45,28 @@ def get_width_height(image):
     height, width = image.shape[:2]
     return [width, height]
 
-#@profile
-def get_edged(G):
+def get_edged(self, G):
     gray = gray_image(image)
     blur = get_blurred(gray, G)
-    v = median(blur)
-    #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
-    lower = int(max(0, (1.0 - 0.33) * v))
-    upper = int(max(255, (1.0 + 0.33) * v))
-    canny = Canny(gray, lower, upper)
+    th = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,11,2)
+    #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    ##edge =  cv2.Canny(blur, ret * 0.5, ret)
+    # cv2.imwrite("Adaptive.jpg", th)
+##        cv2.imshow("th", dilation)
+##        cv2.waitKey(0)
+##        cv2.destroyAllWindows()
+    return dilate(th, ones((3,3),np.uint8),iterations = 1)
+# #@profile
+# def get_edged(G):
+#     gray = gray_image(image)
+#     blur = get_blurred(gray, G)
+#     v = median(blur)
+#     #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+#     lower = int(max(0, (1.0 - 0.33) * v))
+#     upper = int(max(255, (1.0 + 0.33) * v))
+#     canny = Canny(gray, lower, upper)
 
-    return dilate(canny, ones((5,5), uint8), iterations = 1)
+#     return dilate(canny, ones((5,5), uint8), iterations = 1)
 
 #@profile
 def get_contour(G):
