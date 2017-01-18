@@ -29,14 +29,12 @@ rot0 = array([])
 rot90 = array([])
 rot180 = array([])
 rot270 = array([])
-counter = 0
-def set_initials(N_f, M_f, L_f, image_f, counter_f):
-    global N, M, L, image, number_of_blocks, counter
+def set_initials(N_f, M_f, L_f, image_f):
+    global N, M, L, image, number_of_blocks
     N = N_f
     M = M_f 
     L = L_f
     image = image_f
-    counter = counter_f
     number_of_blocks = ((L - N) / M) + 1
 
 # def get_average_luminance_of_block_pro(x, y, rots, num):
@@ -72,7 +70,7 @@ def get_blocks():
     for y in xrange(0, L - M, M):
         I_vis_blur_y[y * 2:y * 2 + N, :] = I_vis_blur_x[y:y + N, :]
 
-    imwrite("Blocked/blocked " + str(counter) + ".jpg", I_vis_blur_y)
+    #imwrite("Blocked/blocked " + str(counter) + ".jpg", I_vis_blur_y)
     return I_vis_blur_y
 
 #@profile
@@ -241,6 +239,7 @@ def get_signature():
     sig_append(False)
     sig_append(False)
     #print("Generated signature length:%d",len(signature))
+    #print signature
     return signature
 
 

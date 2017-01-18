@@ -21,8 +21,6 @@ import argparse
 ap = argparse.ArgumentParser()
 ap.add_argument("-n", "--num-frames", type=int, default=100,
     help="Number of frames which will be processed should be defined in that area")
-ap.add_argument("-f", "--file-name", type=str, default="debug_log.log",
-    help="Filename can be assigned with that argument otherwise default is debug_log.log")
 args = vars(ap.parse_args())
 
 #f = open("signature.bin", "r")
@@ -32,12 +30,12 @@ args = vars(ap.parse_args())
 # def process_thread(image, counter):
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()
-logging.basicConfig(filename=args["file_name"], level = logging.DEBUG)
+logging.basicConfig(filename='debug_log24.log', level = logging.DEBUG)
 counter = 0
 #@profile
 sigGen = bitarray()
 
-#@profile
+@profile
 def initialize_set(image):
     global counter, sigGen
     set_initials_pre(128, image, counter)
@@ -46,20 +44,15 @@ def initialize_set(image):
     if check == 10:
         counter -= 1
         return
-    elif check == 20:
-        logging.debug("Too small detection probably wrong")
-        counter -= 1
-        return
     crop = get_cropped()
     sig = bitarray()
     set_initials(16, 8, 128, crop)
     try:
-        sig = get_signature()
         if counter < 50:
-           sigGen.extend(sig)
+           sigGen.extend(get_signature())
         else:
            sigGen = sigGen[72:]
-           sigGen[3528:] = sig
+           sigGen[3528:] = get_signature()
     except:
         logging.debug("Nonetype")
         counter -= 1
@@ -68,8 +61,7 @@ def initialize_set(image):
         #logging.debug(sigGen)
         set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
-        scan_sig = signature_scan()
-        logging.debug(str(min(scan_sig)))
+        buffer = signature_scan()
         
         
     

@@ -143,6 +143,8 @@ def get_perspective(points, counter):
         height_perspective = int(max(distance_calculator(ordered_points[0], ordered_points[3]), \
                                      distance_calculator(ordered_points[1], ordered_points[2])))
         
+        if width_perspective < width / 4 or height_perspective < height / 4:
+            return 20
         img_size = array([[0, 0], [width_perspective - 1, 0], [width_perspective - 1, height_perspective -1], \
             [0, height_perspective - 1]], dtype = "float32")
 ##            if width_perspective < (self.width / 4) or height_perspective < (self.height / 4):
