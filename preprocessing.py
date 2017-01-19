@@ -56,19 +56,19 @@ def get_edged(G):
 ##        cv2.imshow("th", dilation)
 ##        cv2.waitKey(0)
 ##        cv2.destroyAllWindows()
-    imwrite("otsu.jpg", th)
+    imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
     return dilate(th, ones((3,3), uint8),iterations = 1)
 # #@profile
-# def get_edged(G):
-#     gray = gray_image(image)
-#     blur = get_blurred(gray, G)
-#     v = median(blur)
-#     #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
-#     lower = int(max(0, (1.0 - 0.33) * v))
-#     upper = int(max(255, (1.0 + 0.33) * v))
-#     canny = Canny(gray, lower, upper)
-
-#     return dilate(canny, ones((5,5), uint8), iterations = 1)
+#def get_edged(G):
+#    gray = gray_image(image)
+#    blur = get_blurred(gray, G)
+#    v = median(blur)
+#    #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+#    lower = int(max(0, (1.0 - 0.33) * v))
+#    upper = int(max(255, (1.0 + 0.33) * v))
+#    canny = Canny(gray, lower, upper)#
+#
+#    return dilate(canny, ones((5,5), uint8), iterations = 1)
 
 #@profile
 def get_contour(G):
