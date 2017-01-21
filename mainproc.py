@@ -37,13 +37,14 @@ counter = 0
 #@profile
 sigGen = bitarray()
 fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
-out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/binary_inv_test06.avi", fourcc, 10.0, (544, 400))
-out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/test_warp01.avi", fourcc, 10.0, (500, 300))
+out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/adaptive_test00.avi", fourcc, 10.0, (544, 400))
+out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/adaptive_test_warp00.avi", fourcc, 10.0, (500, 300))
 #@profile
 def initialize_set(image):
     global counter, sigGen
     set_initials_pre(128, image, counter, out, out2)
-    points = get_contour(3)
+    #set_initials_pre(128, image, counter)
+    points = get_contour(5)
     check = get_perspective(points, 0)
     if check == 10:
         counter -= 1
@@ -120,8 +121,8 @@ def pi_stream(vs):
         initialize_set(frame)
         counter += 1
     vs.stop()
-    out.release()
-    out2.release()
+    #out.release()
+    #out2.release()
     #end_time = time.time()
     #logging.debug("Total time:" + str(end_time - start_time))
 

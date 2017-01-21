@@ -1,0 +1,67 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 138.053 s
+File: mainproc.py
+Function: initialize_set at line 42
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    42                                           @profile
+    43                                           def initialize_set(image):
+    44                                               global counter, sigGen
+    45                                               #set_initials_pre(128, image, counter, out, out2)
+    46      2583       387147    149.9      0.3      set_initials_pre(128, image, counter)
+    47      2583     60096273  23266.1     43.5      points = get_contour(3)
+    48      2583     13172084   5099.5      9.5      check = get_perspective(points, 0)
+    49      2583        20700      8.0      0.0      if check == 10:
+    50      1359         7177      5.3      0.0          counter -= 1
+    51      1359         5111      3.8      0.0          return
+    52      1224         5575      4.6      0.0      elif check == 20:
+    53       224       182841    816.3      0.1          logging.debug("Too small detection probably wrong")
+    54       224         1674      7.5      0.0          counter -= 1
+    55       224          933      4.2      0.0          return
+    56      1000       437131    437.1      0.3      crop = get_cropped()
+    57      1000        12228     12.2      0.0      sig = bitarray()
+    58      1000        21194     21.2      0.0      set_initials(16, 8, 128, crop)
+    59      1000         4050      4.0      0.0      try:
+    60      1000     27296079  27296.1     19.8          sig = get_signature()
+    61      1000        10451     10.5      0.0          if counter < 50:
+    62        50          673     13.5      0.0             sigGen.extend(sig)
+    63                                                   else:
+    64       950       133517    140.5      0.1             sigGen = sigGen[72:]
+    65       950        17547     18.5      0.0             sigGen[3528:] = sig
+    66                                               except:
+    67                                                   logging.debug("Nonetype")
+    68                                                   counter -= 1
+    69                                                   return
+    70      1000         4448      4.4      0.0      if counter >= 49:
+    71                                                   #logging.debug(sigGen)
+    72       951        19486     20.5      0.0          set_initials_match(sigGen, 24, 38, 4, 28, 22)
+    73                                                   #logging.debug(signature_scan())
+    74       951     36216627  38082.7     26.2          scan_sig = signature_scan()
+
+Total time: 40.7548 s
+File: preprocessing.py
+Function: get_edged at line 55
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    55                                           @profile
+    56                                           def get_edged(G):
+    57                                               #global out
+    58      2583      5724153   2216.1     14.0      gray = gray_image(image)
+    59      2583      7591630   2939.1     18.6      blur = get_blurred(gray, G)
+    60      2583     12573545   4867.8     30.9      th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY_INV,11,2)
+    61                                               #ret, th = threshold(blur, 0, 255, THRESH_BINARY+THRESH_OTSU)
+    62                                               #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    63                                               ##edge =  cv2.Canny(blur, ret * 0.5, ret)
+    64                                               # cv2.imwrite("Adaptive.jpg", th)
+    65                                           ##        cv2.imshow("th", dilation)
+    66                                           ##        cv2.waitKey(0)
+    67                                           ##        cv2.destroyAllWindows()
+    68                                               #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
+    69                                               #print get_width_height(th)
+    70                                               #out.write(cvtColor(th, COLOR_GRAY2BGR))
+    71      2583     14865464   5755.1     36.5      return dilate(th, ones((3,3), uint8),iterations = 1)
+

@@ -52,12 +52,16 @@ def get_width_height(image):
     height, width = image.shape[:2]
     return [width, height]
 
+#@profile
 def get_edged(G):
     global out
     gray = gray_image(image)
     blur = get_blurred(gray, G)
-    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY_INV,11,2)
-    #ret, th = threshold(blur, 0, 255, THRESH_BINARY+THRESH_OTSU)
+    #v = median(gray)
+    #lower = int(max(0, (1.0 - 0.33) * v))
+    #upper = int(max(255, (1.0 + 0.33) * v))
+    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+    #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
     #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     ##edge =  cv2.Canny(blur, ret * 0.5, ret)
     # cv2.imwrite("Adaptive.jpg", th)
@@ -66,19 +70,24 @@ def get_edged(G):
 ##        cv2.destroyAllWindows()
     #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
     #print get_width_height(th)
+    #out.write(cvtColor(th, COLOR_GRAY2BGR))
+    #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
     out.write(cvtColor(th, COLOR_GRAY2BGR))
     return dilate(th, ones((3,3), uint8),iterations = 1)
+    #return th
 # #@profile
 #def get_edged(G):
+#    global out
 #    gray = gray_image(image)
 #    blur = get_blurred(gray, G)
 #    v = median(blur)
 #    #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
 #    lower = int(max(0, (1.0 - 0.33) * v))
 #    upper = int(max(255, (1.0 + 0.33) * v))
-#    canny = Canny(gray, lower, upper)#
+#    canny = Canny(blur, lower, upper)
+  #  out.write(cvtColor(canny, COLOR_GRAY2BGR))
 #
-#    return dilate(canny, ones((5,5), uint8), iterations = 1)
+ #   return dilate(canny, ones((5,5), uint8), iterations = 1)
 
 #@profile
 def get_contour(G):
@@ -97,11 +106,10 @@ def get_contour(G):
                 approx = approxPolyDP(cnt, epsilon, True)
                 first = True
                 no_contour = False
-        elif (contourArea(last_cnt) < contourArea(cnt)):
-            if check_points(new_approx):
+        elif check_points(new_approx):
+            if (contourArea(last_cnt) < contourArea(cnt)):
                 last_cnt = cnt
                 approx = new_approx
-                no_contour = False
                 
     if first == False:
         return -1
@@ -153,7 +161,7 @@ def distance_calculator(p1, p2):
 
 #@profile
 def get_perspective(points, counter):
-    global warped, out2
+    global warped
     if type(points) is not ndarray:
         return 10
     if len(points) != 1:
