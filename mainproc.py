@@ -37,7 +37,7 @@ counter = 0
 #@profile
 sigGen = bitarray()
 
-#@profile
+@profile
 def initialize_set(image):
     global counter, sigGen
     set_initials_pre(128, image, counter)
