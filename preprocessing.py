@@ -66,7 +66,7 @@ def get_edged(G):
 ##        cv2.destroyAllWindows()
     #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
     #print get_width_height(th)
-    out.write(th)
+    out.write(cvtColor(th, COLOR_GRAY2BGR))
     return dilate(th, ones((3,3), uint8),iterations = 1)
 # #@profile
 #def get_edged(G):
@@ -183,7 +183,7 @@ def get_perspective(points, counter):
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
         #imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
-        out2.write(warped)
+        out2.write(cvtColor(warped, COLOR_GRAY2BGR))
         return 30
 
     else:
