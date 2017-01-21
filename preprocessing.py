@@ -4,7 +4,7 @@ from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      , approxPolyDP, contourArea, warpPerspective, getPerspectiveTransform, resize, \
      INTER_LINEAR, GaussianBlur, COLOR_BGR2GRAY, COLOR_GRAY2BGR, ADAPTIVE_THRESH_GAUSSIAN_C, \
      THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST, \
-     setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU, VideoWriter
+     setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU, VideoWriter, ADAPTIVE_THRESH_MEAN_C
      
 from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray
 import gc
@@ -56,7 +56,7 @@ def get_edged(G):
     global out
     gray = gray_image(image)
     blur = get_blurred(gray, G)
-    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
+    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY_INV,11,2)
     #ret, th = threshold(blur, 0, 255, THRESH_BINARY+THRESH_OTSU)
     #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     ##edge =  cv2.Canny(blur, ret * 0.5, ret)
