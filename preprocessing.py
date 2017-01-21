@@ -56,7 +56,7 @@ def get_edged(G):
 ##        cv2.imshow("th", dilation)
 ##        cv2.waitKey(0)
 ##        cv2.destroyAllWindows()
-    imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
+    #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
     return dilate(th, ones((3,3), uint8),iterations = 1)
 # #@profile
 #def get_edged(G):
@@ -172,7 +172,7 @@ def get_perspective(points, counter):
         elif height_perspective > width_perspective:
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
-        # imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
+        imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
 
         return 30
 
