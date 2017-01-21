@@ -48,8 +48,8 @@ def get_width_height(image):
 def get_edged(G):
     gray = gray_image(image)
     blur = get_blurred(gray, G)
-    #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
-    ret, th = threshold(blur, 0, 255, THRESH_BINARY+THRESH_OTSU)
+    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY,11,2)
+    #ret, th = threshold(blur, 0, 255, THRESH_BINARY+THRESH_OTSU)
     #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     ##edge =  cv2.Canny(blur, ret * 0.5, ret)
     # cv2.imwrite("Adaptive.jpg", th)
