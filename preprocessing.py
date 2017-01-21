@@ -4,7 +4,7 @@ from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      , approxPolyDP, contourArea, warpPerspective, getPerspectiveTransform, resize, \
      INTER_LINEAR, GaussianBlur, COLOR_BGR2GRAY, ADAPTIVE_THRESH_GAUSSIAN_C, \
      THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST, \
-     setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU, VideoWriter, VideoWriter_fourcc
+     setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU, VideoWriter
      
 from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray
 import gc
@@ -20,14 +20,16 @@ resized_image = array([])
 warped = array([])
 L = 0
 counter_warped = 0
-fourcc = VideoWriter_fourcc('X','V','I','D')
-out = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/threshold_test_01.avi", -1, 20.0, (640, 480))
+out = 0
+#fourcc = VideoWriter_fourcc('X','V','I','D')
+#out = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/threshold_test_02.avi", fourcc, 20.0, (544, 400))
 
-def set_initials_pre(L_f, image_f, counter_warped_f):
-    global L, image, counter_warped
+def set_initials_pre(L_f, image_f, counter_warped_f, out_f):
+    global L, image, counter_warped, out
     L = L_f
     image = image_f
     counter_warped = counter_warped_f
+    out = out_f
 # class PreProcessing:
 #     def __init__(self, L, hist_eq):
 #         self.image = array([])

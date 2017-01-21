@@ -36,11 +36,12 @@ logging.basicConfig(filename=args["file_name"], level = logging.DEBUG)
 counter = 0
 #@profile
 sigGen = bitarray()
-
-@profile
+fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
+out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/test03.avi", fourcc, 20.0, (640, 480))
+#@profile
 def initialize_set(image):
     global counter, sigGen
-    set_initials_pre(128, image, counter)
+    set_initials_pre(128, image, counter, out)
     points = get_contour(3)
     check = get_perspective(points, 0)
     if check == 10:
@@ -118,6 +119,7 @@ def pi_stream(vs):
         initialize_set(frame)
         counter += 1
     vs.stop()
+    out.release()
     #end_time = time.time()
     #logging.debug("Total time:" + str(end_time - start_time))
 
