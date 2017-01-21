@@ -13,6 +13,7 @@ class PiVideoStream:
         self.frame = None
         self.stopped = False
         self.camera.start_preview()
+        self.camera.led = False
 
     def start(self):
         Thread(target=self.update, args=()).start()

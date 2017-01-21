@@ -21,7 +21,7 @@ warped = array([])
 L = 0
 counter_warped = 0
 fourcc = VideoWriter_fourcc('X','V','I','D')
-out = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/threshold_test_01.avi", fourcc, 10.0, (640, 480))
+out = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/threshold_test_01.avi", -1, 20.0, (640, 480))
 
 def set_initials_pre(L_f, image_f, counter_warped_f):
     global L, image, counter_warped
