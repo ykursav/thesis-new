@@ -21,15 +21,17 @@ warped = array([])
 L = 0
 counter_warped = 0
 out = 0
+out2 = 0
 #fourcc = VideoWriter_fourcc('X','V','I','D')
 #out = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/threshold_test_02.avi", fourcc, 20.0, (544, 400))
 
-def set_initials_pre(L_f, image_f, counter_warped_f, out_f):
-    global L, image, counter_warped, out
+def set_initials_pre(L_f, image_f, counter_warped_f, out_f, out2_f):
+    global L, image, counter_warped, out, out2
     L = L_f
     image = image_f
     counter_warped = counter_warped_f
     out = out_f
+    out2 = out2_f
 # class PreProcessing:
 #     def __init__(self, L, hist_eq):
 #         self.image = array([])
@@ -54,7 +56,7 @@ def get_edged(G):
     global out
     gray = gray_image(image)
     blur = get_blurred(gray, G)
-    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY,11,2)
+    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,11,2)
     #ret, th = threshold(blur, 0, 255, THRESH_BINARY+THRESH_OTSU)
     #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     ##edge =  cv2.Canny(blur, ret * 0.5, ret)
@@ -64,7 +66,7 @@ def get_edged(G):
 ##        cv2.destroyAllWindows()
     #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
     #print get_width_height(th)
-    out.write(cvtColor(th, COLOR_GRAY2BGR))
+    out.write(th)
     return dilate(th, ones((3,3), uint8),iterations = 1)
 # #@profile
 #def get_edged(G):
@@ -151,7 +153,7 @@ def distance_calculator(p1, p2):
 
 #@profile
 def get_perspective(points, counter):
-    global warped
+    global warped, out2
     if type(points) is not ndarray:
         return 10
     if len(points) != 1:
@@ -181,7 +183,7 @@ def get_perspective(points, counter):
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
         #imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
-
+        out2.write(warped)
         return 30
 
     else:
