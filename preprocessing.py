@@ -4,7 +4,7 @@ from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      , approxPolyDP, contourArea, warpPerspective, getPerspectiveTransform, resize, \
      INTER_LINEAR, GaussianBlur, COLOR_BGR2GRAY, ADAPTIVE_THRESH_GAUSSIAN_C, \
      THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST, \
-     setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU
+     setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU, VideoWriter, VideoWriter_fourcc
      
 from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray
 import gc
@@ -20,6 +20,9 @@ resized_image = array([])
 warped = array([])
 L = 0
 counter_warped = 0
+fourcc = VideoWriter_fourcc(*'XVID')
+out = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/threshold_test_01.avi", fourcc, 10.0, (544, 400))
+
 def set_initials_pre(L_f, image_f, counter_warped_f):
     global L, image, counter_warped
     L = L_f
@@ -57,6 +60,7 @@ def get_edged(G):
 ##        cv2.waitKey(0)
 ##        cv2.destroyAllWindows()
     #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
+    out.write(th)
     return dilate(th, ones((3,3), uint8),iterations = 1)
 # #@profile
 #def get_edged(G):
