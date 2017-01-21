@@ -37,7 +37,7 @@ counter = 0
 #@profile
 sigGen = bitarray()
 fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
-out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/test03.avi", fourcc, 20.0, (640, 480))
+out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/test04.avi", fourcc, 10.0, (544, 400))
 #@profile
 def initialize_set(image):
     global counter, sigGen

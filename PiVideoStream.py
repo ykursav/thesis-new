@@ -8,12 +8,12 @@ class PiVideoStream:
         self.camera = PiCamera()
         self.camera.resolution = resolution
         self.camera.framerate = framerate
+        self.camera.led = False
         self.rawCapture = PiRGBArray(self.camera, size=resolution)
         self.stream = self.camera.capture_continuous(self.rawCapture, format="bgr", use_video_port=True)
         self.frame = None
         self.stopped = False
         self.camera.start_preview()
-        self.camera.led = False
 
     def start(self):
         Thread(target=self.update, args=()).start()
