@@ -1,0 +1,32 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 56.7835 s
+File: preprocessing.py
+Function: get_edged at line 56
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    56                                           @profile
+    57                                           def get_edged(G):
+    58                                               global out
+    59      1142      2534931   2219.7      4.5      gray = gray_image(image)
+    60      1142      4373604   3829.8      7.7      blur = get_blurred(gray, G)
+    61                                               #v = median(gray)
+    62                                               #lower = int(max(0, (1.0 - 0.33) * v))
+    63                                               #upper = int(max(255, (1.0 + 0.33) * v))
+    64      1142     10195931   8928.1     18.0      th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,5,1)
+    65                                               #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
+    66                                               #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    67                                               ##edge =  cv2.Canny(blur, ret * 0.5, ret)
+    68                                               # cv2.imwrite("Adaptive.jpg", th)
+    69                                           ##        cv2.imshow("th", dilation)
+    70                                           ##        cv2.waitKey(0)
+    71                                           ##        cv2.destroyAllWindows()
+    72                                               #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
+    73                                               #print get_width_height(th)
+    74                                               #out.write(cvtColor(th, COLOR_GRAY2BGR))
+    75                                               #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
+    76      1142     33287719  29148.6     58.6      out.write(cvtColor(th, COLOR_GRAY2BGR))
+    77      1142      6391312   5596.6     11.3      return dilate(th, ones((3,3), uint8),iterations = 1)
+

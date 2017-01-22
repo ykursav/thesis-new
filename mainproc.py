@@ -23,6 +23,10 @@ ap.add_argument("-n", "--num-frames", type=int, default=100,
     help="Number of frames which will be processed should be defined in that area")
 ap.add_argument("-f", "--file-name", type=str, default="debug_log.log",
     help="Filename can be assigned with that argument otherwise default is debug_log.log")
+ap.add_argument("-v1", "--video1-name", type=str, default="video1.avi",
+    help="First video output file name can be assigned with that argument otherwise default is video1.avi")
+ap.add_argument("-v2", "--video2-name", type=str, default="video2.avi",
+    help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
 args = vars(ap.parse_args())
 
 #f = open("signature.bin", "r")
@@ -37,8 +41,8 @@ counter = 0
 #@profile
 sigGen = bitarray()
 fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
-out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/adaptive_test00.avi", fourcc, 10.0, (544, 400))
-out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/adaptive_test_warp00.avi", fourcc, 10.0, (500, 300))
+out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video1_name"], fourcc, 10.0, (544, 400))
+out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 10.0, (500, 300))
 #@profile
 def initialize_set(image):
     global counter, sigGen
