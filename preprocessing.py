@@ -74,8 +74,8 @@ def get_edged(G):
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
     #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
     out.write(cvtColor(th, COLOR_GRAY2BGR))
-    return dilate(th, ones((3,3), uint8),iterations = 1)
-    #return th
+    #return dilate(th, ones((3,3), uint8),iterations = 1)
+    return th
 # #@profile
 #def get_edged(G):
 #    global out
