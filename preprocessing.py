@@ -10,6 +10,7 @@ from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
 from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray
 import gc
 import ctypes
+from threading import Thread
 
 setUseOptimized(True)
 libextraction = ctypes.cdll.LoadLibrary("./C_Libraries/libextraction.so")
@@ -73,9 +74,12 @@ def get_edged(G):
     #print get_width_height(th)
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
     #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
-    out.write(cvtColor(th, COLOR_GRAY2BGR))
+    Thread(target = write_out, args = (out, th,)).start()
     #return dilate(th, ones((3,3), uint8),iterations = 1)
     return th
+def write_out(stream, frame):
+    global out, out2
+    stream.write(cvtColor(frame, COLOR_GRAY2BGR))
 # #@profile
 #def get_edged(G):
 #    global out
@@ -192,7 +196,7 @@ def get_perspective(points, counter):
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
         #imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
-        out2.write(cvtColor(warped, COLOR_GRAY2BGR))
+        Thread(target = write_out, args = (out2, warped,)).start()
         return 30
 
     else:
