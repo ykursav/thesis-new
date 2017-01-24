@@ -36,7 +36,7 @@ args = vars(ap.parse_args())
 # def process_thread(image, counter):
 #     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
 #     check = TT.mainprocess()
-logging.basicConfig(filename=args["file_name"], level = logging.DEBUG)
+logging.basicConfig(filename="debug_logs/" + args["file_name"], level = logging.DEBUG)
 counter = 0
 #@profile
 sigGen = bitarray()
