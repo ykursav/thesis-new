@@ -74,9 +74,10 @@ def get_edged(G):
     #print get_width_height(th)
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
     #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
-    Thread(target = write_out, args = (out, th,)).start()
+    dilated = dilate(th, ones((3, 3), uint8), iterations = 1)
+    Thread(target = write_out, args = (out, dilated,)).start()
     #return dilate(th, ones((3,3), uint8),iterations = 1)
-    return th
+    return dilated
 def write_out(stream, frame):
     global out, out2
     stream.write(cvtColor(frame, COLOR_GRAY2BGR))

@@ -48,7 +48,7 @@ def initialize_set(image):
     global counter, sigGen
     set_initials_pre(128, image, counter, out, out2)
     #set_initials_pre(128, image, counter)
-    points = get_contour(7)
+    points = get_contour(5)
     check = get_perspective(points, 0)
     if check == 10:
         counter -= 1
