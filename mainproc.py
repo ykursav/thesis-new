@@ -114,9 +114,12 @@ def pi_stream(vs):
     #start_time = time.time()
     start = 0
     while counter < args["num_frames"]:
-        if (start + 0.1) - time.time() > 0 and counter_old != counter:
-            time.sleep((start + 0.1) - time.time())
-            logging.debug("Real time" + str(time.time()) + "\n")
+        if (start + 0.11) - time.time() > 0 and counter_old != counter:
+            try:
+                time.sleep((start + 0.1) - time.time())
+                logging.debug("Real time" + str(time.time()) + "\n")
+            except:
+                logging.debug("Under real time point " + str(time.time() - start) + "\n")
         else:
             logging.debug("Under real time Point " + str(time.time() - start) + "\n")
         start = time.time()
