@@ -25,9 +25,9 @@ if __name__ == "__main__":
      drc_strengths = {0:'off', 1:'low', 2:'medium', 3:'high'}
      camera = picamera.PiCamera()
      camera.iso = 800
-     camera.awb_mode = 'off'
+     #camera.awb_mode = 'off'
      #camera.flash_mode = 'off'
-     camera.exposure_mode = 'off'
+     #camera.exposure_mode = 'off'
      #camera.image_effect = 'none'
      #camera.meter_mode = 'average'
      #camera.drc_strength = 'off'
@@ -39,16 +39,19 @@ if __name__ == "__main__":
      time.sleep(2)
      counter = 0
      for key in exposure_modes:
-          for key in awb_modes:
+          for key2 in awb_modes:
+               #print awb_modes[key2]
                #for key in flash_modes:
                     #for key in image_effect:
                          #for key in meter_modes:
                               #for key in drc_strengths:
-               camera_update(camera, awb_modes[key], exposure_modes[key])
+               camera_update(camera, awb_modes[key2], exposure_modes[key])
                #camera.capture("cam_test/output_test_" + str(counter) + "_" + exposure_modes[key] + "_" +  awb_modes[key] + \
                #    "_" + flash_modes[key]  + "_" +  image_effect[key]  + "_" +  meter_modes[key]  + "_" +  drc_strengths[key] + ".jpeg")
-               camera.capture("cam_test/output_test_" + str(counter) + "_" + exposure_modes[key] + "_" + awb_modes[key] + ".jpeg")
+               camera.capture("cam_test/output_test_dark_illuminated_" + str(counter) + "_" + exposure_modes[key] + "_" + awb_modes[key2] + ".jpeg")
                counter += 1
                print counter
+               #print exposure_modes[key]
+               #print awb_modes[key2]
 
      camera.stop_preview()
