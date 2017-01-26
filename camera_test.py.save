@@ -1,0 +1,31 @@
+import picamera
+import time
+
+if __name__ == "__main__":
+     camera = picamera.PiCamera()
+     camera.iso = 800
+     camera.awb_mode = 'off'
+     camera.flash_mode = 'off'
+     camera.image_effect = 'none'
+     camera.meter_mode = 'average'
+     camera.drc_strength = 'off'
+     #camera.stereo_mode = 'none'
+    
+     camera.resolution = (544, 400)
+     camera.framerate = 30
+     camera.exposure_mode = 'backlight'
+     print 'backlight'
+     camera.start_preview()
+     time.sleep(5)
+     camera.stop_preview()
+     camera.exposure_mode = 'nightpreview'
+
+     camera.start_preview()     camera.exposure_mode = 'spotlight'
+     camera.exposure_mode = 'sports'
+     camera.exposure_mode = 'snow'
+     camera.exposure_mode = 'beach'
+     camera.exposure_mode = 'verylong'
+     camera.exposure_mode = 'fixedfps'
+     camera.exposure_mode = 'antishake'
+     camera.exposure_mode = 'fireworks'
+
