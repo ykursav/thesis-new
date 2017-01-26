@@ -62,7 +62,7 @@ def get_edged(G):
     #v = median(gray)
     #lower = int(max(0, (1.0 - 0.33) * v))
     #upper = int(max(255, (1.0 + 0.33) * v))
-    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV,7,2)
+    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 9, 1)
     #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
     #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     ##edge =  cv2.Canny(blur, ret * 0.5, ret)
@@ -78,6 +78,7 @@ def get_edged(G):
     Thread(target = write_out, args = (out, dilated,)).start()
     #return dilate(th, ones((3,3), uint8),iterations = 1)
     return dilated
+
 def write_out(stream, frame):
     global out, out2
     stream.write(cvtColor(frame, COLOR_GRAY2BGR))
