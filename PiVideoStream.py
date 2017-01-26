@@ -6,13 +6,6 @@ import cv2
 class PiVideoStream:
     def __init__(self, resolution=(544,400), framerate=32):
         self.camera = PiCamera()
-        self.camera.led = False
-        self.camera.shutter_speed = self.camera.exposure_speed
-        self.camera.exposure_mode = 'off'
-        g = self.camera.awb_gains
-        self.camera.awb_mode = 'off'
-        self.camera.awb_gains = g
-        self.camera.iso = 100
         self.camera.resolution = resolution
         self.camera.framerate = framerate
         self.rawCapture = PiRGBArray(self.camera, size=resolution)

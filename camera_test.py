@@ -26,16 +26,22 @@ if __name__ == "__main__":
      time.sleep(2)
      counter = 0
      for key in exposure_modes:
-          camera.exposure_mode = exposure_modes[key]
           for key in awb_modes:
-               camera.awb_mode = awb_modes[key]
                for key in flash_modes:
-                    camera.flash_mode = flash_modes[key]
                     for key in image_effect:
-                         camera.image_effect = image_effect[key]
                          for key in meter_modes:
-                              camera.meter_mode = meter_modes[key]
                               for key in drc_strengths:
-                                   camera.drc_strength = drc_strengths[key]
+                                   camera_update(camera, awb_modes[key], exposure_modes[key], flash_modes[key], \
+                                        image_effect[key], meter_modes[key], drc_strengths[key])
                                    frame = camera.capture("cam_test/output_test_" + str(counter) + "_" + exposure_modes[key] + "_" +  awb_modes[key] + \
                                         "_" + flash_modes[key]  + "_" +  image_effect[key]  + "_" +  meter_modes[key]  + "_" +  drc_strengths[key] + ".jpeg")
+                                   counter += 1
+                                   print counter
+
+def camera_update(camera, awb, exposure, flash, effect, meter, drc):
+     camera.exposure_mode = exposure
+     camera.awb_mode = awb
+     camera.flash_mode = flash
+     camera.image_effect = effect
+     camera.meter_mode = meter
+     camera.drc_strength = drc
