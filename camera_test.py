@@ -29,7 +29,8 @@ if __name__ == "__main__":
      #camera.flash_mode = 'off'
      #camera.exposure_mode = 'off'
      camera.image_effect = 'none'
-     camera.drc_strength = 'medium'
+     #camera.drc_strength = 'medium'
+     camera.flash_mode = 'auto'
      #camera.meter_mode = 'average'
      #camera.drc_strength = 'off'
      #rawCapture = picamera.array.PiRGBArray(camera)
@@ -49,7 +50,7 @@ if __name__ == "__main__":
                camera_update(camera, awb_modes[key2], exposure_modes[key])
                #camera.capture("cam_test/output_test_" + str(counter) + "_" + exposure_modes[key] + "_" +  awb_modes[key] + \
                #    "_" + flash_modes[key]  + "_" +  image_effect[key]  + "_" +  meter_modes[key]  + "_" +  drc_strengths[key] + ".jpeg")
-               camera.capture("cam_test/output_test_dark_dark_drc_medium_" + str(counter) + "_" + exposure_modes[key] + "_" + awb_modes[key2] + ".jpeg")
+               camera.capture("cam_test/output_test_illuminated_dark_auto_flash_" + str(counter) + "_" + exposure_modes[key] + "_" + awb_modes[key2] + ".jpeg")
                counter += 1
                print counter
                #print exposure_modes[key]
