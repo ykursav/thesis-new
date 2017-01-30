@@ -4,13 +4,13 @@ import time
 import threading
 from cv2 import imwrite
 
-def camera_update(camera, awb, exposure):
+def camera_update(camera, awb, exposure, drc):
      camera.exposure_mode = exposure
      camera.awb_mode = awb
      #camera.flash_mode = flash
      #camera.image_effect = effect
      #camera.meter_mode = meter
-     #camera.drc_strength = drc
+     camera.drc_strength = drc
 
 
 if __name__ == "__main__":
@@ -28,7 +28,7 @@ if __name__ == "__main__":
      #camera.awb_mode = 'off'
      #camera.flash_mode = 'off'
      #camera.exposure_mode = 'off'
-     camera.image_effect = 'none'
+     #camera.image_effect = 'none'
      #camera.drc_strength = 'medium'
      camera.flash_mode = 'auto'
      #camera.meter_mode = 'average'
@@ -47,12 +47,14 @@ if __name__ == "__main__":
                     #for key in image_effect:
                          #for key in meter_modes:
                               #for key in drc_strengths:
-               camera_update(camera, awb_modes[key2], exposure_modes[key])
+               for key3 in drc_strengths:
+                   camera_update(camera, awb_modes[key2], exposure_modes[key], drc_strengths[key3])
                #camera.capture("cam_test/output_test_" + str(counter) + "_" + exposure_modes[key] + "_" +  awb_modes[key] + \
                #    "_" + flash_modes[key]  + "_" +  image_effect[key]  + "_" +  meter_modes[key]  + "_" +  drc_strengths[key] + ".jpeg")
-               camera.capture("cam_test/output_test_illuminated_dark_auto_flash_" + str(counter) + "_" + exposure_modes[key] + "_" + awb_modes[key2] + ".jpeg")
-               counter += 1
-               print counter
+                   camera.capture("cam_test/output_test_dark_dark_auto_flash_" + str(counter) + "_" + exposure_modes[key] + "_" + awb_modes[key2] + "_" + \
+                       drc_strengths[key3] + ".jpeg")
+                   counter += 1
+                   print counter
                #print exposure_modes[key]
                #print awb_modes[key2]
 
