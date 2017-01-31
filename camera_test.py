@@ -51,7 +51,7 @@ if __name__ == "__main__":
                    camera_update(camera, awb_modes[key2], exposure_modes[key], drc_strengths[key3])
                #camera.capture("cam_test/output_test_" + str(counter) + "_" + exposure_modes[key] + "_" +  awb_modes[key] + \
                #    "_" + flash_modes[key]  + "_" +  image_effect[key]  + "_" +  meter_modes[key]  + "_" +  drc_strengths[key] + ".jpeg")
-                   camera.capture("cam_test/output_test_dark_illuminated_auto_flash_" + str(counter) + "_" + exposure_modes[key] + "_" + awb_modes[key2] + "_" + \
+                   camera.capture("cam_test/output_test_dark_dark_auto_flash_" + str(counter) + "_" + exposure_modes[key] + "_" + awb_modes[key2] + "_" + \
                        drc_strengths[key3] + ".jpeg")
                    counter += 1
                    print counter
