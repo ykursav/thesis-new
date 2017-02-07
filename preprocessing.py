@@ -62,7 +62,7 @@ def get_edged(G):
     #v = median(gray)
     #lower = int(max(0, (1.0 - 0.33) * v))
     #upper = int(max(255, (1.0 + 0.33) * v))
-    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 9, 1)
+    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 9, 2)
     #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
     #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     # cv2.imwrite("Adaptive.jpg", th)
@@ -72,12 +72,12 @@ def get_edged(G):
     #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
     #print get_width_height(th)
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
-    #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
+    dilated = dilate(th, ones((3,3), uint8),iterations = 1)
     #dilated = dilate(th, ones((3, 3), uint8), iterations = 1)
     #edge = Canny(blur, lower, upper)
-    Thread(target = write_out, args = (out, th,)).start()
+    Thread(target = write_out, args = (out, dilated,)).start()
     #return dilate(th, ones((3,3), uint8),iterations = 1)
-    return th
+    return dilated
 
 def write_out(stream, frame):
     global out, out2
