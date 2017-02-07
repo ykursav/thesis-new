@@ -8,7 +8,7 @@ class PiVideoStream:
         self.camera = PiCamera()
         self.camera.resolution = resolution
         #self.camera.awb_mode = 'cloudy'
-        self.camera.exposure_mode = 'fireworks'
+        self.camera.exposure_mode = 'off'
         self.flash_mode = 'auto'
         self.camera.framerate = framerate
         self.rawCapture = PiRGBArray(self.camera, size=resolution)
