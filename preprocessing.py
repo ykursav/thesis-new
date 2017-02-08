@@ -62,7 +62,7 @@ def get_edged(G):
     #v = median(gray)
     #lower = int(max(0, (1.0 - 0.33) * v))
     #upper = int(max(255, (1.0 + 0.33) * v))
-    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 9, 2)
+    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 11, 1)
     #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
     #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     # cv2.imwrite("Adaptive.jpg", th)

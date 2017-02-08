@@ -1,0 +1,34 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 281.129 s
+File: preprocessing.py
+Function: get_edged at line 57
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    57                                           @profile
+    58                                           def get_edged(G):
+    59                                               global out
+    60     10067     23403104   2324.7      8.3      gray = gray_image(image)
+    61     10067     37255889   3700.8     13.3      blur = get_blurred(gray, G)
+    62                                               #v = median(gray)
+    63                                               #lower = int(max(0, (1.0 - 0.33) * v))
+    64                                               #upper = int(max(255, (1.0 + 0.33) * v))
+    65     10067    158677430  15762.1     56.4      th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 11, 1)
+    66                                               #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
+    67                                               #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    68                                               # cv2.imwrite("Adaptive.jpg", th)
+    69                                           ##        cv2.imshow("th", dilation)
+    70                                           ##        cv2.waitKey(0)
+    71                                           ##        cv2.destroyAllWindows()
+    72                                               #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
+    73                                               #print get_width_height(th)
+    74                                               #out.write(cvtColor(th, COLOR_GRAY2BGR))
+    75     10067     55274355   5490.6     19.7      dilated = dilate(th, ones((3,3), uint8),iterations = 1)
+    76                                               #dilated = dilate(th, ones((3, 3), uint8), iterations = 1)
+    77                                               #edge = Canny(blur, lower, upper)
+    78     10067      6460539    641.8      2.3      Thread(target = write_out, args = (out, dilated,)).start()
+    79                                               #return dilate(th, ones((3,3), uint8),iterations = 1)
+    80     10067        58151      5.8      0.0      return dilated
+
