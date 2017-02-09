@@ -22,17 +22,17 @@ resized_image = array([])
 warped = array([])
 L = 0
 counter_warped = 0
-#out = 0
+out = 0
 #out2 = 0
 #fourcc = VideoWriter_fourcc('X','V','I','D')
 #out = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/threshold_test_02.avi", fourcc, 20.0, (544, 400))
 
-def set_initials_pre(L_f, image_f, counter_warped_f):
-    global L, image, counter_warped
+def set_initials_pre(L_f, image_f, counter_warped_f, out_f):
+    global L, image, counter_warped, out
     L = L_f
     image = image_f
     counter_warped = counter_warped_f
-    #out = out_f
+    out = out_f
     #out2 = out2_f
 # class PreProcessing:
 #     def __init__(self, L, hist_eq):
@@ -79,9 +79,9 @@ def get_edged(G):
     #return dilate(th, ones((3,3), uint8),iterations = 1)
     return th
 
-# def write_out(stream, frame):
-#     global out, out2
-#     stream.write(cvtColor(frame, COLOR_GRAY2BGR))
+def write_out(stream, frame):
+    global out, out2
+    stream.write(cvtColor(frame, COLOR_GRAY2BGR))
 # #@profile
 #def get_edged(G):
 #    global out
@@ -198,7 +198,7 @@ def get_perspective(points, counter):
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
         #imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
-        #Thread(target = write_out, args = (out2, warped,)).start()
+        Thread(target = write_out, args = (out, warped,)).start()
         return 30
 
     else:
