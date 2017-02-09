@@ -1,0 +1,104 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 295.398 s
+File: mainproc.py
+Function: initialize_set at line 46
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    46                                           @profile
+    47                                           def initialize_set(image):
+    48                                               global counter, sigGen
+    49      7351      1357442    184.7      0.5      set_initials_pre(128, image, counter, out2)
+    50                                               #set_initials_pre(128, image, counter)
+    51      7351    227466328  30943.6     77.0      points = get_contour(3)
+    52      7351     20428830   2779.1      6.9      check = get_perspective(points, 0)
+    53      7351        47247      6.4      0.0      if check == 10:
+    54         6           32      5.3      0.0          counter -= 1
+    55         6           22      3.7      0.0          return
+    56      7345        31048      4.2      0.0      elif check == 20:
+    57      5944      5002850    841.7      1.7          logging.debug("Too small detection probably wrong")
+    58      5944        38559      6.5      0.0          counter -= 1
+    59      5944        22786      3.8      0.0          return
+    60      1401       822517    587.1      0.3      crop = get_cropped()
+    61      1401        29338     20.9      0.0      sig = bitarray()
+    62      1401        41000     29.3      0.0      set_initials(16, 8, 128, crop)
+    63      1401         8066      5.8      0.0      try:
+    64      1401     39847615  28442.3     13.5          sig = get_signature()
+    65      1400        13244      9.5      0.0          if counter < 50:
+    66        50          637     12.7      0.0             sigGen.extend(sig)
+    67                                                   else:
+    68      1350       188529    139.7      0.1             sigGen = sigGen[72:]
+    69      1350        22936     17.0      0.0             sigGen[3528:] = sig
+    70         1            4      4.0      0.0      except:
+    71         1          600    600.0      0.0          logging.debug("Nonetype")
+    72         1            6      6.0      0.0          counter -= 1
+    73         1            4      4.0      0.0          return
+    74      1400         6422      4.6      0.0      if counter >= 49:
+    75                                                   #logging.debug(sigGen)
+    76      1351        22400     16.6      0.0          set_initials_match(sigGen, 24, 38, 4, 28, 22)
+
+Total time: 169.635 s
+File: preprocessing.py
+Function: get_edged at line 57
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    57                                           @profile
+    58                                           def get_edged(G):
+    59                                               global out
+    60      7351     13514063   1838.4      8.0      gray = gray_image(image)
+    61      7351     19825378   2697.0     11.7      blur = get_blurred(gray, G)
+    62      7351     25749628   3502.9     15.2      v = median(gray)
+    63      7351       153675     20.9      0.1      lower = int(max(0, (1.0 - 0.33) * v))
+    64      7351        69839      9.5      0.0      upper = int(max(255, (1.0 + 0.33) * v))
+    65                                               #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 11, 1)
+    66                                               #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
+    67                                               #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    68                                               # cv2.imwrite("Adaptive.jpg", th)
+    69                                           ##        cv2.imshow("th", dilation)
+    70                                           ##        cv2.waitKey(0)
+    71                                           ##        cv2.destroyAllWindows()
+    72                                               #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
+    73                                               #print get_width_height(th)
+    74                                               #out.write(cvtColor(th, COLOR_GRAY2BGR))
+    75                                               #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
+    76                                               #dilated = dilate(th, ones((3, 3), uint8), iterations = 1)
+    77      7351     68524969   9321.9     40.4      edge = Canny(blur, lower, upper)
+    78                                               #Thread(target = write_out, args = (out, dilated,)).start()
+    79      7351     41797218   5685.9     24.6      return dilate(edge, ones((3,3), uint8),iterations = 1)
+
+Total time: 218.358 s
+File: preprocessing.py
+Function: get_contour at line 99
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    99                                           @profile
+   100                                           def get_contour(G):
+   101      7351    170446745  23186.9     78.1      edged = get_edged(G)
+   102      7351     23778192   3234.7     10.9      __, contours, hierarchy = findContours(edged, RETR_LIST, CHAIN_APPROX_SIMPLE)
+   103      7351        65895      9.0      0.0      approx = 0
+   104      7351        32969      4.5      0.0      first = False
+   105      7351        29667      4.0      0.0      no_contour = True
+   106      7351        25804      3.5      0.0      last_cnt = 0
+   107    385907      1468899      3.8      0.7      for cnt in contours:
+   108    378556      3776780     10.0      1.7          epsilon = 0.05 * arcLength(cnt, True)
+   109    378556     10785191     28.5      4.9          new_approx = approxPolyDP(cnt, epsilon, True)
+   110    378556      1641195      4.3      0.8          if first == False:
+   111     10233       130635     12.8      0.1              if check_points(new_approx):
+   112      7345        27499      3.7      0.0                  last_cnt = cnt
+   113      7345       185486     25.3      0.1                  approx = approxPolyDP(cnt, epsilon, True)
+   114      7345        30632      4.2      0.0                  first = True
+   115      7345        30295      4.1      0.0                  no_contour = False
+   116    368323      2846454      7.7      1.3          elif check_points(new_approx):
+   117    187011      2790406     14.9      1.3              if (contourArea(last_cnt) < contourArea(cnt)):
+   118     26179       103943      4.0      0.0                  last_cnt = cnt
+   119     26179       107340      4.1      0.0                  approx = new_approx
+   120                                                           
+   121      7351        28441      3.9      0.0      if first == False:
+   122         6           22      3.7      0.0          return -1
+   123                                               else:
+   124      7345        25040      3.4      0.0          return approx
+

@@ -14,8 +14,8 @@ def initialize_set(image, counter):
 
 
 if __name__ == "__main__": 
-    cap = VideoCapture("Videos/Test1.mp4")
-    f = open("signature_test5.bin", "wb")
+    cap = VideoCapture("Videos/test2.mp4")
+    f = open("signature_test6_new.bin", "wb")
     counter = 0
     while(cap.isOpened()):
         ret, frame = cap.read()
