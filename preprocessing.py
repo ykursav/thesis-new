@@ -64,7 +64,7 @@ def get_edged(G):
     #upper = int(max(255, (1.0 + 0.33) * v))
     th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 11, 1)
     #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
-    #ret ,th2 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+    #ret ,th2 = threshold(blur,0,255,THRESH_BINARY+THRESH_OTSU)
     # cv2.imwrite("Adaptive.jpg", th)
 ##        cv2.imshow("th", dilation)
 ##        cv2.waitKey(0)
@@ -74,9 +74,9 @@ def get_edged(G):
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
     #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
     #dilated = dilate(th, ones((3, 3), uint8), iterations = 1)
-    #edge = Canny(blur, lower, upper)
+    #edge = Canny(blur, ret / 2, ret)
     #Thread(target = write_out, args = (out, dilated,)).start()
-    #return dilate(th, ones((3,3), uint8),iterations = 1)
+    #return dilate(edge, ones((3,3), uint8),iterations = 1)
     return th
 
 def write_out(stream, frame):
@@ -100,6 +100,7 @@ def write_out(stream, frame):
 def get_contour(G):
     edged = get_edged(G)
     __, contours, hierarchy = findContours(edged, RETR_LIST, CHAIN_APPROX_SIMPLE)
+    contours = sorted(contours, key = contourArea, reverse = True)[:4]
     approx = 0
     first = False
     no_contour = True

@@ -1,0 +1,41 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 123.119 s
+File: mainproc.py
+Function: initialize_set at line 46
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    46                                           @profile
+    47                                           def initialize_set(image):
+    48                                               global counter, sigGen
+    49      1403       282992    201.7      0.2      set_initials_pre(128, image, counter, out2)
+    50                                               #set_initials_pre(128, image, counter)
+    51      1403     66389868  47319.9     53.9      points = get_contour(5)
+    52      1403     15686058  11180.4     12.7      check = get_perspective(points, 0)
+    53      1403        15190     10.8      0.0      if check == 10:
+    54                                                   counter -= 1
+    55                                                   return
+    56      1403         6457      4.6      0.0      elif check == 20:
+    57         3         2018    672.7      0.0          logging.debug("Too small detection probably wrong")
+    58         3          218     72.7      0.0          counter -= 1
+    59         3           12      4.0      0.0          return
+    60      1400       905893    647.1      0.7      crop = get_cropped()
+    61      1400        29722     21.2      0.0      sig = bitarray()
+    62      1400        45409     32.4      0.0      set_initials(16, 8, 128, crop)
+    63      1400         6348      4.5      0.0      try:
+    64      1400     39491887  28208.5     32.1          sig = get_signature()
+    65      1400        14023     10.0      0.0          if counter < 50:
+    66        50          666     13.3      0.0             sigGen.extend(sig)
+    67                                                   else:
+    68      1350       188548    139.7      0.2             sigGen = sigGen[72:]
+    69      1350        23826     17.6      0.0             sigGen[3528:] = sig
+    70                                               except:
+    71                                                   logging.debug("Nonetype")
+    72                                                   counter -= 1
+    73                                                   return
+    74      1400         6413      4.6      0.0      if counter >= 49:
+    75                                                   #logging.debug(sigGen)
+    76      1351        23040     17.1      0.0          set_initials_match(sigGen, 24, 38, 4, 28, 22)
+
