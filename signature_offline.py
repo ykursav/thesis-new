@@ -15,13 +15,14 @@ def initialize_set(image, counter):
 
 if __name__ == "__main__": 
     cap = VideoCapture("Videos/test2.mp4")
-    f = open("signature_test6_new.bin", "wb")
+    f = open("signature_test7_new.bin", "wb")
     counter = 0
     while(cap.isOpened()):
         ret, frame = cap.read()
         if ret != True:
             break
 	sigGen = initialize_set(frame, counter)
+        print sigGen
         f.write(sigGen.tobytes())
         counter += 1
 

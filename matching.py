@@ -12,7 +12,7 @@ tau4 = 0
 tau5 = 0
 sigOrig = bitarray()
 sigGen = bitarray()
-f = open("signature_test5.bin", "r")
+f = open("signature_test6_new.bin", "r")
 sigOrig = bitarray()
 sigOrig.fromfile(f)
 f.close()
@@ -40,8 +40,8 @@ def set_signature(sigGen_m):
     global sigGen
     sigGen = sigGen_m
         
-def signature_hamming(sigOrig_h):
-    return bitdiff(sigOrig_h, sigGen)
+def signature_hamming(sigOrig_h, sigGen_h):
+    return bitdiff(sigOrig_h, sigGen_h)
 
 #@profile
 def signature_scan():
@@ -53,10 +53,17 @@ def signature_scan():
        #result = bitdiff(sigOrig[x * 12000:(x + 1) * 12000], sigGen)
        #p.start()
        #jobs.append(p)
-       result_buffer.append(signature_hamming(sigOrig[x * 1800:(x + 1) * 1800 + 1800]))
+       result_buffer.append(signature_hamming(sigOrig[x * 1800:(x + 1) * 1800 + 1800], sigGen))
 
     return result_buffer
     #print signature_scan
+def signature_deep_scan(range1, range2, sigGen_new):
+    buffer_sig = sigOrig[range1:range2]
+    result_buffer = []
+    for x in range(0, 75):
+        result_buffer.append(signature_hamming(buffer_sig[x * 72:(x + 1) * 72], sigGen_new))
+    
+    return min(result_buffer)
 
 def signature_rejection():
     hamming_sig = signature_hamming()

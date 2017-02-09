@@ -3,7 +3,7 @@ from PiVideoStream import PiVideoStream
 from bitarray import bitarray
 from preprocessing import set_initials_pre, get_contour, get_perspective, get_cropped
 from extraction import set_initials, get_signature
-from matching import set_initials_match, signature_rejection, signature_scan
+from matching import set_initials_match, signature_rejection, signature_scan, signature_deep_scan
 #from subprocess import call
 from threading import Thread, active_count
 from picamera import PiCamera
@@ -25,8 +25,8 @@ ap.add_argument("-f", "--file-name", type=str, default="debug_log.log",
     help="Filename can be assigned with that argument otherwise default is debug_log.log")
 #ap.add_argument("-v1", "--video1-name", type=str, default="video1.avi",
 #    help="First video output file name can be assigned with that argument otherwise default is video1.avi")
-ap.add_argument("-v2", "--video2-name", type=str, default="video2.avi",
-    help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
+#ap.add_argument("-v2", "--video2-name", type=str, default="video2.avi",
+#    help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
 args = vars(ap.parse_args())
 
 #f = open("signature.bin", "r")
@@ -42,11 +42,11 @@ counter = 0
 sigGen = bitarray()
 fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
 #out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video1_name"], fourcc, 10.0, (544, 400))
-out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 10.0, (500, 300))
+#out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 10.0, (500, 300))
 #@profile
 def initialize_set(image):
     global counter, sigGen
-    set_initials_pre(128, image, counter, out2)
+    set_initials_pre(128, image, counter)
     #set_initials_pre(128, image, counter)
     points = get_contour(5)
     check = get_perspective(points, 0)
@@ -75,8 +75,19 @@ def initialize_set(image):
         #logging.debug(sigGen)
         set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
-        #scan_sig = signature_scan()
-        #logging.debug(str(min(scan_sig)))
+        scan_sig = signature_scan()
+        min_point = scan_sig.index(min(scan_sig))
+        range1 = 0
+        range2 = 0
+        if min_point != 0:
+            range1 = (min_point * 1800) - 1800
+            range2 = (min_point * 1800) + 3600
+        else:
+            range1 = min_point * 1800
+            range2 = (min_point * 1800) + 5400
+        #print range1, range2
+        min_match = signature_deep_scan(range1, range2, sig)
+        logging.debug(str(min_match))
         
         
     
