@@ -59,7 +59,7 @@ def initialize_set(image):
         return
     crop = get_cropped()
     sig = bitarray()
-    set_initials(8, 4, 128, crop)
+    set_initials(16, 8, 128, crop)
     try:
         sig = get_signature()
         #print len(sig)
