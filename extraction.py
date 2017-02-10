@@ -202,12 +202,12 @@ def get_all_fragments():
     counter_y = 0
     append_std_lum = fragments_list[0].append
     append_avg_lum = fragments_list[1].append
-    while(counter_x < number_of_blocks / 2 or counter_y < number_of_blocks / 2):
-        if counter_x == (number_of_blocks / 2) + 1:
+    while(counter_x < 14 or counter_y < 14):
+        if counter_x == 15:
             counter_y += 1
             counter_x = counter_y
-        if counter_x == counter_y or counter_x == number_of_blocks / 2:
-            if counter_x == number_of_blocks / 2 and counter_y == number_of_blocks / 2:
+        if counter_x == counter_y or counter_x == 14:
+            if counter_x == 14 and counter_y == 14:
                 avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
                 append_std_lum(std_lum)
                 append_avg_lum(avg_lum)

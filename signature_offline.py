@@ -7,7 +7,7 @@ def initialize_set(image, counter):
     set_initials_pre(128, image, counter)
     image2 = get_cropped()
     #simwrite("resized_images/cropped" + str(counter) + ".jpg", image2)
-    set_initials(16, 8, 128, image2)
+    set_initials(8, 4, 128, image2)
     sigGen = get_signature()
     return sigGen
 
@@ -15,7 +15,7 @@ def initialize_set(image, counter):
 
 if __name__ == "__main__": 
     cap = VideoCapture("Videos/test2.mp4")
-    f = open("signature_test7_new.bin", "wb")
+    f = open("signature_test8.bin", "wb")
     counter = 0
     while(cap.isOpened()):
         ret, frame = cap.read()

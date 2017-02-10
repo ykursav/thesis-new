@@ -27,13 +27,13 @@ out2 = 0
 #fourcc = VideoWriter_fourcc('X','V','I','D')
 #out = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/threshold_test_02.avi", fourcc, 20.0, (544, 400))
 
-def set_initials_pre(L_f, image_f, counter_warped_f):
-    global L, image, counter_warped
+def set_initials_pre(L_f, image_f, counter_warped_f, out2_f):
+    global L, image, counter_warped, out2
     L = L_f
     image = image_f
     counter_warped = counter_warped_f
     #out = out_f
-    #out2 = out2_f
+    out2 = out2_f
 # class PreProcessing:
 #     def __init__(self, L, hist_eq):
 #         self.image = array([])
@@ -169,7 +169,7 @@ def distance_calculator(p1, p2):
 
 #@profile
 def get_perspective(points, counter):
-    global warped
+    global warped, out2
     if type(points) is not ndarray:
         return 10
     if len(points) != 1:
@@ -199,7 +199,7 @@ def get_perspective(points, counter):
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
         #imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
-        #Thread(target = write_out, args = (out2, warped,)).start()
+        Thread(target = write_out, args = (out2, warped,)).start()
         return 30
 
     else:
