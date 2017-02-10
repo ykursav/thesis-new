@@ -91,9 +91,13 @@ def initialize_set(image):
         match_frame = (range1 / 240) + min_match
         logging.debug(str(match_frame))
         logging.debug(str(error_n))
-        min_val, error_val = signature_o2o(sig)
-        logging.debug(str(min_val))
-        logging.debug(str(error_val))
+        if error_n >90:
+            logging.debug("No match")
+        else:
+            logging.debug("Match")
+        #min_val, error_val = signature_o2o(sig)
+        #logging.debug(str(min_val))
+        #logging.debug(str(error_val))
         
         
     

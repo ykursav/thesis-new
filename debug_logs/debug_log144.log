@@ -1,0 +1,3776 @@
+DEBUG:root:Under real time Point 1486764299.44
+
+DEBUG:root:Real time1486764299.64
+
+DEBUG:root:Real time1486764299.84
+
+DEBUG:root:Real time1486764300.04
+
+DEBUG:root:Real time1486764300.24
+
+DEBUG:root:Real time1486764300.44
+
+DEBUG:root:Real time1486764300.64
+
+DEBUG:root:Real time1486764300.85
+
+DEBUG:root:Real time1486764301.05
+
+DEBUG:root:Real time1486764301.25
+
+DEBUG:root:205
+DEBUG:root:95
+DEBUG:root:No match
+DEBUG:root:Real time1486764301.45
+
+DEBUG:root:208
+DEBUG:root:87
+DEBUG:root:Match
+DEBUG:root:Real time1486764301.65
+
+DEBUG:root:219
+DEBUG:root:91
+DEBUG:root:No match
+DEBUG:root:Real time1486764301.85
+
+DEBUG:root:210
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764302.05
+
+DEBUG:root:223
+DEBUG:root:88
+DEBUG:root:Match
+DEBUG:root:Real time1486764302.25
+
+DEBUG:root:224
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764302.45
+
+DEBUG:root:325
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764302.65
+
+DEBUG:root:325
+DEBUG:root:101
+DEBUG:root:No match
+DEBUG:root:Real time1486764302.85
+
+DEBUG:root:321
+DEBUG:root:115
+DEBUG:root:No match
+DEBUG:root:Real time1486764303.05
+
+DEBUG:root:227
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764303.25
+
+DEBUG:root:227
+DEBUG:root:76
+DEBUG:root:Match
+DEBUG:root:Real time1486764303.46
+
+DEBUG:root:227
+DEBUG:root:76
+DEBUG:root:Match
+DEBUG:root:Real time1486764303.66
+
+DEBUG:root:121
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764303.86
+
+DEBUG:root:572
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764304.06
+
+DEBUG:root:233
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764304.26
+
+DEBUG:root:234
+DEBUG:root:55
+DEBUG:root:Match
+DEBUG:root:Real time1486764304.46
+
+DEBUG:root:234
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764304.66
+
+DEBUG:root:571
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764304.86
+
+DEBUG:root:586
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764305.06
+
+DEBUG:root:235
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764305.26
+
+DEBUG:root:235
+DEBUG:root:83
+DEBUG:root:Match
+DEBUG:root:Real time1486764305.46
+
+DEBUG:root:239
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764305.66
+
+DEBUG:root:239
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764305.86
+
+DEBUG:root:242
+DEBUG:root:34
+DEBUG:root:Match
+DEBUG:root:Real time1486764306.06
+
+DEBUG:root:242
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764306.26
+
+DEBUG:root:242
+DEBUG:root:44
+DEBUG:root:Match
+DEBUG:root:Real time1486764306.46
+
+DEBUG:root:242
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764306.66
+
+DEBUG:root:242
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764306.86
+
+DEBUG:root:242
+DEBUG:root:46
+DEBUG:root:Match
+DEBUG:root:Real time1486764307.06
+
+DEBUG:root:242
+DEBUG:root:45
+DEBUG:root:Match
+DEBUG:root:Real time1486764307.26
+
+DEBUG:root:249
+DEBUG:root:93
+DEBUG:root:No match
+DEBUG:root:Real time1486764307.46
+
+DEBUG:root:249
+DEBUG:root:105
+DEBUG:root:No match
+DEBUG:root:Real time1486764307.67
+
+DEBUG:root:253
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764307.87
+
+DEBUG:root:250
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764308.07
+
+DEBUG:root:254
+DEBUG:root:42
+DEBUG:root:Match
+DEBUG:root:Real time1486764308.27
+
+DEBUG:root:254
+DEBUG:root:63
+DEBUG:root:Match
+DEBUG:root:Real time1486764308.47
+
+DEBUG:root:254
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764308.67
+
+DEBUG:root:254
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764308.87
+
+DEBUG:root:258
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764309.07
+
+DEBUG:root:259
+DEBUG:root:59
+DEBUG:root:Match
+DEBUG:root:Real time1486764309.27
+
+DEBUG:root:259
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764309.47
+
+DEBUG:root:250
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764309.67
+
+DEBUG:root:257
+DEBUG:root:114
+DEBUG:root:No match
+DEBUG:root:Real time1486764309.87
+
+DEBUG:root:262
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764310.08
+
+DEBUG:root:264
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764310.28
+
+DEBUG:root:264
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764310.48
+
+DEBUG:root:264
+DEBUG:root:89
+DEBUG:root:Match
+DEBUG:root:Real time1486764310.68
+
+DEBUG:root:267
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764310.88
+
+DEBUG:root:268
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Real time1486764311.08
+
+DEBUG:root:269
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764311.28
+
+DEBUG:root:268
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764311.48
+
+DEBUG:root:271
+DEBUG:root:39
+DEBUG:root:Match
+DEBUG:root:Real time1486764311.68
+
+DEBUG:root:272
+DEBUG:root:42
+DEBUG:root:Match
+DEBUG:root:Real time1486764311.88
+
+DEBUG:root:272
+DEBUG:root:44
+DEBUG:root:Match
+DEBUG:root:Real time1486764312.08
+
+DEBUG:root:274
+DEBUG:root:41
+DEBUG:root:Match
+DEBUG:root:Real time1486764312.28
+
+DEBUG:root:274
+DEBUG:root:44
+DEBUG:root:Match
+DEBUG:root:Real time1486764312.48
+
+DEBUG:root:263
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764312.68
+
+DEBUG:root:277
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764312.88
+
+DEBUG:root:278
+DEBUG:root:45
+DEBUG:root:Match
+DEBUG:root:Real time1486764313.08
+
+DEBUG:root:278
+DEBUG:root:27
+DEBUG:root:Match
+DEBUG:root:Real time1486764313.28
+
+DEBUG:root:278
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764313.48
+
+DEBUG:root:279
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764313.69
+
+DEBUG:root:22
+DEBUG:root:88
+DEBUG:root:Match
+DEBUG:root:Real time1486764313.89
+
+DEBUG:root:283
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764314.09
+
+DEBUG:root:283
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764314.29
+
+DEBUG:root:280
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764314.49
+
+DEBUG:root:467
+DEBUG:root:108
+DEBUG:root:No match
+DEBUG:root:Real time1486764314.69
+
+DEBUG:root:59
+DEBUG:root:83
+DEBUG:root:Match
+DEBUG:root:Real time1486764314.89
+
+DEBUG:root:287
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764315.09
+
+DEBUG:root:289
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764315.29
+
+DEBUG:root:281
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764315.49
+
+DEBUG:root:562
+DEBUG:root:122
+DEBUG:root:No match
+DEBUG:root:Real time1486764315.69
+
+DEBUG:root:594
+DEBUG:root:88
+DEBUG:root:Match
+DEBUG:root:Real time1486764315.89
+
+DEBUG:root:594
+DEBUG:root:107
+DEBUG:root:No match
+DEBUG:root:Real time1486764316.09
+
+DEBUG:root:293
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764316.29
+
+DEBUG:root:290
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764316.49
+
+DEBUG:root:298
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764316.7
+
+DEBUG:root:301
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764316.9
+
+DEBUG:root:303
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764317.1
+
+DEBUG:root:299
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764317.3
+
+DEBUG:root:296
+DEBUG:root:60
+DEBUG:root:Match
+DEBUG:root:Real time1486764317.5
+
+DEBUG:root:297
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764317.7
+
+DEBUG:root:298
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764317.9
+
+DEBUG:root:299
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764318.1
+
+DEBUG:root:296
+DEBUG:root:56
+DEBUG:root:Match
+DEBUG:root:Real time1486764318.3
+
+DEBUG:root:298
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Real time1486764318.5
+
+DEBUG:root:300
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764318.7
+
+DEBUG:root:300
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764318.9
+
+DEBUG:root:307
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764319.1
+
+DEBUG:root:296
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764319.3
+
+DEBUG:root:300
+DEBUG:root:66
+DEBUG:root:Match
+DEBUG:root:Real time1486764319.5
+
+DEBUG:root:300
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764319.7
+
+DEBUG:root:300
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764319.9
+
+DEBUG:root:313
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764320.1
+
+DEBUG:root:313
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764320.3
+
+DEBUG:root:313
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764320.51
+
+DEBUG:root:314
+DEBUG:root:53
+DEBUG:root:Match
+DEBUG:root:Real time1486764320.71
+
+DEBUG:root:317
+DEBUG:root:33
+DEBUG:root:Match
+DEBUG:root:Real time1486764320.91
+
+DEBUG:root:314
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764321.11
+
+DEBUG:root:319
+DEBUG:root:83
+DEBUG:root:Match
+DEBUG:root:Real time1486764321.31
+
+DEBUG:root:317
+DEBUG:root:66
+DEBUG:root:Match
+DEBUG:root:Real time1486764321.51
+
+DEBUG:root:317
+DEBUG:root:59
+DEBUG:root:Match
+DEBUG:root:Real time1486764321.71
+
+DEBUG:root:323
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764321.91
+
+DEBUG:root:324
+DEBUG:root:43
+DEBUG:root:Match
+DEBUG:root:Real time1486764322.11
+
+DEBUG:root:324
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764322.31
+
+DEBUG:root:320
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764322.51
+
+DEBUG:root:319
+DEBUG:root:96
+DEBUG:root:No match
+DEBUG:root:Real time1486764322.71
+
+DEBUG:root:329
+DEBUG:root:36
+DEBUG:root:Match
+DEBUG:root:Under real time Point 0.202073097229
+
+DEBUG:root:326
+DEBUG:root:40
+DEBUG:root:Match
+DEBUG:root:Real time1486764323.11
+
+DEBUG:root:326
+DEBUG:root:39
+DEBUG:root:Match
+DEBUG:root:Real time1486764323.31
+
+DEBUG:root:326
+DEBUG:root:37
+DEBUG:root:Match
+DEBUG:root:Real time1486764323.51
+
+DEBUG:root:326
+DEBUG:root:39
+DEBUG:root:Match
+DEBUG:root:Real time1486764323.71
+
+DEBUG:root:326
+DEBUG:root:40
+DEBUG:root:Match
+DEBUG:root:Real time1486764323.91
+
+DEBUG:root:326
+DEBUG:root:35
+DEBUG:root:Match
+DEBUG:root:Real time1486764324.12
+
+DEBUG:root:326
+DEBUG:root:39
+DEBUG:root:Match
+DEBUG:root:Real time1486764324.32
+
+DEBUG:root:330
+DEBUG:root:40
+DEBUG:root:Match
+DEBUG:root:Real time1486764324.52
+
+DEBUG:root:326
+DEBUG:root:37
+DEBUG:root:Match
+DEBUG:root:Real time1486764324.72
+
+DEBUG:root:325
+DEBUG:root:116
+DEBUG:root:No match
+DEBUG:root:Real time1486764324.92
+
+DEBUG:root:325
+DEBUG:root:113
+DEBUG:root:No match
+DEBUG:root:Real time1486764325.12
+
+DEBUG:root:339
+DEBUG:root:95
+DEBUG:root:No match
+DEBUG:root:Real time1486764325.32
+
+DEBUG:root:339
+DEBUG:root:108
+DEBUG:root:No match
+DEBUG:root:Real time1486764325.52
+
+DEBUG:root:325
+DEBUG:root:109
+DEBUG:root:No match
+DEBUG:root:Real time1486764325.72
+
+DEBUG:root:321
+DEBUG:root:109
+DEBUG:root:No match
+DEBUG:root:Real time1486764325.92
+
+DEBUG:root:344
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764326.12
+
+DEBUG:root:344
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764326.32
+
+DEBUG:root:340
+DEBUG:root:95
+DEBUG:root:No match
+DEBUG:root:Real time1486764326.52
+
+DEBUG:root:124
+DEBUG:root:106
+DEBUG:root:No match
+DEBUG:root:Real time1486764326.72
+
+DEBUG:root:388
+DEBUG:root:93
+DEBUG:root:No match
+DEBUG:root:Real time1486764326.92
+
+DEBUG:root:343
+DEBUG:root:97
+DEBUG:root:No match
+DEBUG:root:Real time1486764327.13
+
+DEBUG:root:349
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764327.33
+
+DEBUG:root:389
+DEBUG:root:91
+DEBUG:root:No match
+DEBUG:root:Real time1486764327.53
+
+DEBUG:root:351
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764327.73
+
+DEBUG:root:352
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764327.93
+
+DEBUG:root:353
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764328.13
+
+DEBUG:root:354
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764328.33
+
+DEBUG:root:363
+DEBUG:root:103
+DEBUG:root:No match
+DEBUG:root:Real time1486764328.53
+
+DEBUG:root:376
+DEBUG:root:97
+DEBUG:root:No match
+DEBUG:root:Real time1486764328.73
+
+DEBUG:root:357
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764328.93
+
+DEBUG:root:359
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764329.13
+
+DEBUG:root:359
+DEBUG:root:95
+DEBUG:root:No match
+DEBUG:root:Real time1486764329.33
+
+DEBUG:root:481
+DEBUG:root:102
+DEBUG:root:No match
+DEBUG:root:Real time1486764329.53
+
+DEBUG:root:729
+DEBUG:root:102
+DEBUG:root:No match
+DEBUG:root:Real time1486764329.73
+
+DEBUG:root:428
+DEBUG:root:106
+DEBUG:root:No match
+DEBUG:root:Real time1486764329.93
+
+DEBUG:root:72
+DEBUG:root:103
+DEBUG:root:No match
+DEBUG:root:Real time1486764330.14
+
+DEBUG:root:351
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764330.34
+
+DEBUG:root:134
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764330.54
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0374879837036
+
+DEBUG:root:987
+DEBUG:root:108
+DEBUG:root:No match
+DEBUG:root:Real time1486764330.77
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0342829227448
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0394551753998
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0367829799652
+
+DEBUG:root:368
+DEBUG:root:53
+DEBUG:root:Match
+DEBUG:root:Real time1486764331.09
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0361669063568
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0387499332428
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0368540287018
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0361762046814
+
+DEBUG:root:367
+DEBUG:root:53
+DEBUG:root:Match
+DEBUG:root:Real time1486764331.44
+
+DEBUG:root:367
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764331.64
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0362510681152
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0380539894104
+
+DEBUG:root:371
+DEBUG:root:45
+DEBUG:root:Match
+DEBUG:root:Real time1486764331.91
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0369341373444
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0357358455658
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0373702049255
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0374979972839
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0390589237213
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0369608402252
+
+DEBUG:root:370
+DEBUG:root:59
+DEBUG:root:Match
+DEBUG:root:Real time1486764332.34
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0346670150757
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0407438278198
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0421829223633
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0395300388336
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0356159210205
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0376670360565
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0356829166412
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0363528728485
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.036780834198
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0354809761047
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0354161262512
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0528249740601
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0848870277405
+
+DEBUG:root:374
+DEBUG:root:63
+DEBUG:root:Match
+DEBUG:root:Real time1486764333.09
+
+DEBUG:root:364
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764333.29
+
+DEBUG:root:364
+DEBUG:root:106
+DEBUG:root:No match
+DEBUG:root:Real time1486764333.49
+
+DEBUG:root:365
+DEBUG:root:119
+DEBUG:root:No match
+DEBUG:root:Real time1486764333.69
+
+DEBUG:root:379
+DEBUG:root:108
+DEBUG:root:No match
+DEBUG:root:Real time1486764333.89
+
+DEBUG:root:379
+DEBUG:root:103
+DEBUG:root:No match
+DEBUG:root:Real time1486764334.09
+
+DEBUG:root:384
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764334.29
+
+DEBUG:root:384
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764334.49
+
+DEBUG:root:24
+DEBUG:root:85
+DEBUG:root:Match
+DEBUG:root:Real time1486764334.69
+
+DEBUG:root:387
+DEBUG:root:35
+DEBUG:root:Match
+DEBUG:root:Real time1486764334.89
+
+DEBUG:root:388
+DEBUG:root:36
+DEBUG:root:Match
+DEBUG:root:Real time1486764335.09
+
+DEBUG:root:389
+DEBUG:root:34
+DEBUG:root:Match
+DEBUG:root:Real time1486764335.29
+
+DEBUG:root:389
+DEBUG:root:38
+DEBUG:root:Match
+DEBUG:root:Real time1486764335.5
+
+DEBUG:root:388
+DEBUG:root:39
+DEBUG:root:Match
+DEBUG:root:Real time1486764335.7
+
+DEBUG:root:391
+DEBUG:root:34
+DEBUG:root:Match
+DEBUG:root:Real time1486764335.9
+
+DEBUG:root:394
+DEBUG:root:101
+DEBUG:root:No match
+DEBUG:root:Real time1486764336.1
+
+DEBUG:root:394
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764336.3
+
+DEBUG:root:394
+DEBUG:root:85
+DEBUG:root:Match
+DEBUG:root:Real time1486764336.5
+
+DEBUG:root:394
+DEBUG:root:88
+DEBUG:root:Match
+DEBUG:root:Real time1486764336.7
+
+DEBUG:root:394
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764336.9
+
+DEBUG:root:389
+DEBUG:root:109
+DEBUG:root:No match
+DEBUG:root:Real time1486764337.1
+
+DEBUG:root:396
+DEBUG:root:100
+DEBUG:root:No match
+DEBUG:root:Real time1486764337.3
+
+DEBUG:root:393
+DEBUG:root:85
+DEBUG:root:Match
+DEBUG:root:Real time1486764337.5
+
+DEBUG:root:1016
+DEBUG:root:120
+DEBUG:root:No match
+DEBUG:root:Real time1486764337.7
+
+DEBUG:root:399
+DEBUG:root:102
+DEBUG:root:No match
+DEBUG:root:Under real time Point 0.205437898636
+
+DEBUG:root:403
+DEBUG:root:63
+DEBUG:root:Match
+DEBUG:root:Real time1486764338.11
+
+DEBUG:root:404
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764338.31
+
+DEBUG:root:33
+DEBUG:root:104
+DEBUG:root:No match
+DEBUG:root:Real time1486764338.51
+
+DEBUG:root:36
+DEBUG:root:105
+DEBUG:root:No match
+DEBUG:root:Real time1486764338.71
+
+DEBUG:root:663
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764338.91
+
+DEBUG:root:992
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764339.11
+
+DEBUG:root:409
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764339.31
+
+DEBUG:root:721
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764339.51
+
+DEBUG:root:724
+DEBUG:root:91
+DEBUG:root:No match
+DEBUG:root:Real time1486764339.71
+
+DEBUG:root:646
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764339.91
+
+DEBUG:root:977
+DEBUG:root:85
+DEBUG:root:Match
+DEBUG:root:Real time1486764340.11
+
+DEBUG:root:414
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764340.31
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0390000343323
+
+DEBUG:root:Under real time Point 0.035560131073
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0365998744965
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0337178707123
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0340828895569
+
+DEBUG:root:978
+DEBUG:root:103
+DEBUG:root:No match
+DEBUG:root:Real time1486764340.69
+
+DEBUG:root:979
+DEBUG:root:110
+DEBUG:root:No match
+DEBUG:root:Real time1486764340.89
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0417518615723
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0478768348694
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.033951997757
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0315728187561
+
+DEBUG:root:Too small detection probably wrong
+DEBUG:root:Under real time Point 0.0327939987183
+
+DEBUG:root:960
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764341.28
+
+DEBUG:root:413
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764341.48
+
+DEBUG:root:413
+DEBUG:root:97
+DEBUG:root:No match
+DEBUG:root:Real time1486764341.68
+
+DEBUG:root:424
+DEBUG:root:31
+DEBUG:root:Match
+DEBUG:root:Real time1486764341.89
+
+DEBUG:root:423
+DEBUG:root:32
+DEBUG:root:Match
+DEBUG:root:Real time1486764342.09
+
+DEBUG:root:423
+DEBUG:root:32
+DEBUG:root:Match
+DEBUG:root:Real time1486764342.29
+
+DEBUG:root:428
+DEBUG:root:23
+DEBUG:root:Match
+DEBUG:root:Real time1486764342.49
+
+DEBUG:root:426
+DEBUG:root:29
+DEBUG:root:Match
+DEBUG:root:Real time1486764342.69
+
+DEBUG:root:428
+DEBUG:root:24
+DEBUG:root:Match
+DEBUG:root:Under real time Point 0.205303907394
+
+DEBUG:root:428
+DEBUG:root:27
+DEBUG:root:Match
+DEBUG:root:Real time1486764343.1
+
+DEBUG:root:426
+DEBUG:root:44
+DEBUG:root:Match
+DEBUG:root:Real time1486764343.3
+
+DEBUG:root:429
+DEBUG:root:83
+DEBUG:root:Match
+DEBUG:root:Real time1486764343.5
+
+DEBUG:root:421
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764343.7
+
+DEBUG:root:421
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764343.9
+
+DEBUG:root:424
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764344.1
+
+DEBUG:root:434
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764344.3
+
+DEBUG:root:430
+DEBUG:root:110
+DEBUG:root:No match
+DEBUG:root:Real time1486764344.5
+
+DEBUG:root:415
+DEBUG:root:107
+DEBUG:root:No match
+DEBUG:root:Real time1486764344.7
+
+DEBUG:root:415
+DEBUG:root:108
+DEBUG:root:No match
+DEBUG:root:Real time1486764344.9
+
+DEBUG:root:415
+DEBUG:root:111
+DEBUG:root:No match
+DEBUG:root:Real time1486764345.1
+
+DEBUG:root:439
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764345.3
+
+DEBUG:root:439
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764345.5
+
+DEBUG:root:442
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764345.7
+
+DEBUG:root:442
+DEBUG:root:60
+DEBUG:root:Match
+DEBUG:root:Real time1486764345.9
+
+DEBUG:root:442
+DEBUG:root:41
+DEBUG:root:Match
+DEBUG:root:Real time1486764346.1
+
+DEBUG:root:444
+DEBUG:root:36
+DEBUG:root:Match
+DEBUG:root:Real time1486764346.3
+
+DEBUG:root:442
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764346.5
+
+DEBUG:root:438
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764346.7
+
+DEBUG:root:440
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764346.9
+
+DEBUG:root:448
+DEBUG:root:35
+DEBUG:root:Match
+DEBUG:root:Real time1486764347.1
+
+DEBUG:root:449
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764347.31
+
+DEBUG:root:436
+DEBUG:root:97
+DEBUG:root:No match
+DEBUG:root:Real time1486764347.51
+
+DEBUG:root:448
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764347.71
+
+DEBUG:root:447
+DEBUG:root:103
+DEBUG:root:No match
+DEBUG:root:Under real time Point 0.20973610878
+
+DEBUG:root:453
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Real time1486764348.12
+
+DEBUG:root:454
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764348.32
+
+DEBUG:root:528
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764348.52
+
+DEBUG:root:5
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764348.72
+
+DEBUG:root:7
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764348.92
+
+DEBUG:root:0
+DEBUG:root:112
+DEBUG:root:No match
+DEBUG:root:Real time1486764349.12
+
+DEBUG:root:448
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764349.32
+
+DEBUG:root:3
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764349.52
+
+DEBUG:root:Under real time Point 1486764520.28
+
+DEBUG:root:Real time1486764520.48
+
+DEBUG:root:Real time1486764520.68
+
+DEBUG:root:Real time1486764520.88
+
+DEBUG:root:Real time1486764521.08
+
+DEBUG:root:Real time1486764521.28
+
+DEBUG:root:Real time1486764521.48
+
+DEBUG:root:Real time1486764521.68
+
+DEBUG:root:Real time1486764521.88
+
+DEBUG:root:Real time1486764522.08
+
+DEBUG:root:538
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764522.28
+
+DEBUG:root:543
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764522.48
+
+DEBUG:root:537
+DEBUG:root:52
+DEBUG:root:Match
+DEBUG:root:Real time1486764522.68
+
+DEBUG:root:538
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764522.88
+
+DEBUG:root:536
+DEBUG:root:111
+DEBUG:root:No match
+DEBUG:root:Real time1486764523.08
+
+DEBUG:root:546
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764523.28
+
+DEBUG:root:546
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764523.48
+
+DEBUG:root:546
+DEBUG:root:59
+DEBUG:root:Match
+DEBUG:root:Real time1486764523.68
+
+DEBUG:root:546
+DEBUG:root:63
+DEBUG:root:Match
+DEBUG:root:Real time1486764523.88
+
+DEBUG:root:558
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764524.08
+
+DEBUG:root:564
+DEBUG:root:53
+DEBUG:root:Match
+DEBUG:root:Real time1486764524.29
+
+DEBUG:root:546
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764524.49
+
+DEBUG:root:548
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764524.69
+
+DEBUG:root:568
+DEBUG:root:56
+DEBUG:root:Match
+DEBUG:root:Real time1486764524.89
+
+DEBUG:root:560
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764525.09
+
+DEBUG:root:560
+DEBUG:root:52
+DEBUG:root:Match
+DEBUG:root:Real time1486764525.29
+
+DEBUG:root:558
+DEBUG:root:56
+DEBUG:root:Match
+DEBUG:root:Real time1486764525.49
+
+DEBUG:root:559
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764525.69
+
+DEBUG:root:559
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764525.89
+
+DEBUG:root:561
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764526.09
+
+DEBUG:root:558
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764526.29
+
+DEBUG:root:558
+DEBUG:root:53
+DEBUG:root:Match
+DEBUG:root:Real time1486764526.49
+
+DEBUG:root:557
+DEBUG:root:63
+DEBUG:root:Match
+DEBUG:root:Real time1486764526.69
+
+DEBUG:root:557
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764526.89
+
+DEBUG:root:567
+DEBUG:root:62
+DEBUG:root:Match
+DEBUG:root:Real time1486764527.09
+
+DEBUG:root:559
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764527.3
+
+DEBUG:root:567
+DEBUG:root:66
+DEBUG:root:Match
+DEBUG:root:Real time1486764527.5
+
+DEBUG:root:569
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764527.7
+
+DEBUG:root:569
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764527.9
+
+DEBUG:root:569
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764528.1
+
+DEBUG:root:571
+DEBUG:root:60
+DEBUG:root:Match
+DEBUG:root:Real time1486764528.3
+
+DEBUG:root:572
+DEBUG:root:52
+DEBUG:root:Match
+DEBUG:root:Real time1486764528.5
+
+DEBUG:root:572
+DEBUG:root:52
+DEBUG:root:Match
+DEBUG:root:Real time1486764528.7
+
+DEBUG:root:572
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764528.9
+
+DEBUG:root:572
+DEBUG:root:56
+DEBUG:root:Match
+DEBUG:root:Real time1486764529.1
+
+DEBUG:root:572
+DEBUG:root:53
+DEBUG:root:Match
+DEBUG:root:Real time1486764529.3
+
+DEBUG:root:572
+DEBUG:root:53
+DEBUG:root:Match
+DEBUG:root:Real time1486764529.5
+
+DEBUG:root:572
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764529.7
+
+DEBUG:root:572
+DEBUG:root:52
+DEBUG:root:Match
+DEBUG:root:Real time1486764529.9
+
+DEBUG:root:572
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764530.1
+
+DEBUG:root:572
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764530.3
+
+DEBUG:root:572
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764530.5
+
+DEBUG:root:572
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764530.7
+
+DEBUG:root:572
+DEBUG:root:55
+DEBUG:root:Match
+DEBUG:root:Real time1486764530.9
+
+DEBUG:root:572
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764531.11
+
+DEBUG:root:572
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764531.31
+
+DEBUG:root:576
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764531.51
+
+DEBUG:root:576
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764531.71
+
+DEBUG:root:572
+DEBUG:root:46
+DEBUG:root:Match
+DEBUG:root:Real time1486764531.91
+
+DEBUG:root:572
+DEBUG:root:45
+DEBUG:root:Match
+DEBUG:root:Real time1486764532.11
+
+DEBUG:root:570
+DEBUG:root:113
+DEBUG:root:No match
+DEBUG:root:Real time1486764532.31
+
+DEBUG:root:593
+DEBUG:root:59
+DEBUG:root:Match
+DEBUG:root:Real time1486764532.51
+
+DEBUG:root:594
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764532.71
+
+DEBUG:root:594
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764532.91
+
+DEBUG:root:593
+DEBUG:root:93
+DEBUG:root:No match
+DEBUG:root:Real time1486764533.12
+
+DEBUG:root:594
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764533.32
+
+DEBUG:root:598
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764533.52
+
+DEBUG:root:598
+DEBUG:root:55
+DEBUG:root:Match
+DEBUG:root:Real time1486764533.72
+
+DEBUG:root:598
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764533.92
+
+DEBUG:root:367
+DEBUG:root:96
+DEBUG:root:No match
+DEBUG:root:Real time1486764534.12
+
+DEBUG:root:602
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764534.32
+
+DEBUG:root:604
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764534.52
+
+DEBUG:root:604
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764534.72
+
+DEBUG:root:604
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764534.92
+
+DEBUG:root:606
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764535.12
+
+DEBUG:root:607
+DEBUG:root:76
+DEBUG:root:Match
+DEBUG:root:Real time1486764535.32
+
+DEBUG:root:608
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764535.52
+
+DEBUG:root:608
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764535.72
+
+DEBUG:root:609
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764535.92
+
+DEBUG:root:609
+DEBUG:root:76
+DEBUG:root:Match
+DEBUG:root:Real time1486764536.12
+
+DEBUG:root:609
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764536.33
+
+DEBUG:root:609
+DEBUG:root:72
+DEBUG:root:Match
+DEBUG:root:Real time1486764536.53
+
+DEBUG:root:609
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764536.73
+
+DEBUG:root:608
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764536.93
+
+DEBUG:root:607
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764537.13
+
+DEBUG:root:600
+DEBUG:root:112
+DEBUG:root:No match
+DEBUG:root:Under real time Point 0.217014074326
+
+DEBUG:root:605
+DEBUG:root:101
+DEBUG:root:No match
+DEBUG:root:Real time1486764537.55
+
+DEBUG:root:617
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764537.75
+
+DEBUG:root:618
+DEBUG:root:87
+DEBUG:root:Match
+DEBUG:root:Real time1486764537.95
+
+DEBUG:root:618
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764538.15
+
+DEBUG:root:Under real time Point 0.0305759906769
+
+DEBUG:root:621
+DEBUG:root:53
+DEBUG:root:Match
+DEBUG:root:Real time1486764538.38
+
+DEBUG:root:623
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764538.58
+
+DEBUG:root:624
+DEBUG:root:55
+DEBUG:root:Match
+DEBUG:root:Real time1486764538.78
+
+DEBUG:root:624
+DEBUG:root:60
+DEBUG:root:Match
+DEBUG:root:Real time1486764538.98
+
+DEBUG:root:624
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764539.18
+
+DEBUG:root:627
+DEBUG:root:53
+DEBUG:root:Match
+DEBUG:root:Real time1486764539.38
+
+DEBUG:root:627
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764539.58
+
+DEBUG:root:627
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Real time1486764539.78
+
+DEBUG:root:627
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764539.98
+
+DEBUG:root:629
+DEBUG:root:62
+DEBUG:root:Match
+DEBUG:root:Real time1486764540.18
+
+DEBUG:root:626
+DEBUG:root:103
+DEBUG:root:No match
+DEBUG:root:Real time1486764540.38
+
+DEBUG:root:631
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764540.58
+
+DEBUG:root:627
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764540.78
+
+DEBUG:root:631
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764540.98
+
+DEBUG:root:631
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764541.19
+
+DEBUG:root:637
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764541.39
+
+DEBUG:root:638
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764541.59
+
+DEBUG:root:639
+DEBUG:root:52
+DEBUG:root:Match
+DEBUG:root:Real time1486764541.79
+
+DEBUG:root:639
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764541.99
+
+DEBUG:root:639
+DEBUG:root:82
+DEBUG:root:Match
+DEBUG:root:Real time1486764542.19
+
+DEBUG:root:638
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764542.39
+
+DEBUG:root:643
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764542.59
+
+DEBUG:root:644
+DEBUG:root:60
+DEBUG:root:Match
+DEBUG:root:Real time1486764542.79
+
+DEBUG:root:642
+DEBUG:root:62
+DEBUG:root:Match
+DEBUG:root:Real time1486764542.99
+
+DEBUG:root:637
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764543.19
+
+DEBUG:root:644
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764543.39
+
+DEBUG:root:648
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764543.59
+
+DEBUG:root:649
+DEBUG:root:96
+DEBUG:root:No match
+DEBUG:root:Real time1486764543.79
+
+DEBUG:root:647
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764543.99
+
+DEBUG:root:645
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764544.19
+
+DEBUG:root:649
+DEBUG:root:95
+DEBUG:root:No match
+DEBUG:root:Real time1486764544.39
+
+DEBUG:root:650
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764544.59
+
+DEBUG:root:654
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764544.8
+
+DEBUG:root:655
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764545.0
+
+DEBUG:root:656
+DEBUG:root:59
+DEBUG:root:Match
+DEBUG:root:Real time1486764545.2
+
+DEBUG:root:637
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764545.4
+
+DEBUG:root:658
+DEBUG:root:62
+DEBUG:root:Match
+DEBUG:root:Real time1486764545.6
+
+DEBUG:root:658
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764545.8
+
+DEBUG:root:650
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764546.0
+
+DEBUG:root:660
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Under real time Point 0.201362133026
+
+DEBUG:root:663
+DEBUG:root:59
+DEBUG:root:Match
+DEBUG:root:Real time1486764546.4
+
+DEBUG:root:663
+DEBUG:root:62
+DEBUG:root:Match
+DEBUG:root:Real time1486764546.6
+
+DEBUG:root:664
+DEBUG:root:89
+DEBUG:root:Match
+DEBUG:root:Real time1486764546.8
+
+DEBUG:root:651
+DEBUG:root:96
+DEBUG:root:No match
+DEBUG:root:Real time1486764547.0
+
+DEBUG:root:656
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764547.2
+
+DEBUG:root:651
+DEBUG:root:105
+DEBUG:root:No match
+DEBUG:root:Real time1486764547.4
+
+DEBUG:root:669
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764547.6
+
+DEBUG:root:655
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764547.8
+
+DEBUG:root:655
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764548.0
+
+DEBUG:root:326
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764548.21
+
+DEBUG:root:672
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764548.41
+
+DEBUG:root:673
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764548.61
+
+DEBUG:root:674
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764548.81
+
+DEBUG:root:331
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764549.01
+
+DEBUG:root:674
+DEBUG:root:82
+DEBUG:root:Match
+DEBUG:root:Real time1486764549.21
+
+DEBUG:root:678
+DEBUG:root:100
+DEBUG:root:No match
+DEBUG:root:Real time1486764549.41
+
+DEBUG:root:679
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764549.61
+
+DEBUG:root:679
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764549.81
+
+DEBUG:root:679
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764550.01
+
+DEBUG:root:679
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764550.21
+
+DEBUG:root:682
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Real time1486764550.41
+
+DEBUG:root:684
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764550.61
+
+DEBUG:root:684
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764550.81
+
+DEBUG:root:676
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764551.01
+
+DEBUG:root:686
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764551.22
+
+DEBUG:root:687
+DEBUG:root:43
+DEBUG:root:Match
+DEBUG:root:Real time1486764551.42
+
+DEBUG:root:686
+DEBUG:root:89
+DEBUG:root:Match
+DEBUG:root:Real time1486764551.62
+
+DEBUG:root:686
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764551.82
+
+DEBUG:root:424
+DEBUG:root:96
+DEBUG:root:No match
+DEBUG:root:Real time1486764552.02
+
+DEBUG:root:691
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764552.22
+
+DEBUG:root:744
+DEBUG:root:87
+DEBUG:root:Match
+DEBUG:root:Real time1486764552.42
+
+DEBUG:root:692
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764552.62
+
+DEBUG:root:694
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764552.82
+
+DEBUG:root:735
+DEBUG:root:113
+DEBUG:root:No match
+DEBUG:root:Real time1486764553.02
+
+DEBUG:root:339
+DEBUG:root:104
+DEBUG:root:No match
+DEBUG:root:Real time1486764553.22
+
+DEBUG:root:749
+DEBUG:root:101
+DEBUG:root:No match
+DEBUG:root:Real time1486764553.43
+
+DEBUG:root:699
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764553.63
+
+DEBUG:root:699
+DEBUG:root:105
+DEBUG:root:No match
+DEBUG:root:Real time1486764553.83
+
+DEBUG:root:986
+DEBUG:root:109
+DEBUG:root:No match
+DEBUG:root:Real time1486764554.03
+
+DEBUG:root:676
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764554.23
+
+DEBUG:root:979
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764554.43
+
+DEBUG:root:703
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764554.63
+
+DEBUG:root:704
+DEBUG:root:59
+DEBUG:root:Match
+DEBUG:root:Real time1486764554.83
+
+DEBUG:root:666
+DEBUG:root:101
+DEBUG:root:No match
+DEBUG:root:Real time1486764555.03
+
+DEBUG:root:737
+DEBUG:root:108
+DEBUG:root:No match
+DEBUG:root:Real time1486764555.23
+
+DEBUG:root:456
+DEBUG:root:105
+DEBUG:root:No match
+DEBUG:root:Real time1486764555.43
+
+DEBUG:root:708
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764555.63
+
+DEBUG:root:709
+DEBUG:root:63
+DEBUG:root:Match
+DEBUG:root:Real time1486764555.83
+
+DEBUG:root:709
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764556.03
+
+DEBUG:root:119
+DEBUG:root:108
+DEBUG:root:No match
+DEBUG:root:Real time1486764556.23
+
+DEBUG:root:114
+DEBUG:root:116
+DEBUG:root:No match
+DEBUG:root:Real time1486764556.43
+
+DEBUG:root:714
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Real time1486764556.63
+
+DEBUG:root:714
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764556.83
+
+DEBUG:root:714
+DEBUG:root:97
+DEBUG:root:No match
+DEBUG:root:Real time1486764557.04
+
+DEBUG:root:990
+DEBUG:root:104
+DEBUG:root:No match
+DEBUG:root:Real time1486764557.24
+
+DEBUG:root:718
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764557.44
+
+DEBUG:root:718
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764557.64
+
+DEBUG:root:719
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764557.84
+
+DEBUG:root:706
+DEBUG:root:104
+DEBUG:root:No match
+DEBUG:root:Real time1486764558.04
+
+DEBUG:root:721
+DEBUG:root:63
+DEBUG:root:Match
+DEBUG:root:Real time1486764558.24
+
+DEBUG:root:722
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764558.44
+
+DEBUG:root:724
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764558.64
+
+DEBUG:root:721
+DEBUG:root:97
+DEBUG:root:No match
+DEBUG:root:Real time1486764558.84
+
+DEBUG:root:714
+DEBUG:root:88
+DEBUG:root:Match
+DEBUG:root:Real time1486764559.04
+
+DEBUG:root:429
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764559.24
+
+DEBUG:root:727
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764559.44
+
+DEBUG:root:728
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764559.64
+
+DEBUG:root:728
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764559.84
+
+DEBUG:root:423
+DEBUG:root:88
+DEBUG:root:Match
+DEBUG:root:Real time1486764560.04
+
+DEBUG:root:426
+DEBUG:root:96
+DEBUG:root:No match
+DEBUG:root:Real time1486764560.25
+
+DEBUG:root:427
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764560.45
+
+DEBUG:root:733
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764560.65
+
+DEBUG:root:726
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764560.85
+
+DEBUG:root:420
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764561.05
+
+DEBUG:root:421
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764561.25
+
+DEBUG:root:423
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764561.45
+
+DEBUG:root:738
+DEBUG:root:45
+DEBUG:root:Match
+DEBUG:root:Real time1486764561.65
+
+DEBUG:root:739
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764561.85
+
+DEBUG:root:739
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764562.05
+
+DEBUG:root:743
+DEBUG:root:66
+DEBUG:root:Match
+DEBUG:root:Real time1486764562.25
+
+DEBUG:root:743
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764562.45
+
+DEBUG:root:743
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764562.65
+
+DEBUG:root:743
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764562.85
+
+DEBUG:root:737
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764563.05
+
+DEBUG:root:747
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764563.25
+
+DEBUG:root:747
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764563.45
+
+DEBUG:root:748
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764563.65
+
+DEBUG:root:749
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764563.85
+
+DEBUG:root:749
+DEBUG:root:101
+DEBUG:root:No match
+DEBUG:root:Real time1486764564.05
+
+DEBUG:root:693
+DEBUG:root:104
+DEBUG:root:No match
+DEBUG:root:Real time1486764564.26
+
+DEBUG:root:278
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764564.46
+
+DEBUG:root:754
+DEBUG:root:91
+DEBUG:root:No match
+DEBUG:root:Real time1486764564.66
+
+DEBUG:root:754
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764564.86
+
+DEBUG:root:720
+DEBUG:root:100
+DEBUG:root:No match
+DEBUG:root:Real time1486764565.06
+
+DEBUG:root:965
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764565.26
+
+DEBUG:root:281
+DEBUG:root:102
+DEBUG:root:No match
+DEBUG:root:Real time1486764565.46
+
+DEBUG:root:758
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764565.66
+
+DEBUG:root:759
+DEBUG:root:83
+DEBUG:root:Match
+DEBUG:root:Real time1486764565.86
+
+DEBUG:root:65
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764566.06
+
+DEBUG:root:68
+DEBUG:root:105
+DEBUG:root:No match
+DEBUG:root:Real time1486764566.26
+
+DEBUG:root:44
+DEBUG:root:104
+DEBUG:root:No match
+DEBUG:root:Real time1486764566.46
+
+DEBUG:root:754
+DEBUG:root:89
+DEBUG:root:Match
+DEBUG:root:Real time1486764566.66
+
+DEBUG:root:761
+DEBUG:root:76
+DEBUG:root:Match
+DEBUG:root:Real time1486764566.87
+
+DEBUG:root:758
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764567.07
+
+DEBUG:root:72
+DEBUG:root:95
+DEBUG:root:No match
+DEBUG:root:Real time1486764567.27
+
+DEBUG:root:978
+DEBUG:root:110
+DEBUG:root:No match
+DEBUG:root:Real time1486764567.47
+
+DEBUG:root:769
+DEBUG:root:89
+DEBUG:root:Match
+DEBUG:root:Real time1486764567.67
+
+DEBUG:root:766
+DEBUG:root:107
+DEBUG:root:No match
+DEBUG:root:Real time1486764567.87
+
+DEBUG:root:202
+DEBUG:root:108
+DEBUG:root:No match
+DEBUG:root:Real time1486764568.07
+
+DEBUG:root:638
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764568.27
+
+DEBUG:root:773
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764568.47
+
+DEBUG:root:763
+DEBUG:root:103
+DEBUG:root:No match
+DEBUG:root:Real time1486764568.67
+
+DEBUG:root:760
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764568.87
+
+DEBUG:root:639
+DEBUG:root:91
+DEBUG:root:No match
+DEBUG:root:Real time1486764569.07
+
+DEBUG:root:857
+DEBUG:root:101
+DEBUG:root:No match
+DEBUG:root:Real time1486764569.27
+
+DEBUG:root:43
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764569.47
+
+DEBUG:root:778
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764569.68
+
+DEBUG:root:777
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764569.88
+
+DEBUG:root:60
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764570.08
+
+DEBUG:root:52
+DEBUG:root:89
+DEBUG:root:Match
+DEBUG:root:Real time1486764570.28
+
+DEBUG:root:64
+DEBUG:root:96
+DEBUG:root:No match
+DEBUG:root:Real time1486764570.48
+
+DEBUG:root:784
+DEBUG:root:82
+DEBUG:root:Match
+DEBUG:root:Real time1486764570.68
+
+DEBUG:root:772
+DEBUG:root:106
+DEBUG:root:No match
+DEBUG:root:Real time1486764570.88
+
+DEBUG:root:64
+DEBUG:root:109
+DEBUG:root:No match
+DEBUG:root:Real time1486764571.08
+
+DEBUG:root:243
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764571.28
+
+DEBUG:root:249
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764571.48
+
+DEBUG:root:789
+DEBUG:root:76
+DEBUG:root:Match
+DEBUG:root:Real time1486764571.68
+
+DEBUG:root:484
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764571.88
+
+DEBUG:root:898
+DEBUG:root:104
+DEBUG:root:No match
+DEBUG:root:Real time1486764572.08
+
+DEBUG:root:757
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764572.29
+
+DEBUG:root:251
+DEBUG:root:114
+DEBUG:root:No match
+DEBUG:root:Real time1486764572.49
+
+DEBUG:root:794
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764572.69
+
+DEBUG:root:783
+DEBUG:root:106
+DEBUG:root:No match
+DEBUG:root:Real time1486764572.89
+
+DEBUG:root:958
+DEBUG:root:106
+DEBUG:root:No match
+DEBUG:root:Real time1486764573.09
+
+DEBUG:root:956
+DEBUG:root:103
+DEBUG:root:No match
+DEBUG:root:Real time1486764573.29
+
+DEBUG:root:952
+DEBUG:root:105
+DEBUG:root:No match
+DEBUG:root:Real time1486764573.49
+
+DEBUG:root:799
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764573.69
+
+DEBUG:root:799
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764573.89
+
+DEBUG:root:190
+DEBUG:root:97
+DEBUG:root:No match
+DEBUG:root:Real time1486764574.09
+
+DEBUG:root:840
+DEBUG:root:96
+DEBUG:root:No match
+DEBUG:root:Real time1486764574.29
+
+DEBUG:root:182
+DEBUG:root:87
+DEBUG:root:Match
+DEBUG:root:Real time1486764574.5
+
+DEBUG:root:797
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764574.7
+
+DEBUG:root:802
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764574.9
+
+DEBUG:root:181
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764575.1
+
+DEBUG:root:178
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764575.3
+
+DEBUG:root:808
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764575.5
+
+DEBUG:root:809
+DEBUG:root:60
+DEBUG:root:Match
+DEBUG:root:Real time1486764575.7
+
+DEBUG:root:809
+DEBUG:root:66
+DEBUG:root:Match
+DEBUG:root:Real time1486764575.9
+
+DEBUG:root:809
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764576.1
+
+DEBUG:root:802
+DEBUG:root:107
+DEBUG:root:No match
+DEBUG:root:Real time1486764576.3
+
+DEBUG:root:812
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764576.5
+
+DEBUG:root:814
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764576.7
+
+DEBUG:root:812
+DEBUG:root:60
+DEBUG:root:Match
+DEBUG:root:Real time1486764576.9
+
+DEBUG:root:814
+DEBUG:root:62
+DEBUG:root:Match
+DEBUG:root:Real time1486764577.1
+
+DEBUG:root:814
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764577.3
+
+DEBUG:root:818
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764577.5
+
+DEBUG:root:819
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764577.7
+
+DEBUG:root:819
+DEBUG:root:95
+DEBUG:root:No match
+DEBUG:root:Real time1486764577.9
+
+DEBUG:root:819
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764578.1
+
+DEBUG:root:990
+DEBUG:root:95
+DEBUG:root:No match
+DEBUG:root:Real time1486764578.3
+
+DEBUG:root:823
+DEBUG:root:82
+DEBUG:root:Match
+DEBUG:root:Real time1486764578.51
+
+DEBUG:root:824
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764578.71
+
+DEBUG:root:824
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764578.91
+
+DEBUG:root:824
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764579.11
+
+DEBUG:root:828
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764579.31
+
+DEBUG:root:828
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764579.51
+
+DEBUG:root:828
+DEBUG:root:73
+DEBUG:root:Match
+DEBUG:root:Real time1486764579.71
+
+DEBUG:root:817
+DEBUG:root:96
+DEBUG:root:No match
+DEBUG:root:Real time1486764579.91
+
+DEBUG:root:823
+DEBUG:root:103
+DEBUG:root:No match
+DEBUG:root:Real time1486764580.11
+
+DEBUG:root:832
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764580.31
+
+DEBUG:root:833
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764580.51
+
+DEBUG:root:834
+DEBUG:root:82
+DEBUG:root:Match
+DEBUG:root:Real time1486764580.71
+
+DEBUG:root:823
+DEBUG:root:100
+DEBUG:root:No match
+DEBUG:root:Real time1486764580.91
+
+DEBUG:root:834
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764581.11
+
+DEBUG:root:106
+DEBUG:root:85
+DEBUG:root:Match
+DEBUG:root:Real time1486764581.31
+
+DEBUG:root:838
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764581.51
+
+DEBUG:root:839
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764581.71
+
+DEBUG:root:831
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764581.92
+
+DEBUG:root:838
+DEBUG:root:88
+DEBUG:root:Match
+DEBUG:root:Real time1486764582.12
+
+DEBUG:root:96
+DEBUG:root:82
+DEBUG:root:Match
+DEBUG:root:Real time1486764582.32
+
+DEBUG:root:843
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764582.52
+
+DEBUG:root:844
+DEBUG:root:56
+DEBUG:root:Match
+DEBUG:root:Real time1486764582.72
+
+DEBUG:root:844
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764582.92
+
+DEBUG:root:844
+DEBUG:root:83
+DEBUG:root:Match
+DEBUG:root:Real time1486764583.12
+
+DEBUG:root:844
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764583.32
+
+DEBUG:root:847
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764583.52
+
+DEBUG:root:849
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764583.72
+
+DEBUG:root:841
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764583.92
+
+DEBUG:root:849
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764584.12
+
+DEBUG:root:25
+DEBUG:root:102
+DEBUG:root:No match
+DEBUG:root:Real time1486764584.32
+
+DEBUG:root:35
+DEBUG:root:105
+DEBUG:root:No match
+DEBUG:root:Real time1486764584.52
+
+DEBUG:root:854
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764584.73
+
+DEBUG:root:854
+DEBUG:root:85
+DEBUG:root:Match
+DEBUG:root:Real time1486764584.93
+
+DEBUG:root:975
+DEBUG:root:90
+DEBUG:root:Match
+DEBUG:root:Real time1486764585.13
+
+DEBUG:root:981
+DEBUG:root:106
+DEBUG:root:No match
+DEBUG:root:Real time1486764585.33
+
+DEBUG:root:858
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764585.53
+
+DEBUG:root:858
+DEBUG:root:56
+DEBUG:root:Match
+DEBUG:root:Real time1486764585.73
+
+DEBUG:root:858
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764585.93
+
+DEBUG:root:43
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764586.13
+
+DEBUG:root:858
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764586.33
+
+DEBUG:root:863
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764586.53
+
+DEBUG:root:863
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764586.73
+
+DEBUG:root:52
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764586.93
+
+DEBUG:root:52
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764587.13
+
+DEBUG:root:52
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Real time1486764587.33
+
+DEBUG:root:52
+DEBUG:root:45
+DEBUG:root:Match
+DEBUG:root:Real time1486764587.54
+
+DEBUG:root:863
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764587.74
+
+DEBUG:root:44
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764587.94
+
+DEBUG:root:44
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764588.14
+
+DEBUG:root:52
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764588.34
+
+DEBUG:root:52
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764588.54
+
+DEBUG:root:52
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764588.74
+
+DEBUG:root:44
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764588.94
+
+DEBUG:root:52
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764589.14
+
+DEBUG:root:52
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764589.34
+
+DEBUG:root:52
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764589.54
+
+DEBUG:root:879
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764589.74
+
+DEBUG:root:879
+DEBUG:root:66
+DEBUG:root:Match
+DEBUG:root:Real time1486764589.94
+
+DEBUG:root:879
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764590.14
+
+DEBUG:root:881
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764590.34
+
+DEBUG:root:881
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764590.55
+
+DEBUG:root:884
+DEBUG:root:76
+DEBUG:root:Match
+DEBUG:root:Real time1486764590.75
+
+DEBUG:root:881
+DEBUG:root:72
+DEBUG:root:Match
+DEBUG:root:Real time1486764590.95
+
+DEBUG:root:881
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764591.15
+
+DEBUG:root:881
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764591.35
+
+DEBUG:root:889
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764591.55
+
+DEBUG:root:881
+DEBUG:root:82
+DEBUG:root:Match
+DEBUG:root:Real time1486764591.75
+
+DEBUG:root:889
+DEBUG:root:89
+DEBUG:root:Match
+DEBUG:root:Real time1486764591.95
+
+DEBUG:root:889
+DEBUG:root:88
+DEBUG:root:Match
+DEBUG:root:Real time1486764592.15
+
+DEBUG:root:890
+DEBUG:root:79
+DEBUG:root:Match
+DEBUG:root:Real time1486764592.35
+
+DEBUG:root:890
+DEBUG:root:85
+DEBUG:root:Match
+DEBUG:root:Real time1486764592.55
+
+DEBUG:root:891
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764592.75
+
+DEBUG:root:890
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764592.95
+
+DEBUG:root:882
+DEBUG:root:126
+DEBUG:root:No match
+DEBUG:root:Real time1486764593.15
+
+DEBUG:root:898
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764593.36
+
+DEBUG:root:899
+DEBUG:root:83
+DEBUG:root:Match
+DEBUG:root:Real time1486764593.56
+
+DEBUG:root:899
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764593.76
+
+DEBUG:root:899
+DEBUG:root:76
+DEBUG:root:Match
+DEBUG:root:Real time1486764593.96
+
+DEBUG:root:326
+DEBUG:root:72
+DEBUG:root:Match
+DEBUG:root:Real time1486764594.16
+
+DEBUG:root:901
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764594.36
+
+DEBUG:root:901
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764594.56
+
+DEBUG:root:900
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764594.76
+
+DEBUG:root:327
+DEBUG:root:78
+DEBUG:root:Match
+DEBUG:root:Real time1486764594.96
+
+DEBUG:root:327
+DEBUG:root:82
+DEBUG:root:Match
+DEBUG:root:Real time1486764595.16
+
+DEBUG:root:326
+DEBUG:root:107
+DEBUG:root:No match
+DEBUG:root:Real time1486764595.36
+
+DEBUG:root:321
+DEBUG:root:108
+DEBUG:root:No match
+DEBUG:root:Real time1486764595.56
+
+DEBUG:root:909
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764595.76
+
+DEBUG:root:896
+DEBUG:root:95
+DEBUG:root:No match
+DEBUG:root:Real time1486764595.96
+
+DEBUG:root:899
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764596.16
+
+DEBUG:root:910
+DEBUG:root:89
+DEBUG:root:Match
+DEBUG:root:Real time1486764596.36
+
+DEBUG:root:913
+DEBUG:root:49
+DEBUG:root:Match
+DEBUG:root:Real time1486764596.57
+
+DEBUG:root:914
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Real time1486764596.77
+
+DEBUG:root:914
+DEBUG:root:55
+DEBUG:root:Match
+DEBUG:root:Real time1486764596.97
+
+DEBUG:root:919
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764597.17
+
+DEBUG:root:918
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764597.37
+
+DEBUG:root:919
+DEBUG:root:52
+DEBUG:root:Match
+DEBUG:root:Real time1486764597.57
+
+DEBUG:root:919
+DEBUG:root:45
+DEBUG:root:Match
+DEBUG:root:Real time1486764597.77
+
+DEBUG:root:919
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764597.97
+
+DEBUG:root:922
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764598.17
+
+DEBUG:root:923
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764598.37
+
+DEBUG:root:923
+DEBUG:root:44
+DEBUG:root:Match
+DEBUG:root:Real time1486764598.57
+
+DEBUG:root:923
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764598.77
+
+DEBUG:root:923
+DEBUG:root:52
+DEBUG:root:Match
+DEBUG:root:Real time1486764598.97
+
+DEBUG:root:924
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764599.17
+
+DEBUG:root:924
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764599.37
+
+DEBUG:root:928
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764599.57
+
+DEBUG:root:929
+DEBUG:root:58
+DEBUG:root:Match
+DEBUG:root:Real time1486764599.78
+
+DEBUG:root:921
+DEBUG:root:100
+DEBUG:root:No match
+DEBUG:root:Real time1486764599.98
+
+DEBUG:root:906
+DEBUG:root:89
+DEBUG:root:Match
+DEBUG:root:Real time1486764600.18
+
+DEBUG:root:926
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764600.38
+
+DEBUG:root:933
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764600.58
+
+DEBUG:root:934
+DEBUG:root:62
+DEBUG:root:Match
+DEBUG:root:Real time1486764600.78
+
+DEBUG:root:933
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764600.98
+
+DEBUG:root:866
+DEBUG:root:102
+DEBUG:root:No match
+DEBUG:root:Real time1486764601.18
+
+DEBUG:root:937
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764601.38
+
+DEBUG:root:938
+DEBUG:root:66
+DEBUG:root:Match
+DEBUG:root:Real time1486764601.58
+
+DEBUG:root:939
+DEBUG:root:60
+DEBUG:root:Match
+DEBUG:root:Real time1486764601.78
+
+DEBUG:root:936
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764601.98
+
+DEBUG:root:942
+DEBUG:root:72
+DEBUG:root:Match
+DEBUG:root:Real time1486764602.18
+
+DEBUG:root:942
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764602.38
+
+DEBUG:root:942
+DEBUG:root:72
+DEBUG:root:Match
+DEBUG:root:Real time1486764602.59
+
+DEBUG:root:943
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764602.79
+
+DEBUG:root:942
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764602.99
+
+DEBUG:root:946
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764603.19
+
+DEBUG:root:949
+DEBUG:root:62
+DEBUG:root:Match
+DEBUG:root:Real time1486764603.39
+
+DEBUG:root:946
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764603.59
+
+DEBUG:root:949
+DEBUG:root:77
+DEBUG:root:Match
+DEBUG:root:Real time1486764603.79
+
+DEBUG:root:949
+DEBUG:root:84
+DEBUG:root:Match
+DEBUG:root:Real time1486764603.99
+
+DEBUG:root:952
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764604.19
+
+DEBUG:root:952
+DEBUG:root:66
+DEBUG:root:Match
+DEBUG:root:Real time1486764604.39
+
+DEBUG:root:953
+DEBUG:root:68
+DEBUG:root:Match
+DEBUG:root:Real time1486764604.59
+
+DEBUG:root:954
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764604.79
+
+DEBUG:root:942
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764604.99
+
+DEBUG:root:388
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764605.19
+
+DEBUG:root:956
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764605.39
+
+DEBUG:root:959
+DEBUG:root:72
+DEBUG:root:Match
+DEBUG:root:Real time1486764605.59
+
+DEBUG:root:959
+DEBUG:root:86
+DEBUG:root:Match
+DEBUG:root:Real time1486764605.79
+
+DEBUG:root:955
+DEBUG:root:87
+DEBUG:root:Match
+DEBUG:root:Real time1486764605.99
+
+DEBUG:root:945
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764606.19
+
+DEBUG:root:960
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764606.39
+
+DEBUG:root:964
+DEBUG:root:74
+DEBUG:root:Match
+DEBUG:root:Real time1486764606.59
+
+DEBUG:root:953
+DEBUG:root:92
+DEBUG:root:No match
+DEBUG:root:Real time1486764606.79
+
+DEBUG:root:953
+DEBUG:root:83
+DEBUG:root:Match
+DEBUG:root:Real time1486764607.0
+
+DEBUG:root:953
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764607.2
+
+DEBUG:root:967
+DEBUG:root:46
+DEBUG:root:Match
+DEBUG:root:Real time1486764607.4
+
+DEBUG:root:968
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764607.6
+
+DEBUG:root:969
+DEBUG:root:60
+DEBUG:root:Match
+DEBUG:root:Real time1486764607.8
+
+DEBUG:root:969
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764608.0
+
+DEBUG:root:969
+DEBUG:root:55
+DEBUG:root:Match
+DEBUG:root:Real time1486764608.2
+
+DEBUG:root:970
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764608.4
+
+DEBUG:root:973
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764608.6
+
+DEBUG:root:973
+DEBUG:root:67
+DEBUG:root:Match
+DEBUG:root:Real time1486764608.8
+
+DEBUG:root:974
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764609.0
+
+DEBUG:root:973
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764609.2
+
+DEBUG:root:978
+DEBUG:root:32
+DEBUG:root:Match
+DEBUG:root:Real time1486764609.4
+
+DEBUG:root:979
+DEBUG:root:56
+DEBUG:root:Match
+DEBUG:root:Real time1486764609.6
+
+DEBUG:root:979
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764609.8
+
+DEBUG:root:972
+DEBUG:root:80
+DEBUG:root:Match
+DEBUG:root:Real time1486764610.0
+
+DEBUG:root:974
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764610.21
+
+DEBUG:root:982
+DEBUG:root:63
+DEBUG:root:Match
+DEBUG:root:Real time1486764610.41
+
+DEBUG:root:982
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764610.61
+
+DEBUG:root:984
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764610.81
+
+DEBUG:root:984
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764611.01
+
+DEBUG:root:982
+DEBUG:root:59
+DEBUG:root:Match
+DEBUG:root:Under real time Point 0.205585002899
+
+DEBUG:root:982
+DEBUG:root:69
+DEBUG:root:Match
+DEBUG:root:Real time1486764611.41
+
+DEBUG:root:982
+DEBUG:root:65
+DEBUG:root:Match
+DEBUG:root:Real time1486764611.61
+
+DEBUG:root:979
+DEBUG:root:75
+DEBUG:root:Match
+DEBUG:root:Real time1486764611.81
+
+DEBUG:root:979
+DEBUG:root:81
+DEBUG:root:Match
+DEBUG:root:Real time1486764612.01
+
+DEBUG:root:991
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764612.21
+
+DEBUG:root:990
+DEBUG:root:52
+DEBUG:root:Match
+DEBUG:root:Real time1486764612.41
+
+DEBUG:root:991
+DEBUG:root:57
+DEBUG:root:Match
+DEBUG:root:Real time1486764612.62
+
+DEBUG:root:994
+DEBUG:root:54
+DEBUG:root:Match
+DEBUG:root:Real time1486764612.82
+
+DEBUG:root:994
+DEBUG:root:51
+DEBUG:root:Match
+DEBUG:root:Real time1486764613.02
+
+DEBUG:root:994
+DEBUG:root:55
+DEBUG:root:Match
+DEBUG:root:Real time1486764613.22
+
+DEBUG:root:995
+DEBUG:root:45
+DEBUG:root:Match
+DEBUG:root:Real time1486764613.42
+
+DEBUG:root:998
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764613.62
+
+DEBUG:root:995
+DEBUG:root:64
+DEBUG:root:Match
+DEBUG:root:Real time1486764613.82
+
+DEBUG:root:999
+DEBUG:root:46
+DEBUG:root:Match
+DEBUG:root:Real time1486764614.02
+
+DEBUG:root:999
+DEBUG:root:45
+DEBUG:root:Match
+DEBUG:root:Real time1486764614.22
+
+DEBUG:root:999
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764614.42
+
+DEBUG:root:990
+DEBUG:root:97
+DEBUG:root:No match
+DEBUG:root:Real time1486764614.62
+
+DEBUG:root:1004
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764614.82
+
+DEBUG:root:1004
+DEBUG:root:100
+DEBUG:root:No match
+DEBUG:root:Real time1486764615.02
+
+DEBUG:root:1004
+DEBUG:root:93
+DEBUG:root:No match
+DEBUG:root:Real time1486764615.22
+
+DEBUG:root:1004
+DEBUG:root:101
+DEBUG:root:No match
+DEBUG:root:Real time1486764615.42
+
+DEBUG:root:1004
+DEBUG:root:104
+DEBUG:root:No match
+DEBUG:root:Real time1486764615.62
+
+DEBUG:root:1004
+DEBUG:root:100
+DEBUG:root:No match
+DEBUG:root:Real time1486764615.82
+
+DEBUG:root:1004
+DEBUG:root:94
+DEBUG:root:No match
+DEBUG:root:Real time1486764616.03
+
+DEBUG:root:421
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764616.23
+
+DEBUG:root:421
+DEBUG:root:72
+DEBUG:root:Match
+DEBUG:root:Real time1486764616.43
+
+DEBUG:root:421
+DEBUG:root:71
+DEBUG:root:Match
+DEBUG:root:Real time1486764616.63
+
+DEBUG:root:421
+DEBUG:root:72
+DEBUG:root:Match
+DEBUG:root:Real time1486764616.83
+
+DEBUG:root:421
+DEBUG:root:70
+DEBUG:root:Match
+DEBUG:root:Real time1486764617.03
+
+DEBUG:root:415
+DEBUG:root:111
+DEBUG:root:No match
+DEBUG:root:Real time1486764617.23
+
+DEBUG:root:420
+DEBUG:root:98
+DEBUG:root:No match
+DEBUG:root:Real time1486764617.43
+
+DEBUG:root:428
+DEBUG:root:97
+DEBUG:root:No match
+DEBUG:root:Real time1486764617.63
+
+DEBUG:root:1019
+DEBUG:root:72
+DEBUG:root:Match
+DEBUG:root:Real time1486764617.83
+
+DEBUG:root:428
+DEBUG:root:99
+DEBUG:root:No match
+DEBUG:root:Real time1486764618.03
+
+DEBUG:root:1023
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764618.23
+
+DEBUG:root:1023
+DEBUG:root:55
+DEBUG:root:Match
+DEBUG:root:Real time1486764618.43
+
+DEBUG:root:1023
+DEBUG:root:48
+DEBUG:root:Match
+DEBUG:root:Real time1486764618.63
+
+DEBUG:root:1023
+DEBUG:root:61
+DEBUG:root:Match
+DEBUG:root:Real time1486764618.83
+
+DEBUG:root:1035
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764619.03
+
+DEBUG:root:1026
+DEBUG:root:42
+DEBUG:root:Match
+DEBUG:root:Real time1486764619.23
+
+DEBUG:root:1026
+DEBUG:root:42
+DEBUG:root:Match
+DEBUG:root:Real time1486764619.43
+
+DEBUG:root:1026
+DEBUG:root:50
+DEBUG:root:Match
+DEBUG:root:Real time1486764619.64
+
+DEBUG:root:1026
+DEBUG:root:44
+DEBUG:root:Match
+DEBUG:root:Real time1486764619.84
+
+DEBUG:root:1026
+DEBUG:root:47
+DEBUG:root:Match
+DEBUG:root:Real time1486764620.04
+
+DEBUG:root:1026
+DEBUG:root:43
+DEBUG:root:Match
+DEBUG:root:Real time1486764620.24
+
+DEBUG:root:1026
+DEBUG:root:56
+DEBUG:root:Match
+DEBUG:root:Real time1486764620.44
+
+DEBUG:root:1026
+DEBUG:root:55
+DEBUG:root:Match

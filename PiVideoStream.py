@@ -15,7 +15,7 @@ class PiVideoStream:
         self.stream = self.camera.capture_continuous(self.rawCapture, format="bgr", use_video_port=True)
         self.frame = None
         self.stopped = False
-        self.camera.start_preview()
+        #self.camera.start_preview()
 
     def start(self):
         Thread(target=self.update, args=()).start()
