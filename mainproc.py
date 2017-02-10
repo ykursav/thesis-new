@@ -3,7 +3,7 @@ from PiVideoStream import PiVideoStream
 from bitarray import bitarray
 from preprocessing import set_initials_pre, get_contour, get_perspective, get_cropped
 from extraction import set_initials, get_signature
-from matching import set_initials_match, signature_rejection, signature_scan, signature_deep_scan
+from matching import set_initials_match, signature_rejection, signature_scan, signature_deep_scan, signature_o2o
 #from subprocess import call
 from threading import Thread, active_count
 from picamera import PiCamera
@@ -40,7 +40,7 @@ logging.basicConfig(filename="debug_logs/" + args["file_name"], level = logging.
 counter = 0
 #@profile
 sigGen = bitarray()
-fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
+#fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
 #out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video1_name"], fourcc, 10.0, (544, 400))
 #out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 10.0, (500, 300))
 #@profile
@@ -63,16 +63,16 @@ def initialize_set(image):
     try:
         sig = get_signature()
         #print len(sig)
-        if counter < 20:
+        if counter < 10:
            sigGen.extend(sig)
         else:
            sigGen = sigGen[240:]
-           sigGen[4560:] = sig
+           sigGen[2160:] = sig
     except:
         logging.debug("Nonetype")
         counter -= 1
         return
-    if counter >= 20:
+    if counter >= 9:
         #logging.debug(sigGen)
         set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
@@ -81,15 +81,19 @@ def initialize_set(image):
         range1 = 0
         range2 = 0
         if min_point != 0:
-            range1 = (min_point * 2400) - 2400
-            range2 = (min_point * 2400) + 4800
+            range1 = (min_point * 600) - 1200
+            range2 = (min_point * 600) + 2400
         else:
-            range1 = min_point * 2400
-            range2 = (min_point * 2400) + 7200
+            range1 = min_point * 600
+            range2 = (min_point * 600) + 3600
         #print range1, range2
-        min_match = signature_deep_scan(range1, range2, sig)
+        min_match, error_n = signature_deep_scan(range1, range2, sig)
         match_frame = (range1 / 240) + min_match
         logging.debug(str(match_frame))
+        logging.debug(str(error_n))
+        min_val, error_val = signature_o2o(sig)
+        logging.debug(str(min_val))
+        logging.debug(str(error_val))
         
         
     
