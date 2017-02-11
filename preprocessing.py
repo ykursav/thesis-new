@@ -100,7 +100,7 @@ def write_out(stream, frame):
 def get_contour(G):
     edged = get_edged(G)
     __, contours, hierarchy = findContours(edged, RETR_LIST, CHAIN_APPROX_SIMPLE)
-    contours = sorted(contours, key = contourArea, reverse = True)[:4]
+    contours = sorted(contours, key = contourArea, reverse = True)[:3]
     approx = 0
     first = False
     no_contour = True

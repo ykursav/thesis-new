@@ -34,6 +34,7 @@ def set_initials(N_f, M_f, L_f, image_f):
     N = N_f
     M = M_f 
     L = L_f
+#    print N,M,L
     image = image_f
     number_of_blocks = ((L - N) / M) + 1
 

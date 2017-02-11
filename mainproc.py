@@ -19,7 +19,7 @@ ap.add_argument("-f", "--file-name", type=str, default="debug_log.log",
 #     help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
 args = vars(ap.parse_args())
 
-
+logging.basicConfig(filename="debug_logs_thread/" + args["file_name"], level = logging.DEBUG)
 
 #out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video1_name"], fourcc, 10.0, (544, 400))
 #@profile
@@ -93,7 +93,7 @@ def matching_part(sig):
 # ##    print "reached zero"
 #     end = time.time()
 #     logging.debug("Total time:", end - start)
-
+@profile
 def pi_stream(inse):
     global counter
     #start_time = time.time()
@@ -115,7 +115,8 @@ def pi_stream(inse):
             if (0.1 - (time.time() - start)) > 0:
             	time.sleep(0.1 - (time.time() - start))
         start = time.time()
-        matching_part(inse.get_signature())
+        sig = inse.send_signature()
+        #matching_part(inse.get_signature())
         counter_old = counter 
         counter += 1
     inse.stop()
@@ -129,6 +130,7 @@ def pi_stream(inse):
 
 if __name__ == "__main__":
     inse = InitializeSet().start()
+    time.sleep(2)
     pi_stream(inse)
 
 

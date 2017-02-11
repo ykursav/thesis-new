@@ -1,0 +1,136 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 2.42009 s
+File: InitializeSet.py
+Function: __init__ at line 12
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    12                                               @profile
+    13                                               def __init__(self):
+    14         1           43     43.0      0.0          fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
+    15         1         6841   6841.0      0.3          self.out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/example2.avi", fourcc, 5.0, (500, 300))
+    16         1       410973 410973.0     17.0          self.vs = PiVideoStream().start()
+    17         1      2002063 2002063.0     82.7          time.sleep(2)
+    18         1          111    111.0      0.0          logging.basicConfig(filename="debug_logs_thread/InitializeSet02.log", level = logging.DEBUG)
+    19         1            6      6.0      0.0          self.logging = logging
+    20         1            5      5.0      0.0          self.counter = 0
+    21         1           10     10.0      0.0          self.sigGen = bitarray()
+    22         1            6      6.0      0.0          self.set_initials_pre = set_initials_pre
+    23         1            5      5.0      0.0          self.get_contour = get_contour
+    24         1            5      5.0      0.0          self.get_perspective = get_perspective
+    25         1            5      5.0      0.0          self.get_cropped = get_cropped
+    26         1            5      5.0      0.0          self.set_initials = set_initials
+    27         1            4      4.0      0.0          self.get_signature = get_signature
+    28         1            5      5.0      0.0          self.stopped = False
+
+Total time: 0.000577 s
+File: InitializeSet.py
+Function: start at line 30
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    30                                               @profile
+    31                                               def start(self):
+    32         1          574    574.0     99.5          Thread(target=self.update, args=()).start()
+    33         1            3      3.0      0.5          return self
+
+Total time: 22.8763 s
+File: InitializeSet.py
+Function: update at line 35
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    35                                               @profile
+    36                                               def update(self):
+    37       218          994      4.6      0.0          while(True):
+    38       218         1332      6.1      0.0              start = time.time()
+    39       218        32485    149.0      0.1              self.set_initials_pre(128, self.vs.read(), self.counter, self.out2)
+    40       217      9231994  42543.8     40.4              check = self.get_perspective(self.get_contour(5), 0)
+    41       217         2382     11.0      0.0              if check == 10:
+    42                                                           self.counter -= 1
+    43                                                           continue
+    44       217         1007      4.6      0.0              elif check == 20:
+    45                                                           self.logging.debug("Too small detection probably wrong")
+    46                                                           self.counter -= 1
+    47                                                           continue
+    48                                           
+    49       217       139654    643.6      0.6              self.set_initials(8, 4, 128, self.get_cropped())
+    50                                           
+    51       217         1902      8.8      0.0              try:
+    52       217     13228209  60959.5     57.8                  self.sigGen = self.get_signature()
+    53       217         2634     12.1      0.0                  end = time.time()
+    54       217       232053   1069.4      1.0                  self.logging.debug("Total time:" + str(start-end))
+    55                                                       except:
+    56                                                           self.logging.debug("Nonetype")
+    57                                                           self.counter -= 1
+    58                                                           continue
+    59       217         1676      7.7      0.0              if self.stopped:
+    60                                                           self.vs.stop()
+    61                                                           return
+
+Total time: 0 s
+File: InitializeSet.py
+Function: send_signature at line 63
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    63                                               @profile
+    64                                               def send_signature(self):
+    65                                                   return self.sigGen
+
+Total time: 0 s
+File: InitializeSet.py
+Function: stop at line 66
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    66                                               @profile
+    67                                               def stop(self):
+    68                                                   self.stopped = True
+
+Total time: 0 s
+File: InitializeSet.py
+Function: get_counter at line 69
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    69                                               @profile
+    70                                               def get_counter(self):
+    71                                                   return self.counter
+
+Total time: 0 s
+File: mainproc.py
+Function: pi_stream at line 96
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    96                                           @profile
+    97                                           def pi_stream(inse):
+    98                                               global counter
+    99                                               #start_time = time.time()
+   100                                               start = time.time()
+   101                                               counter_old = 0
+   102                                               counter = inse.get_counter()
+   103                                               #counter = 0
+   104                                               while counter < args["num_frames"]:
+   105                                                   if (start + 0.1) - time.time() > 0 and counter_old != counter:
+   106                                                       try:
+   107                                                           time.sleep((start + 0.1) - time.time())
+   108                                                           logging.debug("Real time" + str(time.time()) + "\n")
+   109                                                       except:
+   110                                                           logging.debug("Under real time point " + str(time.time() - start) + "\n")
+   111                                                           time.sleep(0.2 - (time.time() - start))
+   112                                                   else:
+   113                                                       logging.debug("Under real time Point counter:" + str(time.time() - start) + "\n")
+   114                                                       #print 0.2 - (time.time() -start)
+   115                                                       if (0.1 - (time.time() - start)) > 0:
+   116                                                       	time.sleep(0.1 - (time.time() - start))
+   117                                                   start = time.time()
+   118                                                   sig = inse.send_signature()
+   119                                                   #matching_part(inse.get_signature())
+   120                                                   counter_old = counter 
+   121                                                   counter += 1
+   122                                               inse.stop()
+
