@@ -5,7 +5,7 @@ from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      INTER_LINEAR, GaussianBlur, COLOR_BGR2GRAY, COLOR_GRAY2BGR, ADAPTIVE_THRESH_GAUSSIAN_C, \
      THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST, \
      setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU, VideoWriter, ADAPTIVE_THRESH_MEAN_C, \
-     CV_64F
+     CV_64F, erode
      
 from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray
 import gc
@@ -77,7 +77,7 @@ def get_edged(G):
     #edge = Canny(blur, ret / 2, ret)
     #Thread(target = write_out, args = (out, dilated,)).start()
     #return dilate(edge, ones((3,3), uint8),iterations = 1)
-    return th
+    return erode(th, ones((3, 3), uint8), iterations=1)
 
 def write_out(stream, frame):
     global out, out2
@@ -100,7 +100,7 @@ def write_out(stream, frame):
 def get_contour(G):
     edged = get_edged(G)
     __, contours, hierarchy = findContours(edged, RETR_LIST, CHAIN_APPROX_SIMPLE)
-    contours = sorted(contours, key = contourArea, reverse = True)[:3]
+    contours = sorted(contours, key = contourArea, reverse = True)[:2]
     approx = 0
     first = False
     no_contour = True

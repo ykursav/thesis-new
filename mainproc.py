@@ -1,11 +1,21 @@
 import time
+from PiVideoStream import PiVideoStream
+from bitarray import bitarray
+from preprocessing import set_initials_pre, get_contour, get_perspective, get_cropped
+from extraction import set_initials, get_signature
+from matching import set_initials_match, signature_rejection, signature_scan, signature_deep_scan, signature_o2o
+#from subprocess import call
+from threading import Thread, active_count
+from picamera import PiCamera
+from picamera.array import PiRGBArray
+#import threading_test as tt
+from multiprocessing import Process
 import cv2
 import logging
+#import io
 import numpy as np
 import argparse
-from InitializeSet import InitializeSet
-from matching import set_initials_match, signature_rejection, signature_scan, signature_deep_scan, signature_o2o
-
+#import Queue
 ##cmd = "python /home/pi/master-thesis/threading_test.py image"
 #f_report = open("Quality_Reports_Image/WithoutThread/new_timing00_rpi3_lite.txt", "w")
 ap = argparse.ArgumentParser()
@@ -15,19 +25,52 @@ ap.add_argument("-f", "--file-name", type=str, default="debug_log.log",
     help="Filename can be assigned with that argument otherwise default is debug_log.log")
 #ap.add_argument("-v1", "--video1-name", type=str, default="video1.avi",
 #    help="First video output file name can be assigned with that argument otherwise default is video1.avi")
-# ap.add_argument("-v2", "--video2-name", type=str, default="video2.avi",
-#     help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
+ap.add_argument("-v2", "--video2-name", type=str, default="video2.avi",
+    help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
 args = vars(ap.parse_args())
 
-logging.basicConfig(filename="debug_logs_thread/" + args["file_name"], level = logging.DEBUG)
-
-#out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video1_name"], fourcc, 10.0, (544, 400))
+#f = open("signature.bin", "r")
+# sigOrig = bitarray()
+# sigOrig.fromfile(f)
+# f.close()
+# def process_thread(image, counter):
+#     TT = tt.ThreadTest(image, 8, 4, 128, 24, 38, 4, 28, 22, counter, f_report)
+#     check = TT.mainprocess()
+logging.basicConfig(filename="debug_logs/" + args["file_name"], level = logging.DEBUG)
+counter = 0
 #@profile
-def matching_part(sig):
+sigGen = bitarray()
+fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
+#out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video1_name"], fourcc, 10.0, (544, 400))
+out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 5.0, (500, 300))
+#@profile
+def initialize_set(image):
     global counter, sigGen
+    set_initials_pre(128, image, counter, out2)
     #set_initials_pre(128, image, counter)
-    
-    
+    points = get_contour(5)
+    check = get_perspective(points, 0)
+    if check == 10:
+        counter -= 1
+        return
+    elif check == 20:
+        logging.debug("Too small detection probably wrong")
+        counter -= 1
+        return
+    crop = get_cropped()
+    set_initials(8, 4, 128, crop)
+    sig = bitarray()
+    try:
+        sig = get_signature()
+        if counter < 25:
+           sigGen.extend(sig)
+        else:
+           sigGen = sigGen[72:]
+           sigGen[1728:] = sig
+    except:
+        logging.debug("Nonetype")
+        counter -= 1
+        return
     
     #if counter >= 24:
         #logging.debug(sigGen)
@@ -55,14 +98,14 @@ def matching_part(sig):
         #else:
         #    logging.debug("Match")
         #    time.sleep(0.4)
-    min_val, error_val = signature_o2o(sig)
-    logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
-    logging.debug("Errors over all scan:" + str(error_val) + "\n")
-    if error_val < 10:
-        logging.debug("Match")
-    else:
-        logging.debug("Nomatch")
-        time.sleep(0.05)
+    #min_val, error_val = signature_o2o(sig)
+    #logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
+    #logging.debug("Errors over all scan:" + str(error_val) + "\n")
+    #if error_val < 10:
+    #    logging.debug("Match")
+    #else:
+    #    logging.debug("Nomatch")
+    #    time.sleep(0.05)
         
         
     
@@ -93,33 +136,32 @@ def matching_part(sig):
 # ##    print "reached zero"
 #     end = time.time()
 #     logging.debug("Total time:", end - start)
-@profile
-def pi_stream(inse):
+
+def pi_stream(vs):
     global counter
     #start_time = time.time()
     start = time.time()
     counter_old = 0
-    counter = inse.get_counter()
     #counter = 0
     while counter < args["num_frames"]:
-        if (start + 0.1) - time.time() > 0 and counter_old != counter:
+        if (start + 0.2) - time.time() > 0 and counter_old != counter:
             try:
-                time.sleep((start + 0.1) - time.time())
+                time.sleep((start + 0.2) - time.time())
                 logging.debug("Real time" + str(time.time()) + "\n")
             except:
                 logging.debug("Under real time point " + str(time.time() - start) + "\n")
-                time.sleep(0.2 - (time.time() - start))
+                time.sleep(0.4 - (time.time() - start))
         else:
             logging.debug("Under real time Point counter:" + str(time.time() - start) + "\n")
             #print 0.2 - (time.time() -start)
-            if (0.1 - (time.time() - start)) > 0:
-            	time.sleep(0.1 - (time.time() - start))
+            if (0.2 - (time.time() - start)) > 0:
+            	time.sleep(0.2 - (time.time() - start))
         start = time.time()
-        sig = inse.send_signature()
-        #matching_part(inse.get_signature())
+        frame = vs.read()
+        initialize_set(frame)
         counter_old = counter 
         counter += 1
-    inse.stop()
+    vs.stop()
     #out.release()
     #out2.release()
     #end_time = time.time()
@@ -129,9 +171,20 @@ def pi_stream(inse):
     
 
 if __name__ == "__main__":
-    inse = InitializeSet().start()
+   # camera = PiCamera()
+   # camera.resolution = (544, 400)
+   # rawCapture = PiRGBArray(camera, size = (544, 400))
+   # camera.framerate = 30
+   # camera.start_preview()
+##    time.sleep(3)
+##    camera.stop_preview()
+##    time.sleep(2)
+    vs = PiVideoStream().start()
     time.sleep(2)
-    pi_stream(inse)
+    #p1 = Thread(target = main, args = (camera, ))
+    #p1.start()
+    #p1.join()
+    pi_stream(vs)
 
 
 
