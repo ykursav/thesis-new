@@ -4,11 +4,12 @@ from bitarray import bitarray
 
 from cv2 import VideoCapture
 
+#@profile
 def initialize_set(image, counter):
     set_initials_pre(128, image, counter)
     image2 = get_cropped()
     #simwrite("resized_images/cropped" + str(counter) + ".jpg", image2)
-    set_initials(8, 4, 128, image2)
+    set_initials(16, 8, 128, image2)
     sigGen = get_signature()
     return sigGen
 
@@ -16,7 +17,7 @@ def initialize_set(image, counter):
 
 if __name__ == "__main__": 
     cap = VideoCapture("Videos/newest_version.mp4")
-    f = open("signature_test10.bin", "wb")
+    f = open("signature_test12.bin", "wb")
     counter = 0
     signature_counter = 0
     sig_first = bitarray()
@@ -33,10 +34,11 @@ if __name__ == "__main__":
             sigGen = initialize_set(frame, counter)
             sig_second = sigGen
             signature_res = sig_first and sig_second
-            print len(signature_res)
-            print signature_res
+            #print len(signature_res)
+            #print signature_res
             f.write(signature_res.tobytes())
             signature_counter = 0
+        print counter
         counter += 1
     print counter
     cap.release()

@@ -52,10 +52,15 @@ def get_average_luminance_of_block(block):
 
 def get_second_singular(block):
     U, s, V = linalg.svd(block)
+    #print s[1] ** 2
     return s[1] ** 2
 
 def get_singular_energy(block):
-    return get_second_singular(block) / get_total_energy_of_block(block)
+    total_energy = get_total_energy_of_block(block)
+    if total_energy == 0:
+        return 0
+    else:
+        return get_second_singular(block) / get_total_energy_of_block(block)
 
 
 
@@ -107,7 +112,6 @@ def get_fragment(x, y, only_rotate):
         std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3]]).ctypes.data_as(c_void_p))
 
         #singular energy part
-        group = np.zeros((16, 64))
         singular_energies = map(get_singular_energy, [rot0[y * N:y * N + N, x * N:x * N + N], rot90[y * N:y * N + N, x * N:x * N + N], \
             rot180[y * N:y * N + N, x * N:x * N + N], rot270[y * N:y * N + N, x * N:x * N + N]])
         avg_sing = (singular_energies[0] + singular_energies[1] + singular_energies[2] + singular_energies[3]) / 4
@@ -152,15 +156,16 @@ def get_fragment(x, y, only_rotate):
 #@profile
 def get_all_fragments():
     global rot0, rot90, rot180, rot270
-    fragments_list = [[],[]]
+    fragments_list = [[],[], [], []]
     rot0 = get_blocks()
     rot90, rot180, rot270 = basic_rotations(rot0)
     counter_x = 0
     counter_y = 0
-    append_fragment = fragments_list.append
-    # append_avg_lum = fragments_list[1].append
-    # append_std_lum = fragments_list[2].append
-    # append_avg_lum = fragments_list[3].append
+    #append_fragment = fragments_list.append
+    append_avg_lum = fragments_list[0].append
+    append_std_lum = fragments_list[1].append
+    append_avg_sing = fragments_list[2].append
+    append_std_sing = fragments_list[3].append
     while(counter_x < 7 or counter_y < 7):
         if counter_x == 8:
             counter_y += 1
@@ -168,22 +173,22 @@ def get_all_fragments():
         if counter_x == counter_y or counter_x == 7:
             if counter_x == 7 and counter_y == 7:
                 avg_lum, std_lum, avg_sing, std_sing = get_fragment(counter_x, counter_y, -1)
-                append_fragment(avg_lum)
-                append_fragment(std_lum)
-                append_fragment(avg_sing)
-                append_fragment(std_sing)                
+                append_avg_lum(avg_lum)
+                append_std_lum(std_lum)
+                append_avg_sing(avg_sing)
+                append_std_sing(std_sing)                
             else:
                 avg_lum, std_lum, avg_sing, std_sing = get_fragment(counter_x, counter_y, 1)
-                append_fragment(avg_lum)
-                append_fragment(std_lum)
-                append_fragment(avg_sing)
-                append_fragment(std_sing)     
+                append_avg_lum(avg_lum)
+                append_std_lum(std_lum)
+                append_avg_sing(avg_sing)
+                append_std_sing(std_sing)     
         else:
             avg_lum, std_lum, avg_sing, std_sing = get_fragment(counter_x, counter_y, 1)
-            append_fragment(avg_lum)
-            append_fragment(std_lum)
-            append_fragment(avg_sing)
-            append_fragment(std_sing)   
+            append_avg_lum(avg_lum)
+            append_std_lum(std_lum)
+            append_avg_sing(avg_sing)
+            append_std_sing(std_sing)   
         counter_x += 1
     return fragments_list
 
@@ -203,6 +208,9 @@ def get_signature():
 
     sig_append(False)
     sig_append(False)
+    sig_append(False)
+    sig_append(False)
+    #print len(signature)
     #print("Generated signature length:%d",len(signature))
     #print signature
     return signature

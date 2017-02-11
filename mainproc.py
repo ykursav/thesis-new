@@ -25,8 +25,8 @@ ap.add_argument("-f", "--file-name", type=str, default="debug_log.log",
     help="Filename can be assigned with that argument otherwise default is debug_log.log")
 #ap.add_argument("-v1", "--video1-name", type=str, default="video1.avi",
 #    help="First video output file name can be assigned with that argument otherwise default is video1.avi")
-#ap.add_argument("-v2", "--video2-name", type=str, default="video2.avi",
-#    help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
+ap.add_argument("-v2", "--video2-name", type=str, default="video2.avi",
+    help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
 args = vars(ap.parse_args())
 
 #f = open("signature.bin", "r")
@@ -40,13 +40,13 @@ logging.basicConfig(filename="debug_logs/" + args["file_name"], level = logging.
 counter = 0
 #@profile
 sigGen = bitarray()
-#fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
+fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
 #out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video1_name"], fourcc, 10.0, (544, 400))
-#out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 10.0, (500, 300))
+out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 10.0, (500, 300))
 #@profile
 def initialize_set(image):
     global counter, sigGen
-    set_initials_pre(128, image, counter)
+    set_initials_pre(128, image, counter, out2)
     #set_initials_pre(128, image, counter)
     points = get_contour(5)
     check = get_perspective(points, 0)
@@ -62,12 +62,11 @@ def initialize_set(image):
     set_initials(16, 8, 128, crop)
     try:
         sig = get_signature()
-        #print len(sig)
         if counter < 10:
            sigGen.extend(sig)
         else:
-           sigGen = sigGen[240:]
-           sigGen[2160:] = sig
+           sigGen = sigGen[144:]
+           sigGen[1296:] = sig
     except:
         logging.debug("Nonetype")
         counter -= 1
@@ -76,25 +75,25 @@ def initialize_set(image):
         #logging.debug(sigGen)
         set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
-        scan_sig = signature_scan()
-        min_point = scan_sig.index(min(scan_sig))
-        range1 = 0
-        range2 = 0
-        if min_point != 0:
-            range1 = (min_point * 600) - 1200
-            range2 = (min_point * 600) + 2400
-        else:
-            range1 = min_point * 600
-            range2 = (min_point * 600) + 3600
-        #print range1, range2
-        min_match, error_n = signature_deep_scan(range1, range2, sig)
-        match_frame = (range1 / 240) + min_match
-        logging.debug(str(match_frame))
-        logging.debug(str(error_n))
-        if error_n >90:
-            logging.debug("No match")
-        else:
-            logging.debug("Match")
+        #scan_sig = signature_scan()
+        #min_point = scan_sig.index(min(scan_sig))
+        #range1 = 0
+        #range2 = 0
+        #if min_point != 0:
+        #    range1 = (min_point * 720) - 720
+        #    range2 = (min_point * 720) + 1440
+        #else:
+        #    range1 = min_point * 720
+        #    range2 = (min_point * 720) + 2160
+        ##print range1, range2
+        #min_match, error_n = signature_deep_scan(range1, range2, sig)
+        #match_frame = (range1 / 144) + min_match
+        #logging.debug(str(match_frame))
+        #logging.debug(str(error_n))
+        #if error_n >90:
+        #    logging.debug("No match")
+        #else:
+        #    logging.debug("Match")
         #min_val, error_val = signature_o2o(sig)
         #logging.debug(str(min_val))
         #logging.debug(str(error_val))
@@ -135,9 +134,9 @@ def pi_stream(vs):
     #start_time = time.time()
     start = 0
     while counter < args["num_frames"]:
-        if (start + 0.2) - time.time() > 0 and counter_old != counter:
+        if (start + 0.4) - time.time() > 0 and counter_old != counter:
             try:
-                time.sleep((start + 0.2) - time.time())
+                time.sleep((start + 0.4) - time.time())
                 logging.debug("Real time" + str(time.time()) + "\n")
             except:
                 logging.debug("Under real time point " + str(time.time() - start) + "\n")
