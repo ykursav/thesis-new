@@ -1,0 +1,2336 @@
+DEBUG:root:Under real time Point counter:1.90734863281e-05
+
+DEBUG:root:Real time1486781537.08
+
+DEBUG:root:Real time1486781537.28
+
+DEBUG:root:Real time1486781537.48
+
+DEBUG:root:Real time1486781537.68
+
+DEBUG:root:Real time1486781537.88
+
+DEBUG:root:Real time1486781538.08
+
+DEBUG:root:Real time1486781538.28
+
+DEBUG:root:Real time1486781538.48
+
+DEBUG:root:Real time1486781538.68
+
+DEBUG:root:Real time1486781538.88
+
+DEBUG:root:Real time1486781539.08
+
+DEBUG:root:Real time1486781539.28
+
+DEBUG:root:Real time1486781539.49
+
+DEBUG:root:Real time1486781539.69
+
+DEBUG:root:Real time1486781539.89
+
+DEBUG:root:Real time1486781540.09
+
+DEBUG:root:Real time1486781540.29
+
+DEBUG:root:Real time1486781540.49
+
+DEBUG:root:Real time1486781540.69
+
+DEBUG:root:Real time1486781540.89
+
+DEBUG:root:Real time1486781541.09
+
+DEBUG:root:Real time1486781541.3
+
+DEBUG:root:Real time1486781541.5
+
+DEBUG:root:Real time1486781541.7
+
+DEBUG:root:Total error:290
+
+DEBUG:root:Match frame over 25:176
+
+DEBUG:root:Matched frame error:10
+
+DEBUG:root:Matched frame over all scan:236
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781541.9
+
+DEBUG:root:Total error:241
+
+DEBUG:root:Match frame over 25:176
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:237
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781542.1
+
+DEBUG:root:Total error:251
+
+DEBUG:root:Match frame over 25:176
+
+DEBUG:root:Matched frame error:10
+
+DEBUG:root:Matched frame over all scan:236
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781542.3
+
+DEBUG:root:Total error:287
+
+DEBUG:root:Match frame over 25:176
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:237
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781542.5
+
+DEBUG:root:Total error:319
+
+DEBUG:root:Match frame over 25:181
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:236
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781542.7
+
+DEBUG:root:Total error:283
+
+DEBUG:root:Match frame over 25:182
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:236
+
+DEBUG:root:Errors over all scan:4
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781542.9
+
+DEBUG:root:Total error:245
+
+DEBUG:root:Match frame over 25:182
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:236
+
+DEBUG:root:Errors over all scan:4
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781543.1
+
+DEBUG:root:Total error:249
+
+DEBUG:root:Match frame over 25:182
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:237
+
+DEBUG:root:Errors over all scan:4
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781543.3
+
+DEBUG:root:Total error:303
+
+DEBUG:root:Match frame over 25:176
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Matched frame over all scan:185
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781543.5
+
+DEBUG:root:Total error:353
+
+DEBUG:root:Match frame over 25:186
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:213
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781543.71
+
+DEBUG:root:Total error:304
+
+DEBUG:root:Match frame over 25:186
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:190
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781543.91
+
+DEBUG:root:Total error:260
+
+DEBUG:root:Match frame over 25:186
+
+DEBUG:root:Matched frame error:10
+
+DEBUG:root:Matched frame over all scan:186
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781544.11
+
+DEBUG:root:Total error:258
+
+DEBUG:root:Match frame over 25:188
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:190
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781544.31
+
+DEBUG:root:Total error:319
+
+DEBUG:root:Match frame over 25:188
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:191
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781544.58
+
+DEBUG:root:Total error:372
+
+DEBUG:root:Match frame over 25:191
+
+DEBUG:root:Matched frame error:6
+
+DEBUG:root:Matched frame over all scan:191
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781544.78
+
+DEBUG:root:Total error:312
+
+DEBUG:root:Match frame over 25:193
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:193
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781544.98
+
+DEBUG:root:Total error:254
+
+DEBUG:root:Match frame over 25:193
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:193
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781545.18
+
+DEBUG:root:Total error:277
+
+DEBUG:root:Match frame over 25:171
+
+DEBUG:root:Matched frame error:17
+
+DEBUG:root:Matched frame over all scan:195
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781545.38
+
+DEBUG:root:Total error:346
+
+DEBUG:root:Match frame over 25:171
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:198
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781545.58
+
+DEBUG:root:Total error:375
+
+DEBUG:root:Match frame over 25:195
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:195
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781545.78
+
+DEBUG:root:Total error:324
+
+DEBUG:root:Match frame over 25:198
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:198
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781545.99
+
+DEBUG:root:Total error:252
+
+DEBUG:root:Match frame over 25:199
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:643
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781546.19
+
+DEBUG:root:Total error:324
+
+DEBUG:root:Match frame over 25:199
+
+DEBUG:root:Matched frame error:18
+
+DEBUG:root:Matched frame over all scan:200
+
+DEBUG:root:Errors over all scan:14
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781546.39
+
+DEBUG:root:Total error:398
+
+DEBUG:root:Match frame over 25:199
+
+DEBUG:root:Matched frame error:17
+
+DEBUG:root:Matched frame over all scan:201
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781546.59
+
+DEBUG:root:Total error:410
+
+DEBUG:root:Match frame over 25:199
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:84
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781546.79
+
+DEBUG:root:Total error:340
+
+DEBUG:root:Match frame over 25:204
+
+DEBUG:root:Matched frame error:4
+
+DEBUG:root:Matched frame over all scan:204
+
+DEBUG:root:Errors over all scan:4
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781546.99
+
+DEBUG:root:Total error:248
+
+DEBUG:root:Match frame over 25:204
+
+DEBUG:root:Matched frame error:5
+
+DEBUG:root:Matched frame over all scan:204
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781547.19
+
+DEBUG:root:Total error:333
+
+DEBUG:root:Match frame over 25:192
+
+DEBUG:root:Matched frame error:17
+
+DEBUG:root:Matched frame over all scan:205
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781547.39
+
+DEBUG:root:Total error:432
+
+DEBUG:root:Match frame over 25:170
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:165
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781547.59
+
+DEBUG:root:Total error:462
+
+DEBUG:root:Match frame over 25:192
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:192
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781547.79
+
+DEBUG:root:Total error:371
+
+DEBUG:root:Match frame over 25:205
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:205
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781547.99
+
+DEBUG:root:Total error:262
+
+DEBUG:root:Match frame over 25:203
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:216
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781548.19
+
+DEBUG:root:Total error:372
+
+DEBUG:root:Match frame over 25:192
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:192
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781548.4
+
+DEBUG:root:Total error:457
+
+DEBUG:root:Match frame over 25:192
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:192
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781548.6
+
+DEBUG:root:Total error:463
+
+DEBUG:root:Match frame over 25:211
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:211
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781548.8
+
+DEBUG:root:Total error:379
+
+DEBUG:root:Match frame over 25:191
+
+DEBUG:root:Matched frame error:6
+
+DEBUG:root:Matched frame over all scan:191
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781549.0
+
+DEBUG:root:Total error:263
+
+DEBUG:root:Match frame over 25:191
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:191
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781549.2
+
+DEBUG:root:Total error:396
+
+DEBUG:root:Match frame over 25:213
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Matched frame over all scan:942
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781549.4
+
+DEBUG:root:Total error:476
+
+DEBUG:root:Match frame over 25:192
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:671
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781549.6
+
+DEBUG:root:Total error:467
+
+DEBUG:root:Match frame over 25:217
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:217
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781549.8
+
+DEBUG:root:Total error:404
+
+DEBUG:root:Match frame over 25:217
+
+DEBUG:root:Matched frame error:10
+
+DEBUG:root:Matched frame over all scan:815
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781550.0
+
+DEBUG:root:Total error:278
+
+DEBUG:root:Match frame over 25:219
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:347
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781550.2
+
+DEBUG:root:Total error:415
+
+DEBUG:root:Match frame over 25:192
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:220
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781550.41
+
+DEBUG:root:Total error:479
+
+DEBUG:root:Match frame over 25:218
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:108
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781550.61
+
+DEBUG:root:Total error:453
+
+DEBUG:root:Match frame over 25:223
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:225
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781550.81
+
+DEBUG:root:Total error:385
+
+DEBUG:root:Match frame over 25:223
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:225
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781551.01
+
+DEBUG:root:Total error:275
+
+DEBUG:root:Match frame over 25:223
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:225
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781551.21
+
+DEBUG:root:Total error:382
+
+DEBUG:root:Match frame over 25:223
+
+DEBUG:root:Matched frame error:7
+
+DEBUG:root:Matched frame over all scan:223
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781551.41
+
+DEBUG:root:Total error:424
+
+DEBUG:root:Match frame over 25:223
+
+DEBUG:root:Matched frame error:7
+
+DEBUG:root:Matched frame over all scan:225
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781551.61
+
+DEBUG:root:Total error:436
+
+DEBUG:root:Match frame over 25:223
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:223
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781551.81
+
+DEBUG:root:Total error:389
+
+DEBUG:root:Match frame over 25:199
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:5
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781552.01
+
+DEBUG:root:Total error:299
+
+DEBUG:root:Match frame over 25:199
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:5
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781552.21
+
+DEBUG:root:Total error:369
+
+DEBUG:root:Match frame over 25:229
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Matched frame over all scan:230
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781552.41
+
+DEBUG:root:Total error:402
+
+DEBUG:root:Match frame over 25:203
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:813
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781552.61
+
+DEBUG:root:Total error:421
+
+DEBUG:root:Match frame over 25:230
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:968
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781552.81
+
+DEBUG:root:Total error:398
+
+DEBUG:root:Match frame over 25:229
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:642
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781553.01
+
+DEBUG:root:Total error:299
+
+DEBUG:root:Match frame over 25:229
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:642
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781553.21
+
+DEBUG:root:Total error:357
+
+DEBUG:root:Match frame over 25:229
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:5
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781553.41
+
+DEBUG:root:Total error:405
+
+DEBUG:root:Match frame over 25:208
+
+DEBUG:root:Matched frame error:18
+
+DEBUG:root:Matched frame over all scan:91
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781553.61
+
+DEBUG:root:Total error:435
+
+DEBUG:root:Match frame over 25:238
+
+DEBUG:root:Matched frame error:5
+
+DEBUG:root:Matched frame over all scan:238
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781553.81
+
+DEBUG:root:Total error:389
+
+DEBUG:root:Match frame over 25:239
+
+DEBUG:root:Matched frame error:4
+
+DEBUG:root:Matched frame over all scan:239
+
+DEBUG:root:Errors over all scan:4
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781554.02
+
+DEBUG:root:Total error:287
+
+DEBUG:root:Match frame over 25:239
+
+DEBUG:root:Matched frame error:5
+
+DEBUG:root:Matched frame over all scan:239
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781554.22
+
+DEBUG:root:Total error:338
+
+DEBUG:root:Match frame over 25:239
+
+DEBUG:root:Matched frame error:6
+
+DEBUG:root:Matched frame over all scan:239
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781554.42
+
+DEBUG:root:Total error:384
+
+DEBUG:root:Match frame over 25:239
+
+DEBUG:root:Matched frame error:6
+
+DEBUG:root:Matched frame over all scan:239
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781554.62
+
+DEBUG:root:Total error:421
+
+DEBUG:root:Match frame over 25:237
+
+DEBUG:root:Matched frame error:7
+
+DEBUG:root:Matched frame over all scan:237
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781554.82
+
+DEBUG:root:Total error:362
+
+DEBUG:root:Match frame over 25:243
+
+DEBUG:root:Matched frame error:6
+
+DEBUG:root:Matched frame over all scan:243
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781555.02
+
+DEBUG:root:Total error:269
+
+DEBUG:root:Match frame over 25:244
+
+DEBUG:root:Matched frame error:3
+
+DEBUG:root:Matched frame over all scan:244
+
+DEBUG:root:Errors over all scan:3
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781555.22
+
+DEBUG:root:Total error:300
+
+DEBUG:root:Match frame over 25:244
+
+DEBUG:root:Matched frame error:6
+
+DEBUG:root:Matched frame over all scan:247
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781555.42
+
+DEBUG:root:Total error:341
+
+DEBUG:root:Match frame over 25:244
+
+DEBUG:root:Matched frame error:4
+
+DEBUG:root:Matched frame over all scan:244
+
+DEBUG:root:Errors over all scan:4
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781555.62
+
+DEBUG:root:Total error:382
+
+DEBUG:root:Match frame over 25:246
+
+DEBUG:root:Matched frame error:5
+
+DEBUG:root:Matched frame over all scan:246
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781555.82
+
+DEBUG:root:Total error:342
+
+DEBUG:root:Match frame over 25:246
+
+DEBUG:root:Matched frame error:4
+
+DEBUG:root:Matched frame over all scan:246
+
+DEBUG:root:Errors over all scan:4
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781556.02
+
+DEBUG:root:Total error:255
+
+DEBUG:root:Match frame over 25:246
+
+DEBUG:root:Matched frame error:3
+
+DEBUG:root:Matched frame over all scan:246
+
+DEBUG:root:Errors over all scan:3
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781556.23
+
+DEBUG:root:Total error:279
+
+DEBUG:root:Match frame over 25:244
+
+DEBUG:root:Matched frame error:5
+
+DEBUG:root:Matched frame over all scan:244
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781556.43
+
+DEBUG:root:Total error:328
+
+DEBUG:root:Match frame over 25:244
+
+DEBUG:root:Matched frame error:10
+
+DEBUG:root:Matched frame over all scan:251
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781556.63
+
+DEBUG:root:Total error:357
+
+DEBUG:root:Match frame over 25:236
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:592
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781556.83
+
+DEBUG:root:Total error:317
+
+DEBUG:root:Match frame over 25:254
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:254
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781557.03
+
+DEBUG:root:Total error:230
+
+DEBUG:root:Match frame over 25:254
+
+DEBUG:root:Matched frame error:5
+
+DEBUG:root:Matched frame over all scan:254
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781557.23
+
+DEBUG:root:Total error:294
+
+DEBUG:root:Match frame over 25:220
+
+DEBUG:root:Matched frame error:18
+
+DEBUG:root:Matched frame over all scan:311
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781557.43
+
+DEBUG:root:Total error:334
+
+DEBUG:root:Match frame over 25:226
+
+DEBUG:root:Matched frame error:22
+
+DEBUG:root:Matched frame over all scan:256
+
+DEBUG:root:Errors over all scan:14
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781557.63
+
+DEBUG:root:Total error:366
+
+DEBUG:root:Match frame over 25:242
+
+DEBUG:root:Matched frame error:22
+
+DEBUG:root:Matched frame over all scan:257
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781557.83
+
+DEBUG:root:Total error:318
+
+DEBUG:root:Match frame over 25:258
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:260
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781558.03
+
+DEBUG:root:Total error:237
+
+DEBUG:root:Match frame over 25:258
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Matched frame over all scan:260
+
+DEBUG:root:Errors over all scan:13
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781558.24
+
+DEBUG:root:Total error:306
+
+DEBUG:root:Match frame over 25:258
+
+DEBUG:root:Matched frame error:17
+
+DEBUG:root:Matched frame over all scan:260
+
+DEBUG:root:Errors over all scan:14
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781558.44
+
+DEBUG:root:Total error:338
+
+DEBUG:root:Match frame over 25:258
+
+DEBUG:root:Matched frame error:17
+
+DEBUG:root:Matched frame over all scan:260
+
+DEBUG:root:Errors over all scan:14
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781558.64
+
+DEBUG:root:Total error:372
+
+DEBUG:root:Match frame over 25:251
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:262
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781558.84
+
+DEBUG:root:Total error:320
+
+DEBUG:root:Match frame over 25:263
+
+DEBUG:root:Matched frame error:5
+
+DEBUG:root:Matched frame over all scan:263
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781559.04
+
+DEBUG:root:Total error:239
+
+DEBUG:root:Match frame over 25:263
+
+DEBUG:root:Matched frame error:7
+
+DEBUG:root:Matched frame over all scan:263
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781559.24
+
+DEBUG:root:Total error:322
+
+DEBUG:root:Match frame over 25:262
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:266
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781559.44
+
+DEBUG:root:Total error:385
+
+DEBUG:root:Match frame over 25:262
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Matched frame over all scan:266
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781559.64
+
+DEBUG:root:Total error:397
+
+DEBUG:root:Match frame over 25:267
+
+DEBUG:root:Matched frame error:10
+
+DEBUG:root:Matched frame over all scan:267
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781559.84
+
+DEBUG:root:Total error:326
+
+DEBUG:root:Match frame over 25:262
+
+DEBUG:root:Matched frame error:6
+
+DEBUG:root:Matched frame over all scan:262
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781560.04
+
+DEBUG:root:Total error:246
+
+DEBUG:root:Match frame over 25:268
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:268
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781560.24
+
+DEBUG:root:Total error:355
+
+DEBUG:root:Match frame over 25:235
+
+DEBUG:root:Matched frame error:19
+
+DEBUG:root:Matched frame over all scan:270
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781560.44
+
+DEBUG:root:Total error:426
+
+DEBUG:root:Match frame over 25:243
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:928
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781560.64
+
+DEBUG:root:Total error:478
+
+DEBUG:root:Match frame over 25:255
+
+DEBUG:root:Matched frame error:20
+
+DEBUG:root:Matched frame over all scan:273
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781560.84
+
+DEBUG:root:Total error:397
+
+DEBUG:root:Match frame over 25:273
+
+DEBUG:root:Matched frame error:3
+
+DEBUG:root:Matched frame over all scan:273
+
+DEBUG:root:Errors over all scan:3
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781561.05
+
+DEBUG:root:Total error:273
+
+DEBUG:root:Match frame over 25:274
+
+DEBUG:root:Matched frame error:5
+
+DEBUG:root:Matched frame over all scan:274
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781561.25
+
+DEBUG:root:Total error:380
+
+DEBUG:root:Match frame over 25:274
+
+DEBUG:root:Matched frame error:7
+
+DEBUG:root:Matched frame over all scan:275
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781561.45
+
+DEBUG:root:Total error:475
+
+DEBUG:root:Match frame over 25:273
+
+DEBUG:root:Matched frame error:18
+
+DEBUG:root:Matched frame over all scan:312
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781561.65
+
+DEBUG:root:Total error:507
+
+DEBUG:root:Match frame over 25:973
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:776
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781561.85
+
+DEBUG:root:Total error:424
+
+DEBUG:root:Match frame over 25:278
+
+DEBUG:root:Matched frame error:3
+
+DEBUG:root:Matched frame over all scan:278
+
+DEBUG:root:Errors over all scan:3
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781562.05
+
+DEBUG:root:Total error:271
+
+DEBUG:root:Match frame over 25:278
+
+DEBUG:root:Matched frame error:1
+
+DEBUG:root:Matched frame over all scan:278
+
+DEBUG:root:Errors over all scan:1
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781562.25
+
+DEBUG:root:Total error:367
+
+DEBUG:root:Match frame over 25:278
+
+DEBUG:root:Matched frame error:1
+
+DEBUG:root:Matched frame over all scan:278
+
+DEBUG:root:Errors over all scan:1
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781562.45
+
+DEBUG:root:Total error:466
+
+DEBUG:root:Match frame over 25:248
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:725
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781562.65
+
+DEBUG:root:Total error:470
+
+DEBUG:root:Match frame over 25:1000
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:725
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781562.85
+
+DEBUG:root:Total error:399
+
+DEBUG:root:Match frame over 25:282
+
+DEBUG:root:Matched frame error:7
+
+DEBUG:root:Matched frame over all scan:282
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781563.05
+
+DEBUG:root:Total error:267
+
+DEBUG:root:Match frame over 25:252
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:252
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781563.25
+
+DEBUG:root:Total error:359
+
+DEBUG:root:Match frame over 25:271
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:760
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781563.45
+
+DEBUG:root:Total error:472
+
+DEBUG:root:Match frame over 25:283
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:219
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781563.65
+
+DEBUG:root:Total error:486
+
+DEBUG:root:Match frame over 25:979
+
+DEBUG:root:Matched frame error:20
+
+DEBUG:root:Matched frame over all scan:281
+
+DEBUG:root:Errors over all scan:14
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781563.86
+
+DEBUG:root:Total error:438
+
+DEBUG:root:Match frame over 25:269
+
+DEBUG:root:Matched frame error:17
+
+DEBUG:root:Matched frame over all scan:452
+
+DEBUG:root:Errors over all scan:13
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781564.06
+
+DEBUG:root:Total error:317
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Matched frame over all scan:411
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781564.26
+
+DEBUG:root:Total error:375
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:1442
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781564.46
+
+DEBUG:root:Total error:468
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Matched frame over all scan:173
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781564.66
+
+DEBUG:root:Total error:495
+
+DEBUG:root:Match frame over 25:1489
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:173
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781564.86
+
+DEBUG:root:Total error:460
+
+DEBUG:root:Match frame over 25:291
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Matched frame over all scan:783
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781565.06
+
+DEBUG:root:Total error:358
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:88
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781565.26
+
+DEBUG:root:Total error:384
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:88
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781565.46
+
+DEBUG:root:Total error:458
+
+DEBUG:root:Match frame over 25:291
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:173
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781565.66
+
+DEBUG:root:Total error:434
+
+DEBUG:root:Match frame over 25:299
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:783
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781565.86
+
+DEBUG:root:Total error:432
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:171
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781566.06
+
+DEBUG:root:Total error:380
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:171
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781566.26
+
+DEBUG:root:Total error:402
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:217
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781566.46
+
+DEBUG:root:Total error:450
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:217
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781566.66
+
+DEBUG:root:Total error:412
+
+DEBUG:root:Match frame over 25:299
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:299
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781566.86
+
+DEBUG:root:Total error:428
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:217
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781567.06
+
+DEBUG:root:Total error:417
+
+DEBUG:root:Match frame over 25:281
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:217
+
+DEBUG:root:Errors over all scan:13
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781567.26
+
+DEBUG:root:Total error:417
+
+DEBUG:root:Match frame over 25:299
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:172
+
+DEBUG:root:Errors over all scan:13
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781567.46
+
+DEBUG:root:Total error:450
+
+DEBUG:root:Match frame over 25:305
+
+DEBUG:root:Matched frame error:7
+
+DEBUG:root:Matched frame over all scan:305
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781567.66
+
+DEBUG:root:Total error:424
+
+DEBUG:root:Match frame over 25:305
+
+DEBUG:root:Matched frame error:6
+
+DEBUG:root:Matched frame over all scan:305
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781567.86
+
+DEBUG:root:Total error:436
+
+DEBUG:root:Match frame over 25:306
+
+DEBUG:root:Matched frame error:7
+
+DEBUG:root:Matched frame over all scan:306
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781568.07
+
+DEBUG:root:Total error:418
+
+DEBUG:root:Match frame over 25:306
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:389
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781568.27
+
+DEBUG:root:Total error:391
+
+DEBUG:root:Match frame over 25:306
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:306
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781568.47
+
+DEBUG:root:Total error:421
+
+DEBUG:root:Match frame over 25:287
+
+DEBUG:root:Matched frame error:22
+
+DEBUG:root:Matched frame over all scan:310
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781568.67
+
+DEBUG:root:Total error:440
+
+DEBUG:root:Match frame over 25:276
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:836
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781568.87
+
+DEBUG:root:Total error:439
+
+DEBUG:root:Match frame over 25:312
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:348
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781569.07
+
+DEBUG:root:Total error:431
+
+DEBUG:root:Match frame over 25:307
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:316
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781569.27
+
+DEBUG:root:Total error:346
+
+DEBUG:root:Match frame over 25:314
+
+DEBUG:root:Matched frame error:3
+
+DEBUG:root:Matched frame over all scan:314
+
+DEBUG:root:Errors over all scan:3
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781569.47
+
+DEBUG:root:Total error:403
+
+DEBUG:root:Match frame over 25:314
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:316
+
+DEBUG:root:Errors over all scan:4
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781569.67
+
+DEBUG:root:Total error:430
+
+DEBUG:root:Match frame over 25:314
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:316
+
+DEBUG:root:Errors over all scan:3
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781569.87
+
+DEBUG:root:Total error:440
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:3
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:3
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781570.07
+
+DEBUG:root:Total error:394
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781570.27
+
+DEBUG:root:Total error:282
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781570.47
+
+DEBUG:root:Total error:365
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781570.68
+
+DEBUG:root:Total error:424
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781570.88
+
+DEBUG:root:Total error:382
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781571.08
+
+DEBUG:root:Total error:337
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781571.28
+
+DEBUG:root:Total error:228
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781571.48
+
+DEBUG:root:Total error:305
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781571.68
+
+DEBUG:root:Total error:364
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781571.88
+
+DEBUG:root:Total error:331
+
+DEBUG:root:Match frame over 25:318
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:318
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781572.08
+
+DEBUG:root:Total error:288
+
+DEBUG:root:Match frame over 25:319
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:319
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781572.28
+
+DEBUG:root:Total error:176
+
+DEBUG:root:Match frame over 25:319
+
+DEBUG:root:Matched frame error:2
+
+DEBUG:root:Matched frame over all scan:319
+
+DEBUG:root:Errors over all scan:2
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781572.48
+
+DEBUG:root:Total error:251
+
+DEBUG:root:Match frame over 25:317
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:610
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781572.68
+
+DEBUG:root:Total error:315
+
+DEBUG:root:Match frame over 25:317
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Matched frame over all scan:749
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781572.88
+
+DEBUG:root:Total error:362
+
+DEBUG:root:Match frame over 25:332
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:332
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781573.08
+
+DEBUG:root:Total error:316
+
+DEBUG:root:Match frame over 25:334
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Matched frame over all scan:335
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781573.28
+
+DEBUG:root:Total error:193
+
+DEBUG:root:Match frame over 25:333
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:335
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781573.49
+
+DEBUG:root:Total error:276
+
+DEBUG:root:Match frame over 25:327
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Matched frame over all scan:336
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781573.69
+
+DEBUG:root:Total error:341
+
+DEBUG:root:Match frame over 25:321
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Matched frame over all scan:336
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781573.89
+
+DEBUG:root:Total error:359
+
+DEBUG:root:Match frame over 25:334
+
+DEBUG:root:Matched frame error:18
+
+DEBUG:root:Matched frame over all scan:987
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781574.09
+
+DEBUG:root:Total error:290
+
+DEBUG:root:Match frame over 25:338
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:688
+
+DEBUG:root:Errors over all scan:11
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781574.29
+
+DEBUG:root:Total error:209
+
+DEBUG:root:Match frame over 25:339
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:39
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781574.49
+
+DEBUG:root:Total error:291
+
+DEBUG:root:Match frame over 25:311
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Matched frame over all scan:943
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781574.69
+
+DEBUG:root:Total error:356
+
+DEBUG:root:Match frame over 25:339
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:341
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781574.89
+
+DEBUG:root:Total error:356
+
+DEBUG:root:Match frame over 25:341
+
+DEBUG:root:Matched frame error:6
+
+DEBUG:root:Matched frame over all scan:345
+
+DEBUG:root:Errors over all scan:5
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781575.09
+
+DEBUG:root:Total error:319
+
+DEBUG:root:Match frame over 25:343
+
+DEBUG:root:Matched frame error:8
+
+DEBUG:root:Matched frame over all scan:343
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781575.29
+
+DEBUG:root:Total error:255
+
+DEBUG:root:Match frame over 25:312
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Matched frame over all scan:399
+
+DEBUG:root:Errors over all scan:9
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781575.49
+
+DEBUG:root:Total error:314
+
+DEBUG:root:Match frame over 25:341
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:345
+
+DEBUG:root:Errors over all scan:6
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781575.69
+
+DEBUG:root:Total error:372
+
+DEBUG:root:Match frame over 25:338
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Matched frame over all scan:848
+
+DEBUG:root:Errors over all scan:10
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781575.89
+
+DEBUG:root:Total error:413
+
+DEBUG:root:Match frame over 25:338
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Matched frame over all scan:67
+
+DEBUG:root:Errors over all scan:12
+
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486781576.09
+
+DEBUG:root:Total error:383
+
+DEBUG:root:Match frame over 25:348
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Matched frame over all scan:272
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781576.29
+
+DEBUG:root:Total error:288
+
+DEBUG:root:Match frame over 25:348
+
+DEBUG:root:Matched frame error:9
+
+DEBUG:root:Matched frame over all scan:943
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781576.49
+
+DEBUG:root:Total error:363
+
+DEBUG:root:Match frame over 25:341
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Matched frame over all scan:242
+
+DEBUG:root:Errors over all scan:7
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781576.69
+
+DEBUG:root:Total error:443
+
+DEBUG:root:Match frame over 25:315
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Matched frame over all scan:786
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match
+DEBUG:root:Real time1486781576.89
+
+DEBUG:root:Total error:458
+
+DEBUG:root:Match frame over 25:869
+
+DEBUG:root:Matched frame error:19
+
+DEBUG:root:Matched frame over all scan:352
+
+DEBUG:root:Errors over all scan:8
+
+DEBUG:root:Match

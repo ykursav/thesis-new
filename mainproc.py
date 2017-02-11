@@ -59,51 +59,52 @@ def initialize_set(image):
         return
     crop = get_cropped()
     sig = bitarray()
-    set_initials(16, 8, 128, crop)
+    set_initials(8, 4, 128, crop)
     try:
         sig = get_signature()
-        if counter < 10:
-           sigGen.extend(sig)
-        else:
-           sigGen = sigGen[144:]
-           sigGen[1296:] = sig
+        #if counter < 25:
+        #   sigGen.extend(sig)
+        #else:
+        #   sigGen = sigGen[72:]
+        #   sigGen[1728:] = sig
     except:
         logging.debug("Nonetype")
         counter -= 1
         return
-    if counter >= 9:
+    #if counter >= 24:
         #logging.debug(sigGen)
-        set_initials_match(sigGen, 24, 38, 4, 28, 22)
+        #set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
         #scan_sig = signature_scan()
         #min_point = scan_sig.index(min(scan_sig))
         #range1 = 0
         #range2 = 0
         #if min_point != 0:
-        #    range1 = (min_point * 720) - 720
-        #    range2 = (min_point * 720) + 1440
+        #    range1 = (min_point * 360) - 720
+        #    range2 = (min_point * 360) + 1800
         #else:
-        #    range1 = min_point * 720
-        #    range2 = (min_point * 720) + 2160
+        #    range1 = min_point * 360
+        #    range2 = (min_point * 360) + 2520
         #print range1, range2
-        #min_match, error_n = signature_deep_scan(range1, range2, sig)
-        #match_frame = (range1 / 144) + min_match
-        #logging.debug(str(match_frame))
-        #logging.debug(str(error_n))
+    #min_match, error_n = signature_deep_scan(range1, range2, sig)
+    #match_frame = (range1 / 72) + min_match
+    #logging.debug("Total error:" + str(min(scan_sig)) + "\n")
+    #logging.debug("Match frame over 25:" +str(match_frame) + "\n")
+    #logging.debug("Matched frame error:"  + str(error_n) + "\n")
         #if error_n >20:
         #    logging.debug("No match")
         #    time.sleep(0.05)
         #else:
         #    logging.debug("Match")
         #    time.sleep(0.4)
-        #min_val, error_val = signature_o2o(sig)
-        #logging.debug(str(min_val))
-        #logging.debug(str(error_val))
-        #if error_val < 24:
-        #    logging.debug("Match")
-        #else:
-        #    logging.debug("Nomatch")
-        #    time.sleep(0.05)
+    min_val, error_val = signature_o2o(sig)
+    logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
+    logging.debug("Errors over all scan:" + str(error_val) + "\n")
+    if error_val < 10:
+        logging.debug("Match")
+    else:
+        logging.debug("Nomatch")
+        time.sleep(0.05)
         
         
     
@@ -139,7 +140,9 @@ def initialize_set(image):
 def pi_stream(vs):
     global counter
     #start_time = time.time()
-    start = 0
+    start = time.time()
+    counter_old = 0
+    #counter = 0
     while counter < args["num_frames"]:
         if (start + 0.2) - time.time() > 0 and counter_old != counter:
             try:
@@ -147,12 +150,15 @@ def pi_stream(vs):
                 logging.debug("Real time" + str(time.time()) + "\n")
             except:
                 logging.debug("Under real time point " + str(time.time() - start) + "\n")
+                time.sleep(0.4 - (time.time() - start))
         else:
-            logging.debug("Under real time Point " + str(time.time() - start) + "\n")
+            logging.debug("Under real time Point counter:" + str(time.time() - start) + "\n")
+            #print 0.2 - (time.time() -start)
+            if (0.2 - (time.time() - start)) > 0:
+            	time.sleep(0.2 - (time.time() - start))
         start = time.time()
         frame = vs.read()
-        counter_old = counter
-        initialize_set(frame)
+        counter_old = counter 
         counter += 1
     vs.stop()
     #out.release()
