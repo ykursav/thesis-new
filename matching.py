@@ -68,8 +68,8 @@ def signature_deep_scan(range1, range2, sigGen_new):
 
 def signature_o2o(sigGen_new):
     result_buffer = []
-    for x in range(0, (len(sigOrig)) / 144 - 1):
-        result_buffer.append(signature_hamming(sigOrig[x * 144:(x+1) * 144], sigGen_new))
+    for x in range(0, (len(sigOrig)) / 72 - 1):
+        result_buffer.append(signature_hamming(sigOrig[x * 72:(x+1) * 72], sigGen_new))
 
     return result_buffer.index(min(result_buffer)), min(result_buffer)
 

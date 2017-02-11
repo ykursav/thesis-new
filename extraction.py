@@ -112,21 +112,21 @@ def get_fragment(x, y, only_rotate):
         std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3]]).ctypes.data_as(c_void_p))
 
         #singular energy part
-        singular_energies = map(get_singular_energy, [rot0[y * N:y * N + N, x * N:x * N + N], rot90[y * N:y * N + N, x * N:x * N + N], \
-            rot180[y * N:y * N + N, x * N:x * N + N], rot270[y * N:y * N + N, x * N:x * N + N]])
-        avg_sing = (singular_energies[0] + singular_energies[1] + singular_energies[2] + singular_energies[3]) / 4
-        std_sing = libextraction.calculateSD(array([singular_energies[0], singular_energies[1], singular_energies[2], singular_energies[3]]). \
-            ctypes.data_as(c_void_p))
-        return avg_lum, std_lum, avg_sing, std_sing
+        # singular_energies = map(get_singular_energy, [rot0[y * N:y * N + N, x * N:x * N + N], rot90[y * N:y * N + N, x * N:x * N + N], \
+        #     rot180[y * N:y * N + N, x * N:x * N + N], rot270[y * N:y * N + N, x * N:x * N + N]])
+        # avg_sing = (singular_energies[0] + singular_energies[1] + singular_energies[2] + singular_energies[3]) / 4
+        # std_sing = libextraction.calculateSD(array([singular_energies[0], singular_energies[1], singular_energies[2], singular_energies[3]]). \
+        #     ctypes.data_as(c_void_p))
+        return avg_lum, std_lum
 
     elif only_rotate == -1:
         lum1 = get_average_luminance_of_block(rot0[y * N:y * N + N, x * N:x * N + N])
         avg_lum = lum1
         std_lum = 0
-        avg_sing = get_singular_energy(rot0[y * N:y * N + N, x * N:x * N + N])
-        std_sing = 0
+        # avg_sing = get_singular_energy(rot0[y * N:y * N + N, x * N:x * N + N])
+        # std_sing = 0
         
-        return avg_lum, std_lum, avg_sing, std_sing
+        return avg_lum, std_lum
 
   #  else:
   #      results = map(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N], rot90[y * 8:y * 8 + N, x * 8:x * 8 + N], \
@@ -164,31 +164,31 @@ def get_all_fragments():
     #append_fragment = fragments_list.append
     append_avg_lum = fragments_list[0].append
     append_std_lum = fragments_list[1].append
-    append_avg_sing = fragments_list[2].append
-    append_std_sing = fragments_list[3].append
+    # append_avg_sing = fragments_list[2].append
+    # append_std_sing = fragments_list[3].append
     while(counter_x < 7 or counter_y < 7):
         if counter_x == 8:
             counter_y += 1
             counter_x = counter_y
         if counter_x == counter_y or counter_x == 7:
             if counter_x == 7 and counter_y == 7:
-                avg_lum, std_lum, avg_sing, std_sing = get_fragment(counter_x, counter_y, -1)
+                avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
                 append_avg_lum(avg_lum)
                 append_std_lum(std_lum)
-                append_avg_sing(avg_sing)
-                append_std_sing(std_sing)                
+                # append_avg_sing(avg_sing)
+                # append_std_sing(std_sing)                
             else:
-                avg_lum, std_lum, avg_sing, std_sing = get_fragment(counter_x, counter_y, 1)
+                avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)
                 append_avg_lum(avg_lum)
                 append_std_lum(std_lum)
-                append_avg_sing(avg_sing)
-                append_std_sing(std_sing)     
+                # append_avg_sing(avg_sing)
+                # append_std_sing(std_sing)     
         else:
-            avg_lum, std_lum, avg_sing, std_sing = get_fragment(counter_x, counter_y, 1)
+            avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)
             append_avg_lum(avg_lum)
             append_std_lum(std_lum)
-            append_avg_sing(avg_sing)
-            append_std_sing(std_sing)   
+            # append_avg_sing(avg_sing)
+            # append_std_sing(std_sing)   
         counter_x += 1
     return fragments_list
 
@@ -206,8 +206,6 @@ def get_signature():
             else:
                 sig_append(False)
 
-    sig_append(False)
-    sig_append(False)
     sig_append(False)
     sig_append(False)
     #print len(signature)

@@ -96,14 +96,14 @@ def initialize_set(image):
         #else:
         #    logging.debug("Match")
         #    time.sleep(0.4)
-        min_val, error_val = signature_o2o(sig)
-        logging.debug(str(min_val))
-        logging.debug(str(error_val))
-        if error_val < 24:
-            logging.debug("Match")
-        else:
-            logging.debug("Nomatch")
-            time.sleep(0.05)
+        #min_val, error_val = signature_o2o(sig)
+        #logging.debug(str(min_val))
+        #logging.debug(str(error_val))
+        #if error_val < 24:
+        #    logging.debug("Match")
+        #else:
+        #    logging.debug("Nomatch")
+        #    time.sleep(0.05)
         
         
     
@@ -141,9 +141,9 @@ def pi_stream(vs):
     #start_time = time.time()
     start = 0
     while counter < args["num_frames"]:
-        if (start + 0.4) - time.time() > 0 and counter_old != counter:
+        if (start + 0.2) - time.time() > 0 and counter_old != counter:
             try:
-                time.sleep((start + 0.4) - time.time())
+                time.sleep((start + 0.2) - time.time())
                 logging.debug("Real time" + str(time.time()) + "\n")
             except:
                 logging.debug("Under real time point " + str(time.time() - start) + "\n")
