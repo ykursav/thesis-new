@@ -166,12 +166,12 @@ def get_all_fragments():
     append_std_lum = fragments_list[1].append
     # append_avg_sing = fragments_list[2].append
     # append_std_sing = fragments_list[3].append
-    while(counter_x < 7 or counter_y < 7):
-        if counter_x == 8:
+    while(counter_x < 15 or counter_y < 15):
+        if counter_x == 16:
             counter_y += 1
             counter_x = counter_y
-        if counter_x == counter_y or counter_x == 7:
-            if counter_x == 7 and counter_y == 7:
+        if counter_x == counter_y or counter_x == 15:
+            if counter_x == 15 and counter_y == 15:
                 avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
                 append_avg_lum(avg_lum)
                 append_std_lum(std_lum)

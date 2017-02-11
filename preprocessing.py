@@ -198,7 +198,7 @@ def get_perspective(points, counter):
         elif height_perspective > width_perspective:
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = get_blurred(warped_image, 3)
-        #imwrite("warped_images/warped_new" + str(counter_warped) + ".jpg", warped_image)
+        imwrite("warped_images_new/warped_new" + str(counter_warped) + ".jpg", warped)
         Thread(target = write_out, args = (out2, warped,)).start()
         return 30
 

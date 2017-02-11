@@ -9,15 +9,15 @@ def initialize_set(image, counter):
     set_initials_pre(128, image, counter)
     image2 = get_cropped()
     #simwrite("resized_images/cropped" + str(counter) + ".jpg", image2)
-    set_initials(16, 8, 128, image2)
+    set_initials(8, 4, 128, image2)
     sigGen = get_signature()
     return sigGen
 
 
 
 if __name__ == "__main__": 
-    cap = VideoCapture("ADAPTIVE_THRESHOLD_TESTS/test20_warped.avi")
-    f = open("signature_test14.bin", "wb")
+    cap = VideoCapture("ADAPTIVE_THRESHOLD_TESTS/test21_warp.avi")
+    f = open("signature_test15.bin", "wb")
     counter = 0
     signature_counter = 0
     sig_first = bitarray()

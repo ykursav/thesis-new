@@ -42,7 +42,7 @@ counter = 0
 sigGen = bitarray()
 fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
 #out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video1_name"], fourcc, 10.0, (544, 400))
-out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 10.0, (500, 300))
+out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 5.0, (500, 300))
 #@profile
 def initialize_set(image):
     global counter, sigGen
@@ -58,19 +58,20 @@ def initialize_set(image):
         counter -= 1
         return
     crop = get_cropped()
-    sig = bitarray()
     set_initials(8, 4, 128, crop)
+    sig = bitarray()
     try:
         sig = get_signature()
-        #if counter < 25:
-        #   sigGen.extend(sig)
-        #else:
-        #   sigGen = sigGen[72:]
-        #   sigGen[1728:] = sig
+        if counter < 25:
+           sigGen.extend(sig)
+        else:
+           sigGen = sigGen[72:]
+           sigGen[1728:] = sig
     except:
         logging.debug("Nonetype")
         counter -= 1
         return
+    
     #if counter >= 24:
         #logging.debug(sigGen)
         #set_initials_match(sigGen, 24, 38, 4, 28, 22)
@@ -97,14 +98,14 @@ def initialize_set(image):
         #else:
         #    logging.debug("Match")
         #    time.sleep(0.4)
-    min_val, error_val = signature_o2o(sig)
-    logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
-    logging.debug("Errors over all scan:" + str(error_val) + "\n")
-    if error_val < 10:
-        logging.debug("Match")
-    else:
-        logging.debug("Nomatch")
-        time.sleep(0.05)
+    #min_val, error_val = signature_o2o(sig)
+    #logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
+    #logging.debug("Errors over all scan:" + str(error_val) + "\n")
+    #if error_val < 10:
+    #    logging.debug("Match")
+    #else:
+    #    logging.debug("Nomatch")
+    #    time.sleep(0.05)
         
         
     
@@ -116,8 +117,7 @@ def initialize_set(image):
 #     last = 0
 #     start = time.time()
 #     for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
-#         if last != 0:
-#             if (last + 0.1) - time.time() > 0:
+#         if last != 0:#             if (last + 0.1) - time.time() > 0:
 #                 time.sleep((last + 0.1) - time.time())
 #             #else:
 #                 #logging.debug('Under Real_time Point:' + str(time.time() - last) + '\n')
