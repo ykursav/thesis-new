@@ -3,7 +3,7 @@ from PiVideoStream import PiVideoStream
 from bitarray import bitarray
 from preprocessing import set_initials_pre, get_contour, get_perspective, get_cropped
 from extraction import set_initials, get_signature
-from matching import set_initials_match, signature_rejection, signature_scan, signature_deep_scan
+from matching import set_initials_match, signature_rejection, signature_scan, signature_deep_scan, signature_o2o
 #from subprocess import call
 from threading import Thread, active_count
 from picamera import PiCamera
@@ -25,8 +25,8 @@ ap.add_argument("-f", "--file-name", type=str, default="debug_log.log",
     help="Filename can be assigned with that argument otherwise default is debug_log.log")
 #ap.add_argument("-v1", "--video1-name", type=str, default="video1.avi",
 #    help="First video output file name can be assigned with that argument otherwise default is video1.avi")
-#ap.add_argument("-v2", "--video2-name", type=str, default="video2.avi",
-#    help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
+ap.add_argument("-v2", "--video2-name", type=str, default="video2.avi",
+    help="Second video output file name can be assigned with that argument otherwise default is video2.avi")
 args = vars(ap.parse_args())
 
 #f = open("signature.bin", "r")
@@ -42,11 +42,11 @@ counter = 0
 sigGen = bitarray()
 fourcc = cv2.VideoWriter_fourcc('X','V','I','D')
 #out = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video1_name"], fourcc, 10.0, (544, 400))
-#out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 10.0, (500, 300))
+out2 = cv2.VideoWriter("ADAPTIVE_THRESHOLD_TESTS/" + args["video2_name"], fourcc, 5.0, (500, 300))
 #@profile
 def initialize_set(image):
     global counter, sigGen
-    set_initials_pre(128, image, counter)
+    set_initials_pre(128, image, counter, out2)
     #set_initials_pre(128, image, counter)
     points = get_contour(5)
     check = get_perspective(points, 0)
@@ -58,37 +58,54 @@ def initialize_set(image):
         counter -= 1
         return
     crop = get_cropped()
+    set_initials(8, 4, 128, crop)
     sig = bitarray()
-    set_initials(16, 8, 128, crop)
     try:
         sig = get_signature()
-        if counter < 20:
+        if counter < 25:
            sigGen.extend(sig)
         else:
            sigGen = sigGen[72:]
-           sigGen[136:] = sig
+           sigGen[1728:] = sig
     except:
         logging.debug("Nonetype")
         counter -= 1
         return
-    if counter >= 19:
+    
+    #if counter >= 24:
         #logging.debug(sigGen)
-        set_initials_match(sigGen, 24, 38, 4, 28, 22)
+        #set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
-        scan_sig = signature_scan()
-        min_point = scan_sig.index(min(scan_sig))
-        range1 = 0
-        range2 = 0
-        if min_point != 0:
-            range1 = (min_point * 1800) - 1800
-            range2 = (min_point * 1800) + 3600
-        else:
-            range1 = min_point * 1800
-            range2 = (min_point * 1800) + 5400
+        #scan_sig = signature_scan()
+        #min_point = scan_sig.index(min(scan_sig))
+        #range1 = 0
+        #range2 = 0
+        #if min_point != 0:
+        #    range1 = (min_point * 360) - 720
+        #    range2 = (min_point * 360) + 1800
+        #else:
+        #    range1 = min_point * 360
+        #    range2 = (min_point * 360) + 2520
         #print range1, range2
-        min_match = signature_deep_scan(range1, range2, sig)
-        match_frame = (range1 / 72) + min_match
-        logging.debug(str(match_frame))
+    #min_match, error_n = signature_deep_scan(range1, range2, sig)
+    #match_frame = (range1 / 72) + min_match
+    #logging.debug("Total error:" + str(min(scan_sig)) + "\n")
+    #logging.debug("Match frame over 25:" +str(match_frame) + "\n")
+    #logging.debug("Matched frame error:"  + str(error_n) + "\n")
+        #if error_n >20:
+        #    logging.debug("No match")
+        #    time.sleep(0.05)
+        #else:
+        #    logging.debug("Match")
+        #    time.sleep(0.4)
+    #min_val, error_val = signature_o2o(sig)
+    #logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
+    #logging.debug("Errors over all scan:" + str(error_val) + "\n")
+    #if error_val < 10:
+    #    logging.debug("Match")
+    #else:
+    #    logging.debug("Nomatch")
+    #    time.sleep(0.05)
         
         
     
@@ -100,8 +117,7 @@ def initialize_set(image):
 #     last = 0
 #     start = time.time()
 #     for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port = True):
-#         if last != 0:
-#             if (last + 0.1) - time.time() > 0:
+#         if last != 0:#             if (last + 0.1) - time.time() > 0:
 #                 time.sleep((last + 0.1) - time.time())
 #             #else:
 #                 #logging.debug('Under Real_time Point:' + str(time.time() - last) + '\n')
@@ -124,20 +140,26 @@ def initialize_set(image):
 def pi_stream(vs):
     global counter
     #start_time = time.time()
-    start = 0
+    start = time.time()
+    counter_old = 0
+    #counter = 0
     while counter < args["num_frames"]:
-        if (start + 0.15) - time.time() > 0 and counter_old != counter:
+        if (start + 0.2) - time.time() > 0 and counter_old != counter:
             try:
-                time.sleep((start + 0.15) - time.time())
+                time.sleep((start + 0.2) - time.time())
                 logging.debug("Real time" + str(time.time()) + "\n")
             except:
                 logging.debug("Under real time point " + str(time.time() - start) + "\n")
+                time.sleep(0.4 - (time.time() - start))
         else:
-            logging.debug("Under real time Point " + str(time.time() - start) + "\n")
+            logging.debug("Under real time Point counter:" + str(time.time() - start) + "\n")
+            #print 0.2 - (time.time() -start)
+            if (0.2 - (time.time() - start)) > 0:
+            	time.sleep(0.2 - (time.time() - start))
         start = time.time()
         frame = vs.read()
-        counter_old = counter
         initialize_set(frame)
+        counter_old = counter 
         counter += 1
     vs.stop()
     #out.release()
