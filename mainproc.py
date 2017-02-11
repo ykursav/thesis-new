@@ -85,18 +85,25 @@ def initialize_set(image):
         #else:
         #    range1 = min_point * 720
         #    range2 = (min_point * 720) + 2160
-        ##print range1, range2
+        #print range1, range2
         #min_match, error_n = signature_deep_scan(range1, range2, sig)
         #match_frame = (range1 / 144) + min_match
         #logging.debug(str(match_frame))
         #logging.debug(str(error_n))
-        #if error_n >90:
+        #if error_n >20:
         #    logging.debug("No match")
+        #    time.sleep(0.05)
         #else:
         #    logging.debug("Match")
-        #min_val, error_val = signature_o2o(sig)
-        #logging.debug(str(min_val))
-        #logging.debug(str(error_val))
+        #    time.sleep(0.4)
+        min_val, error_val = signature_o2o(sig)
+        logging.debug(str(min_val))
+        logging.debug(str(error_val))
+        if error_val < 24:
+            logging.debug("Match")
+        else:
+            logging.debug("Nomatch")
+            time.sleep(0.05)
         
         
     

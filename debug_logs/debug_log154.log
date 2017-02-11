@@ -1,0 +1,973 @@
+DEBUG:root:Under real time Point 1486777238.08
+
+DEBUG:root:Under real time Point 0.412261962891
+
+DEBUG:root:Real time1486777238.89
+
+DEBUG:root:Real time1486777239.29
+
+DEBUG:root:Real time1486777239.7
+
+DEBUG:root:Real time1486777240.1
+
+DEBUG:root:Real time1486777240.5
+
+DEBUG:root:Real time1486777240.9
+
+DEBUG:root:Real time1486777241.3
+
+DEBUG:root:Real time1486777241.7
+
+DEBUG:root:249
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.420906066895
+
+DEBUG:root:251
+DEBUG:root:23
+DEBUG:root:Match
+DEBUG:root:Real time1486777242.52
+
+DEBUG:root:256
+DEBUG:root:22
+DEBUG:root:Match
+DEBUG:root:Real time1486777242.92
+
+DEBUG:root:256
+DEBUG:root:24
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.412405014038
+
+DEBUG:root:259
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.412575960159
+
+DEBUG:root:260
+DEBUG:root:18
+DEBUG:root:Match
+DEBUG:root:Real time1486777244.15
+
+DEBUG:root:262
+DEBUG:root:27
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.410672187805
+
+DEBUG:root:264
+DEBUG:root:23
+DEBUG:root:Match
+DEBUG:root:Real time1486777244.96
+
+DEBUG:root:266
+DEBUG:root:21
+DEBUG:root:Match
+DEBUG:root:Real time1486777245.36
+
+DEBUG:root:267
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407217025757
+
+DEBUG:root:270
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.412300109863
+
+DEBUG:root:272
+DEBUG:root:27
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.416471004486
+
+DEBUG:root:274
+DEBUG:root:19
+DEBUG:root:Match
+DEBUG:root:Real time1486777247.0
+
+DEBUG:root:265
+DEBUG:root:41
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403608083725
+
+DEBUG:root:97
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.406821966171
+
+DEBUG:root:281
+DEBUG:root:25
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403884887695
+
+DEBUG:root:281
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401675224304
+
+DEBUG:root:789
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.410389900208
+
+DEBUG:root:286
+DEBUG:root:20
+DEBUG:root:Match
+DEBUG:root:Real time1486777249.43
+
+DEBUG:root:287
+DEBUG:root:24
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.400765895844
+
+DEBUG:root:303
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407169818878
+
+DEBUG:root:295
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401775836945
+
+DEBUG:root:295
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.41049695015
+
+DEBUG:root:310
+DEBUG:root:19
+DEBUG:root:Match
+DEBUG:root:Real time1486777251.45
+
+DEBUG:root:296
+DEBUG:root:23
+DEBUG:root:Match
+DEBUG:root:Real time1486777251.85
+
+DEBUG:root:310
+DEBUG:root:21
+DEBUG:root:Match
+DEBUG:root:Real time1486777252.25
+
+DEBUG:root:299
+DEBUG:root:29
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.40042090416
+
+DEBUG:root:304
+DEBUG:root:25
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401114940643
+
+DEBUG:root:310
+DEBUG:root:15
+DEBUG:root:Match
+DEBUG:root:Real time1486777253.45
+
+DEBUG:root:307
+DEBUG:root:16
+DEBUG:root:Match
+DEBUG:root:Real time1486777253.86
+
+DEBUG:root:304
+DEBUG:root:23
+DEBUG:root:Match
+DEBUG:root:Real time1486777254.26
+
+DEBUG:root:696
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402619838715
+
+DEBUG:root:257
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407777070999
+
+DEBUG:root:313
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.411775112152
+
+DEBUG:root:445
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.416069984436
+
+DEBUG:root:318
+DEBUG:root:24
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.406782150269
+
+DEBUG:root:322
+DEBUG:root:23
+DEBUG:root:Match
+DEBUG:root:Real time1486777256.7
+
+DEBUG:root:326
+DEBUG:root:21
+DEBUG:root:Match
+DEBUG:root:Real time1486777257.1
+
+DEBUG:root:326
+DEBUG:root:12
+DEBUG:root:Match
+DEBUG:root:Real time1486777257.5
+
+DEBUG:root:326
+DEBUG:root:17
+DEBUG:root:Match
+DEBUG:root:Real time1486777257.9
+
+DEBUG:root:326
+DEBUG:root:29
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.41144990921
+
+DEBUG:root:326
+DEBUG:root:28
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.411727905273
+
+DEBUG:root:326
+DEBUG:root:19
+DEBUG:root:Match
+DEBUG:root:Real time1486777259.13
+
+DEBUG:root:326
+DEBUG:root:25
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.41011595726
+
+DEBUG:root:43
+DEBUG:root:38
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.41010594368
+
+DEBUG:root:403
+DEBUG:root:41
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.405652999878
+
+DEBUG:root:517
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.415023803711
+
+DEBUG:root:751
+DEBUG:root:40
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.408644914627
+
+DEBUG:root:78
+DEBUG:root:36
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777261.58
+
+DEBUG:root:349
+DEBUG:root:29
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.410760164261
+
+DEBUG:root:97
+DEBUG:root:36
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777262.39
+
+DEBUG:root:295
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777262.79
+
+DEBUG:root:229
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407434940338
+
+DEBUG:root:289
+DEBUG:root:38
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401870965958
+
+DEBUG:root:358
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.413531064987
+
+DEBUG:root:97
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.404666900635
+
+DEBUG:root:759
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.408504962921
+
+DEBUG:root:400
+DEBUG:root:36
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777265.23
+
+DEBUG:root:369
+DEBUG:root:27
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.41175198555
+
+DEBUG:root:373
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.408421039581
+
+DEBUG:root:125
+DEBUG:root:29
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.409760951996
+
+DEBUG:root:373
+DEBUG:root:27
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.400729894638
+
+DEBUG:root:374
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.404070138931
+
+DEBUG:root:371
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.411010026932
+
+DEBUG:root:371
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401351928711
+
+DEBUG:root:382
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.408891201019
+
+DEBUG:root:608
+DEBUG:root:41
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.413558959961
+
+DEBUG:root:390
+DEBUG:root:25
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.400441884995
+
+DEBUG:root:390
+DEBUG:root:28
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.408797025681
+
+DEBUG:root:780
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407946109772
+
+DEBUG:root:392
+DEBUG:root:25
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401948928833
+
+DEBUG:root:175
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.400510787964
+
+DEBUG:root:814
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403412103653
+
+DEBUG:root:398
+DEBUG:root:26
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.40790104866
+
+DEBUG:root:852
+DEBUG:root:42
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777272.14
+
+DEBUG:root:669
+DEBUG:root:39
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.410883903503
+
+DEBUG:root:517
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402216911316
+
+DEBUG:root:406
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402231931686
+
+DEBUG:root:408
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.41400885582
+
+DEBUG:root:410
+DEBUG:root:36
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.411285161972
+
+DEBUG:root:413
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.408372879028
+
+DEBUG:root:75
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.405672073364
+
+DEBUG:root:416
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402024030685
+
+DEBUG:root:417
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.408032178879
+
+DEBUG:root:420
+DEBUG:root:23
+DEBUG:root:Match
+DEBUG:root:Real time1486777276.21
+
+DEBUG:root:426
+DEBUG:root:16
+DEBUG:root:Match
+DEBUG:root:Real time1486777276.61
+
+DEBUG:root:427
+DEBUG:root:17
+DEBUG:root:Match
+DEBUG:root:Real time1486777277.01
+
+DEBUG:root:426
+DEBUG:root:22
+DEBUG:root:Match
+DEBUG:root:Real time1486777277.41
+
+DEBUG:root:427
+DEBUG:root:28
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.40331697464
+
+DEBUG:root:70
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403728961945
+
+DEBUG:root:432
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402951955795
+
+DEBUG:root:434
+DEBUG:root:29
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777279.02
+
+DEBUG:root:437
+DEBUG:root:26
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403637886047
+
+DEBUG:root:437
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.40872502327
+
+DEBUG:root:440
+DEBUG:root:19
+DEBUG:root:Match
+DEBUG:root:Real time1486777280.23
+
+DEBUG:root:445
+DEBUG:root:18
+DEBUG:root:Match
+DEBUG:root:Real time1486777280.63
+
+DEBUG:root:441
+DEBUG:root:23
+DEBUG:root:Match
+DEBUG:root:Real time1486777281.03
+
+DEBUG:root:447
+DEBUG:root:28
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.409212112427
+
+DEBUG:root:98
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.417905092239
+
+DEBUG:root:412
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.405436038971
+
+DEBUG:root:707
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407338857651
+
+DEBUG:root:454
+DEBUG:root:29
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.409737110138
+
+DEBUG:root:999
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.405405044556
+
+DEBUG:root:458
+DEBUG:root:29
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.412801027298
+
+DEBUG:root:460
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.406388044357
+
+DEBUG:root:462
+DEBUG:root:22
+DEBUG:root:Match
+DEBUG:root:Real time1486777284.71
+
+DEBUG:root:465
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.405908823013
+
+DEBUG:root:467
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777285.52
+
+DEBUG:root:480
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.406876087189
+
+DEBUG:root:475
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.419821023941
+
+DEBUG:root:473
+DEBUG:root:25
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.406495094299
+
+DEBUG:root:475
+DEBUG:root:27
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.406322002411
+
+DEBUG:root:477
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777287.56
+
+DEBUG:root:475
+DEBUG:root:38
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777287.96
+
+DEBUG:root:484
+DEBUG:root:28
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.409463882446
+
+DEBUG:root:484
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407618045807
+
+DEBUG:root:484
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403725862503
+
+DEBUG:root:963
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401332139969
+
+DEBUG:root:190
+DEBUG:root:42
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.409859895706
+
+DEBUG:root:492
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402821063995
+
+DEBUG:root:493
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407024145126
+
+DEBUG:root:496
+DEBUG:root:40
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402353048325
+
+DEBUG:root:496
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.411440849304
+
+DEBUG:root:963
+DEBUG:root:25
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401335000992
+
+DEBUG:root:503
+DEBUG:root:23
+DEBUG:root:Match
+DEBUG:root:Real time1486777292.42
+
+DEBUG:root:512
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.414932966232
+
+DEBUG:root:436
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.404187917709
+
+DEBUG:root:506
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403865098953
+
+DEBUG:root:510
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.414576053619
+
+DEBUG:root:510
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777294.46
+
+DEBUG:root:486
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.406768083572
+
+DEBUG:root:973
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401430845261
+
+DEBUG:root:517
+DEBUG:root:21
+DEBUG:root:Match
+DEBUG:root:Real time1486777295.67
+
+DEBUG:root:519
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.408852100372
+
+DEBUG:root:521
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777296.48
+
+DEBUG:root:522
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.411552190781
+
+DEBUG:root:546
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.404525995255
+
+DEBUG:root:76
+DEBUG:root:38
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401884078979
+
+DEBUG:root:543
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.411187887192
+
+DEBUG:root:112
+DEBUG:root:38
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.40216088295
+
+DEBUG:root:534
+DEBUG:root:28
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.412392139435
+
+DEBUG:root:535
+DEBUG:root:39
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.409296035767
+
+DEBUG:root:538
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.405356884003
+
+DEBUG:root:536
+DEBUG:root:25
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401391029358
+
+DEBUG:root:544
+DEBUG:root:26
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.410603046417
+
+DEBUG:root:545
+DEBUG:root:22
+DEBUG:root:Match
+DEBUG:root:Real time1486777300.96
+
+DEBUG:root:553
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401800870895
+
+DEBUG:root:566
+DEBUG:root:27
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.404701948166
+
+DEBUG:root:566
+DEBUG:root:32
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403836011887
+
+DEBUG:root:566
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403075933456
+
+DEBUG:root:553
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.400233030319
+
+DEBUG:root:566
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403192043304
+
+DEBUG:root:564
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.40326499939
+
+DEBUG:root:560
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.410076856613
+
+DEBUG:root:562
+DEBUG:root:36
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407742023468
+
+DEBUG:root:564
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403436899185
+
+DEBUG:root:564
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403990983963
+
+DEBUG:root:564
+DEBUG:root:41
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.404778957367
+
+DEBUG:root:222
+DEBUG:root:39
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402539014816
+
+DEBUG:root:572
+DEBUG:root:36
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777306.62
+
+DEBUG:root:263
+DEBUG:root:39
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.438158988953
+
+DEBUG:root:572
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.40099811554
+
+DEBUG:root:572
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.400666952133
+
+DEBUG:root:572
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.400350093842
+
+DEBUG:root:572
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.405179977417
+
+DEBUG:root:572
+DEBUG:root:33
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402863025665
+
+DEBUG:root:575
+DEBUG:root:34
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402969121933
+
+DEBUG:root:572
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403638124466
+
+DEBUG:root:570
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.401151180267
+
+DEBUG:root:73
+DEBUG:root:36
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402448177338
+
+DEBUG:root:594
+DEBUG:root:38
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777311.08
+
+DEBUG:root:882
+DEBUG:root:37
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.414546012878
+
+DEBUG:root:416
+DEBUG:root:38
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.407725811005
+
+DEBUG:root:648
+DEBUG:root:35
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.406261920929
+
+DEBUG:root:602
+DEBUG:root:28
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777312.71
+
+DEBUG:root:605
+DEBUG:root:26
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.406944990158
+
+DEBUG:root:609
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777313.52
+
+DEBUG:root:609
+DEBUG:root:27
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.403524875641
+
+DEBUG:root:614
+DEBUG:root:29
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.404932975769
+
+DEBUG:root:614
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.409073114395
+
+DEBUG:root:607
+DEBUG:root:30
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.408489942551
+
+DEBUG:root:131
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.411114215851
+
+DEBUG:root:618
+DEBUG:root:28
+DEBUG:root:Nomatch
+DEBUG:root:Real time1486777315.96
+
+DEBUG:root:95
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.402112960815
+
+DEBUG:root:621
+DEBUG:root:31
+DEBUG:root:Nomatch
+DEBUG:root:Under real time Point 0.410540103912
+
+DEBUG:root:625
+DEBUG:root:22
+DEBUG:root:Match
+DEBUG:root:Real time1486777317.17
+
+DEBUG:root:627
+DEBUG:root:19
+DEBUG:root:Match
+DEBUG:root:Real time1486777317.57
+
+DEBUG:root:631
+DEBUG:root:22
+DEBUG:root:Match
+DEBUG:root:Real time1486777317.97
+
+DEBUG:root:631
+DEBUG:root:21
+DEBUG:root:Match
+DEBUG:root:Real time1486777318.37
+
+DEBUG:root:631
+DEBUG:root:22
+DEBUG:root:Match
+DEBUG:root:Real time1486777318.78
+
+DEBUG:root:631
+DEBUG:root:20
+DEBUG:root:Match
