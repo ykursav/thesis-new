@@ -88,9 +88,9 @@ def initialize_set(image):
             range2 = (min_point * 6000) + 12000
         #print range1, range2
         min_match, error_n = signature_deep_scan(range1, range2, sig)
-        match_frame = (range1 / 240) + min_match
+        #match_frame = (range1 / 240) + min_match
         logging.debug("Total error:" + str(min(scan_sig)) + "\n")
-        logging.debug("Match frame over 25:" +str(match_frame) + "\n")
+        #logging.debug("Match frame over 50:" +str(match_frame) + "\n")
         logging.debug("Matched frame error:"  + str(error_n) + "\n")
         #if error_n >20:
         #    logging.debug("No match")
