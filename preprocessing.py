@@ -77,7 +77,7 @@ def get_edged(G):
     #edge = Canny(blur, ret / 2, ret)
     #Thread(target = write_out, args = (out, dilated,)).start()
     #return dilate(edge, ones((3,3), uint8),iterations = 1)
-    return erode(th, ones((3, 3), uint8), iterations=1)
+    return th
 
 def write_out(stream, frame):
     global out, out2
@@ -197,7 +197,7 @@ def get_perspective(points, counter):
             warped_image = resize(warped_image, (500, 300), INTER_NEAREST)
         elif height_perspective > width_perspective:
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
-        warped = get_blurred(warped_image, 3)
+        warped = warped_image
         #imwrite("warped_images_new/warped_new" + str(counter_warped) + ".jpg", warped)
         Thread(target = write_out, args = (out2, warped,)).start()
         return 30
@@ -234,17 +234,17 @@ def get_cropped():
         if width > height:
             if width % 2 == 0:
                 crop_width = width / 2 - 1
-                return resized_image[:, crop_width - L / 2:crop_width + L / 2]
+                return get_blurred(resized_image[:, crop_width - L / 2:crop_width + L / 2], 3)
             else:
                 crop_width = width / 2 - 1
-                return resized_image[:, crop_width - (L/ 2 - 1):crop_width + (L/ 2 + 1)]
+                return get_blurred(resized_image[:, crop_width - (L/ 2 - 1):crop_width + (L/ 2 + 1)], 3)
         else:
             if height % 2 == 0:
                 crop_height = height / 2 - 1
-                return resized_image[crop_height - L / 2:crop_height + L / 2, :]
+                return get_blurred(resized_image[crop_height - L / 2:crop_height + L / 2, :], 3)
             else:
                 crop_height = height / 2 - 1
-                return resized_image[crop_height - (L/ 2 - 1):crop_height + (L/ 2 + 1), :]
+                return get_blurred(resized_image[crop_height - (L/ 2 - 1):crop_height + (L/ 2 + 1), :], 3)
 
 
 #@profile
