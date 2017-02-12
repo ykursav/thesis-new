@@ -89,18 +89,15 @@ def get_cropped():
             else:
                 crop_width = width / 2 - 1
                 res = get_blurred(resized_image[:, crop_width - (L/ 2 - 1):crop_width + (L/ 2 + 1)], 3)
-                Thread(target = write_out, args = (out2, res,)).start()
                 return res
         else:
             if height % 2 == 0:
                 crop_height = height / 2 - 1
                 res = get_blurred(resized_image[crop_height - L / 2:crop_height + L / 2, :], 3)
-                Thread(target = write_out, args = (out2, res,)).start()
                 return res
             else:
                 crop_height = height / 2 - 1
                 res = get_blurred(resized_image[crop_height - (L/ 2 - 1):crop_height + (L/ 2 + 1), :], 3)
-                Thread(target = write_out, args = (out2, res,)).start()
                 return res
 
 #@profile

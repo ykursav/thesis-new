@@ -22,7 +22,7 @@ if __name__ == "__main__":
     sig_first = bitarray()
     sig_second = bitarray()
 
-    sigGen = initialize_set(frame, counter)
+    sigGen = initialize_set(img, counter)
     f.write(sigGen.tobytes())
     f.close()
 

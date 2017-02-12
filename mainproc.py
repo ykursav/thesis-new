@@ -62,17 +62,17 @@ def initialize_set(image):
     sig = bitarray()
     try:
         sig = get_signature()
-        if counter < 50:
+        if counter < 30:
            sigGen.extend(sig)
         else:
            sigGen = sigGen[240:]
-           sigGen[11760:] = sig
+           sigGen[6960:] = sig
     except:
         logging.debug("Nonetype")
         counter -= 1
         return
     
-    if counter >= 49:
+    if counter >= 29:
         #logging.debug(sigGen)
         set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
@@ -81,27 +81,28 @@ def initialize_set(image):
         range1 = 0
         range2 = 0
         if min_point != 0:
-            range1 = (min_point * 6000) - 6000
-            range2 = (min_point * 6000) + 6000
+            range1 = (min_point * 3600) - 3600
+            range2 = (min_point * 3600) + 3600
         else:
-            range1 = min_point * 6000
-            range2 = (min_point * 6000) + 12000
+            range1 = min_point * 3600
+            range2 = (min_point * 3600) + 7200
         #print range1, range2
         min_match, error_n = signature_deep_scan(range1, range2, sig)
-        #match_frame = (range1 / 240) + min_match
+        match_frame = (range1 / 240) + min_match
         logging.debug("Total error:" + str(min(scan_sig)) + "\n")
-        #logging.debug("Match frame over 50:" +str(match_frame) + "\n")
-        logging.debug("Matched frame error:"  + str(error_n) + "\n")
+        logging.debug("Match frame over 50:" +str(match_frame) + "\n")
+        logging.debug(sigGen)
+        #logging.debug("Matched frame error:"  + str(error_n) + "\n")
         #if error_n >20:
         #    logging.debug("No match")
         #    time.sleep(0.05)
         #else:
         #    logging.debug("Match")
         #    time.sleep(0.4)
-    min_val, error_val = signature_o2o(sig)
+    #min_val, error_val = signature_o2o(sig)
     #logging.debug("Extracted signature:" + str(sig))
-    logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
-    logging.debug("Errors over all scan:" + str(error_val) + "\n")
+    #logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
+    #logging.debug("Errors over all scan:" + str(error_val) + "\n")
     #if error_val < 10:
     #    logging.debug("Match")
     #else:

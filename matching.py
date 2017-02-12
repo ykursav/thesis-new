@@ -46,7 +46,7 @@ def signature_hamming(sigOrig_h, sigGen_h):
 #@profile
 def signature_scan():
     result_buffer = []
-    for x in range(0, (len(sigOrig) / 6000) - 1):
+    for x in range(0, (len(sigOrig) / 3600) - 1):
        #print "Generated signature length" + str(len(sigGen))
        #print "Original signature length" + str(len(sigOrig[x * 3600:(x+1) * 3600]))
        #p = Thread(target = signature_hamming, args = (sigOrig[x * 12000:(x + 1) * 12000], q, ))
@@ -54,14 +54,14 @@ def signature_scan():
        #p.start()
        #jobs.append(p)
        #print len(sigGen), len(sigOrig[x * 360:(x+1)*360+1440])
-       result_buffer.append(signature_hamming(sigOrig[x * 6000:(x + 1) * 6000 + 6000], sigGen))
+       result_buffer.append(signature_hamming(sigOrig[x * 3600:(x + 1) * 3600 + 3600], sigGen))
 
     return result_buffer
     #print signature_scan
 def signature_deep_scan(range1, range2, sigGen_new):
     buffer_sig = sigOrig[range1:range2]
     result_buffer = []
-    for x in range(0, 50):
+    for x in range(0, 30):
         result_buffer.append(signature_hamming(buffer_sig[x * 240:(x + 1) * 240], sigGen_new))
     
     return result_buffer.index(min(result_buffer)), min(result_buffer)
@@ -76,7 +76,8 @@ def signature_o2o(sigGen_new):
     return result_buffer.index(min(result_buffer)), min(result_buffer)
 
 def signature_rejection():
-    hamming_sig = signature_hamming()
+    hamming_sig = signature_hamming(sigOrig, sigGen)
+    print hamming_sig
     if sum(hamming_sig[0:60]) > tau1:
         return False, sum(hamming_sig), "tau1_fail"
     else:
