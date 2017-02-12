@@ -18,8 +18,8 @@ def initialize_set(image, counter):
 
 
 if __name__ == "__main__": 
-    cap = VideoCapture("ADAPTIVE_THRESHOLD_TESTS/test34_warped.avi")
-    f = open("signature_test21.bin", "wb")
+    cap = VideoCapture("ADAPTIVE_THRESHOLD_TESTS/test38_warped.avi")
+    f = open("signature_test23.bin", "wb")
     counter = 0
     signature_counter = 0
     sig_first = bitarray()
