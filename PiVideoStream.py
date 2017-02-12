@@ -10,7 +10,7 @@ class PiVideoStream:
         #self.camera.awb_mode = 'cloudy'
         #self.camera.exposure_mode = 'fireworks'
         #self.flash_mode = 'auto'
-        self.camera.framerate = framerate
+        self.camera.framerate = framerate 
         self.rawCapture = PiRGBArray(self.camera, size=resolution)
         self.stream = self.camera.capture_continuous(self.rawCapture, format="bgr", use_video_port=True)
         self.frame = None
