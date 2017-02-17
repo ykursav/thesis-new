@@ -73,12 +73,12 @@ def get_edged(G):
     #print get_width_height(th)
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
     #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
-    #dilated = dilate(th, ones((3, 3), uint8), iterations = 1)
     edge = Canny(gray, lower, upper)
+    dilated = dilate(edge, ones((3, 3), uint8), iterations = 1)
+    imwrite("Canny_edges/canny_dilated"+ str(counter_warped) + ".jpg", dilated)
     #Thread(target = write_out, args = (out, dilated,)).start()
-    #return dilate(edge, ones((3,3), uint8),iterations = 1)
-    imwrite("Canny_edges/canny_"+ str(counter_warped) + ".jpg", edge)
-    return edge
+    return dilated
+#    return edge
 
 def write_out(stream, frame):
     global out, out2
