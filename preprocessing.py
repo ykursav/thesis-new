@@ -58,11 +58,11 @@ def get_width_height(image):
 def get_edged(G):
     global out
     gray = gray_image(image)
-    blur = get_blurred(gray, G)
-    #v = median(gray)
-    #lower = int(max(0, (1.0 - 0.33) * v))
-    #upper = int(max(255, (1.0 + 0.33) * v))
-    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 11, 1)
+    #blur = get_blurred(gray, G)
+    v = median(gray)
+    lower = int(max(0, (1.0 - 0.33) * v))
+    upper = int(max(255, (1.0 + 0.33) * v))
+    #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 11, 1)
     #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
     #ret ,th2 = threshold(blur,0,255,THRESH_BINARY+THRESH_OTSU)
     # cv2.imwrite("Adaptive.jpg", th)
@@ -74,10 +74,11 @@ def get_edged(G):
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
     #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
     #dilated = dilate(th, ones((3, 3), uint8), iterations = 1)
-    #edge = Canny(blur, ret / 2, ret)
+    edge = Canny(gray, lower, upper)
     #Thread(target = write_out, args = (out, dilated,)).start()
     #return dilate(edge, ones((3,3), uint8),iterations = 1)
-    return th
+    imwrite("Canny_edges/canny_"+ str(counter_warped) + ".jpg", edge)
+    return edge
 
 def write_out(stream, frame):
     global out, out2
@@ -198,7 +199,7 @@ def get_perspective(points, counter):
         elif height_perspective > width_perspective:
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = warped_image
-        #imwrite("warped_images_new/warped_new" + str(counter_warped) + ".jpg", warped)
+        imwrite("warped_images_newest/warped_new" + str(counter_warped) + ".jpg", warped)
         Thread(target = write_out, args = (out2, warped,)).start()
         return 30
 
