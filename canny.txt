@@ -1,0 +1,32 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.32245 s
+File: preprocessing.py
+Function: get_edged at line 57
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    57                                           @profile
+    58                                           def get_edged(G):
+    59                                               global out
+    60        12        39061   3255.1     12.1      gray = gray_image(image)
+    61                                               #blur = get_blurred(gray, G)
+    62        12        52850   4404.2     16.4      v = median(gray)
+    63        12          287     23.9      0.1      lower = int(max(0, (1.0 - 0.33) * v))
+    64        12          128     10.7      0.0      upper = int(max(255, (1.0 + 0.33) * v))
+    65                                               #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 11, 1)
+    66                                               #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
+    67                                               #ret ,th2 = threshold(blur,0,255,THRESH_BINARY+THRESH_OTSU)
+    68                                               # cv2.imwrite("Adaptive.jpg", th)
+    69                                           ##        cv2.imshow("th", dilation)
+    70                                           ##        cv2.waitKey(0)
+    71                                           ##        cv2.destroyAllWindows()
+    72                                               #imwrite("OTSU/otsu" + str(counter_warped) + ".jpg", th)
+    73                                               #print get_width_height(th)
+    74                                               #out.write(cvtColor(th, COLOR_GRAY2BGR))
+    75                                               #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
+    76        12       143378  11948.2     44.5      edge = Canny(gray, lower, upper)
+    77        12        86746   7228.8     26.9      return dilate(edge, ones((3, 3), uint8), iterations = 1)
+    78                                               imwrite("adaptive_edges/adaptive"+ str(counter_warped) + ".jpg", th)
+

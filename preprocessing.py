@@ -54,7 +54,7 @@ def get_width_height(image):
     height, width = image.shape[:2]
     return [width, height]
 
-#@profile
+@profile
 def get_edged(G):
     global out
     gray = gray_image(image)
@@ -74,10 +74,10 @@ def get_edged(G):
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
     #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
     edge = Canny(gray, lower, upper)
-    dilated = dilate(edge, ones((3, 3), uint8), iterations = 1)
-    imwrite("Canny_edges/canny_dilated"+ str(counter_warped) + ".jpg", dilated)
+    return dilate(edge, ones((3, 3), uint8), iterations = 1)
+    imwrite("adaptive_edges/adaptive"+ str(counter_warped) + ".jpg", th)
     #Thread(target = write_out, args = (out, dilated,)).start()
-    return dilated
+    #return th
 #    return edge
 
 def write_out(stream, frame):
@@ -199,7 +199,7 @@ def get_perspective(points, counter):
         elif height_perspective > width_perspective:
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = warped_image
-        imwrite("warped_images_newest/warped_new" + str(counter_warped) + ".jpg", warped)
+        imwrite("warped_adaptive/warped_new" + str(counter_warped) + ".jpg", warped)
         Thread(target = write_out, args = (out2, warped,)).start()
         return 30
 

@@ -61937,3 +61937,47 @@ DEBUG:root:Errors over all scan:59
 
 DEBUG:root:Result:tau3_fail
 DEBUG:root:Match or Not:False
+DEBUG:root:Under real time Point counter:2.69412994385e-05
+
+DEBUG:root:Under real time Point counter:0.207201957703
+
+DEBUG:root:Real time1487385638.95
+
+DEBUG:root:Real time1487385639.15
+
+DEBUG:root:Real time1487385639.35
+
+DEBUG:root:Real time1487385639.55
+
+DEBUG:root:Real time1487385639.76
+
+DEBUG:root:Real time1487385639.96
+
+DEBUG:root:Real time1487385640.16
+
+DEBUG:root:Real time1487385640.36
+
+DEBUG:root:Under real time Point counter:1.90734863281e-05
+
+DEBUG:root:Real time1487385725.6
+
+DEBUG:root:Real time1487385725.8
+
+DEBUG:root:Real time1487385726.0
+
+DEBUG:root:Real time1487385726.2
+
+DEBUG:root:Real time1487385726.4
+
+DEBUG:root:Real time1487385726.6
+
+DEBUG:root:Real time1487385726.8
+
+DEBUG:root:Real time1487385727.0
+
+DEBUG:root:Real time1487385727.2
+
+DEBUG:root:Real time1487385727.4
+
+DEBUG:root:Real time1487385727.6
+

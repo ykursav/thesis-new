@@ -62,19 +62,19 @@ def initialize_set(image):
     sig = bitarray()
     try:
         sig = get_signature()
-        if counter < 30:
-           sigGen.extend(sig)
-        else:
-           sigGen = sigGen[240:]
-           sigGen[6960:] = sig
+        #if counter < 30:
+        #   sigGen.extend(sig)
+        #else:
+        #   sigGen = sigGen[240:]
+        #   sigGen[6960:] = sig
     except:
         logging.debug("Nonetype")
         counter -= 1
         return
     
-    if counter >= 29:
+    #if counter >= 29:
         #logging.debug(sigGen)
-        set_initials_match(sigGen, 24, 38, 4, 28, 22)
+    #set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
         #scan_sig = signature_scan()
         #min_point = scan_sig.index(min(scan_sig))
@@ -99,13 +99,13 @@ def initialize_set(image):
         #else:
         #    logging.debug("Match")
         #    time.sleep(0.4)
-        min_val, error_val = signature_o2o(sig)
-        logging.debug("Extracted signature:" + str(sig))
-        logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
-        logging.debug("Errors over all scan:" + str(error_val) + "\n")
-        check, hamming, message = signature_rejection(sig, min_val)
-        logging.debug("Result:" + message)
-        logging.debug("Match or Not:" + str(check))
+    #min_val, error_val = signature_o2o(sig)
+    #logging.debug("Extracted signature:" + str(sig))
+    #logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
+    #logging.debug("Errors over all scan:" + str(error_val) + "\n")
+    #check, hamming, message = signature_rejection(sig, min_val)
+    #logging.debug("Result:" + message)
+    #logging.debug("Match or Not:" + str(check))
     #if error_val < 10:
     #    logging.debug("Match")
     #else:
