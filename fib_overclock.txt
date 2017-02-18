@@ -1,0 +1,19 @@
+832040
+Wrote profile results to fib.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 19.1986 s
+File: fib.py
+Function: recur_fibo at line 3
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     3                                           @profile 
+     4                                           def recur_fibo(n):
+     5                                              """Recursive function to if __name__ == "__main__":
+     6                                              print Fibonacci sequence"""
+     7   2692537      6901545      2.6     35.9     if n <= 1:
+     8   1346269      3091618      2.3     16.1         return n
+     9                                              else:
+    10   1346268      9205428      6.8     47.9         return(recur_fibo(n-1) + recur_fibo(n-2))
+
