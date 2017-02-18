@@ -5,7 +5,7 @@ from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      INTER_LINEAR, GaussianBlur, COLOR_BGR2GRAY, COLOR_GRAY2BGR, ADAPTIVE_THRESH_GAUSSIAN_C, \
      THRESH_BINARY_INV, RETR_LIST, CHAIN_APPROX_SIMPLE, imwrite, Canny, INTER_NEAREST, \
      setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU, VideoWriter, ADAPTIVE_THRESH_MEAN_C, \
-     CV_64F, erode
+     CV_64F, erode, drawContours
      
 from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray
 import gc
@@ -31,6 +31,7 @@ def set_initials_pre(L_f, image_f, counter_warped_f, out2_f):
     global L, image, counter_warped, out2
     L = L_f
     image = image_f
+    imwrite("main_image.jpg", image)
     counter_warped = counter_warped_f
     #out = out_f
     out2 = out2_f
@@ -74,8 +75,11 @@ def get_edged(G):
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
     #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
     edge = Canny(gray, lower, upper)
-    return dilate(edge, ones((3, 3), uint8), iterations = 1)
-    imwrite("adaptive_edges/adaptive"+ str(counter_warped) + ".jpg", th)
+    imwrite("canny.jpg", edge)
+    dilated = dilate(edge, ones((3, 3), uint8), iterations = 1)
+    imwrite("dilated.jpg", dilated)
+    return dilated
+    #imwrite("adaptive_edges/adaptive"+ str(counter_warped) + ".jpg", th)
     #Thread(target = write_out, args = (out, dilated,)).start()
     #return th
 #    return edge
@@ -123,6 +127,9 @@ def get_contour(G):
     if first == False:
         return -1
     else:
+        image_copy = image
+        drawContours(image_copy, approx, -1, (0, 255, 0), 3)
+        imwrite("contours.jpg", image_copy)
         return approx
 
 #@profile
@@ -199,7 +206,8 @@ def get_perspective(points, counter):
         elif height_perspective > width_perspective:
             warped_image = resize(warped_image, (300, 500), INTER_NEAREST)            
         warped = warped_image
-        imwrite("warped_adaptive/warped_new" + str(counter_warped) + ".jpg", warped)
+        #imwrite("warped_adaptive/warped_new" + str(counter_warped) + ".jpg", warped)
+        imwrite("warped.jpg", warped)
         Thread(target = write_out, args = (out2, warped,)).start()
         return 30
 
