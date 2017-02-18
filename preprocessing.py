@@ -127,7 +127,7 @@ def get_contour(G):
     if first == False:
         return -1
     else:
-        image_copy = image
+        image_copy = image.copy()
         drawContours(image_copy, approx, -1, (0, 255, 0), 3)
         imwrite("contours.jpg", image_copy)
         return approx
