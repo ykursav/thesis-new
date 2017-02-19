@@ -58,6 +58,7 @@ def initialize_set(image):
         counter -= 1
         return
     crop = get_cropped()
+    cv2.imwrite("cropped.jpg", crop)
     set_initials(8, 4, 128, crop)
     sig = bitarray()
     try:
