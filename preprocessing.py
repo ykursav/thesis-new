@@ -59,11 +59,11 @@ def get_width_height(image):
 def get_edged(G):
     global out
     gray = gray_image(image)
-    blur = get_blurred(gray, G)
-    #v = median(gray)
-    #lower = int(max(0, (1.0 - 0.33) * v))
-    #upper = int(max(255, (1.0 + 0.33) * v))
-    th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 11, 1)
+    #blur = get_blurred(gray, G)
+    v = median(gray)
+    lower = int(max(0, (1.0 - 0.33) * v))
+    upper = int(max(255, (1.0 + 0.33) * v))
+    #th = adaptiveThreshold(blur, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 11, 2)
     #ret, th = threshold(blur, lower, upper, THRESH_BINARY)
     #ret ,th2 = threshold(blur,0,255,THRESH_BINARY+THRESH_OTSU)
     # cv2.imwrite("Adaptive.jpg", th)
@@ -74,11 +74,11 @@ def get_edged(G):
     #print get_width_height(th)
     #out.write(cvtColor(th, COLOR_GRAY2BGR))
     #dilated = dilate(th, ones((3,3), uint8),iterations = 1)
-    #edge = Canny(gray, lower, upper)
+    edge = Canny(gray, lower, upper)
     #imwrite("canny.jpg", th)
-    #dilated = dilate(edge, ones((3, 3), uint8), iterations = 1)
+    dilated = dilate(edge, ones((3, 3), uint8), iterations = 1)
     #imwrite("dilated.jpg", dilated)
-    return th
+    return dilated
     #imwrite("adaptive_edges/adaptive"+ str(counter_warped) + ".jpg", th)
     #Thread(target = write_out, args = (out, dilated,)).start()
     #return th
