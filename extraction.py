@@ -1,5 +1,5 @@
 from numpy import uintp, array, zeros, sum, linalg
-from cv2 import getRotationMatrix2D, warpAffine, flip, setUseOptimized, imwrite, rectangle
+from cv2 import getRotationMatrix2D, warpAffine, flip, setUseOptimized, imwrite, rectangle, cvtColor, COLOR_GRAY2BGR
 from bitarray import bitarray
 import gc
 from ctypes import *
@@ -84,6 +84,7 @@ def get_blocks():
 def basic_rotations(rot0):
     center = (N * number_of_blocks) / 2
     rot_matrix = getRotationMatrix2D((center, center), 90, 1)
+    rot0 = cvtColor(int(rot0), COLOR_GRAY2BGR)
     rot90 = warpAffine(rot0, rot_matrix, (center * 2, center * 2))
     rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
     rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
