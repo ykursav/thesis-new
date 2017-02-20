@@ -77,7 +77,7 @@ def get_blocks():
     for y in xrange(0, L - M, M):
         I_vis_blur_y[y * 2:y * 2 + N, :] = I_vis_blur_x[y:y + N, :]
 
-    imwrite("blocked_example.jpg", I_vis_blur_y)
+    #imwrite("blocked_example.jpg", I_vis_blur_y)
     return I_vis_blur_y
 
 #@profile
@@ -95,20 +95,20 @@ def basic_rotations(rot0):
     rot270_c = cvtColor(rot270, COLOR_GRAY2BGR)
     vertical_c = cvtColor(vertical, COLOR_GRAY2BGR)
     horizontal_c = cvtColor(horizontal, COLOR_GRAY2BGR)
-    for x in range(0,32):
-        for y in range(0,32):
+    for x in range(0,16):
+        for y in range(x,16):
            rot0_c = rectangle(rot0_c, (x * 8, x * 8), (y * 8, y * 8), (255,0,0), 1)
            rot90_c = rectangle(rot90_c, (x * 8, x* 8), (y * 8,y * 8), (255,0,0), 1)
            rot180_c = rectangle(rot180_c, (x * 8,x * 8), (y * 8,y * 8), (255,0,0), 1)
            rot270_c = rectangle(rot270_c, (x * 8,x *8), (y * 8,y * 8), (255,0,0), 1)
            vertical_c = rectangle(vertical_c, (x * 8,x * 8), (y * 8,y * 8), (255,0,0), 1)
            horizontal_c = rectangle(horizontal_c, (x * 8,x * 8), (y * 8,y *8), (255,0,0), 1)
-    imwrite("rot90_all.jpg",rot90_c)
-    imwrite("rot180_all.jpg",rot180_c)
-    imwrite("rot270_all.jpg", rot270_c)
-    imwrite("rot0_all.jpg", rot0_c)
-    imwrite("horizontal_all.jpg", horizontal_c)
-    imwrite("vertical_all.jpg", vertical_c)
+    imwrite("rot90_quadrant.jpg",rot90_c)
+    imwrite("rot180_quadrant.jpg",rot180_c)
+    imwrite("rot270_quadrant.jpg", rot270_c)
+    imwrite("rot0_quadrant.jpg", rot0_c)
+    imwrite("horizontal_quadrant.jpg", horizontal_c)
+    imwrite("vertical_quadrant.jpg", vertical_c)
     
     rot90 = rot90[0:120, 0:120]
     rot180 = rot180[0:120, 0:120]
