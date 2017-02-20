@@ -87,9 +87,19 @@ def basic_rotations(rot0):
     rot90 = warpAffine(rot0, rot_matrix, (center * 2, center * 2))
     rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
     rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
+    vertical = flip(rot0, 0)
+    horizontal = flip(rot0, 1)
+    imwrite("rot90.jpg",rot90)
+    imwrite("rot180.jpg",rot180)
+    imwrite("rot270.jpg", rot270)
+    imwrite("rot0.jpg", rot0)
+    imwrite("horizontal.jpg", horizontal)
+    imwrite("vertical.jpg", vertical)
+
     rot90 = rot90[0:120, 0:120]
     rot180 = rot180[0:120, 0:120]
     rot270 = rot270[0:120, 0:120]
+    
 ##        fVertical0 = flip(image, 0)
 ##        fHorizontal0 = flip(image, 1)
 ##        fVertical90 = flip(rot90, 0)
