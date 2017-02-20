@@ -31,7 +31,7 @@ def set_initials_pre(L_f, image_f, counter_warped_f, out2_f):
     global L, image, counter_warped, out2
     L = L_f
     image = image_f
-    #imwrite("main_image.jpg", image)
+    imwrite("original_block.jpg", image)
     counter_warped = counter_warped_f
     #out = out_f
     out2 = out2_f
@@ -232,7 +232,7 @@ def get_scaled():
         new_height = L
     resized_image = resize(warped, (new_width, new_height), \
     interpolation = INTER_NEAREST)
-    imwrite("scaled.jpg", resized_image)
+    #imwrite("scaled.jpg", resized_image)
 
 #@profile    
 def get_cropped():

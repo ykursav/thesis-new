@@ -77,7 +77,7 @@ def get_blocks():
     for y in xrange(0, L - M, M):
         I_vis_blur_y[y * 2:y * 2 + N, :] = I_vis_blur_x[y:y + N, :]
 
-    #imwrite("Blocked/blocked " + str(counter) + ".jpg", I_vis_blur_y)
+    imwrite("blocked_example.jpg", I_vis_blur_y)
     return I_vis_blur_y
 
 #@profile
