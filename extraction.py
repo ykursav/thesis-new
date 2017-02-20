@@ -89,18 +89,20 @@ def basic_rotations(rot0):
     rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
     vertical = flip(rot0, 0)
     horizontal = flip(rot0, 1)
-    rot0_c = rectangle(cvtColor(rot0, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
-    rot90_c = rectangle(cvtColor(rot90, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
-    rot180_c = rectangle(cvtColor(rot180, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
-    rot270_c = rectangle(cvtColor(rot270, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
-    vertical_c = rectangle(cvtColor(vertical, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
-    horizontal_c = rectangle(cvtColor(horizontal, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
-    imwrite("rot90.jpg",rot90_c)
-    imwrite("rot180.jpg",rot180_c)
-    imwrite("rot270.jpg", rot270_c)
-    imwrite("rot0.jpg", rot0_c)
-    imwrite("horizontal.jpg", horizontal_c)
-    imwrite("vertical.jpg", vertical_c)
+    for x in range(0,31):
+        for y in range(0,31):
+           rot0_c = rectangle(cvtColor(rot0, COLOR_GRAY2BGR), (x * 8, x * 8), (y * 8, y * 8), (255,0,0), 1)
+           rot90_c = rectangle(cvtColor(rot90, COLOR_GRAY2BGR), (x * 8, x* 8), (y * 8,y * 8), (255,0,0), 1)
+           rot180_c = rectangle(cvtColor(rot180, COLOR_GRAY2BGR), (x * 8,x * 8), (y * 8,y * 8), (255,0,0), 1)
+           rot270_c = rectangle(cvtColor(rot270, COLOR_GRAY2BGR), (x * 8,x *8), (y * 8,y * 8), (255,0,0), 1)
+           vertical_c = rectangle(cvtColor(vertical, COLOR_GRAY2BGR), (x * 8,x * 8), (y * 8,y * 8), (255,0,0), 1)
+           horizontal_c = rectangle(cvtColor(horizontal, COLOR_GRAY2BGR), (x * 8,x * 8), (y * 8,y *8), (255,0,0), 1)
+    imwrite("rot90_all.jpg",rot90_c)
+    imwrite("rot180_all.jpg",rot180_c)
+    imwrite("rot270_all.jpg", rot270_c)
+    imwrite("rot0_all.jpg", rot0_c)
+    imwrite("horizontal_all.jpg", horizontal_c)
+    imwrite("vertical_all.jpg", vertical_c)
     
     rot90 = rot90[0:120, 0:120]
     rot180 = rot180[0:120, 0:120]
