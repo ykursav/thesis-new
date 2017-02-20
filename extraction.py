@@ -95,8 +95,8 @@ def basic_rotations(rot0):
     rot270_c = cvtColor(rot270, COLOR_GRAY2BGR)
     vertical_c = cvtColor(vertical, COLOR_GRAY2BGR)
     horizontal_c = cvtColor(horizontal, COLOR_GRAY2BGR)
-    for x in range(0,31):
-        for y in range(0,31):
+    for x in range(0,32):
+        for y in range(0,32):
            rot0_c = rectangle(rot0_c, (x * 8, x * 8), (y * 8, y * 8), (255,0,0), 1)
            rot90_c = rectangle(rot90_c, (x * 8, x* 8), (y * 8,y * 8), (255,0,0), 1)
            rot180_c = rectangle(rot180_c, (x * 8,x * 8), (y * 8,y * 8), (255,0,0), 1)
