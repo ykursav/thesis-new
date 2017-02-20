@@ -1,4 +1,4 @@
-from numpy import uintp, array, zeros, sum, linalg
+from numpy import uintp, array, zeros, sum, linalg, uint8
 from cv2 import getRotationMatrix2D, warpAffine, flip, setUseOptimized, imwrite, rectangle, cvtColor, COLOR_GRAY2BGR
 from bitarray import bitarray
 import gc
@@ -25,10 +25,10 @@ image = array([])
 width = 0
 height = 0
 number_of_block = 0
-rot0 = array([])
-rot90 = array([])
-rot180 = array([])
-rot270 = array([])
+rot0 = array([], uint8)
+rot90 = array([], uint8)
+rot180 = array([], uint8)
+rot270 = array([], uint8)
 def set_initials(N_f, M_f, L_f, image_f):
     global N, M, L, image, number_of_blocks
     N = N_f
@@ -69,8 +69,8 @@ def get_singular_energy(block):
 def get_blocks():
     global counter
     '''Dividing cropped image N x N blocks by M overlapping'''
-    I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N))
-    I_vis_blur_x = zeros((L, number_of_blocks * N))
+    I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N), uint8)
+    I_vis_blur_x = zeros((L, number_of_blocks * N), uint8)
     for x in xrange(0, L - M, M):
         I_vis_blur_x[:, x * 2:x * 2 + N] = image[:, x:x + N]
 
@@ -84,18 +84,17 @@ def get_blocks():
 def basic_rotations(rot0):
     center = (N * number_of_blocks) / 2
     rot_matrix = getRotationMatrix2D((center, center), 90, 1)
-    rot0 = cvtColor(int(rot0), COLOR_GRAY2BGR)
     rot90 = warpAffine(rot0, rot_matrix, (center * 2, center * 2))
     rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
     rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
     vertical = flip(rot0, 0)
     horizontal = flip(rot0, 1)
-    rectangle(rot0, (0,0), (8,8), (0,255,0), 3)
-    rectangle(rot90, (0,0), (8,8), (0,255,0), 3)
-    rectangle(rot180, (0,0), (8,8), (0,255,0), 3)
-    rectangle(rot270, (0,0), (8,8), (0,255,0), 3)
-    rectangle(vertical, (0,0), (8,8), (0,255,0), 3)
-    rectangle(horizontal, (0,0), (8,8), (0,255,0), 3)
+    rectangle(cvtColor(rot0, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
+    rectangle(cvtColor(rot90, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
+    rectangle(cvtColor(rot180, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
+    rectangle(cvtColor(rot270, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
+    rectangle(cvtColor(vertical, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
+    rectangle(cvtColor(horizontal, COLOR_GRAY2BGR), (0,0), (8,8), (0,255,0), 3)
     imwrite("rot90.jpg",rot90)
     imwrite("rot180.jpg",rot180)
     imwrite("rot270.jpg", rot270)
