@@ -2,3 +2,8 @@
 /cam_test/*
 /adaptive_edges/*
 /warped_adaptive/*
+/Canny_edges/*
+/Signatures/*
+/Videos/*
+/example_outs/*
+/warped_images_newest/*

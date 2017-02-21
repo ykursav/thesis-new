@@ -80,79 +80,121 @@ def get_blocks():
     #imwrite("blocked_example.jpg", I_vis_blur_y)
     return I_vis_blur_y
 
-#@profile
-def basic_rotations(rot0):
-    center = (N * number_of_blocks) / 2
-    rot_matrix = getRotationMatrix2D((center, center), 90, 1)
-    rot90 = warpAffine(rot0, rot_matrix, (center * 2, center * 2))
-    rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
-    rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
-    vertical = flip(rot0, 0)
-    horizontal = flip(rot0, 1)
-    rot0_c = cvtColor(rot0, COLOR_GRAY2BGR)
-    rot90_c = cvtColor(rot90, COLOR_GRAY2BGR)
-    rot180_c = cvtColor(rot180, COLOR_GRAY2BGR)
-    rot270_c = cvtColor(rot270, COLOR_GRAY2BGR)
-    vertical_c = cvtColor(vertical, COLOR_GRAY2BGR)
-    horizontal_c = cvtColor(horizontal, COLOR_GRAY2BGR)
-    for y in range(0,16):
-        print range(y,16)
-        for x in range(y,16):
-           rot0_c = rectangle(rot0_c, (x * 8, y * 8), (x * 8 + 8 , y * 8 + 8), (255,0,0), 1)
-           rot90_c = rectangle(rot90_c, (x * 8, y* 8), (x * 8 + 8,y * 8 + 8), (255,0,0), 1)
-           rot180_c = rectangle(rot180_c, (x * 8,y * 8), (x * 8+8,y * 8+8), (255,0,0), 1)
-           rot270_c = rectangle(rot270_c, (x * 8,y *8), (x * 8+8,y * 8+8), (255,0,0), 1)
-           vertical_c = rectangle(vertical_c, (x * 8,y * 8), (x * 8+8,y * 8+8), (255,0,0), 1)
-           horizontal_c = rectangle(horizontal_c, (x * 8,y * 8), (x * 8+8,y *8+8), (255,0,0), 1)
-    imwrite("rot90_quadrant.jpg",rot90_c)
-    imwrite("rot180_quadrant.jpg",rot180_c)
-    imwrite("rot270_quadrant.jpg", rot270_c)
-    imwrite("rot0_quadrant.jpg", rot0_c)
-    imwrite("horizontal_quadrant.jpg", horizontal_c)
-    imwrite("vertical_quadrant.jpg", vertical_c)
+# #@profile
+# def basic_rotations(rot0):
+#     center = (N * number_of_blocks) / 2
+#     rot_matrix = getRotationMatrix2D((center, center), 90, 1)
+#     rot90 = warpAffine(rot0, rot_matrix, (center * 2, center * 2))
+#     rot180 = warpAffine(rot90, rot_matrix, (center * 2, center * 2))
+#     rot270 = warpAffine(rot180, rot_matrix, (center * 2, center * 2))
+#     vertical = flip(rot0, 0)
+#     horizontal = flip(rot0, 1)
+#     rot0_c = cvtColor(rot0, COLOR_GRAY2BGR)
+#     rot90_c = cvtColor(rot90, COLOR_GRAY2BGR)
+#     rot180_c = cvtColor(rot180, COLOR_GRAY2BGR)
+#     rot270_c = cvtColor(rot270, COLOR_GRAY2BGR)
+#     vertical_c = cvtColor(vertical, COLOR_GRAY2BGR)
+#     horizontal_c = cvtColor(horizontal, COLOR_GRAY2BGR)
+#     for y in range(0,16):
+#         print range(y,16)
+#         for x in range(y,16):
+#            rot0_c = rectangle(rot0_c, (x * 8, y * 8), (x * 8 + 8 , y * 8 + 8), (255,0,0), 1)
+#            rot90_c = rectangle(rot90_c, (x * 8, y* 8), (x * 8 + 8,y * 8 + 8), (255,0,0), 1)
+#            rot180_c = rectangle(rot180_c, (x * 8,y * 8), (x * 8+8,y * 8+8), (255,0,0), 1)
+#            rot270_c = rectangle(rot270_c, (x * 8,y *8), (x * 8+8,y * 8+8), (255,0,0), 1)
+#            vertical_c = rectangle(vertical_c, (x * 8,y * 8), (x * 8+8,y * 8+8), (255,0,0), 1)
+#            horizontal_c = rectangle(horizontal_c, (x * 8,y * 8), (x * 8+8,y *8+8), (255,0,0), 1)
+#     imwrite("rot90_quadrant.jpg",rot90_c)
+#     imwrite("rot180_quadrant.jpg",rot180_c)
+#     imwrite("rot270_quadrant.jpg", rot270_c)
+#     imwrite("rot0_quadrant.jpg", rot0_c)
+#     imwrite("horizontal_quadrant.jpg", horizontal_c)
+#     imwrite("vertical_quadrant.jpg", vertical_c)
     
-    rot90 = rot90[0:120, 0:120]
-    rot180 = rot180[0:120, 0:120]
-    rot270 = rot270[0:120, 0:120]
+#     rot90 = rot90[0:120, 0:120]
+#     rot180 = rot180[0:120, 0:120]
+#     rot270 = rot270[0:120, 0:120]
     
-##        fVertical0 = flip(image, 0)
-##        fHorizontal0 = flip(image, 1)
-##        fVertical90 = flip(rot90, 0)
-##        fHorizontal90 = flip(rot90, 1)
-##        fVertical180 = flip(rot180, 0)
-##        fHorizontal180 = flip(rot180, 1)
-##        fVertical270 = flip(rot270, 0)
-##        fHorizontal270 = flip(rot270, 1)
+# ##        fVertical0 = flip(image, 0)
+# ##        fHorizontal0 = flip(image, 1)
+# ##        fVertical90 = flip(rot90, 0)
+# ##        fHorizontal90 = flip(rot90, 1)
+# ##        fVertical180 = flip(rot180, 0)
+# ##        fHorizontal180 = flip(rot180, 1)
+# ##        fVertical270 = flip(rot270, 0)
+# ##        fHorizontal270 = flip(rot270, 1)
 
-    return rot90, rot180, rot270
-##    fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \
-##         fVertical270, fHorizontal270
+#     return rot90, rot180, rot270
+# ##    fVertical0, fHorizontal0, fVertical90, fHorizontal90, fVertical180, fHorizontal180, \
+# ##         fVertical270, fHorizontal270
 
 #@profile
+
+def get_luminances():
+    x = 0
+    y = 0
+    lum_array = [[0 for x in range(31)] for y in range(31)] 
+    while x<31 or y<31:
+        lum_array[x][y] = get_average_luminance_of_block(rot0[y*N:y*N+N, x*N:x*N+N])
+        if x==30 and y==30:
+            break
+        if x == 30:
+            y += 1
+            x= 0
+        x = x + 1
+
+    return lum_array
 def get_fragment(x, y, only_rotate):
+    lum_array = get_luminances()
     if only_rotate == 1:
-        results = map(get_average_luminance_of_block, [rot0[y * N:y * N + N, x * N:x * N + N], rot90[y * N:y * N + N, x * N:x * N + N], \
-            rot180[y * N:y * N + N, x * N:x * N + N], rot270[y * N:y * N + N, x * N:x * N + N]])
-        avg_lum = (results[0] + results[1] + results[2] + results[3]) / 4
-        #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
-        std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3]]).ctypes.data_as(c_void_p))
-
-        #singular energy part
-        # singular_energies = map(get_singular_energy, [rot0[y * N:y * N + N, x * N:x * N + N], rot90[y * N:y * N + N, x * N:x * N + N], \
-        #     rot180[y * N:y * N + N, x * N:x * N + N], rot270[y * N:y * N + N, x * N:x * N + N]])
-        # avg_sing = (singular_energies[0] + singular_energies[1] + singular_energies[2] + singular_energies[3]) / 4
-        # std_sing = libextraction.calculateSD(array([singular_energies[0], singular_energies[1], singular_energies[2], singular_energies[3]]). \
-        #     ctypes.data_as(c_void_p))
-        return avg_lum, std_lum
+        avg_lum = (lum_array[x][y] + lum_array[x - 1][y + 1] + lum_array[x - 1][30 - y - 1] + lum_array[x][30 - y] + \
+            lum_array[30 - x][30 - y] + lum_array[30 - x + 1][30 - y - 1] + lum_array[30 - x + 1][y + 1] + lum_array[30 - x][y]) / 8
+        std_lum = libextraction.calculateSD(array(lum_array[x][y], lum_array[x - 1][y + 1], lum_array[x - 1][30 - y - 1], lum_array[x][30 - y] + \
+            lum_array[30 - x][30 - y], lum_array[30 - x + 1][30 - y - 1], lum_array[30 - x + 1][y + 1], lum_array[30 - x][y])))
+       return avg_lum, std_lum
 
     elif only_rotate == -1:
-        lum1 = get_average_luminance_of_block(rot0[y * N:y * N + N, x * N:x * N + N])
-        avg_lum = lum1
-        std_lum = 0
-        # avg_sing = get_singular_energy(rot0[y * N:y * N + N, x * N:x * N + N])
-        # std_sing = 0
-        
+        avg_lum = (lum_array[x][y] + lum_array[x][30 - y] + lum_array[30 - x][30 - y] + lum_array[30 - x][y]) / 4
+        std_lum = libextraction.calculateSD(array(lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][30 - y], lum_array[30 - x][y])))
+       return avg_lum, std_lum
+
+    elif only_rotate == 0:
+        avg_lum = lum_array[x][y]
+        std_lum = lum_array[x][y]
+
         return avg_lum, std_lum
+    # if only_rotate == 1:
+    #     results = map(get_average_luminance_of_block, [rot0[y * N:y * N + N, x * N:x * N + N], rot0[(y + 1)* N:(y + 1) * N + N, (x - 1) * N:(x - 1) * N + N], \
+    #         rot0[(30 - y - 1)* N:(30 - y - 1) * N + N, (x - 1) * N:(x - 1) * N + N], rot0[(30 - y)* N:(30 - y) * N + N, x  * N:x * N + N], \
+    #         rot0[(30 - y)* N:(30 - y) * N + N, (30 - x) * N:(30 - x) * N + N], rot0[(30 - y - 1)* N:(30 - y - 1) * N + N, (30 - x + 1) * N:(30 - x + 1) * N + N], \
+    #         rot0[(y + 1)* N:(y + 1) * N + N, (30 - x + 1) * N:(30 - x + 1) * N + N], rot0[y* N:y * N + N, (30 - x) * N:(30 - x) * N + N]]
+    #     avg_lum = (results[0] + results[1] + results[2] + results[3] + results[4] + results[5] + results[6] + results[7]) / 8
+    #     #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
+    #     std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3], results[4], results[5], results[6], results[7]]).ctypes.data_as(c_void_p))
+
+    #     #singular energy part
+    #     # singular_energies = map(get_singular_energy, [rot0[y * N:y * N + N, x * N:x * N + N], rot90[y * N:y * N + N, x * N:x * N + N], \
+    #     #     rot180[y * N:y * N + N, x * N:x * N + N], rot270[y * N:y * N + N, x * N:x * N + N]])
+    #     # avg_sing = (singular_energies[0] + singular_energies[1] + singular_energies[2] + singular_energies[3]) / 4
+    #     # std_sing = libextraction.calculateSD(array([singular_energies[0], singular_energies[1], singular_energies[2], singular_energies[3]]). \
+    #     #     ctypes.data_as(c_void_p))
+    #     return avg_lum, std_lum
+
+    # elif only_rotate == 0:
+    #     lum1 = get_average_luminance_of_block(rot0[y * N:y * N + N, x * N:x * N + N])
+    #     avg_lum = lum1
+    #     std_lum = 0
+    #     # avg_sing = get_singular_energy(rot0[y * N:y * N + N, x * N:x * N + N])
+    #     # std_sing = 0
+        
+    #     return avg_lum, std_lum
+
+    # elif only_rotate == -1:
+    #     results = map(get_average_luminance_of_block, [rot0[y * N:y * N + N, x * N:x * N + N],rot90[y * N:y * N + N, x * N:x * N + N]]
+    #     avg_lum = (results[0] + results[1] + results[2] + results[3] + results[4] + results[5] + results[6] + results[7]) / 8
+    #     #std_lum = np.std(np.array([lum1, lum2, lum3, lum4]))
+    #     std_lum = libextraction.calculateSD(array([results[0], results[1], results[2], results[3], results[4], results[5], results[6], results[7]]).ctypes.data_as(c_void_p))
+
 
   #  else:
   #      results = map(get_average_luminance_of_block, [rot0[y * 8:y * 8 + N, x * 8:x * 8 + N], rot90[y * 8:y * 8 + N, x * 8:x * 8 + N], \
@@ -192,19 +234,19 @@ def get_all_fragments():
     append_std_lum = fragments_list[1].append
     # append_avg_sing = fragments_list[2].append
     # append_std_sing = fragments_list[3].append
-    while(counter_x < 14 or counter_y < 14):
-        if counter_x == 15:
+    while(counter_x < 15 or counter_y < 15):
+        if counter_x == 16:
             counter_y += 1
             counter_x = counter_y
-        if counter_x == counter_y or counter_x == 14:
-            if counter_x == 14 and counter_y == 14:
-                avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
+        if counter_x == counter_y or counter_x == 15:
+            if counter_x == 15 and counter_y == 15:
+                avg_lum, std_lum = get_fragment(counter_x, counter_y, 0)
                 append_avg_lum(avg_lum)
                 append_std_lum(std_lum)
                 # append_avg_sing(avg_sing)
                 # append_std_sing(std_sing)                
             else:
-                avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)
+                avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
                 append_avg_lum(avg_lum)
                 append_std_lum(std_lum)
                 # append_avg_sing(avg_sing)
