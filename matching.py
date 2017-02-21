@@ -12,7 +12,7 @@ tau4 = 0
 tau5 = 0
 sigOrig = bitarray()
 sigGen = bitarray()
-f = open("signature_test23.bin", "r")
+f = open("signature_test00.bin", "r")
 sigOrig = bitarray()
 sigOrig.fromfile(f)
 f.close()
@@ -68,8 +68,8 @@ def signature_deep_scan(range1, range2, sigGen_new):
 
 def signature_o2o(sigGen_new):
     result_buffer = []
-    for x in range(0, (len(sigOrig)) / 240 - 1):
-        result_buffer.append(signature_hamming(sigOrig[x * 240:(x+1) * 240], sigGen_new))
+    for x in range(0, (len(sigOrig)) / 272 - 1):
+        result_buffer.append(signature_hamming(sigOrig[x * 272:(x+1) * 272], sigGen_new))
 
     #print sigOrig[min(result_buffer) * 272: (min(result_buffer)+ 1)  * 272]
     #print len(sigOrig)/272
@@ -77,7 +77,7 @@ def signature_o2o(sigGen_new):
 
 def signature_rejection(sig, min):
     #print len(sig),  lensigOrig[min * 240:(min+1) * 240]
-    hamming_sig = sigOrig[min * 240:(min+1) * 240] ^ sig
+    hamming_sig = sigOrig[min * 272:(min+1) * 272] ^ sig
     if sum(hamming_sig[0:60]) > tau1:
         return False, sum(hamming_sig), "tau1_fail"
     else:

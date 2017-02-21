@@ -18,7 +18,7 @@ double sum(double **x,int n)
 }
 
 
-double calculateSD(double *data)
+double calculateSD(int *data)
 {
     double sum = 0.0, mean, standardDeviation = 0.0;
 
@@ -29,7 +29,6 @@ double calculateSD(double *data)
     {
         sum += data[i];
     }
-
     mean = sum/counter;
 
     for(i=0; i<counter; ++i)

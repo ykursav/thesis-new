@@ -11,10 +11,11 @@ import subprocess
 import Queue
 from threading import Thread
 
-libextraction = cdll.LoadLibrary("./C_Libraries/libextraction.so")
+libextraction = cdll.LoadLibrary("./C_Libraries/libextractionv2.so")
 libextraction.sum.restype = ctypes.c_double
 _doublepp = ndpointer(dtype = uintp, ndim = 1, flags = 'C')
 libextraction.sum.argtypes = [_doublepp, ctypes.c_int]
+#libextraction.calculateSD.argtypes = [ctypes.c_int]
 libextraction.calculateSD.restype = ctypes.c_double
 setUseOptimized(True)
 ##gc.enable()
@@ -26,9 +27,10 @@ width = 0
 height = 0
 number_of_block = 0
 rot0 = array([], uint8)
-rot90 = array([], uint8)
-rot180 = array([], uint8)
-rot270 = array([], uint8)
+#rot90 = array([], uint8)
+#rot180 = array([], uint8)
+#rot270 = array([], uint8)
+lum_array = 0
 def set_initials(N_f, M_f, L_f, image_f):
     global N, M, L, image, number_of_blocks
     N = N_f
@@ -133,30 +135,35 @@ def get_blocks():
 def get_luminances():
     x = 0
     y = 0
-    lum_array = [[0 for x in range(31)] for y in range(31)] 
+    lumin_array = [[0 for m in range(31)] for n in range(31)] 
     while x<31 or y<31:
-        lum_array[x][y] = get_average_luminance_of_block(rot0[y*N:y*N+N, x*N:x*N+N])
+        lumin = get_average_luminance_of_block(rot0[y*N:y*N+N, x*N:x*N+N])
+        lumin_array[x][y] = lumin
         if x==30 and y==30:
             break
         if x == 30:
             y += 1
             x= 0
         x = x + 1
+    #print lumin_array
+    return lumin_array
 
-    return lum_array
 def get_fragment(x, y, only_rotate):
-    lum_array = get_luminances()
+    global lum_array
     if only_rotate == 1:
         avg_lum = (lum_array[x][y] + lum_array[x - 1][y + 1] + lum_array[x - 1][30 - y - 1] + lum_array[x][30 - y] + \
             lum_array[30 - x][30 - y] + lum_array[30 - x + 1][30 - y - 1] + lum_array[30 - x + 1][y + 1] + lum_array[30 - x][y]) / 8
-        std_lum = libextraction.calculateSD(array(lum_array[x][y], lum_array[x - 1][y + 1], lum_array[x - 1][30 - y - 1], lum_array[x][30 - y] + \
-            lum_array[30 - x][30 - y], lum_array[30 - x + 1][30 - y - 1], lum_array[30 - x + 1][y + 1], lum_array[30 - x][y])))
-       return avg_lum, std_lum
+        std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[x - 1][y + 1], lum_array[x - 1][30 - y - 1], lum_array[x][30 - y] + \
+            lum_array[30 - x][30 - y], lum_array[30 - x + 1][30 - y - 1], lum_array[30 - x + 1][y + 1], lum_array[30 - x][y]]).ctypes.data_as(c_void_p))
+        
+        return avg_lum, std_lum
 
     elif only_rotate == -1:
         avg_lum = (lum_array[x][y] + lum_array[x][30 - y] + lum_array[30 - x][30 - y] + lum_array[30 - x][y]) / 4
-        std_lum = libextraction.calculateSD(array(lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][30 - y], lum_array[30 - x][y])))
-       return avg_lum, std_lum
+        #std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][30 - y], lum_array[30 - x][y]]).ctypes.data_as(c_void_p))
+        std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][30 - y], lum_array[30 - x][y]]).ctypes.data_as(c_void_p))
+        #print std_lum
+        return avg_lum, std_lum
 
     elif only_rotate == 0:
         avg_lum = lum_array[x][y]
@@ -223,10 +230,12 @@ def get_fragment(x, y, only_rotate):
 #        return avg_lum, std_lum
 #@profile
 def get_all_fragments():
-    global rot0, rot90, rot180, rot270
+    global rot0, lum_array
     fragments_list = [[],[], [], []]
     rot0 = get_blocks()
-    rot90, rot180, rot270 = basic_rotations(rot0)
+    #print rot0
+    lum_array = get_luminances()
+    #rot90, rot180, rot270 = basic_rotations(rot0)
     counter_x = 0
     counter_y = 0
     #append_fragment = fragments_list.append
@@ -276,6 +285,7 @@ def get_signature():
 
     sig_append(False)
     sig_append(False)
+    #print len(signature)
     #print len(signature)
     #print("Generated signature length:%d",len(signature))
     #print signature

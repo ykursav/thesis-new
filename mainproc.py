@@ -58,7 +58,7 @@ def initialize_set(image):
         counter -= 1
         return
     crop = get_cropped()
-    cv2.imwrite("cropped_blocked.jpg", crop)
+    #cv2.imwrite("cropped_blocked.jpg", crop)
     set_initials(8, 4, 128, crop)
     sig = bitarray()
     try:
@@ -75,7 +75,7 @@ def initialize_set(image):
     
     #if counter >= 29:
         #logging.debug(sigGen)
-    #set_initials_match(sigGen, 24, 38, 4, 28, 22)
+    set_initials_match(sigGen, 24, 38, 4, 28, 22)
         #logging.debug(signature_scan())
         #scan_sig = signature_scan()
         #min_point = scan_sig.index(min(scan_sig))
@@ -100,13 +100,13 @@ def initialize_set(image):
         #else:
         #    logging.debug("Match")
         #    time.sleep(0.4)
-    #min_val, error_val = signature_o2o(sig)
-    #logging.debug("Extracted signature:" + str(sig))
-    #logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
-    #logging.debug("Errors over all scan:" + str(error_val) + "\n")
-    #check, hamming, message = signature_rejection(sig, min_val)
-    #logging.debug("Result:" + message)
-    #logging.debug("Match or Not:" + str(check))
+    min_val, error_val = signature_o2o(sig)
+    logging.debug("Extracted signature:" + str(sig))
+    logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
+    logging.debug("Errors over all scan:" + str(error_val) + "\n")
+    check, hamming, message = signature_rejection(sig, min_val)
+    logging.debug("Result:" + message)
+    logging.debug("Match or Not:" + str(check))
     #if error_val < 10:
     #    logging.debug("Match")
     #else:

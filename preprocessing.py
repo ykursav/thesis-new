@@ -135,7 +135,7 @@ def get_contour(G):
         circle(image_copy, tuple(approx[3][0]), 10, (0, 0, 255), -1)
         polylines(image_copy, [approx], True, (0, 255, 255))
         drawContours(image_copy, approx, -1, (0, 255, 0), 3)
-        imwrite("contours.jpg", image_copy)
+        #imwrite("contours.jpg", image_copy)
         return approx
 
 #@profile
