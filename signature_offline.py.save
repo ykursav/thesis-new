@@ -5,7 +5,7 @@ from bitarray import bitarray
 from cv2 import VideoCapture, VideoWriter, VideoWriter_fourcc
 
 fourcc = VideoWriter_fourcc('X', 'V', 'I', 'D')
-out2 = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/cropped02.avi", fourcc, 5.0, (128, 128))
+out2 = VideoWriter("ADAPTIVE_THRESHOLD_TESTS/cropped01.avi", fourcc, 5.0, (128, 128))
 #@profile
 def initialize_set(image, counter):
     set_initials_pre(128, image, counter, out2)
@@ -18,8 +18,8 @@ def initialize_set(image, counter):
 
 
 if __name__ == "__main__": 
-    cap = VideoCapture("ADAPTIVE_THRESHOLD_TESTS/signature_video00.avi")
-    f = open("signature_test01.bin", "wb")
+    cap = VideoCapture("ADAPTIVE_THRESHOLD_TESTS/adaptive_11_1.avi")
+    f = ope("signature_test00.bin", "wb")
     counter = 0
     signature_counter = 0
     sig_first = bitarray()
@@ -28,8 +28,9 @@ if __name__ == "__main__":
         ret, frame = cap.read()
         if ret != True:
             break
-        sigGen = initialize_set(frame, counter)
-        f.write(sigGen.tobytes())
+        if counter%5 == 0:
+            sigGen = initialize_set(frame, counter)
+            f.write(sigGen.tobytes())
         #if signature_counter == 0:
         #    sigGen = initialize_set(frame, counter)
         #    sig_first = sigGen
