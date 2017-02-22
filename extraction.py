@@ -136,10 +136,12 @@ def get_luminances():
     x = 0
     y = 0
     lumin_array = [[0 for m in range(31)] for n in range(31)] 
-    rot0_copy = rot0.copy()
+
     while x<31 or y<31:
         lumin = get_average_luminance_of_block(rot0[y*N:y*N+N, x*N:x*N+N])
         lumin_array[x][y] = lumin
+        
+
         if x==30 and y==30:
             break
         if x == 30:
@@ -157,7 +159,18 @@ def get_fragment(x, y, only_rotate):
             lum_array[30 - x][30 - y] + lum_array[30 - x + 1][30 - y - 1] + lum_array[30 - x + 1][y + 1] + lum_array[30 - x][y]) / 8
         std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[x - 1][y + 1], lum_array[x - 1][30 - y - 1], lum_array[x][30 - y] + \
             lum_array[30 - x][30 - y], lum_array[30 - x + 1][30 - y - 1], lum_array[30 - x + 1][y + 1], lum_array[30 - x][y]]).ctypes.data_as(c_void_p))
-        
+    
+            rot0_copy = rot0.copy()
+            rot0_copy = cvtColor(rot0_copy, COLOR_GRAY2BGR)
+            rot0_copy = rectangle(rot0_c, (x * 8, y * 8), (x * 8 + 8 , y * 8 + 8), (x*15,y*15,0), 1)
+            rot0_copy = rectangle(rot0_c, ((x -1) * 8, (y+1) * 8), ((x -1)* 8 + 8 , (y+1) * 8 + 8), (x*15,y*15,0), 1)
+            rot0_copy = rectangle(rot0_c, ((x - 1) * 8, (30 - y -1)* 8), ((x -1) * 8 + 8 , (30 - y-1) * 8 + 8), (x*15,y*15,0), 1)
+            rot0_copy = rectangle(rot0_c, (x * 8, (30 - y) * 8), (x * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
+            rot0_copy = rectangle(rot0_c, ((30 - x) * 8, (30 - y) * 8), ((30 - x) * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
+            rot0_copy = rectangle(rot0_c, ((30 - x  + 1) * 8, (30 - y - 1) * 8), ((30 - x + 1) * 8 + 8 , (30 - y - 1) * 8 + 8), (x*15,y*15,0), 1)
+            rot0_copy = rectangle(rot0_c, ((30 - x + 1) * 8, (y + 1) * 8), (30 - x +1) * 8 + 8 , (y + 1) * 8 + 8), (x*15,y*15,0), 1)
+            rot0_copy = rectangle(rot0_c, ((30 - x) * 8, y * 8), ((30 - x) * 8 + 8 , y * 8 + 8), (x*15,y*15,0), 1) 
+            imwrite("rot0_rectangle.jpg" , rot0_copy)
         return avg_lum, std_lum
 
     elif only_rotate == -1:
