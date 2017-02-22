@@ -58,7 +58,7 @@ def initialize_set(image):
         counter -= 1
         return
     crop = get_cropped()
-    cv2.imwrite("cropped_blocked.jpg", crop)
+    #cv2.imwrite("cropped_blocked.jpg", crop)
     set_initials(8, 4, 128, crop)
     sig = bitarray()
     try:
@@ -75,7 +75,7 @@ def initialize_set(image):
     
     #if counter >= 29:
         #logging.debug(sigGen)
-    set_initials_match(sigGen, 24, 38, 4, 28, 22)
+    set_initials_match(sigGen, 27, 43, 5, 32, 22)
         #logging.debug(signature_scan())
         #scan_sig = signature_scan()
         #min_point = scan_sig.index(min(scan_sig))

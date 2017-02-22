@@ -78,13 +78,13 @@ def signature_o2o(sigGen_new):
 def signature_rejection(sig, min):
     #print len(sig),  lensigOrig[min * 240:(min+1) * 240]
     hamming_sig = sigOrig[min * 272:(min+1) * 272] ^ sig
-    if sum(hamming_sig[0:60]) > tau1:
+    if sum(hamming_sig[0:66]) > tau1:
         return False, sum(hamming_sig), "tau1_fail"
     else:
-        if sum(hamming_sig[0:120]) > tau2:
+        if sum(hamming_sig[0:135]) > tau2:
             return False, sum(hamming_sig), "tau2_fail" 
         else:
-            if (sum(hamming_sig[0:119])) < tau3 or (sum(hamming_sig[119:238]) < tau4):
+            if (sum(hamming_sig[0:135])) < tau3 or (sum(hamming_sig[135:270]) < tau4):
     ##                    print sum(hamming_sig[0:119]), sum(hamming_sig[119:238])
                 return True, sum(hamming_sig),  "replica detected"
             else:
