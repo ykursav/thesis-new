@@ -50,7 +50,7 @@ def get_total_energy_of_block(block):
 
 #@profile    
 def get_average_luminance_of_block(block):
-    return sum(block) / (N * N)
+    return sum(block) / (64.0)
 
 
 def get_second_singular(block):
@@ -72,7 +72,7 @@ def get_blocks():
     global counter
     '''Dividing cropped image N x N blocks by M overlapping'''
     I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N), uint8)
-    I_vis_blur_x = zeros((L, number_of_blocks * N), uint8)
+    I_vis_blur_x = zeros((number_of_blocks * N, L), uint8)
     for x in xrange(0, L - M, M):
         I_vis_blur_x[x * 2:x * 2 + N, :] = image[x:x + N, :]
 
@@ -135,13 +135,11 @@ def get_blocks():
 def get_luminances():
     x = 0
     y = 0
-    lumin_array = [[0 for m in range(31)] for n in range(31)] 
+    lumin_array = zeros((31,31))
 
     while x<31 or y<31:
-        lumin = get_average_luminance_of_block(rot0[x*N:x*N+N, y*N:y*N+N])
-        lumin_array[x][y] = lumin
-        
-
+        lumin_array[x][y] = get_average_luminance_of_block(rot0[x*N:x*N+N, y*N:y*N+N])
+        #print lumin
         if x==30 and y==30:
             break
         if x == 30:
@@ -160,17 +158,17 @@ def get_fragment(x, y, only_rotate):
         std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[y][x], lum_array[x][30 - y], lum_array[y][30 - x] + \
             lum_array[30 - x][30 - y], lum_array[30 - y][30 - x], lum_array[30 - x][y], lum_array[30 - y][x]]).ctypes.data_as(c_void_p))
     
-            # rot0_copy = rot0.copy()
-            # rot0_copy = cvtColor(rot0_copy, COLOR_GRAY2BGR)
-            # rot0_copy = rectangle(rot0_c, (x * 8, y * 8), (x * 8 + 8 , y * 8 + 8), (x*15,y*15,0), 1)
-            # rot0_copy = rectangle(rot0_c, ((x -1) * 8, (y+1) * 8), ((x -1)* 8 + 8 , (y+1) * 8 + 8), (x*15,y*15,0), 1)
-            # rot0_copy = rectangle(rot0_c, ((x - 1) * 8, (30 - y -1)* 8), ((x -1) * 8 + 8 , (30 - y-1) * 8 + 8), (x*15,y*15,0), 1)
-            # rot0_copy = rectangle(rot0_c, (x * 8, (30 - y) * 8), (x * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
-            # rot0_copy = rectangle(rot0_c, ((30 - x) * 8, (30 - y) * 8), ((30 - x) * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
-            # rot0_copy = rectangle(rot0_c, ((30 - x  + 1) * 8, (30 - y - 1) * 8), ((30 - x + 1) * 8 + 8 , (30 - y - 1) * 8 + 8), (x*15,y*15,0), 1)
-            # rot0_copy = rectangle(rot0_c, ((30 - x + 1) * 8, (y + 1) * 8), (30 - x +1) * 8 + 8 , (y + 1) * 8 + 8), (x*15,y*15,0), 1)
-            # rot0_copy = rectangle(rot0_c, ((30 - x) * 8, y * 8), ((30 - x) * 8 + 8 , y * 8 + 8), (x*15,y*15,0), 1)
-            # imwrite("rot0_rectangle.jpg" , rot0_copy)
+        rot0_copy = rot0.copy()
+        rot0_copy = cvtColor(rot0_copy, COLOR_GRAY2BGR)
+        rot0_copy = rectangle(rot0_copy, (x * 8, y * 8), (x * 8 + 8 , y * 8 + 8), (x*15,y*15,0), 1)
+        rot0_copy = rectangle(rot0_copy, (y * 8, x * 8), (y* 8 + 8 , x * 8 + 8), (x*15,y*15,0), 1) 
+        rot0_copy = rectangle(rot0_copy, (x * 8, (30 - y) * 8), (x  * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
+        rot0_copy = rectangle(rot0_copy, (y * 8, (30 - x) * 8), (y * 8 + 8 , (30 - x) * 8 + 8), (x*15,y*15,0), 1)
+        rot0_copy = rectangle(rot0_copy, ((30 - x) * 8, (30 - y) * 8), ((30 - x) * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
+        rot0_copy = rectangle(rot0_copy, ((30 - y) * 8, (30 - x) * 8), ((30 - y) * 8 + 8 , (30 - x) * 8 + 8), (x*15,y*15,0), 1)
+        rot0_copy = rectangle(rot0_copy, ((30 - x) * 8, y * 8), ((30 - x) * 8 + 8 , y  * 8 + 8), (x*15,y*15,0), 1)
+        rot0_copy = rectangle(rot0_copy, ((30 - y) * 8, x * 8), ((30 - y) * 8 + 8 , x * 8 + 8), (x*15,y*15,0), 1)
+        imwrite("rot0_rectangle.jpg" , rot0_copy)
         return avg_lum, std_lum
 
     elif only_rotate == -1:
@@ -186,11 +184,13 @@ def get_fragment(x, y, only_rotate):
 
         return avg_lum, std_lum
 
-    elif only_rotate == 2:
+    elif only_rotate == 1:
         avg_lum = (lum_array[x][y] + lum_array[x][30 - y] + lum_array[30 -x][y] + lum_array[30 - x][30 - y]) / 4
+        #print avg_lum
         #std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][30 - y], lum_array[30 - x][y]]).ctypes.data_as(c_void_p))
         std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][y], lum_array[30 - x][30 -y]]).ctypes.data_as(c_void_p))
         #print std_lum
+        #print avg_lum, std_lum
         return avg_lum, std_lum
 
     # if only_rotate == 1:
@@ -258,6 +258,7 @@ def get_all_fragments():
     rot0 = get_blocks()
     #print rot0
     lum_array = get_luminances()
+    #print lum_array
     #rot90, rot180, rot270 = basic_rotations(rot0)
     counter_x = 0
     counter_y = 0
