@@ -74,10 +74,10 @@ def get_blocks():
     I_vis_blur_y = zeros((number_of_blocks * N, number_of_blocks * N), uint8)
     I_vis_blur_x = zeros((L, number_of_blocks * N), uint8)
     for x in xrange(0, L - M, M):
-        I_vis_blur_x[:, x * 2:x * 2 + N] = image[:, x:x + N]
+        I_vis_blur_x[x * 2:x * 2 + N, :] = image[x:x + N, :]
 
     for y in xrange(0, L - M, M):
-        I_vis_blur_y[y * 2:y * 2 + N, :] = I_vis_blur_x[y:y + N, :]
+        I_vis_blur_y[:, y * 2:y * 2 + N] = I_vis_blur_x[:, y:y + N]
 
     #imwrite("blocked_example.jpg", I_vis_blur_y)
     return I_vis_blur_y
@@ -138,7 +138,7 @@ def get_luminances():
     lumin_array = [[0 for m in range(31)] for n in range(31)] 
 
     while x<31 or y<31:
-        lumin = get_average_luminance_of_block(rot0[y*N:y*N+N, x*N:x*N+N])
+        lumin = get_average_luminance_of_block(rot0[x*N:x*N+N, y*N:y*N+N])
         lumin_array[x][y] = lumin
         
 
@@ -154,7 +154,7 @@ def get_luminances():
 
 def get_fragment(x, y, only_rotate):
     global lum_array
-    if only_rotate == 1:
+    if only_rotate == 2:
         avg_lum = (lum_array[x][y] + lum_array[y][x] + lum_array[x][30 - y] + lum_array[y][30 - x] + \
             lum_array[30 - x][30 - y] + lum_array[30 - y][30 - x] + lum_array[30 - x][y] + lum_array[30 - y][x]) / 8
         std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[y][x], lum_array[x][30 - y], lum_array[y][30 - x] + \
@@ -284,11 +284,11 @@ def get_all_fragments():
                 # append_avg_sing(avg_sing)
                 # append_std_sing(std_sing)
             elif counter_x == counter_y:
-                avg_lum, std_lum = get_fragment(counter_x, counter_y, 2)  
+                avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)  
                 append_avg_lum(avg_lum)
                 append_std_lum(std_lum)
         else:
-            avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)
+            avg_lum, std_lum = get_fragment(counter_x, counter_y, 2)
             append_avg_lum(avg_lum)
             append_std_lum(std_lum)
             # append_avg_sing(avg_sing)
