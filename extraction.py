@@ -158,18 +158,19 @@ def get_fragment(x, y, only_rotate):
         std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[y][x], lum_array[x][30 - y], lum_array[y][30 - x] + \
             lum_array[30 - x][30 - y], lum_array[30 - y][30 - x], lum_array[30 - x][y], lum_array[30 - y][x]]).ctypes.data_as(c_void_p))
     
-        rot0_copy = rot0.copy()
-        rot0_copy = cvtColor(rot0_copy, COLOR_GRAY2BGR)
-        rot0_copy = rectangle(rot0_copy, (x * 8, y * 8), (x * 8 + 8 , y * 8 + 8), (x*15,y*15,0), 1)
-        rot0_copy = rectangle(rot0_copy, (y * 8, x * 8), (y* 8 + 8 , x * 8 + 8), (x*15,y*15,0), 1) 
-        rot0_copy = rectangle(rot0_copy, (x * 8, (30 - y) * 8), (x  * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
-        rot0_copy = rectangle(rot0_copy, (y * 8, (30 - x) * 8), (y * 8 + 8 , (30 - x) * 8 + 8), (x*15,y*15,0), 1)
-        rot0_copy = rectangle(rot0_copy, ((30 - x) * 8, (30 - y) * 8), ((30 - x) * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
-        rot0_copy = rectangle(rot0_copy, ((30 - y) * 8, (30 - x) * 8), ((30 - y) * 8 + 8 , (30 - x) * 8 + 8), (x*15,y*15,0), 1)
-        rot0_copy = rectangle(rot0_copy, ((30 - x) * 8, y * 8), ((30 - x) * 8 + 8 , y  * 8 + 8), (x*15,y*15,0), 1)
-        rot0_copy = rectangle(rot0_copy, ((30 - y) * 8, x * 8), ((30 - y) * 8 + 8 , x * 8 + 8), (x*15,y*15,0), 1)
-        imwrite("rot0_rectangle.jpg" , rot0_copy)
-        return avg_lum, std_lum
+        #rot0_copy = rot0.copy()
+        #rot0_copy = cvtColor(rot0_copy, COLOR_GRAY2BGR)
+        #rot0_copy = rectangle(rot0_copy, (x * 8, y * 8), (x * 8 + 8 , y * 8 + 8), (x*15,y*15,0), 1)
+        #rot0_copy = rectangle(rot0_copy, (y * 8, x * 8), (y* 8 + 8 , x * 8 + 8), (x*15,y*15,0), 1) 
+        #rot0_copy = rectangle(rot0_copy, (x * 8, (30 - y) * 8), (x  * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
+        #rot0_copy = rectangle(rot0_copy, (y * 8, (30 - x) * 8), (y * 8 + 8 , (30 - x) * 8 + 8), (x*15,y*15,0), 1)
+        #rot0_copy = rectangle(rot0_copy, ((30 - x) * 8, (30 - y) * 8), ((30 - x) * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
+        #rot0_copy = rectangle(rot0_copy, ((30 - y) * 8, (30 - x) * 8), ((30 - y) * 8 + 8 , (30 - x) * 8 + 8), (x*15,y*15,0), 1)
+        #rot0_copy = rectangle(rot0_copy, ((30 - x) * 8, y * 8), ((30 - x) * 8 + 8 , y  * 8 + 8), (x*15,y*15,0), 1)
+        #rot0_copy = rectangle(rot0_copy, ((30 - y) * 8, x * 8), ((30 - y) * 8 + 8 , x * 8 + 8), (x*15,y*15,0), 1)
+        #imwrite("rot0_rectangle.jpg" , rot0_copy)
+        
+	return avg_lum, std_lum
 
     elif only_rotate == -1:
         avg_lum = (lum_array[x][y] + lum_array[30 - y][x] + lum_array[x][30 - y] + lum_array[y][30 - x]) / 4

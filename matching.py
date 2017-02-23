@@ -12,7 +12,7 @@ tau4 = 0
 tau5 = 0
 sigOrig = bitarray()
 sigGen = bitarray()
-f = open("signature_test05.bin", "r")
+f = open("signature_test07.bin", "r")
 sigOrig = bitarray()
 sigOrig.fromfile(f)
 f.close()
