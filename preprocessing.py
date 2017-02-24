@@ -213,7 +213,7 @@ def get_perspective(points, counter):
             warped_image = resize(warped_image, (300, 500), INTER_LINEAR)      
         warped = warped_image
         #imwrite("warped_adaptive/warped_new" + str(counter_warped) + ".jpg", warped)
-        imwrite("warped90.jpg", warped)
+        #imwrite("warped90.jpg", warped)
         Thread(target = write_out, args = (out2, warped,)).start()
         return 30
 
@@ -236,13 +236,13 @@ def get_scaled():
     elif height == width:
         new_width = L
         new_height = L
+    if new_height % 2 != 0:
+        new_height += 1
     if new_width % 2 != 0:
         new_width += 1
-    if new_height %2 != 0:
-        new_height += 1
     resized_image = resize(warped, (new_width, new_height), \
     interpolation = INTER_LINEAR)
-    #imwrite("scaled.jpg", resized_image)
+    imwrite("scaled__" + str(counter_warped) + ".jpg", resized_image)
 
 #@profile    
 def get_cropped():
@@ -256,14 +256,15 @@ def get_cropped():
                 return get_blurred(resized_image[:, crop_width - L / 2:crop_width + L / 2], 3)
             else:
                 crop_width = width / 2
-                return get_blurred(resized_image[:, crop_width - (L/ 2):crop_width + (L/ 2)], 3)
+                print crop_width
+                return get_blurred(resized_image[:, crop_width - (L/ 2 - 1):crop_width + (L/ 2 + 1)], 3)
         else:
             if height % 2 == 0:
                 crop_height = height / 2
                 return get_blurred(resized_image[crop_height - L / 2:crop_height + L / 2, :], 3)
             else:
                 crop_height = height / 2
-                return get_blurred(resized_image[crop_height - (L/ 2):crop_height + (L/ 2), :], 3)
+                return get_blurred(resized_image[crop_height - (L/ 2 - 1):crop_height + (L/ 2 + 1), :], 3)
 
 
 #@profile

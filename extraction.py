@@ -11,12 +11,12 @@ import subprocess
 import Queue
 from threading import Thread
 
-libextraction = cdll.LoadLibrary("./C_Libraries/libextractionv2.so")
-libextraction.sum.restype = ctypes.c_double
-_doublepp = ndpointer(dtype = uintp, ndim = 1, flags = 'C')
-libextraction.sum.argtypes = [_doublepp, ctypes.c_int]
+#libextraction = cdll.LoadLibrary("./C_Libraries/libextractionv2.so")
+#libextraction.sum.restype = ctypes.c_double
+#_doublepp = ndpointer(dtype = uintp, ndim = 1, flags = 'C')
+#libextraction.sum.argtypes = [_doublepp, ctypes.c_int]
 #libextraction.calculateSD.argtypes = [ctypes.c_int]
-libextraction.calculateSD.restype = ctypes.c_double
+#libextraction.calculateSD.restype = ctypes.c_double
 setUseOptimized(True)
 ##gc.enable()
 N = 0
@@ -155,9 +155,9 @@ def get_fragment(x, y, only_rotate):
     if only_rotate == 2:
         avg_lum = (lum_array[x][y] + lum_array[y][x] + lum_array[x][30 - y] + lum_array[y][30 - x] + \
             lum_array[30 - x][30 - y] + lum_array[30 - y][30 - x] + lum_array[30 - x][y] + lum_array[30 - y][x]) / 8
-        std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[y][x], lum_array[x][30 - y], lum_array[y][30 - x], \
-            lum_array[30 - x][30 - y], lum_array[30 - y][30 - x], lum_array[30 - x][y], lum_array[30 - y][x]]).ctypes.data_as(c_void_p))
-    
+        std_lum = std([lum_array[x][y], lum_array[y][x], lum_array[x][30 - y], lum_array[y][30 - x], \
+            lum_array[30 - x][30 - y], lum_array[30 - y][30 - x], lum_array[30 - x][y], lum_array[30 - y][x]])
+
         #rot0_copy = rot0.copy()
         #rot0_copy = cvtColor(rot0_copy, COLOR_GRAY2BGR)
         #rot0_copy = rectangle(rot0_copy, (x * 8, y * 8), (x * 8 + 8 , y * 8 + 8), (x*15,y*15,0), 1)
@@ -175,7 +175,7 @@ def get_fragment(x, y, only_rotate):
     elif only_rotate == -1:
         avg_lum = (lum_array[x][y] + lum_array[30 - y][x] + lum_array[x][30 - y] + lum_array[y][30 - x]) / 4
         #std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][30 - y], lum_array[30 - x][y]]).ctypes.data_as(c_void_p))
-        std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[30 - y][x], lum_array[x][30 - y], lum_array[y][30 -x]]).ctypes.data_as(c_void_p))
+        std_lum = std([lum_array[x][y], lum_array[30 - y][x], lum_array[x][30 - y], lum_array[y][30 -x]])
         #print std_lum
         return avg_lum, std_lum
 
@@ -189,11 +189,10 @@ def get_fragment(x, y, only_rotate):
         avg_lum = (lum_array[x][y] + lum_array[x][30 - y] + lum_array[30 -x][y] + lum_array[30 - x][30 - y]) / 4
         #print avg_lum
         #std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][30 - y], lum_array[30 - x][y]]).ctypes.data_as(c_void_p))
-        std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][y], lum_array[30 - x][30 -y]]).ctypes.data_as(c_void_p))
+        std_lum = std([lum_array[x][y], lum_array[x][30 - y], lum_array[30 - x][y], lum_array[30 - x][30 -y]])
         #print std_lum
         #print avg_lum, std_lum
         return avg_lum, std_lum
-
     # if only_rotate == 1:
     #     results = map(get_average_luminance_of_block, [rot0[y * N:y * N + N, x * N:x * N + N], rot0[(y + 1)* N:(y + 1) * N + N, (x - 1) * N:(x - 1) * N + N], \
     #         rot0[(30 - y - 1)* N:(30 - y - 1) * N + N, (x - 1) * N:(x - 1) * N + N], rot0[(30 - y)* N:(30 - y) * N + N, x  * N:x * N + N], \
