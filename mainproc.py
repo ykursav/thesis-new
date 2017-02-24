@@ -57,43 +57,46 @@ def initialize_set(image):
         logging.debug("Too small detection probably wrong")
         counter -= 1
         return
-    crop = get_cropped()
     #cv2.imwrite("cropped_90.jpg", crop)
-    set_initials(8, 4, 128, crop)
+    set_initials(8, 4, 128, get_cropped())
     sig = bitarray()
     try:
         sig = get_signature()
-        #if counter < 30:
+        #if counter < 25:
         #   sigGen.extend(sig)
         #else:
-        #   sigGen = sigGen[240:]
-        #   sigGen[6960:] = sig
+        #   sigGen = sigGen[272:]
+        #   sigGen[6528:] = sig
     except:
         logging.debug("Nonetype")
         counter -= 1
         return
     
-    #if counter >= 29:
+    #if counter >= 24:
         #logging.debug(sigGen)
-    set_initials_match(sigGen, 27, 43, 10, 32, 22)
+    set_initials_match(sigGen, 27, 43, 5, 32, 22)
         #logging.debug(signature_scan())
         #scan_sig = signature_scan()
         #min_point = scan_sig.index(min(scan_sig))
         #range1 = 0
         #range2 = 0
         #if min_point != 0:
-        #    range1 = (min_point * 3600) - 3600
-        #    range2 = (min_point * 3600) + 3600
+        #    range1 = (min_point * 6800)
+        #    range2 = (min_point * 6800) + 6800
         #else:
-        #    range1 = min_point * 3600
-        #    range2 = (min_point * 3600) + 7200
+        #    range1 = min_point * 6800
+        #    range2 = (min_point * 6800) + 6800
         #print range1, range2
         #min_match, error_n = signature_deep_scan(range1, range2, sig)
-        #match_frame = (range1 / 240) + min_match
+        #match_frame = (range1 / 272) + min_match
         #logging.debug("Total error:" + str(min(scan_sig)) + "\n")
-        #logging.debug("Match frame over 50:" +str(match_frame) + "\n")
+        #logging.debug("Match frame over 25:" +str(match_frame) + "\n")
         #logging.debug(sigGen)
+        #logging.debug(min_match + min_point)
+        #print min_match
         #logging.debug("Matched frame error:"  + str(error_n) + "\n")
+        #check, hamming, message = signature_rejection(sig, (match_frame))
+        #logging.debug("Result:" + message)
         #if error_n >20:
         #    logging.debug("No match")
         #    time.sleep(0.05)

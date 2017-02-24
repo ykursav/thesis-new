@@ -7,14 +7,14 @@ from cv2 import cvtColor, adaptiveThreshold, dilate, findContours, arcLength \
      setUseOptimized, threshold, THRESH_BINARY, THRESH_OTSU, VideoWriter, ADAPTIVE_THRESH_MEAN_C, \
      CV_64F, erode
      
-from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray
+from numpy import array, ones, uint8, zeros, argmin, argmax, delete, floor, median, ndarray, std
 import gc
 import ctypes
 from threading import Thread
 
-setUseOptimized(True)
-libextraction = ctypes.cdll.LoadLibrary("./C_Libraries/libextraction.so")
-libextraction.calSqrt.restype = ctypes.c_double
+#setUseOptimized(True)
+#libextraction = ctypes.cdll.LoadLibrary("./C_Libraries/libextraction.so")
+#libextraction.calSqrt.restype = ctypes.c_double
 # import time
 SCALED_IMAGE = [128, 128]
 image = array([])

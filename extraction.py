@@ -1,4 +1,4 @@
-from numpy import uintp, array, zeros, sum, linalg, uint8
+from numpy import uintp, array, zeros, sum, linalg, uint8, std
 from cv2 import getRotationMatrix2D, warpAffine, flip, setUseOptimized, imwrite, rectangle, cvtColor, COLOR_GRAY2BGR
 from bitarray import bitarray
 import gc
@@ -131,7 +131,7 @@ def get_blocks():
 # ##         fVertical270, fHorizontal270
 
 #@profile
-
+#@profile
 def get_luminances():
     x = 0
     y = 0
@@ -139,7 +139,6 @@ def get_luminances():
 
     while x<31 or y<31:
         lumin_array[x][y] = get_average_luminance_of_block(rot0[x*N:x*N+N, y*N:y*N+N])
-        #print lumin
         if x==30 and y==30:
             break
         if x == 30:
@@ -147,7 +146,6 @@ def get_luminances():
             x= 0
         else:
             x = x + 1
-    #print lumin_array
     return lumin_array
 
 def get_fragment(x, y, only_rotate):
@@ -157,18 +155,6 @@ def get_fragment(x, y, only_rotate):
             lum_array[30 - x][30 - y] + lum_array[30 - y][30 - x] + lum_array[30 - x][y] + lum_array[30 - y][x]) / 8
         std_lum = std([lum_array[x][y], lum_array[y][x], lum_array[x][30 - y], lum_array[y][30 - x], \
             lum_array[30 - x][30 - y], lum_array[30 - y][30 - x], lum_array[30 - x][y], lum_array[30 - y][x]])
-
-        #rot0_copy = rot0.copy()
-        #rot0_copy = cvtColor(rot0_copy, COLOR_GRAY2BGR)
-        #rot0_copy = rectangle(rot0_copy, (x * 8, y * 8), (x * 8 + 8 , y * 8 + 8), (x*15,y*15,0), 1)
-        #rot0_copy = rectangle(rot0_copy, (y * 8, x * 8), (y* 8 + 8 , x * 8 + 8), (x*15,y*15,0), 1) 
-        #rot0_copy = rectangle(rot0_copy, (x * 8, (30 - y) * 8), (x  * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
-        #rot0_copy = rectangle(rot0_copy, (y * 8, (30 - x) * 8), (y * 8 + 8 , (30 - x) * 8 + 8), (x*15,y*15,0), 1)
-        #rot0_copy = rectangle(rot0_copy, ((30 - x) * 8, (30 - y) * 8), ((30 - x) * 8 + 8 , (30 - y) * 8 + 8), (x*15,y*15,0), 1)
-        #rot0_copy = rectangle(rot0_copy, ((30 - y) * 8, (30 - x) * 8), ((30 - y) * 8 + 8 , (30 - x) * 8 + 8), (x*15,y*15,0), 1)
-        #rot0_copy = rectangle(rot0_copy, ((30 - x) * 8, y * 8), ((30 - x) * 8 + 8 , y  * 8 + 8), (x*15,y*15,0), 1)
-        #rot0_copy = rectangle(rot0_copy, ((30 - y) * 8, x * 8), ((30 - y) * 8 + 8 , x * 8 + 8), (x*15,y*15,0), 1)
-        #imwrite("rot0_rectangle.jpg" , rot0_copy)
         
 	return avg_lum, std_lum
 

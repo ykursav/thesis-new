@@ -12,7 +12,7 @@ tau4 = 0
 tau5 = 0
 sigOrig = bitarray()
 sigGen = bitarray()
-f = open("signature_test25.bin", "r")
+f = open("signature_test29.bin", "r")
 sigOrig = bitarray()
 sigOrig.fromfile(f)
 f.close()
@@ -46,23 +46,23 @@ def signature_hamming(sigOrig_h, sigGen_h):
 #@profile
 def signature_scan():
     result_buffer = []
-    for x in range(0, (len(sigOrig) / 3600) - 1):
+    for x in range(0, (len(sigOrig) / 6800) - 1):
        #print "Generated signature length" + str(len(sigGen))
        #print "Original signature length" + str(len(sigOrig[x * 3600:(x+1) * 3600]))
        #p = Thread(target = signature_hamming, args = (sigOrig[x * 12000:(x + 1) * 12000], q, ))
        #result = bitdiff(sigOrig[x * 12000:(x + 1) * 12000], sigGen)
        #p.start()
        #jobs.append(p)
-       #print len(sigGen), len(sigOrig[x * 360:(x+1)*360+1440])
-       result_buffer.append(signature_hamming(sigOrig[x * 3600:(x + 1) * 3600 + 3600], sigGen))
+       #print len(sigGen), len(sigOrig[x * 360:(x+1)*360+1440]
+       result_buffer.append(signature_hamming(sigOrig[x * 6800:(x + 1) * 6800], sigGen))
 
     return result_buffer
     #print signature_scan
 def signature_deep_scan(range1, range2, sigGen_new):
     buffer_sig = sigOrig[range1:range2]
     result_buffer = []
-    for x in range(0, 30):
-        result_buffer.append(signature_hamming(buffer_sig[x * 240:(x + 1) * 240], sigGen_new))
+    for x in range(0, 25):
+        result_buffer.append(signature_hamming(buffer_sig[x * 272:(x + 1) * 272], sigGen_new))
     
     return result_buffer.index(min(result_buffer)), min(result_buffer)
 

@@ -1,0 +1,155 @@
+Wrote profile results to mainproc.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 8.06578 s
+File: extraction.py
+Function: get_luminances at line 134
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   134                                           @profile
+   135                                           def get_luminances():
+   136       100          356      3.6      0.0      x = 0
+   137       100          299      3.0      0.0      y = 0
+   138       100         1752     17.5      0.0      lumin_array = zeros((31,31))
+   139                                           
+   140     96100       288131      3.0      3.6      while x<31 or y<31:
+   141     96100      6797598     70.7     84.3          lumin_array[x][y] = get_average_luminance_of_block(rot0[x*N:x*N+N, y*N:y*N+N])
+   142                                                   #print lumin
+   143     96100       370220      3.9      4.6          if x==30 and y==30:
+   144       100          344      3.4      0.0              break
+   145     96000       298060      3.1      3.7          if x == 30:
+   146      3000         9526      3.2      0.1              y += 1
+   147      3000         8805      2.9      0.1              x= 0
+   148                                                   else:
+   149     93000       290405      3.1      3.6              x = x + 1
+   150                                               #print lumin_array
+   151       100          280      2.8      0.0      return lumin_array
+
+Total time: 13.7362 s
+File: extraction.py
+Function: get_all_fragments at line 242
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   242                                           @profile
+   243                                           def get_all_fragments():
+   244                                               global rot0, lum_array
+   245       100          514      5.1      0.0      fragments_list = [[],[]]
+   246       100       171589   1715.9      1.2      rot0 = get_blocks()
+   247                                               #print rot0
+   248       100      9476799  94768.0     69.0      lum_array = get_luminances()
+   249                                               #print lum_array
+   250                                               #rot90, rot180, rot270 = basic_rotations(rot0)
+   251       100          348      3.5      0.0      counter_x = 0
+   252       100          304      3.0      0.0      counter_y = 0
+   253                                               #append_fragment = fragments_list.append
+   254       100          462      4.6      0.0      append_avg_lum = fragments_list[0].append
+   255       100          392      3.9      0.0      append_std_lum = fragments_list[1].append
+   256                                               # append_avg_sing = fragments_list[2].append
+   257                                               # append_std_sing = fragments_list[3].append
+   258     13700        46143      3.4      0.3      while(counter_x < 15 or counter_y < 15):
+   259     13600        43989      3.2      0.3          if counter_x == 16:
+   260      1500         4885      3.3      0.0              counter_y += 1
+   261      1500         4670      3.1      0.0              counter_x = counter_y
+   262     13600        46933      3.5      0.3          if counter_x == counter_y or counter_x == 15:
+   263      3100        10154      3.3      0.1              if counter_x == 15 and counter_y == 15:
+   264       100         1826     18.3      0.0                  avg_lum, std_lum = get_fragment(counter_x, counter_y, 0)
+   265       100          369      3.7      0.0                  append_avg_lum(avg_lum)
+   266       100          349      3.5      0.0                  append_std_lum(std_lum)
+   267                                                           # append_avg_sing(avg_sing)
+   268                                                           # append_std_sing(std_sing)                
+   269      3000         9586      3.2      0.1              elif counter_x == 15:
+   270      1500       389227    259.5      2.8                  avg_lum, std_lum = get_fragment(counter_x, counter_y, -1)
+   271      1500         6752      4.5      0.0                  append_avg_lum(avg_lum)
+   272      1500         5719      3.8      0.0                  append_std_lum(std_lum)
+   273                                                           # append_avg_sing(avg_sing)
+   274                                                           # append_std_sing(std_sing)
+   275      1500         4781      3.2      0.0              elif counter_x == counter_y:
+   276      1500       406301    270.9      3.0                  avg_lum, std_lum = get_fragment(counter_x, counter_y, 1)  
+   277      1500         7903      5.3      0.1                  append_avg_lum(avg_lum)
+   278      1500         6350      4.2      0.0                  append_std_lum(std_lum)
+   279                                                   else:
+   280     10500      2952866    281.2     21.5              avg_lum, std_lum = get_fragment(counter_x, counter_y, 2)
+   281     10500        49728      4.7      0.4              append_avg_lum(avg_lum)
+   282     10500        39898      3.8      0.3              append_std_lum(std_lum)
+   283                                                       # append_avg_sing(avg_sing)
+   284                                                       # append_std_sing(std_sing)   
+   285     13600        47041      3.5      0.3          counter_x += 1
+   286       100          302      3.0      0.0      return fragments_list
+
+Total time: 26.1932 s
+File: mainproc.py
+Function: initialize_set at line 46
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    46                                           @profile
+    47                                           def initialize_set(image):
+    48                                               global counter, sigGen
+    49       100        18097    181.0      0.1      set_initials_pre(128, image, counter, out2)
+    50                                               #set_initials_pre(128, image, counter)
+    51       100      3618453  36184.5     13.8      points = get_contour(5)
+    52       100      1566820  15668.2      6.0      check = get_perspective(points, 0)
+    53       100         1129     11.3      0.0      if check == 10:
+    54                                                   counter -= 1
+    55                                                   return
+    56       100          505      5.0      0.0      elif check == 20:
+    57                                                   logging.debug("Too small detection probably wrong")
+    58                                                   counter -= 1
+    59                                                   return
+    60       100       416466   4164.7      1.6      crop = get_cropped()
+    61                                               #cv2.imwrite("cropped_90.jpg", crop)
+    62       100         3254     32.5      0.0      set_initials(8, 4, 128, crop)
+    63       100         1047     10.5      0.0      sig = bitarray()
+    64       100          466      4.7      0.0      try:
+    65       100     14226961 142269.6     54.3          sig = get_signature()
+    66                                                   #if counter < 25:
+    67                                                   #   sigGen.extend(sig)
+    68                                                   #else:
+    69                                                   #   sigGen = sigGen[272:]
+    70                                                   #   sigGen[6528:] = sig
+    71                                               except:
+    72                                                   logging.debug("Nonetype")
+    73                                                   counter -= 1
+    74                                                   return
+    75                                               
+    76                                               #if counter >= 24:
+    77                                                   #logging.debug(sigGen)
+    78       100         1723     17.2      0.0      set_initials_match(sigGen, 27, 43, 5, 32, 22)
+    79                                                   #logging.debug(signature_scan())
+    80                                                   #scan_sig = signature_scan()
+    81                                                   #min_point = scan_sig.index(min(scan_sig))
+    82                                                   #range1 = 0
+    83                                                   #range2 = 0
+    84                                                   #if min_point != 0:
+    85                                                   #    range1 = (min_point * 6800)
+    86                                                   #    range2 = (min_point * 6800) + 6800
+    87                                                   #else:
+    88                                                   #    range1 = min_point * 6800
+    89                                                   #    range2 = (min_point * 6800) + 6800
+    90                                                   #print range1, range2
+    91                                                   #min_match, error_n = signature_deep_scan(range1, range2, sig)
+    92                                                   #match_frame = (range1 / 272) + min_match
+    93                                                   #logging.debug("Total error:" + str(min(scan_sig)) + "\n")
+    94                                                   #logging.debug("Match frame over 25:" +str(match_frame) + "\n")
+    95                                                   #logging.debug(sigGen)
+    96                                                   #logging.debug(min_match + min_point)
+    97                                                   #print min_match
+    98                                                   #logging.debug("Matched frame error:"  + str(error_n) + "\n")
+    99                                                   #check, hamming, message = signature_rejection(sig, (match_frame))
+   100                                                   #logging.debug("Result:" + message)
+   101                                                   #if error_n >20:
+   102                                                   #    logging.debug("No match")
+   103                                                   #    time.sleep(0.05)
+   104                                                   #else:
+   105                                                   #    logging.debug("Match")
+   106                                                   #    time.sleep(0.4)
+   107       100      5788167  57881.7     22.1      min_val, error_val = signature_o2o(sig)
+   108       100       190508   1905.1      0.7      logging.debug("Extracted signature:" + str(sig))
+   109       100        98558    985.6      0.4      logging.debug("Matched frame over all scan:"  + str(min_val) + "\n")
+   110       100        73913    739.1      0.3      logging.debug("Errors over all scan:" + str(error_val) + "\n")
+   111       100        19255    192.6      0.1      check, hamming, message = signature_rejection(sig, min_val)
+   112       100        84619    846.2      0.3      logging.debug("Result:" + message)
+   113       100        83269    832.7      0.3      logging.debug("Match or Not:" + str(check))
+

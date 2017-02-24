@@ -1,0 +1,580 @@
+DEBUG:root:Under real time Point counter:1.78813934326e-05
+
+DEBUG:root:Under real time Point counter:0.212516069412
+
+DEBUG:root:Under real time Point counter:0.213456869125
+
+DEBUG:root:Under real time Point counter:0.207801103592
+
+DEBUG:root:Under real time Point counter:0.211375951767
+
+DEBUG:root:Under real time Point counter:0.211656093597
+
+DEBUG:root:Under real time Point counter:0.214824914932
+
+DEBUG:root:Under real time Point counter:0.203077077866
+
+DEBUG:root:Real time1487972060.98
+
+DEBUG:root:Under real time Point counter:0.201139211655
+
+DEBUG:root:Under real time Point counter:0.200282096863
+
+DEBUG:root:Under real time Point counter:0.200871944427
+
+DEBUG:root:Under real time Point counter:0.203072071075
+
+DEBUG:root:Real time1487972062.0
+
+DEBUG:root:Real time1487972062.2
+
+DEBUG:root:Under real time Point counter:0.203202009201
+
+DEBUG:root:Under real time Point counter:0.256248950958
+
+DEBUG:root:Under real time Point counter:0.203723907471
+
+DEBUG:root:Real time1487972063.07
+
+DEBUG:root:Real time1487972063.27
+
+DEBUG:root:Real time1487972063.47
+
+DEBUG:root:Real time1487972063.67
+
+DEBUG:root:Real time1487972063.87
+
+DEBUG:root:Real time1487972064.07
+
+DEBUG:root:Real time1487972064.27
+
+DEBUG:root:Total error:2182
+
+DEBUG:root:Matched frame error:51
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.229552030563
+
+DEBUG:root:Total error:2310
+
+DEBUG:root:Matched frame error:50
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.227952003479
+
+DEBUG:root:Total error:2440
+
+DEBUG:root:Matched frame error:36
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.228091001511
+
+DEBUG:root:Total error:2545
+
+DEBUG:root:Matched frame error:27
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.227752923965
+
+DEBUG:root:Total error:2450
+
+DEBUG:root:Matched frame error:37
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.226203918457
+
+DEBUG:root:Total error:2511
+
+DEBUG:root:Matched frame error:39
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.226726055145
+
+DEBUG:root:Total error:2455
+
+DEBUG:root:Matched frame error:36
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.225687026978
+
+DEBUG:root:Total error:2359
+
+DEBUG:root:Matched frame error:28
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.225906133652
+
+DEBUG:root:Total error:2386
+
+DEBUG:root:Matched frame error:28
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.230077028275
+
+DEBUG:root:Total error:2150
+
+DEBUG:root:Matched frame error:24
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.236746072769
+
+DEBUG:root:Total error:2286
+
+DEBUG:root:Matched frame error:24
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.243504047394
+
+DEBUG:root:Total error:2095
+
+DEBUG:root:Matched frame error:63
+
+DEBUG:root:Result:tau3_fail
+DEBUG:root:Under real time Point counter:0.240937948227
+
+DEBUG:root:Total error:2061
+
+DEBUG:root:Matched frame error:48
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.247995853424
+
+DEBUG:root:Total error:1957
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.23299407959
+
+DEBUG:root:Total error:1640
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.227858066559
+
+DEBUG:root:Total error:1611
+
+DEBUG:root:Matched frame error:14
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.232627868652
+
+DEBUG:root:Total error:1328
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.230036973953
+
+DEBUG:root:Total error:1280
+
+DEBUG:root:Matched frame error:11
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.230926990509
+
+DEBUG:root:Total error:1334
+
+DEBUG:root:Matched frame error:109
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.241933107376
+
+DEBUG:root:Total error:1360
+
+DEBUG:root:Matched frame error:127
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.24063706398
+
+DEBUG:root:Total error:1698
+
+DEBUG:root:Matched frame error:127
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.233571052551
+
+DEBUG:root:Total error:1820
+
+DEBUG:root:Matched frame error:127
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.241473197937
+
+DEBUG:root:Total error:2102
+
+DEBUG:root:Matched frame error:127
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.242058038712
+
+DEBUG:root:Total error:2181
+
+DEBUG:root:Matched frame error:110
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.240864038467
+
+DEBUG:root:Total error:2294
+
+DEBUG:root:Matched frame error:119
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.235567092896
+
+DEBUG:root:Total error:2466
+
+DEBUG:root:Matched frame error:137
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.247035980225
+
+DEBUG:root:Total error:2567
+
+DEBUG:root:Matched frame error:129
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.241039991379
+
+DEBUG:root:Total error:2629
+
+DEBUG:root:Matched frame error:131
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.246067047119
+
+DEBUG:root:Total error:2710
+
+DEBUG:root:Matched frame error:141
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.244044065475
+
+DEBUG:root:Total error:2765
+
+DEBUG:root:Matched frame error:136
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.243035078049
+
+DEBUG:root:Total error:2774
+
+DEBUG:root:Matched frame error:137
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.245488882065
+
+DEBUG:root:Total error:2836
+
+DEBUG:root:Matched frame error:118
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.238881826401
+
+DEBUG:root:Total error:2874
+
+DEBUG:root:Matched frame error:86
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.239629983902
+
+DEBUG:root:Total error:2728
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.23201584816
+
+DEBUG:root:Total error:2683
+
+DEBUG:root:Matched frame error:12
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.23132109642
+
+DEBUG:root:Total error:2551
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.23602104187
+
+DEBUG:root:Total error:2284
+
+DEBUG:root:Matched frame error:13
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.234251976013
+
+DEBUG:root:Total error:2093
+
+DEBUG:root:Matched frame error:15
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.232841968536
+
+DEBUG:root:Total error:1865
+
+DEBUG:root:Matched frame error:19
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.235223054886
+
+DEBUG:root:Total error:1645
+
+DEBUG:root:Matched frame error:16
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.232548952103
+
+DEBUG:root:Total error:1495
+
+DEBUG:root:Matched frame error:20
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.231083154678
+
+DEBUG:root:Total error:1713
+
+DEBUG:root:Matched frame error:23
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.23845410347
+
+DEBUG:root:Total error:1909
+
+DEBUG:root:Matched frame error:20
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.237812995911
+
+DEBUG:root:Total error:2230
+
+DEBUG:root:Matched frame error:93
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.234452962875
+
+DEBUG:root:Total error:2326
+
+DEBUG:root:Matched frame error:95
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.232422113419
+
+DEBUG:root:Total error:2418
+
+DEBUG:root:Matched frame error:95
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.233052015305
+
+DEBUG:root:Total error:2540
+
+DEBUG:root:Matched frame error:91
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.240911960602
+
+DEBUG:root:Total error:2657
+
+DEBUG:root:Matched frame error:118
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.232673168182
+
+DEBUG:root:Total error:2563
+
+DEBUG:root:Matched frame error:118
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.234817028046
+
+DEBUG:root:Total error:2474
+
+DEBUG:root:Matched frame error:109
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.232653141022
+
+DEBUG:root:Total error:2413
+
+DEBUG:root:Matched frame error:109
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.236465930939
+
+DEBUG:root:Total error:2310
+
+DEBUG:root:Matched frame error:112
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.232735872269
+
+DEBUG:root:Total error:2253
+
+DEBUG:root:Matched frame error:112
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.240240097046
+
+DEBUG:root:Total error:2189
+
+DEBUG:root:Matched frame error:104
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.242829084396
+
+DEBUG:root:Total error:2152
+
+DEBUG:root:Matched frame error:98
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.234085083008
+
+DEBUG:root:Total error:2145
+
+DEBUG:root:Matched frame error:95
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.242033958435
+
+DEBUG:root:Total error:2214
+
+DEBUG:root:Matched frame error:113
+
+DEBUG:root:Result:tau3_fail
+DEBUG:root:Under real time Point counter:0.234704971313
+
+DEBUG:root:Total error:2192
+
+DEBUG:root:Matched frame error:31
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.230466842651
+
+DEBUG:root:Total error:1884
+
+DEBUG:root:Matched frame error:99
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.229438066483
+
+DEBUG:root:Total error:1490
+
+DEBUG:root:Matched frame error:99
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.23119187355
+
+DEBUG:root:Total error:1406
+
+DEBUG:root:Matched frame error:94
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.233814954758
+
+DEBUG:root:Total error:1437
+
+DEBUG:root:Matched frame error:82
+
+DEBUG:root:Result:tau3_fail
+DEBUG:root:Under real time Point counter:0.230911970139
+
+DEBUG:root:Total error:1905
+
+DEBUG:root:Matched frame error:82
+
+DEBUG:root:Result:tau3_fail
+DEBUG:root:Under real time Point counter:0.23396897316
+
+DEBUG:root:Total error:2359
+
+DEBUG:root:Matched frame error:42
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.233381032944
+
+DEBUG:root:Total error:2562
+
+DEBUG:root:Matched frame error:42
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.235907077789
+
+DEBUG:root:Total error:2616
+
+DEBUG:root:Matched frame error:42
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.237586021423
+
+DEBUG:root:Total error:2818
+
+DEBUG:root:Matched frame error:38
+
+DEBUG:root:Result:replica detected
+DEBUG:root:Under real time Point counter:0.233911037445
+
+DEBUG:root:Total error:2939
+
+DEBUG:root:Matched frame error:105
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.236087083817
+
+DEBUG:root:Total error:2922
+
+DEBUG:root:Matched frame error:92
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.233434915543
+
+DEBUG:root:Total error:2913
+
+DEBUG:root:Matched frame error:92
+
+DEBUG:root:Result:tau1_fail
+DEBUG:root:Under real time Point counter:0.233509063721
+
+DEBUG:root:Total error:2909
+
+DEBUG:root:Matched frame error:116
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.232872009277
+
+DEBUG:root:Total error:2915
+
+DEBUG:root:Matched frame error:116
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.235138893127
+
+DEBUG:root:Total error:2869
+
+DEBUG:root:Matched frame error:94
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.232408046722
+
+DEBUG:root:Total error:2879
+
+DEBUG:root:Matched frame error:94
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.237577915192
+
+DEBUG:root:Total error:2853
+
+DEBUG:root:Matched frame error:92
+
+DEBUG:root:Result:tau2_fail
+DEBUG:root:Under real time Point counter:0.239539146423
+
+DEBUG:root:Total error:2811
+
+DEBUG:root:Matched frame error:92
+
+DEBUG:root:Result:tau2_fail
