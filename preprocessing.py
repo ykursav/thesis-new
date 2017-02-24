@@ -208,9 +208,9 @@ def get_perspective(points, counter):
                                            (width_perspective, height_perspective))
         
         if width_perspective > height_perspective:     
-            warped_image = resize(warped_image, (500, 300), INTER_NEAREST)
+            warped_image = resize(warped_image, (500, 300), INTER_LINEAR)
         elif height_perspective > width_perspective:
-            warped_image = resize(warped_image, (300, 500), INTER_NEAREST)      
+            warped_image = resize(warped_image, (300, 500), INTER_LINEAR)      
         warped = warped_image
         #imwrite("warped_adaptive/warped_new" + str(counter_warped) + ".jpg", warped)
         imwrite("warped.jpg", warped)
@@ -236,8 +236,12 @@ def get_scaled():
     elif height == width:
         new_width = L
         new_height = L
+    if new_width % 2 != 0:
+        new_width += 1
+    if new_height %2 != 0:
+        new_height += 1
     resized_image = resize(warped, (new_width, new_height), \
-    interpolation = INTER_NEAREST)
+    interpolation = INTER_LINEAR)
     #imwrite("scaled.jpg", resized_image)
 
 #@profile    
@@ -248,18 +252,18 @@ def get_cropped():
     if width != height:
         if width > height:
             if width % 2 == 0:
-                crop_width = width / 2 - 1
+                crop_width = width / 2
                 return get_blurred(resized_image[:, crop_width - L / 2:crop_width + L / 2], 3)
             else:
-                crop_width = width / 2 - 1
-                return get_blurred(resized_image[:, crop_width - (L/ 2 - 1):crop_width + (L/ 2 + 1)], 3)
+                crop_width = width / 2
+                return get_blurred(resized_image[:, crop_width - (L/ 2):crop_width + (L/ 2)], 3)
         else:
             if height % 2 == 0:
-                crop_height = height / 2 - 1
+                crop_height = height / 2
                 return get_blurred(resized_image[crop_height - L / 2:crop_height + L / 2, :], 3)
             else:
-                crop_height = height / 2 - 1
-                return get_blurred(resized_image[crop_height - (L/ 2 - 1):crop_height + (L/ 2 + 1), :], 3)
+                crop_height = height / 2
+                return get_blurred(resized_image[crop_height - (L/ 2):crop_height + (L/ 2), :], 3)
 
 
 #@profile
