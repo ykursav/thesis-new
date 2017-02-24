@@ -7,7 +7,7 @@ class PiVideoStream:
     def __init__(self, resolution=(544,400), framerate=32):
         self.camera = PiCamera()
         self.camera.resolution = resolution
-        #self.camera.awb_mode = 'cloudy'
+        #self.camera.awb_mode = 'off'
         #self.camera.exposure_mode = 'fireworks'
         #self.flash_mode = 'auto'
         self.camera.framerate = framerate 

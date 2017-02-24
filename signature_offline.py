@@ -18,8 +18,8 @@ def initialize_set(image, counter):
 
 
 if __name__ == "__main__": 
-    cap = VideoCapture("ADAPTIVE_THRESHOLD_TESTS/signature_test03.avi")
-    f = open("signature_test08.bin", "wb")
+    cap = VideoCapture("ADAPTIVE_THRESHOLD_TESTS/signature_test05.avi")
+    f = open("signature_test11.bin", "wb")
     counter = 0
     signature_counter = 0
     sig_first = bitarray()
@@ -28,8 +28,18 @@ if __name__ == "__main__":
         ret, frame = cap.read()
         if ret != True:
             break
-        sigGen = initialize_set(frame, counter)
+        sigGen = initialize_set(frame,counter)
         f.write(sigGen.tobytes())
+
+        #if signature_counter%3 == 0 and signature_counter != 0:
+        #    signature_counter += 1
+        #    
+        #else:
+        #    if signature_counter == 0:
+        #        sigGen = initialize_set(frame, counter)
+         ##       signature_counter += 1
+          #  else:
+           #     sigGen = sigGen and initialize_set(frame, counter) 
         #if signature_counter == 0:
         #    sigGen = initialize_set(frame, counter)
         #    sig_first = sigGen
@@ -38,12 +48,12 @@ if __name__ == "__main__":
         #    sigGen = initialize_set(frame, counter)
         #    sig_second = sigGen
         #    signature_res = sig_first and sig_second
-            #print len(signature_res)
-            #print signature_res
-        #    f.write(signature_res.tobytes())
-        #   signature_counter = 0
-        print sigGen
-        print len(sigGen)
+        #    #print len(signature_res)
+        #    #print signature_res
+         #   f.write(signature_res.tobytes())
+            #signature_counter = 0
+        #print sigGen
+        #print len(sigGen)
         #print counter
         counter += 1
     print counter
