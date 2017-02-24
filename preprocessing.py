@@ -213,7 +213,7 @@ def get_perspective(points, counter):
             warped_image = resize(warped_image, (300, 500), INTER_LINEAR)      
         warped = warped_image
         #imwrite("warped_adaptive/warped_new" + str(counter_warped) + ".jpg", warped)
-        imwrite("warped.jpg", warped)
+        imwrite("warped90.jpg", warped)
         Thread(target = write_out, args = (out2, warped,)).start()
         return 30
 

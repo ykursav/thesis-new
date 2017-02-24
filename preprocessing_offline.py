@@ -77,8 +77,12 @@ def get_scaled():
     elif height == width:
         new_width = L
         new_height = L
+    if new_width %2 != 0:
+        new_width += 1
+    if new_height %2 != 0:
+        new_height += 1
     resized_image = resize(gray, (new_width, new_height), \
-    interpolation = INTER_NEAREST)
+    interpolation = INTER_LINEAR)
 
 #@profile    
 def get_cropped():
@@ -89,24 +93,24 @@ def get_cropped():
     if width != height:
         if width > height:
             if width % 2 == 0:
-                crop_width = width / 2 - 1
+                crop_width = width / 2
                 res = get_blurred(resized_image[:, crop_width - L / 2:crop_width + L / 2], 3)
                 Thread(target = write_out, args = (out2, res,)).start()
                 return res
             else:
-                crop_width = width / 2 - 1
-                res = get_blurred(resized_image[:, crop_width - (L/ 2 - 1):crop_width + (L/ 2 + 1)], 3)
+                crop_width = width / 2
+                res = get_blurred(resized_image[:, crop_width - (L/ 2):crop_width + (L/ 2)], 3)
                 Thread(target = write_out, args = (out2, res,)).start()
                 return res
         else:
             if height % 2 == 0:
-                crop_height = height / 2 - 1
+                crop_height = height / 2
                 res = get_blurred(resized_image[crop_height - L / 2:crop_height + L / 2, :], 3)
                 Thread(target = write_out, args = (out2, res,)).start()
                 return res
             else:
-                crop_height = height / 2 - 1
-                res = get_blurred(resized_image[crop_height - (L/ 2 - 1):crop_height + (L/ 2 + 1), :], 3)
+                crop_height = height / 2
+                res = get_blurred(resized_image[crop_height - (L/ 2):crop_height + (L/ 2), :], 3)
                 Thread(target = write_out, args = (out2, res,)).start()
                 return res
 
