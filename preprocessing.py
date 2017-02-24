@@ -208,9 +208,9 @@ def get_perspective(points, counter):
                                            (width_perspective, height_perspective))
         
         if width_perspective > height_perspective:     
-            warped_image = resize(warped_image, (500, 300), INTER_LINEAR)
+            warped_image = resize(warped_image, (500, 300), INTER_NEAREST)
         elif height_perspective > width_perspective:
-            warped_image = resize(warped_image, (300, 500), INTER_LINEAR)            
+            warped_image = resize(warped_image, (300, 500), INTER_NEAREST)      
         warped = warped_image
         #imwrite("warped_adaptive/warped_new" + str(counter_warped) + ".jpg", warped)
         #imwrite("warped.jpg", warped)
@@ -237,7 +237,7 @@ def get_scaled():
         new_width = L
         new_height = L
     resized_image = resize(warped, (new_width, new_height), \
-    interpolation = INTER_LINEAR)
+    interpolation = INTER_NEAREST)
     #imwrite("scaled.jpg", resized_image)
 
 #@profile    

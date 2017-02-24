@@ -155,7 +155,7 @@ def get_fragment(x, y, only_rotate):
     if only_rotate == 2:
         avg_lum = (lum_array[x][y] + lum_array[y][x] + lum_array[x][30 - y] + lum_array[y][30 - x] + \
             lum_array[30 - x][30 - y] + lum_array[30 - y][30 - x] + lum_array[30 - x][y] + lum_array[30 - y][x]) / 8
-        std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[y][x], lum_array[x][30 - y], lum_array[y][30 - x] + \
+        std_lum = libextraction.calculateSD(array([lum_array[x][y], lum_array[y][x], lum_array[x][30 - y], lum_array[y][30 - x], \
             lum_array[30 - x][30 - y], lum_array[30 - y][30 - x], lum_array[30 - x][y], lum_array[30 - y][x]]).ctypes.data_as(c_void_p))
     
         #rot0_copy = rot0.copy()
@@ -255,7 +255,7 @@ def get_fragment(x, y, only_rotate):
 #@profile
 def get_all_fragments():
     global rot0, lum_array
-    fragments_list = [[],[], [], []]
+    fragments_list = [[],[]]
     rot0 = get_blocks()
     #print rot0
     lum_array = get_luminances()
