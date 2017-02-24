@@ -75,7 +75,7 @@ def initialize_set(image):
     
     #if counter >= 29:
         #logging.debug(sigGen)
-    set_initials_match(sigGen, 27, 43, 5, 32, 22)
+    set_initials_match(sigGen, 27, 43, 10, 32, 22)
         #logging.debug(signature_scan())
         #scan_sig = signature_scan()
         #min_point = scan_sig.index(min(scan_sig))
